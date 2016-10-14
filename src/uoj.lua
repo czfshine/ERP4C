@@ -56,10 +56,12 @@ function facepunch.http.get( URL, session )
 	return r, c, cookie
 end
 for i=1000,2000 do 
-	infile=io.open("uoj"..str(i)..".html")
-r,c,cookie=facepunch.http.get( "http://acm.scau.edu.cn:8002/uoj/common_problem_view_PUBLIC.html?identity=d58fb98d3a0ba5531d48aa3f5b33a510&problemId="..str(i),
- {cookie="JSESSIONID=E037FBE6D3EF06B6801BDE46EBF93E98; cotree=1; cstree=13"} )
-infile:write(infile)
-
+	infile=io.open("uoj"..i..".html","w")
+r,c,cookie=facepunch.http.get( "http://acm.scau.edu.cn:8002/uoj/common_problem_view_PUBLIC.html?identity=d58fb98d3a0ba5531d48aa3f5b33a510&problemId="..i,
+ {cookie="JSESSIONID=63AF67ECACFF7F3E7158A291EB0FE191; cotree=1.2; cstree=64;"} )
+infile:write(r)
+print(i)
+infile:close()
+print(c)
 end
 
