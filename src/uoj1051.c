@@ -13,21 +13,6 @@ int* getMatrix  (int c,int r){
 
 	return data;
 }
-//Debug
-void printMatrix(void * d,int c,int r){
-	int *data;
-	data=(int *)d;
-	for (int i = 0; i < c; ++i)
-	{
-		for (int j = 0; j < r; ++j)
-		{
-			//printf("%d ",*(data+i*r+j));
-		}
-		//printf("\n");
-	}
-
-	//printf("\n");
-}
 void getcmax(int  * c,int * out){
 	int max=*c;
 	for (int i = 0; i < 4; ++i)
@@ -66,11 +51,9 @@ int main(int argc, char const *argv[])
 	int *data;
 	int max,isMax[3][4]={0},isMin[3][4]={0},tempr[3]={0};
 	data=getMatrix(3,4);
-	printMatrix(data,3,4);
 	for (int i = 0; i < 3; ++i)
 	{
 		getcmax(data+i*4,isMax[i]);
-		printMatrix(isMax,3,4);
 	}
 	for (int j = 0; j < 4; ++j)
 	{
@@ -80,7 +63,6 @@ int main(int argc, char const *argv[])
 			
 		}
 		getrmin(tempr,isMin,j);
-		printMatrix(isMin,3,4);
 	}
 	int yes=0;
 	for (int i = 0; i < 3; ++i)
