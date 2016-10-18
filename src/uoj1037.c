@@ -1,19 +1,20 @@
-#include "stdio.h"
-//TODO
+#include <stdio.h>
+
 int main(int argc, char const *argv[])
 {
-	double f=2,s=1,t=3;
-	double sum;
-	int n;
-	scanf("%d",&n);
+	double n=1,m=2,t=0;
+	double sum=0;
+	int r;
+	scanf("%d",&r);
 
-	for (int i = 0; i < n; ++i)
+	for (int i = 0; i < r; ++i)
 	{
-		sum+=f/s;
-		t=f+s;
-		s=f;
-		f=t;
+		sum+=m/n;
+		t=n;
+		n=m;
+		m=t+n;
 	}
 	printf("%.4f",sum);
+
 	return 0;
 }
