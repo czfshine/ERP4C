@@ -1,57 +1,71 @@
 #include <stdio.h>
-#define MAXLONG 81
+#include <stdlib.h>
 #include "string.h"
-//TODO
-void tonum(char * num){
+#include "math.h"
 
-	for (int i = 0; i < 82; ++i)
-	{
-		if(num[i]){
-			num[i]-=48;
-		}
-	}
+#define max(x,y) ((x)>(y))?(x):(y)
+struct longnum{
+    const int mod;
+    int dlen;
+    int nums[100],len;
+};
+
+void numinit(struct  longnum nums[] ,char str[]){
+    int L=strlen(str);
+    nums[0].len=L/ nums[0].dlen;
+
+    if(L%nums[0].dlen) nums[0].len++;
+
+    int index=0;
+    int i,j;
+    for (i=L-1;i>=0;i-=nums[0].dlen){
+        int t=0;
+        int k=i-nums[0].dlen+1;
+        if(k<0) k=0;
+        for(j=k;j<=i;j++)
+        t=t*10+str[j]-'0';
+    nums[0].nums[index++]=t;
+    }
 }
-void tostr(char * num,int len){
 
-	for (int i = 0; i < len-1; ++i)
-	{
-
-			num[i]+=48;
-		
-	}
-	num[len]='\0';
+void output(struct longnum num){
+    printf("%d",num.nums[num.len-1]);
+    int i=0;
+    for(i=num.len-2;i>=0;i--)
+        printf("%04d",num.nums[i]);
+    printf("\n");
 }
-int main(int argc, char const *argv[])
-{
-	char num1[82]={0},num2[82]={0},re[82]={0};
 
-	scanf("%s",num1);
-	scanf("%s",num2);
-	tonum(num1);
-	tonum(num2);
-	int len1,len2;
+struct longnum add(struct longnum num1,struct longnum num2){
+    struct longnum res={10000,4,{0},0};
+    int i;
+    res.len=max(num1.len,num2.len);
 
-	len1=strlen(num1);
-	len2=strlen(num2);
+    for (i=0;i<res.len;i++){
+        res.nums[i]=0;
+    }
 
-	int a,b,c=0;
-	if(len1>len2){
-		for (int i = 0; i < len2; ++i)
-		{
+    for (i=0;i<res.len;i++){
+        res.nums[i]+=((i<num1.len)?num1.nums[i]:0)+((i<num2.len)?num2.nums[i]:0);
+        res.nums[i+1]+=res.nums[i]/res.mod;
+        res.nums[i]%=res.mod;
+    }
+    if(res.nums[res.len]) res.len++;
 
-			a=num1[len2-i-1];
-			b=num2[len2-i-1];
-
-			c=((a+b+c)-(a+b+c)%10)/10;
-			re[len2-i-1]=(a+b)%10;
-
-			printf("%d,%d,%d\n",a,b,c);
-			tostr(re,len2);
-			printf("%s\n",re);
-			tonum(re);
-		}
-	}
-	tostr(re,len2);
-	printf("%s",re);
-	return 0;
+    return res;
 }
+int main(){
+    char str[81];
+    struct longnum num1[1]={{10000,4,{0},0}},num2[1]={{10000,4,{0},0}};
+    //struct longnum res;
+    scanf("%s",str);
+    numinit(num1,str);
+
+    scanf("%s",str);
+    numinit(num2,str);
+    output(add(num1[0],num2[0]));
+    return 0;
+
+}
+
+
