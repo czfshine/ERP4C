@@ -1,1 +1,3 @@
 *.exe
+src/test.c
+src/log
