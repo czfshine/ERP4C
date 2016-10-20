@@ -1,19 +1,20 @@
 #include "stdio.h"
 
 main(){
-    int n,a,b;
-    scanf("%d",&n);
+    long long  n,a,b;
+    scanf("%lld",&n);
 
     a=n+2;
     b=n*4;
 
     if(a%2==1){
-    printf("%d",b);
+    printf("%lld",b);
     }else{
         if(b%a==0){
-            printf("%d",a%b);}
+            printf("%lld",b/a);
+        }
         else{
-            printf("%d",b/2);
-       }
+            printf("%lld",b/2);
+        }
     }
 }
