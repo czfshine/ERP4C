@@ -1,7 +1,7 @@
 #include "stdio.h" 
 #include "malloc.h" 
 #define LEN sizeof(struct student) 
-//todo
+
 struct student 
 { 
      long num; 
@@ -74,56 +74,20 @@ struct student *del(struct student *head,long num)
 } 
 
 struct student *sort(struct student *head) 
-{ 
-	struct student * p1=NULL,*p2;
-	p2=head->next;
-	p1=head;
+{   
+    struct student *p1,*p2=NULL,*p3; 
+    p1=head; 
+    while(p1!=NULL) 
+    {   printf("%d",p1->num); 
+        p3=(struct student *)malloc(LEN); 
+        p3->num=p1->num;
+        p3->score=p1->score;    
+        p2=insert(p2,p3);
+        p1=p1->next; 
+    } 
 
 
-
-
-
-
-	while(p2!=NULL){
-
-
-		/////////////////
-		struct student *p1=NULL,*p2=NULL; 
-     int i;
-
-     p1=head;
-
-     while(p1!=NULL)
-     {      
-     	if(p1->num >= stud-> num ){
-     		if(p2==NULL){
-     			stud->next=p1;
-     			return stud;
-     		}else{
-
-     			p2->next=stud;
-     			stud->next=p1;
-     			return head;
-     		}
-     	}
-     	p2=p1;
-     	p1=p1->next;
-     } 
-     p2->next=stud;
-     return head;
-     /////////////////////////
-	}
-
-
-
-
-
-
-
-
-
-
-	return p1;
+    return p2;
 } 
 
 main() 

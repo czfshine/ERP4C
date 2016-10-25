@@ -1,22 +1,35 @@
 #include "stdio.h" 
-#include "math.h"
-//TODO
-int getpow(int n){
-	int p=0;
-	while(n<pow((double)2.0,(double)p)){
-		p++;
-	}
-	return p;
+//23333333333333333333333
+void binary(int n){
+  	char b[16]={0};
+    sprintf(b,"%o",n);
+    int cur=0;
+    switch(b[cur]){
+    		case'0':printf("");break;
+    		case'1':printf("1");break;
+    		case'2':printf("10");break;
+    		case'3':printf("11");break;
+    		case'4':printf("100");break;
+    		case'5':printf("101");break;
+    		case'6':printf("110");break;
+    		case'7':printf("111");break;
+    	}
+    cur++;
+    while(b[cur]!='\0'){
+    	switch(b[cur]){
+    		case'0':printf("000");break;
+    		case'1':printf("001");break;
+    		case'2':printf("010");break;
+    		case'3':printf("011");break;
+    		case'4':printf("100");break;
+    		case'5':printf("101");break;
+    		case'6':printf("110");break;
+    		case'7':printf("111");break;
+    	}
+    cur++;
+    }
 }
 
-void binary(int n){
-	int p;
-	p=getpow(n);
-	printf("%d",p);
-	if(p) {printf("1");
-		binary((int)n-pow((double)2.0,(double)p));
-	}
-}
 main() 
 { 
     int n; 
