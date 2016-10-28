@@ -9,9 +9,10 @@ int main(int argc, char const *argv[])
 			scanf("%d",data+i);
 		}
 
-		int A=0,B=0;
+		
 		int m=1;
 		while(m){
+			int A=0,B=0;
 			for (int i = 0; i < n; ++i)
 			{
 				scanf("%d",&m);
@@ -23,8 +24,9 @@ int main(int argc, char const *argv[])
 					if(data[j]==m) B++;
 					break;
 				}
-				printf("%d %d\n",A,B);
+				
 			}
+			printf("%d %d\n",A,B);
 		}
 	}
 	return 0;
