@@ -22,10 +22,12 @@ int main(int argc, char const *argv[])
 				for (int j = 0; j < n; ++j)
 				{
 					if(data[j]==m) B++;
+					printf("B %d %d %d\n",data[j],m,B);
 					break;
 				}
 			}
-			printf("%d %d\n",A,B);
+			if(m)
+				printf("%d %d\n",A,B);
 		}
 	}
 	return 0;
