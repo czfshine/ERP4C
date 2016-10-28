@@ -24,7 +24,6 @@ int main(int argc, char const *argv[])
 					if(data[j]==m) B++;
 					break;
 				}
-				
 			}
 			printf("%d %d\n",A,B);
 		}
