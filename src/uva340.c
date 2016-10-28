@@ -10,20 +10,21 @@ int main(int argc, char const *argv[])
 		}
 
 		int A=0,B=0;
-
-		for (int i = 0; i < n; ++i)
-		{
-			int m;
-			scanf("%d",&m);
-			if(m==0)continue;
-			if(data[i]==m) A++;
-
-			for (int j = 0; j < n; ++j)
+		int m=1;
+		while(m){
+			for (int i = 0; i < n; ++i)
 			{
-				if(data[j]==m) B++;
-				break;
+				scanf("%d",&m);
+				if(m==0) continue;
+				if(data[i]==m) A++;
+
+				for (int j = 0; j < n; ++j)
+				{
+					if(data[j]==m) B++;
+					break;
+				}
+				printf("%d %d\n",A,B);
 			}
-			printf("%d %d\n",A,B);
 		}
 	}
 	return 0;
