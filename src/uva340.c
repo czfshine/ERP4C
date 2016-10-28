@@ -1,4 +1,5 @@
 #include "stdio.h"
+//todo
 int main(int argc, char const *argv[])
 {
 	int n;
