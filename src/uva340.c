@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
 		{
 			int m;
 			scanf("%d",&m);
-			if(m==0)break;
+			if(m==0)continue;
 			if(data[i]==m) A++;
 
 			for (int j = 0; j < n; ++j)
