@@ -1,40 +1,25 @@
 #include "stdio.h"
-#include <math.h>
-#include "stdlib.h"
-#define min(x,y) ((x)<(y)?x:y)
-#define max(x,y) ((x)>(y)?x:y)
-//todo
+#define max(x,y) x>y?x:y
+#define min(x,y) x<y?x:y
 int main(int argc, char const *argv[])
 {
 	int n;
 	scanf("%d",&n);
-	int x[n],c,rh,lh,m=0,j,k,i,s,mi;
-
+	int data[n],ma,mi;
 	for (int i = 0; i < n; ++i)
 	{
-		scanf("%d",x+i);
+		scanf("%d",data+i);
 	}
+	ma=0;
 	for (int i = 0; i < n; ++i)
-	{
-		c=x[i];
-		rh=0;
-		lh=0;
-		mi=x[i];
-		for (j = 0; j < n; ++j)
+	{	mi=data[i];
+		for (int j = i; j <n; ++j)
 		{
-			rh=x[j];
-			for (k=i;k>0;k--)
-			{
-				lh=x[k];
-				mi=min(mi,min(lh,rh));
-				s=mi*(abs((j+1)-(k+1))+1);
-				printf("%d,%d=%d %d %d\n",j+1,k+1,(abs((j+1)-(k+1))+1),mi,s);
-				m=max(m,s);
-			}
+			mi=min(mi,data[j]);
+			ma=max(ma,(j-i+1)*mi);
+			//printf("%d %d \n",mi,ma);
 		}
-
 	}
-
-	printf("%d",m);
+	printf("%d",ma);
 	return 0;
 }

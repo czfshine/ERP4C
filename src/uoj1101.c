@@ -74,20 +74,10 @@ struct student *del(struct student *head,long num)
 } 
 
 struct student *sort(struct student *head) 
-{   
-    struct student *p1,*p2=NULL,*p3; 
-    p1=head; 
-    while(p1!=NULL) 
-    {   printf("%d",p1->num); 
-        p3=(struct student *)malloc(LEN); 
-        p3->num=p1->num;
-        p3->score=p1->score;    
-        p2=insert(p2,p3);
-        p1=p1->next; 
-    } 
-
-
-    return p2;
+{ 
+	struct student * pre,*p,*q;
+	int min;
+	min=head->num;
 } 
 
 main() 
