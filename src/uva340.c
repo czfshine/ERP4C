@@ -15,7 +15,6 @@ int main(int argc, char const *argv[])
 		while(m){
 			int c2[11]={0};
 			int A=0,B=0;
-			printf("%d %d\n",A,B);
 			for (int i = 0; i < n; ++i)
 			{
 				scanf("%d",&m);
