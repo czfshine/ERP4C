@@ -2,8 +2,10 @@
 
 int main(int argc, char const *argv[])
 {
-	int n;
+	int n,count=0;
 	while(scanf("%d",&n)==1&&n){
+		count++;
+		printf("Game %d:",count);
 		int data[n];
 		int c1[11]={0};
 		for (int i = 0; i < n; ++i)
@@ -26,7 +28,7 @@ int main(int argc, char const *argv[])
 				if(c1[j] < c2[j]) B += c1[j]; else B += c2[j];
 			}
 			if(m)
-				printf("%d %d\n",A,B-A);
+				printf("    (%d,%d)\n",A,B-A);
 		}
 	}
 	return 0;
