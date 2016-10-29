@@ -26,7 +26,7 @@ int main(int argc, char const *argv[])
 				if(c1[j] < c2[j]) B += c1[j]; else B += c2[j];
 			}
 			if(m)
-				printf("%d %d\n",A,B);
+				printf("%d %d\n",A,B-A);
 		}
 	}
 	return 0;
