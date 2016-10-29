@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
 		{
 			putchar(str[(re+i)%count]);
 		}
-		putchar("\n");
+		putchar('\n');
 	}
 
 	return 0;
