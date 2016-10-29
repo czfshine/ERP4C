@@ -18,7 +18,7 @@ int main() {
 			data[b] = m;
 	}
 
-
+  
 	scanf("%d", &T);
 	while(T--) {
 		scanf("%d", &n);
