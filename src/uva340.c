@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
 			{
 				scanf("%d",&m);
 				if(m==0) continue;
-				c2[data[m]]++;
+				c2[m]++;
 				if(data[i]==m) A++;
 			}
 			for (int j = 1; j <= 9; ++j){
