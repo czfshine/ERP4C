@@ -7,6 +7,7 @@ int main(int argc, char const *argv[])
 	char s[81];
 	while(T--){
 		scanf("%s",s);
+		printf("%s",s);
 		int O=0,S=0;
 		for (int i = 0; i < strlen(s); ++i)
 		{
@@ -17,6 +18,7 @@ int main(int argc, char const *argv[])
 				O=0;
 			}
 		}
+
 		printf("%d",S);
 	}
 	return 0;
