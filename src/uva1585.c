@@ -7,11 +7,11 @@ int main(int argc, char const *argv[])
 	char s[81];
 	while(T--){
 		scanf("%s",s);
-		printf("%s",s);
+		//printf("%s",s);
 		int O=0,S=0;
 		for (int i = 0; i < strlen(s); ++i)
 		{
-			if(s[i]=='o'){
+			if(s[i]=='O'){
 				O++;
 				S+=O;
 			}else{
@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
 			}
 		}
 
-		printf("%d",S);
+		printf("%d\n",S);
 	}
 	return 0;
 }
