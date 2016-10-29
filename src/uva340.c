@@ -5,7 +5,7 @@ int main(int argc, char const *argv[])
 	int n,count=0;
 	while(scanf("%d",&n)==1&&n){
 		count++;
-		printf("Game %d:",count);
+		printf("Game %d:\n",count);
 		int data[n];
 		int c1[11]={0};
 		for (int i = 0; i < n; ++i)
