@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
 		{
 			printf("%d ",count[i]);
 		}
-		//printf("%d ",count[9]);
+		
 	}
 	printf("\n");
 	return 0;
