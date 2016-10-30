@@ -7,7 +7,8 @@ int main(int argc, char const *argv[])
 	for (int i = 1; i < n; ++i)
 	{
 		int t=i;
-		while(t){ 
+		while(t){
+			printf("-%d\n",t%10); 
 			count[t%10]++;
 			t/=10;
 		}
