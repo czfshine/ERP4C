@@ -2,7 +2,9 @@
 /* 
 error 1:
 	new line
-
+error 2:
+	空白fuck！！！！！！！！！！！！
+输出格式fuck！！！！！！！！！！！！
 */
 int main(int argc, char const *argv[])
 {	int T;
@@ -30,7 +32,7 @@ int main(int argc, char const *argv[])
 			else
 				printf("%d",count[i]);
 		}
-		if(T) printf("\n");
+		printf("\n");
 	}
 	return 0;
 }
