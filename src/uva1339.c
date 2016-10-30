@@ -26,9 +26,9 @@ int main(int argc, char const *argv[])
 			for (int j = i; j < 26; ++j)
 			{
 				if(c1[i]>c1[j])
-					temp=c1[i];c1[i]=c1[j];c1[j]=temp;
+					{temp=c1[i];c1[i]=c1[j];c1[j]=temp;}
 				if(c2[i]>c2[j])
-					temp=c2[i];c2[i]=c2[j];c2[j]=temp;
+					{temp=c2[i];c2[i]=c2[j];c2[j]=temp;}
 			}
 		}
 		for ( i= 0; i < 26; ++i){
