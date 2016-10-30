@@ -19,11 +19,11 @@ int main(int argc, char const *argv[])
 			}
 
 		}
-		for (int i = 0; i < 9; ++i)
+		for (int i = 0; i < 10; ++i)
 		{
 			printf("%d ",count[i]);
 		}
-		printf("%d",count[9]);
+		//printf("%d ",count[9]);
 	}
 	printf("\n");
 	return 0;
