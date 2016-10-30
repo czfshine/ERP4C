@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
 		scanf("%s",s);
 		int len=strlen(s);
 		int j,i;
-		for (i = 1; i <len/2; ++i)
+		for (i = 1; i <(len/2)%2?len/2:; ++i)
 		{
 			for (j = 0; j < len-i; ++j)
 			{
