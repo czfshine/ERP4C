@@ -7,7 +7,7 @@ int main(int argc, char const *argv[])
 		scanf("%d",&n);
 		if(n==0){
 			printf("1 0 0 0 0 0 0 0 0 0\n");
-			break;
+			continue;
 		}
 		int count[10]={0};
 		for (int i = 1; i <= n; ++i)
