@@ -6,6 +6,7 @@ int main(int argc, char const *argv[])
 	char s1[101],s2[101];
 	int temp;
 	while(scanf("%s",s1)!=EOF){
+		printf("YES");
 		scanf("%s",s2);
 
 		for (int i = 0; i < strlen(s1); ++i)
@@ -42,7 +43,7 @@ int main(int argc, char const *argv[])
 		}else{
 			printf("NO");
 		}
-		printf("YES");
+		
 	}
 
 	return 0;
