@@ -1,11 +1,12 @@
 #include "stdio.h"
+#include <string.h>
 int main(int argc, char const *argv[])
 {
-	int c1[26],c2[26];
+	int c1[26]={0},c2[26]={0};
 	char s1,s2;
 	int temp;
-	while(s1=gets()){
-		s2=gets();
+	while(scanf("%s",s1)!=EOF){
+		scanf("%s",s2);
 
 		for (int i = 0; i < strlen(s1); ++i)
 			c1[s1[i]-'A']++;
