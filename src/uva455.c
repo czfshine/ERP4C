@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
 		scanf("%s",s);
 		int len=strlen(s);
 		int j,i;
-		for (i = 1; i <len; ++i)
+		for (i = 1; i <len/2; ++i)
 		{
 			for (j = 0; j <= len-i; ++j)
 			{
@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 			}
 		}
 
-		if(i==len){
+		if(i>=len/2){
 			printf("%d\n\n",len);//wtf???
 		}
 
