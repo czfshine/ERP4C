@@ -2,13 +2,13 @@
 #include <string.h>
 int main(int argc, char const *argv[])
 {
-	int c1[26]={0},c2[26]={0};
+	
 	char s1[101],s2[101];
 	int temp;
 	while(scanf("%s",s1)!=EOF){
 		//printf("YES");
 		scanf("%s",s2);
-
+		int c1[26]={0},c2[26]={0};
 		for (int i = 0; i < strlen(s1); ++i)
 			c1[s1[i]-'A']++;
 		for (int i = 0; i < strlen(s2); ++i)
