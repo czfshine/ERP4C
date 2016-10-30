@@ -6,14 +6,10 @@ int main(int argc, char const *argv[])
 	int temp,i,f=0;
 	while(scanf("%s",s1)!=EOF){
 		scanf("%s",s2);
-		if(f){
-			printf("\n");
-		}
-		f=1;
 		int c1[26]={0},c2[26]={0};
 		if(strlen(s1) != strlen(s2))
 		{
-			printf("NO");
+			printf("NO\n");
 			continue;
 		}
 
@@ -35,11 +31,11 @@ int main(int argc, char const *argv[])
 			if(c1[i]!=c2[i])
 				break;
 		}
-		
+
 		if(i==26)
-			printf("YES");
+			printf("YES\n");
 		else
-			printf("NO");
+			printf("NO\n");
 	}
 	return 0;
 }
