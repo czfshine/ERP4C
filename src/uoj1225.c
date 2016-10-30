@@ -11,6 +11,7 @@ int main(int argc, char const *argv[])
 			printf("-%d\n",t%10); 
 			count[t%10]++;
 			t/=10;
+			printf("+%d",t);
 		}
 
 	}
