@@ -10,10 +10,8 @@ int main(int argc, char const *argv[])
 		{
 			int t=i;
 			while(t){
-				//printf("-%d\n",t%10); 
 				count[t%10]++;
 				t/=10;
-				//printf("+%d",t);
 			}
 
 		}
