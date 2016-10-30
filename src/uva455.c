@@ -11,8 +11,8 @@ int main(int argc, char const *argv[])
 		char s[81];
 		scanf("%s",s);
 		int len=strlen(s);
-		int j;
-		for (int i = 1; i <len/2; ++i)
+		int j,i;
+		for (i = 1; i <len/2; ++i)
 		{
 			for (j = 0; j < len-i; ++j)
 			{
