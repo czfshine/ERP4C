@@ -37,7 +37,7 @@ int main(int argc, char const *argv[])
 		{	
 			printf("%d %d",c1[i],c2[i]);
 			if(c1[i]!=c2[i])
-				break;
+				//break;
 		}
 		if(i==26){
 			printf("YES\n");
