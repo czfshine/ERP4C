@@ -1,4 +1,9 @@
 #include "stdio.h"
+/* 
+error 1:
+	new line
+
+*/
 int main(int argc, char const *argv[])
 {	int T;
 	scanf("%d",&T);
@@ -20,8 +25,10 @@ int main(int argc, char const *argv[])
 
 		}
 		for (int i = 0; i < 10; ++i)
-		{
-			printf("%d ",count[i]);
+		{	if(i<9)
+				printf("%d ",count[i]);
+			else
+				printf("%d",count[i]);
 		}
 		if(T) printf("\n");
 	}
