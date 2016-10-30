@@ -3,20 +3,20 @@
 int main(int argc, char const *argv[])
 {
 	char s1[101],s2[101];
-	int temp,i,f=1;
+	int temp,i,f=0;
 	while(scanf("%s",s1)!=EOF){
 		scanf("%s",s2);
 		if(f){
 			printf("\n");
-			f=0;
 		}
+		f=1;
 		int c1[26]={0},c2[26]={0};
 		if(strlen(s1) != strlen(s2))
 		{
 			printf("NO");
 			continue;
 		}
-		
+
 		for (i = 0; i < strlen(s1); ++i)
 			c1[s1[i]-'A']++;
 		for (i = 0; i < strlen(s2); ++i)
