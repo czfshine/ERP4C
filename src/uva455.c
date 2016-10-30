@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include "string.h"
 int main(int argc, char const *argv[])
 {
 	int T;
@@ -7,9 +8,10 @@ int main(int argc, char const *argv[])
 		char s[81];
 		scanf("%s",s);
 		int len=strlen(s);
+		int j;
 		for (int i = 0; i <len; ++i)
 		{
-			for (int j = 0; j < len-i; ++j)
+			for (j = 0; j < len-i; ++j)
 			{
 				if(s[j]!=s[j+i]) break;
 			}
