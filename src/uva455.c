@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
 		char s[81];
 		scanf("%s",s);
 		int len=strlen(s);
-		int j,i;
+		int j,i,yes=0;
 		for (i = 1; i <(len/2)%2?len/2:len/2+1; ++i)
 		{
 			for (j = 0; j < len-i; ++j)
@@ -20,11 +20,12 @@ int main(int argc, char const *argv[])
 			}
 			if(j==len-i){
 				printf("%d\n\n",i);
+				yes=1;
 				break;
 			}
 		}
 
-		if(i>=(len/2)%2?len/2:len/2+1){
+		if(yes==0){
 			printf("%d\n\n",len);//wtf???
 		}
 
