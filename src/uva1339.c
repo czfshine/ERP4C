@@ -31,7 +31,8 @@ int main(int argc, char const *argv[])
 				}
 			}
 		}
-		for (int i = 0; i < 26; ++i)
+		int i;
+		for ( i= 0; i < 26; ++i)
 		{
 			if(c1[i]!=c2[i])
 				break;
@@ -39,7 +40,7 @@ int main(int argc, char const *argv[])
 		if(i==26){
 			printf("YES");
 		}else{
-			printf("NO")
+			printf("NO");
 		}
 
 	}
