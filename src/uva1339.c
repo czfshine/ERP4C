@@ -1,5 +1,8 @@
 #include "stdio.h"
 #include <string.h>
+/* error ：
+换行fuck
+!!!!!!!!!!!!!!!!!!!!*/
 int main(int argc, char const *argv[])
 {
 	char s1[101],s2[101];
