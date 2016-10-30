@@ -35,6 +35,7 @@ int main(int argc, char const *argv[])
 			if(c1[i]!=c2[i])
 				break;
 		}
+		
 		if(i==26)
 			printf("YES");
 		else
