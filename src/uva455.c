@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 				if(s[j]!=s[j+i]) break;
 			}
 			if(j==len-i){
-				printf("%d\n",i);
+				printf("%d\n\n",i);
 				break;
 			}
 		}
