@@ -5,6 +5,10 @@ int main(int argc, char const *argv[])
 	while(T--){
 		int n;
 		scanf("%d",&n);
+		if(n==0){
+			printf("1 0 0 0 0 0 0 0 0 0\n");
+			break;
+		}
 		int count[10]={0};
 		for (int i = 1; i <= n; ++i)
 		{
