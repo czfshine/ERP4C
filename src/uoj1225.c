@@ -15,10 +15,11 @@ int main(int argc, char const *argv[])
 			}
 
 		}
-		for (int i = 0; i < 10; ++i)
+		for (int i = 0; i < 9; ++i)
 		{
 			printf("%d ",count[i]);
 		}
+		
 	}
 	return 0;
 }
