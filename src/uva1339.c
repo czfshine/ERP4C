@@ -2,50 +2,32 @@
 #include <string.h>
 int main(int argc, char const *argv[])
 {
-	
 	char s1[101],s2[101];
-	int temp;
+	int temp,i;
 	while(scanf("%s",s1)!=EOF){
-		//printf("YES");
 		scanf("%s",s2);
 		int c1[26]={0},c2[26]={0};
-		for (int i = 0; i < strlen(s1); ++i)
+		for (i = 0; i < strlen(s1); ++i)
 			c1[s1[i]-'A']++;
-		for (int i = 0; i < strlen(s2); ++i)
+		for (i = 0; i < strlen(s2); ++i)
 			c2[s2[i]-'A']++;
-
-		for (int i = 0; i < 26; ++i)
+		for ( i = 0; i < 26; ++i)
 		{
 			for (int j = i; j < 26; ++j)
 			{
-				if(c1[i]>c1[j]){
+				if(c1[i]>c1[j])
 					temp=c1[i];c1[i]=c1[j];c1[j]=temp;
-				}
-			}
-		}
-		for (int i = 0; i < 26; ++i)
-		{
-			for (int j = i; j < 26; ++j)
-			{
-				if(c2[i]>c2[j]){
+				if(c2[i]>c2[j])
 					temp=c2[i];c2[i]=c2[j];c2[j]=temp;
-				}
 			}
 		}
-		int i;
 		for ( i= 0; i < 26; ++i)
-		{	
-			//printf("%d %d",c1[i],c2[i]);
 			if(c1[i]!=c2[i])
 				break;
-		}
-		if(i==26){
+		if(i==26)
 			printf("YES\n");
-		}else{
+		else
 			printf("NO\n");
-		}
-		
 	}
-
 	return 0;
 }
