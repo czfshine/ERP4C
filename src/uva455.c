@@ -23,6 +23,7 @@ int main(int argc, char const *argv[])
 				break;
 			}
 		}
+		
 		if(i==len/2){
 			printf("%d\n\n",len);//wtf???
 		}
