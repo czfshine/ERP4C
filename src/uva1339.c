@@ -42,7 +42,7 @@ int main(int argc, char const *argv[])
 		}else{
 			printf("NO");
 		}
-
+		printf("YES");
 	}
 
 	return 0;
