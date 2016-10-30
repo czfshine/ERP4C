@@ -31,9 +31,10 @@ int main(int argc, char const *argv[])
 					temp=c2[i];c2[i]=c2[j];c2[j]=temp;
 			}
 		}
-		for ( i= 0; i < 26; ++i)
+		for ( i= 0; i < 26; ++i){
 			if(c1[i]!=c2[i])
 				break;
+		}
 		if(i==26)
 			printf("YES");
 		else
