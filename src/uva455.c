@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 		int j,i;
 		for (i = 1; i <len; ++i)
 		{
-			for (j = 0; j < len-i; ++j)
+			for (j = 0; j <= len-i; ++j)
 			{
 				if(s[j]!=s[j+i]) break;
 			}
