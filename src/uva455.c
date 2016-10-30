@@ -20,11 +20,11 @@ int main(int argc, char const *argv[])
 			}
 			if(j==len-i){
 				if(len%i != 0){
-printf("%d\n\n",len);//wtf???
+					printf("%d\n",len);//wtf???
 				}else{
 
 
-				printf("%d\n\n",i);
+				printf("%d\n",i);
 			}
 				yes=1;
 				break;
@@ -32,9 +32,9 @@ printf("%d\n\n",len);//wtf???
 		}
 
 		if(yes==0){
-			printf("%d\n\n",len);//wtf???
+			printf("%d\n",len);//wtf???
 		}
-
+		if(T) printf("\n");
 	}
 	return 0;
 }
