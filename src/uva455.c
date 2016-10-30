@@ -18,6 +18,8 @@ int main(int argc, char const *argv[])
 			if(j==len-i){
 				printf("%d\n\n",i);
 				break;
+			}else{
+				printf("%d\n\n",len);//wtf???
 			}
 		}
 
