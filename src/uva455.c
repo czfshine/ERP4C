@@ -21,9 +21,10 @@ int main(int argc, char const *argv[])
 			if(j==len-i){
 				printf("%d\n\n",i);
 				break;
-			}else{
-				printf("%d\n\n",len);//wtf???
 			}
+		}
+		if(i==len/2){
+			printf("%d\n\n",len);//wtf???
 		}
 
 	}
