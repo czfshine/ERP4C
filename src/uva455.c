@@ -1,5 +1,8 @@
 #include "stdio.h"
 #include "string.h"
+/* error
+	about the 描述
+*/
 int main(int argc, char const *argv[])
 {
 	int T;
