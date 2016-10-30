@@ -16,6 +16,7 @@ int main(int argc, char const *argv[])
 			printf("NO");
 			continue;
 		}
+		
 		for (i = 0; i < strlen(s1); ++i)
 			c1[s1[i]-'A']++;
 		for (i = 0; i < strlen(s2); ++i)
