@@ -35,9 +35,9 @@ int main(int argc, char const *argv[])
 		int i;
 		for ( i= 0; i < 26; ++i)
 		{	
-			printf("%d %d",c1[i],c2[i]);
-			//if(c1[i]!=c2[i])
-				//break;
+			//printf("%d %d",c1[i],c2[i]);
+			if(c1[i]!=c2[i])
+				break;
 		}
 		if(i==26){
 			printf("YES\n");
