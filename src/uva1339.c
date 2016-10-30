@@ -39,9 +39,9 @@ int main(int argc, char const *argv[])
 				break;
 		}
 		if(i==26){
-			printf("YES");
+			printf("YES\n");
 		}else{
-			printf("NO");
+			printf("NO\n");
 		}
 		
 	}
