@@ -25,6 +25,6 @@ int main(int argc, char const *argv[])
 		}
 		
 	}
-	printf("\n");
+	if(T) printf("\n");
 	return 0;
 }
