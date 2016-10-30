@@ -3,7 +3,7 @@
 int main(int argc, char const *argv[])
 {
 	int c1[26]={0},c2[26]={0};
-	char s1,s2;
+	char s1[01],s2[101];
 	int temp;
 	while(scanf("%s",s1)!=EOF){
 		scanf("%s",s2);
