@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
 		scanf("%s",s);
 		int len=strlen(s);
 		int j;
-		for (int i = 0; i <len; ++i)
+		for (int i = 1; i <len; ++i)
 		{
 			for (j = 0; j < len-i; ++j)
 			{
