@@ -3,7 +3,7 @@ int main(int argc, char const *argv[])
 {
 	int c1[26],c2[26];
 	char s1,s2;
-	INT TEMP;
+	int temp;
 	while(s1=gets()){
 		s2=gets();
 
