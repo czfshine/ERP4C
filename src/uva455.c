@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 			}
 		}
 
-		if(i>=len/2){
+		if(i>=(len/2)%2?len/2:len/2+1){
 			printf("%d\n\n",len);//wtf???
 		}
 
