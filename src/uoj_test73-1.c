@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
 	for (int j = 0; j < i; ++j)
 	{
 		newstr(str,out,i,j);
-		printf("%s",out);
+		//printf("%s",out);
 
 		if(is(out,i-1))
 			Y=1;
