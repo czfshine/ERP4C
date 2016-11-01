@@ -22,7 +22,8 @@ int is(char * str,int len){
 int main(int argc, char const *argv[])
 {
 	char str[81];
-	for(int i=0;(str[i]=getchar())!='\n';i++);
+	int i;
+	for( i=0;(str[i]=getchar())!='\n';i++);
 	if(is(str,i)){
 		printf("Y");
 	}else{
