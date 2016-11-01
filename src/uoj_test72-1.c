@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
 		for (int j = i; j < 10; ++j)
 		{
 			if(data[i]<data[j]){
-				int temp=data[i];
+				double temp=data[i];
 				data[i]=data[j];
 				data[j]=temp;
 			}
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 	double min=data[0]-data[1];
 
 	for (int i = 0; i < 9; ++i)
-	{	printf("%lf",data[i]);
+	{	//printf("%lf",data[i]);
 		if(data[i]-data[i+1] <min){
 			min=data[i]-data[i+1];
 		}
