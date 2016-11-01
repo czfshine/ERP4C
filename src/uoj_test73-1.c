@@ -1,6 +1,6 @@
 #include "stdio.h"
 int is(char * str,int len){
-	int len,fail=0;
+	int fail=0;
 	if((len%2)==0){
 		for (int i = 0; i < len/2; ++i)
 		{
