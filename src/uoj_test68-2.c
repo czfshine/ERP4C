@@ -3,7 +3,7 @@
 int main(int argc, char const *argv[])
 {
 	double r,h;
-	scanf("%lf%lf",r,h);
+	scanf("%lf%lf",&r,&h);
 	printf("%.3lf",PI*r*r*2+PI*r*2*h);
 	return 0;
 }
