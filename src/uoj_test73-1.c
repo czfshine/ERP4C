@@ -34,19 +34,22 @@ void newstr(char * str,char * out,int len,int index){
 int main(int argc, char const *argv[])
 {
 	char str[81]={0},out[81]={0};
-	int i;
+	int i,Y=0;
 	for( i=0;(str[i]=getchar())!='\n';i++);
-
+	if(is(str,i))
+		Y=1;
 	for (int j = 0; j < i; ++j)
 	{
 		newstr(str,out,i,j);
 		printf("%s",out);
 
-		if(is(out,i-1)){
-			printf("Y");
-		}else{
-			printf("N");
-		}
+		if(is(out,i-1))
+			Y=1;
 	}
+
+	if(Y)
+		printf("Y");
+	else
+		printf("N");
 	return 0;
 }
