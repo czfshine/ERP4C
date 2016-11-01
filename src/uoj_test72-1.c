@@ -26,6 +26,6 @@ int main(int argc, char const *argv[])
 			min=data[i]-data[i+1];
 		}
 	}
-	printf("%lf",min);
+	printf("%.2lf",min);
 	return 0;
 }
