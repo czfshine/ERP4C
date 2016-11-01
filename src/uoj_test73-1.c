@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include <string.h>
 int is(char * str,int len){
 	int fail=0;
 	if((len%2)==0){
@@ -19,15 +20,32 @@ int is(char * str,int len){
 		return 1;
 	}
 }
+void newstr(char * str,char * out,int len,int index){
+	int i=0,j=0;
+	memset(out,0,81);
+	for (int i = 0; i < len; ++i)
+	{
+		if(i!=index){
+			out[j]=str[i];
+			j++;
+		}
+	}
+}
 int main(int argc, char const *argv[])
 {
-	char str[81];
+	char str[81]={0},out[81]={0};
 	int i;
 	for( i=0;(str[i]=getchar())!='\n';i++);
-	if(is(str,i)){
-		printf("Y");
-	}else{
-		printf("N");
+
+	for (int j = 0; j < i; ++j)
+	{
+		newstr(str,out,i,j);
+		printf("%s",out);
+		if(is(str,i-1)){
+			printf("Y");
+		}else{
+			printf("N");
+		}
 	}
 	return 0;
 }
