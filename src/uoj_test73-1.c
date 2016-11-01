@@ -41,8 +41,8 @@ int main(int argc, char const *argv[])
 	{
 		newstr(str,out,i,j);
 		printf("%s",out);
-		
-		if(is(str,i-1)){
+
+		if(is(out,i-1)){
 			printf("Y");
 		}else{
 			printf("N");
