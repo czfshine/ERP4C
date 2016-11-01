@@ -1,5 +1,6 @@
 #include "stdio.h"
 #include <string.h>
+//form uoj1145.c
 int is(char * str,int len){
 	int fail=0;
 	if((len%2)==0){
@@ -46,7 +47,6 @@ int main(int argc, char const *argv[])
 		if(is(out,i-1))
 			Y=1;
 	}
-
 	if(Y)
 		printf("Y");
 	else
