@@ -7,7 +7,7 @@ void p(char * str,int len){
 		p(str,len-1-i);
 		
 	}
-	printf("%c ",str[len-1]);
+	printf("%d ",len-1);
 }
 int main(int argc, char const *argv[])
 {
