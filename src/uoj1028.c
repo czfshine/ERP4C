@@ -8,21 +8,11 @@ int main(int argc, char const *argv[])
 	data[2]=0;
 	int j,i;
 	for (i = 2; i < 201; ++i)
-	{
-		if(!data[i]){
-			//printf("%d",i);
+		if(!data[i])
 			for (j = i+1; j < 201; ++j)
-			{
-				//printf("%d",j);
-				if(j%i==0){
+				if(j%i==0)
 					data[j]=1;
-				}
-			}
-		}
-	}
 	for (int i = 1; i < 201; ++i)
-	{
 		if(!data[i]) printf("%d\n",i);
-	}
 	return 0;
 }
