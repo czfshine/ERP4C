@@ -1,7 +1,7 @@
 #include "stdio.h"
 //todo
-void s(int * a,int *b){
-	int t=*a;
+void s(char * a,char *b){
+	char t=*a;
 	*a=*b;
 	*b=*a;
 }
@@ -9,7 +9,7 @@ void p(char * str,int k,int m){
 	if((k>m)&&(str[m]>str[0])){
 		for (int i = 0; i <=m; ++i)
 		{
-			prinf("%c",str[i]);
+			printf("%c",str[i]);
 		}
 		printf("\n");
 	}else{
