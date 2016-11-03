@@ -1,13 +1,27 @@
 #include "stdio.h"
 //todo
-void p(char * str,int len){
-	
-	for (int i =0 ; i<len-1; ++i)
-	{
-		p(str,len-1-i);
-		
+void s(int * a,int *b){
+	int t=*a;
+	*a=*b;
+	*b=*a;
+}
+void p(char * str,int k,int m){
+	if((k>m)&&(str[m]>str[0])){
+		for (int i = 0; i <=m; ++i)
+		{
+			prinf("%c",str[i]);
+		}
+		printf("\n");
+	}else{
+
+		for (int i = k; i <=m; ++i)
+		{
+			s(str+k,str+i);
+			p(str,k+1,m);
+			s(str+k,str+i);
+		}
 	}
-	printf("%c",str[len-1]);
+
 }
 int main(int argc, char const *argv[])
 {
@@ -20,6 +34,6 @@ int main(int argc, char const *argv[])
 	{
 		str[i]=getchar();
 	}
-	p(str,n);
+	p(str,0,n-1);
 	return 0;
 }
