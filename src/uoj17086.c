@@ -4,7 +4,7 @@ void p(char * str,int len){
 	
 	for (int i =0 ; i<len; ++i)
 	{
-		p(str,len-1-i);
+		p(str,len-i);
 		
 	}
 	printf("%d ",str[len-1]);
