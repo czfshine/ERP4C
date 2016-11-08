@@ -20,6 +20,6 @@ long f(int n,int k){
 
 int main(int argc, char const *argv[])
 {
-	printf("%ld",f(5,0));
+	printf("%ld",f(5,5));
 	return 0;
 }
