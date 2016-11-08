@@ -12,7 +12,7 @@ long f(int n,int k){
 	if(k>0) {
 		for (int i = 0; i <=k; ++i)
 		{
-			sum+=f(n-2^i, i);
+			sum+=f(n-pow(2,i), i);
 		}
 		return sum;
 	}
