@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
 
 	while(scanf("%c",&ch)>0){
 		if(ch=='\n'){
-			printf("%d",m);
+			printf("%d\n",m);
 			c=0,m=0;
 			continue;
 		}
