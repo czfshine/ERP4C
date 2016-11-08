@@ -20,7 +20,6 @@ int main(int argc, char const *argv[])
 			c-=1;
 		}
 		m=max(m,abs(c));
-
 	}
 	printf("%d",m);
 	return 0;
