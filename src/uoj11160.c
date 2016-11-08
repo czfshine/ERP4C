@@ -13,7 +13,6 @@ int main(int argc, char const *argv[])
 			c=0,m=0;
 			continue;
 		}
-		
 		if(ch=='+'){
 			c+=1;
 		}else{
@@ -21,6 +20,6 @@ int main(int argc, char const *argv[])
 		}
 		m=max(m,abs(c));
 	}
-	printf("%d",m);
+	printf("%d\n",m);
 	return 0;
 }
