@@ -13,6 +13,7 @@ int main(int argc, char const *argv[])
 			c=0,m=0;
 			continue;
 		}
+		
 		if(ch=='+'){
 			c+=1;
 		}else{
