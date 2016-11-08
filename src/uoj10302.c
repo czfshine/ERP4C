@@ -1,6 +1,6 @@
 #include "stdio.h"
 #include "math.h"
-
+//todo
 int data[10000][10000];
 
 long f(int n,int k){
