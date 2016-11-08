@@ -1,5 +1,5 @@
 #include "stdio.h"
-
+//todo
 #define max(x,y) (x)>(y)?x:y
 #define abs(x) x>0?x:-x
 int main(int argc, char const *argv[])
