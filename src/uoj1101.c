@@ -83,15 +83,15 @@ struct student *sort(struct student *head)
     {
         for(q=p->next;q!=0;q=q->next){
 
-            if(p.num>q.num){
+            if(p->num>q->num){
 
-                num=p.num;
-                p.num=q.num;
-                q.num=num;
+                num=p->num;
+                p->num=q->num;
+                q->num=num;
 
-                score=p.score;
-                p.score=q.score;
-                q.score=score;
+                score=p->score;
+                p->score=q->score;
+                q->score=score;
 
             }
         }
