@@ -36,7 +36,7 @@ struct DATA *merge(struct DATA *head, struct DATA *head2)
 struct DATA *insert(struct DATA *head, struct DATA *d) 
 { 
     struct DATA *p0,*p1,*p2; 
-    p1=head;  p0=stud; 
+    p1=head;  p0=d; 
     if(head==NULL) 
       {head=p0;} 
     else 
