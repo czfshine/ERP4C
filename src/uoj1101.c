@@ -75,9 +75,29 @@ struct student *del(struct student *head,long num)
 
 struct student *sort(struct student *head) 
 { 
-	struct student * pre,*p,*q;
-	int min;
-	min=head->num;
+	struct student *p,*q;
+    long num; 
+    int score; 
+
+    for (p = head; p!=NULL;p=p->next)
+    {
+        for(q=p->next;q!=0;q=q->next){
+
+            if(p.num>q.num){
+
+                num=p.num;
+                p.num=q.num;
+                q.num=num;
+
+                score=p.score;
+                p.score=q.score;
+                q.score=score;
+
+            }
+        }
+    }
+
+    return head;
 } 
 
 main() 

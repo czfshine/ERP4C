@@ -64,7 +64,7 @@ struct student *reverse(struct student *head)
 
         if (p==head){
             c->next=p;
-            break;}
+            br eak;}
 
         p=head;
     }
