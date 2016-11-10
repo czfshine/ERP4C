@@ -3,7 +3,7 @@
 int main(int argc, char const *argv[])
 {
 	int n,m=3;
-	scanf("%d%d",&n);
+	scanf("%d",&n);
 	int data[n+1];
 	data[1]=1;
 	for (int i = 2; i <= n; ++i)
