@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 		scanf("%d-%d",&om,&od);
 
 		int data[]={31,29,31,30,31,30,31,31,30,31,30,31};
-		int sum;
+		int sum=0;
 		for (int i = im; i < om-1; ++i)
 		{
 			sum+=data[i];
