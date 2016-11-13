@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 		sum+=data[im-1]-id;
 		sum+=data[om-1]-od;
 
-		printf("%d\n",sum);
+		printf("%d\n",sum+1);
 	}
 	return 0;
 }
