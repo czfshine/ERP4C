@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
 		int im,id;
 		int od,om;
 
-		scanf("%d-%d",&im,id);
+		scanf("%d-%d",&im,&id);
 		scanf("%d-%d",&om,&od);
 
 		int data[]={31,29,31,30,31,30,31,31,30,31,30,31};
