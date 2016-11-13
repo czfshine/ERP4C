@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
        	 	x=r; 
     	}
 
-    	printf("%d\n",n1/(m*n/x)*6);
+    	printf("%d\n",n1/(m*n/x)*36);
 	}
 	return 0;
 }
