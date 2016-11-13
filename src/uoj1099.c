@@ -1,3 +1,48 @@
+/*
+
+**************************************
+1099 [填空题]链表的合并
+**************************************
+Description
+下面程序创建两个链表，然后将第二个链表合并到第一个链表未尾，但合并部分的代码未完成，请你完成这部分代码。
+**************************************
+Sample Input
+
+2			（the 1st linked list, 2 students）
+
+1			（code of no.1 studentof the 1st linked list）
+
+98			（score of no.1 student of the 1st linked list）
+
+7			（code of no.2 student of the 1st linked list）
+
+99			（score of no.2 student of the 1st linked list）
+
+1			（the 2nd linked list, 1 student）
+
+5			（code of no.1 student of the 2nd linked list）
+
+87			（score of no.1 student of the 2nd linked list）
+
+
+**************************************
+Sample Output
+
+       1      98
+
+       7      99
+
+       5      87
+
+       1      98
+
+       7      99
+
+       5      87
+
+
+**************************************
+Author0*/
 #include "stdio.h" 
 #include "malloc.h" 
 #define LEN sizeof(struct student) 

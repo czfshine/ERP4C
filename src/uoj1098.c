@@ -1,3 +1,53 @@
+/*
+
+**************************************
+1098 [填空]链表结点的插入
+**************************************
+Description
+
+完成插入链表结点的函数(按学号顺序)，并调试通过、提交。
+**************************************
+Sample Input
+
+3			（3 students）
+
+1			（code of no.1 student）
+
+98			（score of no.1 student）
+
+3			（code of no.2 student）
+
+99			（score of no.2 student）
+
+5			（code of no.3 student）
+
+87			（score of no.3 student）
+
+4			（code of no.3 student needs be inserted）
+
+77			（score of no.3 student needs be inserted）
+
+
+**************************************
+Sample Output
+
+       1      98
+
+       3      99
+
+       5      87
+
+       1      98
+
+       3      99
+
+       4      77
+
+       5      87
+
+
+**************************************
+Author0*/
 #include "stdio.h" 
 #include "malloc.h" 
 #define LEN sizeof(struct student) 

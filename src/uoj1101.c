@@ -1,3 +1,46 @@
+/*
+
+**************************************
+1101 [填空题]链表的排序
+**************************************
+Description
+下面程序，先创建一个链表（链表中各结点未按学号由小到大排序），然后调用sort函数，将链表中各结点按学号由小到大排序。
+**************************************
+Sample Input
+
+3			（the 1st linked list, 2 students）
+
+1			（code of no.1 student）
+
+98			（score of no.1 student）
+
+7			（code of no.2 student）
+
+99			（score of no.2 student）
+
+5			（code of no.3 student）
+
+87			（score of no.3 student）
+
+
+**************************************
+Sample Output
+
+       1      98
+
+       7      99
+
+       5      87
+
+       1      98
+
+       5      87
+
+       7      99
+
+
+**************************************
+Author0*/
 #include "stdio.h" 
 #include "malloc.h" 
 #define LEN sizeof(struct student) 

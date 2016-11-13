@@ -1,3 +1,33 @@
+/*
+
+**************************************
+8068 ACM(Array Complicated Manipulation)
+**************************************
+Description2
+
+30
+
+90
+
+0
+**************************************
+Inputyes
+
+yes
+
+no
+
+
+
+Hint: The number n never has a prime factor greater than 13000000, but n may be extremely large.
+**************************************
+Output
+**************************************
+Sample Input
+**************************************
+Sample Output
+**************************************
+Author0*/
 #include <stdio.h> 
 
 int sort(int a[], int n) 

@@ -1,3 +1,47 @@
+/*
+
+**************************************
+1104 [填空题]链表的倒序
+**************************************
+Description
+
+下面程序，先创建一个链表，然后调用reverse函数，将链表中各结点变为倒序排列。请完成reverse函数，
+**************************************
+Sample Input
+
+3			（3 students）
+
+1			（code of no.1 student）
+
+98			（score of no.1 student）
+
+4			（code of no.2 student）
+
+99			（score of no.2 student）
+
+5			（code of no.3 student）
+
+87			（score of no.3 student）
+
+
+**************************************
+Sample Output
+
+       1      98
+
+       4      99
+
+       5      87
+
+       5      87
+
+       4      99
+
+       1      98
+
+
+**************************************
+Author0*/
 #include "stdio.h"
 #include "malloc.h"
 #define LEN sizeof(struct student)
