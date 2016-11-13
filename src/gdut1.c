@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
    			 printf("%d ",a[m]);
    		}
 
-   		for (m =n-1; m >(n + 1)/ 2; --m)
+   		for (m =n-1; m >=(n + 1)/ 2; --m)
    		{
    			 printf("%d ",a[m]);
    		}
