@@ -3,7 +3,7 @@
 int main(int argc, char const *argv[])
 {
 	int T;
-	scamg("%d",&T);
+	scanf("%d",&T);
 	for (int kkk = 0; kkk < T; ++kkk)
 	{
 		int im,id;
