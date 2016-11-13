@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
             		{t=a[k];a[k]=a[l];a[l]=t;} 
    		} 
 
-   		for (m = 0; m <(n + 1)/ 2; ++m)
+   		for (m = 0; m <=(n + 1)/ 2; ++m)
    		{
    			 printf("%d ",a[m]);
    		}
