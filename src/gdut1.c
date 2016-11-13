@@ -27,6 +27,7 @@ int main(int argc, char const *argv[])
    		{
    			 printf("%d ",a[m]);
    		}
+   		
    		for (m = (n + 1) / 2; m <n; ++m)
    		{
    			 printf("%d ",a[m]);
