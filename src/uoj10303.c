@@ -19,3 +19,4 @@ int main(int argc, char const *argv[])
 		printf("%d ",a[i][d[i][j]>d[i][j+1]?j:j++]);
 	return 0;
 }
+}

@@ -18,9 +18,3 @@ main (){
 	printf("%d\n",*(*(a+2)+2) );
 
 }
-
-#include <stdio.h>
-
-main (){
-printf("19\n2016\n2000\n2016\n2004\n2016\n2036\n2020\n21");
-}
