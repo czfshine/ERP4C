@@ -11,9 +11,7 @@ int main(int argc, char const *argv[])
 		scanf("%d",&n);
 		int a[n];
 
-		for (int j = 0; j < 1
-5
-156 22 223 156 18n; ++j)
+		for (int j = 0; j < n; ++j)
 		{
 			scanf("%d",a+j);
 		}
