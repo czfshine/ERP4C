@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
 	x=d[0];
 	y=b[0];
 
-	for (int j = ; j < 8; ++j)
+	for (int j = 1; j < 8; ++j)
 	{
 		y-=b[j];
 		if(y<0) y=b[j]+y;
