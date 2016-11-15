@@ -26,6 +26,6 @@ int main(int argc, char const *argv[])
 		x*=d[j];
 		y*=d[j];
 	}
-	printf("%d",x+y+1);
+	printf("%d",(x+y+1)%;
 	return 0;
 }
