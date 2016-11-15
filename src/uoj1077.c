@@ -12,10 +12,10 @@ int main(int argc, char const *argv[])
 	{
 		scanf("%d",b+i);
 	}
-
+	int j;
 	for (int i = d[0]+b[0]; ; i+=d[0])
 	{
-		for (int j = 1; j < 8; ++j)
+		for (j = 1; j < 8; ++j)
 		{
 			if(i%d[j]!=b[j]){
 				break;
