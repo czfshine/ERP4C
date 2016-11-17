@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
 	printf("\n");
 	for (int i = n/2-n+2; i < n-n/2-1; ++i)
 	{
-		printf("%d",i);
+		//printf("%d",i);
 
 		int k=abs(i);
 
