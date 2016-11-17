@@ -6,7 +6,7 @@ int f(long n){
 	long k=1;
 	int c=0;
 	while(k<n){
-		printf("%d",c);
+		printf("%ld",k);
 		k*=5;
 		c++;
 	}
