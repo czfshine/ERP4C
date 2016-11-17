@@ -1,10 +1,10 @@
 #include "stdio.h"
 #include "string.h"
-char data[10000][11];
+char data[10000][12];
 
 void swap(char *s1,char *s2){
 
-	char tmp[11];
+	char tmp[12];
 	strcpy(tmp,s1);
 	strcpy(s1,s2);
 	strcpy(s2,tmp);
@@ -13,9 +13,10 @@ void swap(char *s1,char *s2){
 int main(int argc, char const *argv[])
 {
 	int i=0;
-	FILE * infile;
+	FILE * infile,*outfile;
 
 	infile=fopen("case1.in","r");
+	outfile=fopen("answer.txt","w");
 
 	while(fgets(data[i],11,infile)!=NULL){
 		i++;
@@ -34,7 +35,11 @@ int main(int argc, char const *argv[])
 	for (int j = 0; j < i+1; ++j)
 	{
 		printf("%s\n",data[j]);
+		fputs(data[j],outfile);
 	}
+	fclose(infile);
+	fclose(outfile);
+
 
 	return 0;
 }
