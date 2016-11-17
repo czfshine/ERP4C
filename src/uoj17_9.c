@@ -22,7 +22,7 @@ int f(int n){
 		for (int kk = 0; kk < n1; ++kk)
 		{
 			sum+=j;
-			printf("%ld",sum);
+			printf("%ld\n",sum);
 		}
 		j++;
 		n1*=5;
