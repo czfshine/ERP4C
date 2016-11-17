@@ -10,7 +10,8 @@ int f(int n){
 		k*=5;
 		c++;
 	}
-	printf("%d",c);
+	//printf("%d",c--);
+	c--;
 	int j=1;
 	long sum=0;
 	int n1=4;
@@ -24,7 +25,7 @@ int f(int n){
 		j++;
 		n1*=5;
 	}
-	//printf("%d",sum);
+	printf("%d",sum);
 	return c;
 }
 int main(int argc, char const *argv[])
