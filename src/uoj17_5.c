@@ -9,6 +9,7 @@ int main(int argc, char const *argv[])
 			fb=1;
 		}else{
 			if(fb){
+				fb=0;
 				count++;
 			}
 		}
