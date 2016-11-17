@@ -24,7 +24,7 @@ int f(int n){
 		j++;
 		n1*=5;
 	}
-	printf("%d",sum);
+	//printf("%d",sum);
 	return c;
 }
 int main(int argc, char const *argv[])
