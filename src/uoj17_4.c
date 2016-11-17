@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 	for (int i = 2; i < 201; ++i)
 	{
 		if(!data[i])
-			printf("%d\n",data[i]);
+			printf("%d\n",i);
 	}
 	return 0;
 }
