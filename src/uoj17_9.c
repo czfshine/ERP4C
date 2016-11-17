@@ -22,11 +22,12 @@ int f(int n){
 		for (int kk = 0; kk < n1; ++kk)
 		{
 			sum+=j;
+			printf("%ld",sum);
 		}
 		j++;
 		n1*=5;
 	}
-	printf("%d",sum);
+	printf("%ld",sum);
 	return c;
 }
 int main(int argc, char const *argv[])
