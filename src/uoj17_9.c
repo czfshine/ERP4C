@@ -3,10 +3,10 @@
 #include "stdlib.h"
 
 int f(long n){
-	long k=1;
+	long long k=1;
 	int c=0;
 	while(k<n){
-		printf("%ld",k);
+		printf("%lld",k);
 		k*=5;
 		c++;
 	}
