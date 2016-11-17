@@ -1,5 +1,6 @@
 #include "stdio.h"
 #define min(x,y) x<y?x:y
+//todo
 int main(int argc, char const *argv[])
 {
 	int a,b,c;
