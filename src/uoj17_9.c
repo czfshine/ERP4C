@@ -28,7 +28,7 @@ int f(int n){
 		n1*=5;
 	}
 
-	int cc=n-n1/4;
+	int cc=n-n1/20;
 
 	for (int i = 0; i < cc; ++i)
 	{
