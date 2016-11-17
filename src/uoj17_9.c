@@ -35,6 +35,8 @@ int f(int n){
 		sum+=j;
 			printf("%ld\n",sum);
 	}
+
+	if(n%5==0) sum-=j;
 	printf("%ld",sum);
 	return c;
 }
