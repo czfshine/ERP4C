@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 		{
 			printf("%d ",*(data+i*3+j));
 		}
-		printf("\n")
+		printf("\n");
 	}
 	return 0;
 }
