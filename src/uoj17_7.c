@@ -4,6 +4,12 @@ int main(int argc, char const *argv[])
 {
 	int n;
 	scanf("%d",&n);
+
+	if(n==1){
+		printf("*");
+		return 0;
+	}
+
 	for (int i = 0; i < n; ++i)
 	{
 		printf("*");
