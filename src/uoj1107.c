@@ -1,17 +1,10 @@
 #include "stdio.h"
 #include "string.h"
-char data[10000][12];
 
-void swap(char *s1,char *s2){
-
-	char tmp[12];
-	strcpy(tmp,s1);
-	strcpy(s1,s2);
-	strcpy(s2,tmp);
-
-}
 int main(int argc, char const *argv[])
-{
+{	char data[10000][12];
+	char *s1,*s2;
+
 	int i=0;
 	FILE * infile,*outfile;
 
@@ -27,7 +20,12 @@ int main(int argc, char const *argv[])
 		for (int k = 0; k < j; ++k)
 		{
 			if(strcmp(data[j],data[k])<0){
-				swap(data[j],data[k]);
+				s1=data[j];
+				s2=data[k];
+				char tmp[12];
+				strcpy(tmp,s1);
+				strcpy(s1,s2);
+				strcpy(s2,tmp);
 			}
 		}
 	}
