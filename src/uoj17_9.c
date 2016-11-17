@@ -16,7 +16,7 @@ int f(int n){
 	int j=1;
 	long sum=0;
 	int n1=4;
-	for (int i = 0; i < c; ++i)
+	for (int i = 0; i < c-1; ++i)
 	{	
 
 		for (int kk = 0; kk < n1; ++kk)
@@ -26,6 +26,14 @@ int f(int n){
 		}
 		j++;
 		n1*=5;
+	}
+
+	int cc=n-n1/4;
+
+	for (int i = 0; i < cc; ++i)
+	{
+		sum+=j;
+			printf("%ld\n",sum);
 	}
 	printf("%ld",sum);
 	return c;
