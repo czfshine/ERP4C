@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include "string.h"
 int* getMatrix  (int c,int r){
 	int* data;
 	data=(int*)malloc(4*c*r);
