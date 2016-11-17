@@ -2,11 +2,10 @@
 #include "string.h"
 #include "stdlib.h"
 
-int f(long n){
+int f(int n){
 	long long k=1;
 	int c=0;
 	while(k<n){
-		printf("%lld%ld",k,n );
 		k*=5;
 		c++;
 	}
@@ -28,8 +27,8 @@ int f(long n){
 	return c;
 }
 int main(int argc, char const *argv[])
-{	long n;
-	scanf("%ld",n);
+{	int n;
+	scanf("%d",&n);
 	f(n);
 	return 0;
 }
