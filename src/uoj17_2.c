@@ -1,5 +1,5 @@
 #include "stdio.h"
-#define min(x,y) x<y?x:y
+#define min(x,y) (x)<(y)?(x):(y)
 int main(int argc, char const *argv[])
 {
 	float a,b,c,d;
