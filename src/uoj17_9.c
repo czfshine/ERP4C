@@ -9,13 +9,14 @@ int f(long n){
 		k*=5;
 		c++;
 	}
+	printf("%d",c);
 	int j=1;
 	long sum=0;
 	int n1=4;
 	for (int i = 0; i < c; ++i)
 	{	
 
-		for (int i = 0; i < n1; ++i)
+		for (int kk = 0; kk < n1; ++kk)
 		{
 			sum+=j;
 		}
