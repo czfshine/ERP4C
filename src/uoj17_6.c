@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 	{
 		for (int j = 0; j < 3; ++j)
 		{
-			printf("%d ",*(data+i*3+j));
+			printf("%d ",*(data+j*4+i));
 		}
 		printf("\n");
 	}
