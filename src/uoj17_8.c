@@ -8,10 +8,10 @@ int main(int argc, char const *argv[])
 
 	int o=0;
 	out[2]=in[0];
-	oit[1]=in[1];
+	out[1]=in[1];
 	out[0]=in[2];
 	out[3]='\0';
-	sscanf(out,"%d",&n);
-	printf("%d",n);
+	sscanf(out,"%d",&o);
+	printf("%d",o);
 	return 0;
 }
