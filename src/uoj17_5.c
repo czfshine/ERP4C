@@ -14,6 +14,6 @@ int main(int argc, char const *argv[])
 			}
 		}
 	}
-	printf("%d\n",count);
+	printf("%d",count);
 	return 0;
 }
