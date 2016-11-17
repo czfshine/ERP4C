@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 		if(!data[i]){
 			for (int j = i+1; j < 201; ++j)
 			{
-				if(j%i==0) dta[j]=1;
+				if(j%i==0) data[j]=1;
 			}
 		}
 	}
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 	for (int i = 2; i < 201; ++i)
 	{
 		if(!data[i])
-			printdf("%d\n",data[i]);
+			printf("%d\n",data[i]);
 	}
 	return 0;
 }
