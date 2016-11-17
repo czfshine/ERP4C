@@ -3,7 +3,7 @@
 
 char * data;
 
-data=malloc(1000000000,1);
+data=(char *)malloc(1000000000);
 int main(int argc, char const *argv[])
 {
 	/* code */
