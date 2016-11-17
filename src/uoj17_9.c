@@ -28,8 +28,8 @@ int f(long n){
 	return c;
 }
 int main(int argc, char const *argv[])
-{	int n;
-	scanf("%d",n);
+{	long n;
+	scanf("%ld",n);
 	f(n);
 	return 0;
 }
