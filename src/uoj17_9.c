@@ -1,6 +1,9 @@
 #include "stdio.h"
-char data2[1000000000];
-char data5[1000000000];
+#include "string.h"
+
+char * data;
+
+data=malloc(1000000000,1);
 int main(int argc, char const *argv[])
 {
 	/* code */
