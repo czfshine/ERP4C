@@ -1,5 +1,5 @@
 #include "stdio.h"
-char data[10000][11]
+char data[10000][11];
 int main(int argc, char const *argv[])
 {
 	int i=0;
@@ -10,6 +10,6 @@ int main(int argc, char const *argv[])
 	while(fgets(data[i],11,infile)!=NULL){
 		i++;
 	}
-	
+
 	return 0;
 }
