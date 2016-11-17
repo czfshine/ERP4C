@@ -17,7 +17,7 @@ int f(long n){
 
 		for (int i = 0; i < n1; ++i)
 		{
-			sum+=j
+			sum+=j;
 		}
 		j++;
 		n1*=5;
@@ -26,6 +26,8 @@ int f(long n){
 	return c;
 }
 int main(int argc, char const *argv[])
-{	
+{	int n;
+	scanf("%d",n);
+	f(n)
 	return 0;
 }
