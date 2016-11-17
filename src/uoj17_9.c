@@ -29,7 +29,6 @@ int f(int n){
 	}
 
 	int cc=n-n1/20;
-
 	for (int i = 0; i < cc/5; ++i)
 	{
 		sum+=j;
