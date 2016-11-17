@@ -18,7 +18,7 @@ int* getMatrix  (int c,int r){
 int main(int argc, char const *argv[])
 {
 	int *data;
-	data=getMatrix(3,4);
+	data=getMatrix(4,3);
 
 	for (int i = 0; i < 4; ++i)
 	{
