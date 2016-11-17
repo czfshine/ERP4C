@@ -10,8 +10,9 @@ int f(int n){
 		k*=5;
 		c++;
 	}
-	//printf("%d",c--);
+	
 	c--;
+	printf("%d",c);
 	int j=1;
 	long sum=0;
 	int n1=4;
