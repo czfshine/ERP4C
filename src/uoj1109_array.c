@@ -2,7 +2,7 @@
 #include "math.h" 
 #include "string.h" 
 #include "stdlib.h" 
-
+#include "ctype.h"
 #define pass //don't anything
 
 char words[10001][21];
@@ -14,18 +14,13 @@ int  count[10001];
 //@return:!0 sucess
 //@return: 0 fail
 int next(FILE * infile,char * word){
+	char ch;
+	while((ch=getc(infile))!=EOF){
+
+	}
+
 
 	return 0;
-}
-
-int test(int x ){
-	return x+y;
-}
-int (*test1(void))(int){
-	int y=0;
-	int(* p)(int);
-	p=test;
-	return p;
 }
 //打开文件
 FILE* open(char * filename){
@@ -63,6 +58,5 @@ main()
 
 	sort();
 	print();
-         
 } 
 
