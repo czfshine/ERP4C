@@ -12,7 +12,7 @@ int next(FILE * infile,char * word){
 
 }
 FILE* open(char * filename){
-	FILE * in=fopen(filename,'r');
+	FILE * in=fopen(filename,"r");
 	if(in==NULL)
 		pass;
 }
