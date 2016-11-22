@@ -62,9 +62,9 @@ void counter(char * word){
 	int index=0;
 
 	if(index=canfind(word)){
-		counts[index]++;
+		count[index]++;
 	}else{
-		counts[lindex]=1;
+		count[lindex]=1;
 		strcpy(words[lindex++],word);
 	}
 }
@@ -77,7 +77,7 @@ void sort(){
 void print(){
 	for (int i = 0; i < lindex; ++i)
 	{
-		printf("%04d-%s",counts[i],words[i]);
+		printf("%04d-%s",count[i],words[i]);
 	}
 }
 main() 
