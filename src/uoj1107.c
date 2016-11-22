@@ -2,7 +2,7 @@
 #include "string.h"
 
 main(int argc, char const *argv[])
-{	char data[10000][12];
+{	char data[10000][13];
 	char *s1,*s2;
 
 	int i=0;
@@ -11,7 +11,7 @@ main(int argc, char const *argv[])
 	infile=fopen("case1.in","r");
 	outfile=fopen("answer.txt","w");
 
-	while(fgets(data[i],11,infile)!=NULL){
+	while(fgets(data[i],12,infile)!=NULL){
 		i++;
 	}
 
@@ -22,7 +22,7 @@ main(int argc, char const *argv[])
 			if(strcmp(data[j],data[k])<0){
 				s1=data[j];
 				s2=data[k];
-				char tmp[12];
+				char tmp[13];
 				strcpy(tmp,s1);
 				strcpy(s1,s2);
 				strcpy(s2,tmp);
