@@ -24,7 +24,7 @@ int test(int x ){
 int (*f(void))(int){
 	int(* p)(int);
 	p=test;
-	return 
+	return p;
 }
 //打开文件
 FILE* open(char * filename){
