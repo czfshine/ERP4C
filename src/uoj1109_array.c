@@ -30,6 +30,7 @@ int (*test1(void))(int){
 FILE* open(char * filename){
 	int(* p)(int);
 	p=test1();
+	printf("%d",p(1));
 	FILE * in=fopen(filename,"r");
 	if(in==NULL)
 		pass;
