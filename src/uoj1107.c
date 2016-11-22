@@ -15,7 +15,7 @@ main(int argc, char const *argv[])
 		i++;
 	}
 
-	for (int j = 0; j < i; ++j)
+	for (int j = 0; j < i; ++j)//fuck!!!!!!!!!!!!!!!!!
 	{
 		for (int k = 0; k < j; ++k)
 		{
