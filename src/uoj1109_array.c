@@ -14,19 +14,29 @@ int  count[10001];
 //@return:!0 sucess
 //@return: 0 fail
 int next(FILE * infile,char * word){
-	char ch;
+	char ch,i=0;
 	while((ch=getc(infile))!=EOF){
+		if(isalpha(ch)){
+			word[i++]=tolower(ch);
+			if (i>20) 
+				pass;
+		}else if(ch=='-'){
+			ch=getc(infile);
+		}else{
+
+			word[i]='\0';
+			return 1;
+		}
 
 	}
-
-
+	if(i>0){
+		word[i]='\0';
+		return 1;
+	}
 	return 0;
 }
 //打开文件
 FILE* open(char * filename){
-	int(* p)(int);
-	p=test1();
-	printf("%d",p(1));
 	FILE * in=fopen(filename,"r");
 	if(in==NULL)
 		pass;
@@ -34,7 +44,7 @@ FILE* open(char * filename){
 }
 //计数器
 void counter(char * word){
-
+	printf("%s\n",word);
 }
 //以key排序
 void sort(){
