@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "string.h"
 
-int main(int argc, char const *argv[])
+main(int argc, char const *argv[])
 {	char data[10000][12];
 	char *s1,*s2;
 
@@ -37,7 +37,4 @@ int main(int argc, char const *argv[])
 	}
 	fclose(infile);
 	fclose(outfile);
-
-
-	return 0;
 }
