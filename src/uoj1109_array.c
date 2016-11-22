@@ -19,9 +19,10 @@ int next(FILE * infile,char * word){
 }
 
 int test(int x ){
-	return x+1;
+	return x+y;
 }
 int (*test1(void))(int){
+	int y=0;
 	int(* p)(int);
 	p=test;
 	return p;
