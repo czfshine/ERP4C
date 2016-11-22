@@ -28,7 +28,8 @@ int (*test1(void))(int){
 }
 //打开文件
 FILE* open(char * filename){
-	
+	int(* p)(int);
+	p=test1();
 	FILE * in=fopen(filename,"r");
 	if(in==NULL)
 		pass;
