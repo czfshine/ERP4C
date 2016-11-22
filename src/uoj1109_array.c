@@ -8,23 +8,31 @@
 char words[10001][21];
 int  count[10001];
 
+//将下一个单词压入word
+//@para: infile 输入文件
+//@para: word 保存单词的字符串
+//@return:!0 sucess
+//@return: 0 fail
 int next(FILE * infile,char * word){
-
+	^{printf("Hello, World!\n"); } ();  
 	return 0;
 }
+//打开文件
 FILE* open(char * filename){
 	FILE * in=fopen(filename,"r");
 	if(in==NULL)
 		pass;
+	return in;
 }
-
+//计数器
 void counter(char * word){
 
 }
-
+//以key排序
 void sort(){
 
 }
+
 
 void print(){
 

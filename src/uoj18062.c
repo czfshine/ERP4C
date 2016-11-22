@@ -49,9 +49,8 @@ void find(int a[][4])
     { 
         max=*p; 
         for(q=*p;q<*p+4;q++) 
-        { 
         	if(*q>*max) max=q;
-        } 
+
         printf("%d\n", *max); 
     } 
 } 
