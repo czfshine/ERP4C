@@ -21,8 +21,7 @@ int next(FILE * infile,char * word){
 int test(int x ){
 	return x+1;
 }
-
-int (*)(int ) test1(){
+int (*f(void))(int){
 	int(* p)(int);
 	p=test;
 	return 
