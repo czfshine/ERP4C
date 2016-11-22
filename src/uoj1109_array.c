@@ -77,7 +77,7 @@ void sort(){
 void print(){
 	for (int i = 0; i < lindex; ++i)
 	{
-		printf("%04d-%s",count[i],words[i]);
+		printf("%04d-%s\n",count[i],words[i]);
 	}
 }
 main() 
