@@ -30,7 +30,7 @@ main(int argc, char const *argv[])
 		}
 	}
 
-	for (int j = 0; j < i+1; ++j)
+	for (int j = 0; j < i; ++j)
 	{
 		//printf("%s1",data[j]);
 		fputs(data[j],outfile);
