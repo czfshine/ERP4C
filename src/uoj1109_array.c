@@ -18,7 +18,7 @@ int lindex=0;
 //@return: 0 fail
 int next(FILE * infile,char * word){
 	char ch,i=0;
-	menset(word,0,21)
+	
 	while((ch=getc(infile))!=EOF){
 		if(isalpha(ch)){
 			word[i++]=tolower(ch);
