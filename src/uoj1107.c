@@ -2,7 +2,7 @@
 #include "string.h"
 
 main(int argc, char const *argv[])
-{	char data[10000][13];
+{	char data[10000][13]={0};
 	char *s1,*s2;
 
 	int i=0;
