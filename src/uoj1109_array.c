@@ -3,6 +3,8 @@
 #include "string.h" 
 #include "stdlib.h" 
 
+#define pass //don't anything
+
 char words[10001][21];
 int  count[10001];
 
@@ -10,7 +12,9 @@ int next(FILE * infile,char * word){
 
 }
 FILE* open(char * filename){
-
+	FILE * in=fopen(filename,'r');
+	if(in==NULL)
+		pass;
 }
 
 void counter(char * word){
