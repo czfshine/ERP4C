@@ -35,7 +35,8 @@ main(int argc, char const *argv[])
 		//printf("%s\n",data[j]);
 		fputs(data[j],outfile);
 	}
+	fputs("\n\0",outfile);
 	fclose(infile);
 	fclose(outfile);
-	
+
 }
