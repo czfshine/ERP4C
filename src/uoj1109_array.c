@@ -14,7 +14,7 @@ int  count[10001];
 //@return:!0 sucess
 //@return: 0 fail
 int next(FILE * infile,char * word){
-	[] { ; } ();    
+
 	return 0;
 }
 //打开文件
