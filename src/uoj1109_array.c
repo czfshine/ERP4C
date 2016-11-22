@@ -17,6 +17,16 @@ int next(FILE * infile,char * word){
 
 	return 0;
 }
+
+int test(int x ){
+	return x+1;
+}
+
+int (*)(int ) test1(){
+	int(* p)(int);
+	p=test;
+	return 
+}
 //打开文件
 FILE* open(char * filename){
 	FILE * in=fopen(filename,"r");
