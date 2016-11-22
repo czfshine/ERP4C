@@ -2,12 +2,15 @@
 #include "math.h" 
 #include "string.h" 
 #include "stdlib.h" 
+
 #include "ctype.h"
-#define pass //don't anything
 
-char words[10001][21];
-int  count[10001];
+#define pass //I can't do anything. This world is mad!
 
+char words[10001][21]={0}; //keys
+int  count[10001]={0};     //values
+
+int lindex=0;
 //将下一个单词压入word
 //@para: infile 输入文件
 //@para: word 保存单词的字符串
@@ -42,9 +45,28 @@ FILE* open(char * filename){
 		pass;
 	return in;
 }
+int canfind(char * word ){
+	int i=0;
+	while(words[i][0]!='\0' &&(strcmp(words[i++],word)!=0 )){
+
+	}
+	if(words[i][0]=='\0'){
+		return 0;
+	}else{
+		return i-1;
+	}
+}
 //计数器
 void counter(char * word){
 	printf("%s\n",word);
+	int index=0;
+
+	if(index=canfind(word)){
+		counts[index]++;
+	}else{
+		counts[lindex]=1;
+		strcpy(words[lindex++],word);
+	}
 }
 //以key排序
 void sort(){
@@ -53,7 +75,10 @@ void sort(){
 
 
 void print(){
-
+	for (int i = 0; i < lindex; ++i)
+	{
+		printf("%04d-%s",counts[i],words[i]);
+	}
 }
 main() 
 { 
