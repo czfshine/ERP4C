@@ -32,7 +32,7 @@ main(int argc, char const *argv[])
 
 	for (int j = 0; j < i+1; ++j)
 	{
-		printf("%s",data[j]);
+		printf("%s\n",data[j]);
 		fputs(data[j],outfile);
 	}
 	fputs("\n",outfile);
