@@ -21,13 +21,14 @@ int next(FILE * infile,char * word){
 int test(int x ){
 	return x+1;
 }
-int (*f(void))(int){
+int (*test1(void))(int){
 	int(* p)(int);
 	p=test;
 	return p;
 }
 //打开文件
 FILE* open(char * filename){
+	
 	FILE * in=fopen(filename,"r");
 	if(in==NULL)
 		pass;
