@@ -10,6 +10,7 @@ int  count[10001];
 
 int next(FILE * infile,char * word){
 
+	return 0;
 }
 FILE* open(char * filename){
 	FILE * in=fopen(filename,"r");
