@@ -31,6 +31,7 @@ int main(int argc, char const *argv[])
 		}
 
 		x[i]=sum;
+		printf("%d\n",sum);
 	}
 
 	for (int i = 0; i < N; ++i)
@@ -41,6 +42,7 @@ int main(int argc, char const *argv[])
 		}
 
 		y[i]=sum;
+		printf("%d\n",sum);
 	}
 	int max=x[0]+y[0]-*(data);
 	for (int i = 0; i < N; ++i)
