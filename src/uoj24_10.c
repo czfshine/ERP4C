@@ -6,21 +6,21 @@ int main(int argc, char const *argv[])
 	scanf("%d",&T);
 
 	while(T--){
-		int n;
-		scanf("%d",&n);
-		int m=n/5;
-		int h;
-		int count=0;
-		for (int i = 1; i <= m; ++i)
+		long long  n;
+		scanf("%lld",&n);
+		long long  m=n/5;
+		long long h;
+		long long count=0;
+		for (long long i = 1; i <= m; ++i)
 		{	count++;
-			int t=i;
+			long long  t=i;
 			while(t%5==0){
 				t=t/5;
 				count++;
 			}
 			
 		}
-		printf("%d\n",count);
+		printf("%lld\n",count);
 	}
 	return 0;
 }
