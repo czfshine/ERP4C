@@ -48,8 +48,8 @@ int main(int argc, char const *argv[])
 		for (int j = 0; j < N; ++j)
 		{
 			int n=*(data+j*N+i);
-			int xd=x[j];
-			int yd=y[i];//fuck
+			int xd=x[i];
+			int yd=y[j];//fuck
 			int m=xd+yd-n;
 			printf("%d %d %d %d %d %d\n",i,j,xd,yd,n,m);
 			max=max>m?max:m;
