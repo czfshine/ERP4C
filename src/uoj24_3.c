@@ -1,3 +1,5 @@
+/*
+
 #include <stdio.h> 
 
 int F(int x, int n) 
