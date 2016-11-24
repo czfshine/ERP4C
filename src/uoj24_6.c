@@ -9,11 +9,11 @@ double dist(int x ,int y,int dx,int dy){
 int main(int argc, char const *argv[])
 {
 	int data[50][2];
-	int T=;
+	int T=0;
 	scanf("%d",&T);
 	for (int i = 0; i < T; ++i)
 	{
-		scnaf("%d%d",&data[i][0],&data[i][1]);
+		scanf("%d%d",&data[i][0],&data[i][1]);
 	}
 
 	double m=dist(data[0][0] ,data[0][1],data[1][0],data[1][1]);
