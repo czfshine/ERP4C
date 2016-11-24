@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "math.h"
 
-#define min(x,y) (x)>(y)?(x):(y)
+#define min(x,y) (x)<(y)?(x):(y)
 double dist(int x ,int y,int dx,int dy){
 
 	return sqrt(fabs((dx-x)*(dx-x)+(dy-y)*(dy-y)));
