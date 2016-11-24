@@ -1,3 +1,17 @@
+/*
+描述
+由键盘输入正数n（n<30,n为奇数），要求输出具有n行的如下图案。
+
+输入样例
+7
+输出样例
+*******
+*** ***
+**   **
+*     *
+**   **
+*** ***
+********/
 #include "stdio.h"
 #define abs(x) x>0?x:-x
 int main(int argc, char const *argv[])
