@@ -13,8 +13,9 @@ int main(int argc, char const *argv[])
 		for (int i = 1; i <= m; ++i)
 
 		{	int count=0;
-			while(i%5==0){
-				i=i/5;
+			int t=i;
+			while(t%5==0){
+				t=t/5;
 				count++;
 			}
 			printf("%d",count);
