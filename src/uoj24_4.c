@@ -20,9 +20,13 @@ int main(int argc, char const *argv[])
 			}
 		}
 	}
-	for (int i = 0; i < 20; ++i)
+	int count =0;
+	for (int i = 1; i < 20; ++i)
 	{
-		printf("%d ",data[i]);
+		if(data[i]!= data[i-1])
+			count ++;
 	}
+
+	printf("%d",count)
 	return 0;
 }
