@@ -49,7 +49,7 @@ int main(int argc, char const *argv[])
 		{
 			int n=*(data+j*N+i);
 			int xd=x[i];
-			int yd=y[i];
+			int yd=y[j];
 			int m=xd+yd-n;
 			printf("%d %d %d %d %d %d\n",i,j,xd,yd,n,m);
 			max=max>m?max:m;
