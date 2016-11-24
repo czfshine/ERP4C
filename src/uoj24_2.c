@@ -3,7 +3,7 @@
 int main(int argc, char const *argv[])
 {
 	char ch;
-	while((ch=scanf(%c))&& ch!='\n'){
+	while((scanf("%c",&ch))&& ch!='\n'){
 
 		if(ch>='A' &&ch<='Z' )
 			ch+=32;
