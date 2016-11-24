@@ -7,10 +7,10 @@ int main(int argc, char const *argv[])
 
 	while(T--){
 		int n;
-		scanf("%d",&n)
+		scanf("%d",&n);
 		int m=n/5;
 		int h;
-		for (int i = 1; i =< m; ++i)
+		for (int i = 1; i <= m; ++i)
 		{	int count=0;
 			while(i%5==0){
 				count++;
