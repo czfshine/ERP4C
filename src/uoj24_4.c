@@ -27,6 +27,6 @@ int main(int argc, char const *argv[])
 			count ++;
 	}
 
-	printf("%d",count);
+	printf("%d",count+1);
 	return 0;
 }
