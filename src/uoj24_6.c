@@ -29,6 +29,6 @@ int main(int argc, char const *argv[])
 		}
 	}
 		
-		printf("%lf",m);
+		printf("%.3lf",m);
 	return 0;
 }
