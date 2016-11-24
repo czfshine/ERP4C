@@ -10,17 +10,18 @@ int main(int argc, char const *argv[])
 		scanf("%d",&n);
 		int m=n/5;
 		int h;
+		int count=0;
 		for (int i = 1; i <= m; ++i)
-
-		{	int count=0;
+		{	count++;
 			int t=i;
 			while(t%5==0){
 				t=t/5;
 				count++;
 			}
-			printf("%d",count);
+			
 		}
-		printf("1\n");
+
+		printf("%d\n",count);
 	}
 	return 0;
 }
