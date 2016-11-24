@@ -51,7 +51,7 @@ int main(int argc, char const *argv[])
 			int xd=x[i];
 			int yd=y[i];
 			int m=xd+yd-n;
-			printf("%d\n",m);
+			printf("%d %d %d %d %d %d\n",i,j,xd,yd,n,m);
 			max=max>m?max:m;
 		}
 	}
