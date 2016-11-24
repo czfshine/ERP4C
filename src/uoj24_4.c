@@ -5,7 +5,7 @@ int main(int argc, char const *argv[])
 	int data[20];
 	for (int i = 0; i < 20; ++i)
 	{
-		scanf("%cd",data+i);
+		scanf("%d",data+i);
 	}
 
 	for (int i = 0; i < 20; ++i)
