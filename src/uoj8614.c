@@ -7,7 +7,7 @@ int count = 1;
 
 int Prime(int n)  
 {  
-    int tmp = (int)sqrt((double)n);  
+    int tmp =sqrt(n);  
     for (int i = 0; p[i] <= tmp; ++i) {  
         if (n % p[i] == 0)  
             return 0;  
