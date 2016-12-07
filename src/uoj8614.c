@@ -1,9 +1,7 @@
 #include <stdio.h>  
 #include <math.h>  
-int pc[100001];  
-int p[100001] ;
-
-int count = 1;  
+int pc[100001], p[100001] ;
+int count = 1,T,m;  
 
 int Prime(int n)  
 {  
@@ -23,11 +21,8 @@ int main()
             p[count++] = i;
         pc[i] = count;  
     }  
-  
-    int T;  
     scanf("%d", &T);  
-    while (T--) {  
-        int m;  
+    while (T--) {   
         scanf("%d", &m);  
         printf("%d\n", pc[m]);  
     }  
