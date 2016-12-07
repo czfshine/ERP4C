@@ -1,7 +1,7 @@
 #include <stdio.h>  
 #include <math.h>  
 int pc[100001];  
-int p[100001] ；
+int p[100001] ;
 
 int count = 1;  
 
