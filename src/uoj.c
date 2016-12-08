@@ -1,38 +1,33 @@
-#include<stdio.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+
 int main()
 {
-    int a[3][4];
-    int i,j,maxi,minj,yes=0,t,k;//maxi,minj分别表示行里面最大的数以及列里面最小的数.
+    int i,j,a[3][4],flag=0,col,r;
+    for(i=0;i<3;i++)
+        for(j=0;j<4;j++)
+            scanf("%d",&a[i][j]);
     for(i=0;i<3;i++)
     {
+        col=0;
+        for(j=1;j<4;j++)
+            if(a[i][j]>a[i][col]) col=j;
         for(j=0;j<4;j++)
         {
-            scanf("%d",&a[i][j]);
-        }
-    }
-    for(i=0;i<3;i++)
-    {
-        yes=0;
-        maxi=a[i][0];//假设每行中第一个数为该行中最大的数
-        for(j=0;j<3;j++)//这个循环用于找出每行中最大的数。
-        {
-            if(maxi<a[i][j+1])
+            if(a[i][j]==a[i][col])
             {
-                yes=1;
-                maxi=a[i][j+1];
-                t=j+1;//用t来记录下该行中最大的数所在的列。
+                for(r=0;r<3;r++)
+                    if(a[r][j]<a[i][j]) break;
+                if(r==3)
+                {
+                    printf("%d\n", a[i][j]);
+                    flag=1;
+                }
             }
         }
-        if(yes==0)  k=0;
-        else k=t;
-        minj=a[0][k];//假定每列中最小的数都是第一行的数
-        for(i=0;i<2;i++)//这个循环用来找出每列中最小的数
-        {
-            if(minj>a[i+1][k])  minj=a[i+1][k];
-        }
-        if(maxi==minj)  printf("%d\n",minj);
     }
-    
-    printf("NO");
+    if(!flag)
+        printf("NO\n");
     return 0;
 }
