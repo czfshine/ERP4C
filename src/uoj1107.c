@@ -32,8 +32,8 @@ main(int argc, char const *argv[])
 		i++;
 	}
 	for (int j = 0; j < i; ++j){
-		int len=strlen(ddata[i]);
-		data[i]=revstr(data[i],len);
+		int len=strlen(data[i]);
+		data[i]=revstr((char *)data[i],len);
 	}
 	for (int j = 0; j < i; ++j)//fuck!!!!!!!!!!!!!!!!!
 	{
