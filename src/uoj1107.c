@@ -3,7 +3,7 @@
 
 void printstrre(char * s){
 	int n=strlen(s);
-	for (int i = n-1; i>=0; ++i)
+	for (int i = n-1; i>=0; --i)
 	{
 		printf("%c",s[i]);
 	}
