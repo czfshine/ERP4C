@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 		scanf("%d",&A);
 		char ch;
 		int cur=0;
-		while((ch=getc())!='e')
+		while((ch=getchar())!='e')
 			B[cur++]=ch;
 		B[cur]='\0';
 
