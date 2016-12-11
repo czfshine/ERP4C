@@ -6,9 +6,9 @@ char * printstrre(char * s){
 	char out[n];
 	for (int i = n-1; i>=0; --i)
 	{
-		out=[n-i]=s[i];
+		out[n-i]=s[i];
 	}
-	out[n]='\0'
+	out[n]='\0';
 
 	return out;
 }
