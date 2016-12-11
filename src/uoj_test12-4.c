@@ -14,9 +14,9 @@ int main()
 	{
 		if(x<=a[i]){
 			
-			for (int j = i; j < 16; ++j)
+			for (int j = 15; j >i; --j)
 			{
-				a[i+1]=a[i];
+				a[j+1]=a[j];
 
 			}
 			a[i]=x;
