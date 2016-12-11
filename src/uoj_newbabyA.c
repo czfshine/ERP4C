@@ -22,7 +22,6 @@ int main(int argc, char const *argv[])
 		}
 
 	}
-
 	if(!flag) printf("N0");
 	return 0;
 }
