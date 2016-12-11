@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int main(int argc, char const *argv[])
 {
-	int n,flag=0;
+	int a,n,flag=0;
 	scanf("%d",&n);
 	a=n*n;
 	for (int i =a%2?1:2; i < a; i+=2)
