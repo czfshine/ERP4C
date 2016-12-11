@@ -7,10 +7,11 @@ float f(int n)
 		return f(n-1)*n;
 	return 1;
 }
-void main()
+int main()
 {
 	int m,n,s;
 	scanf("%d%d",&m,&n);
-	s=fun(m)/(fun(n)*fun(m-n));
+	s=f(m)/(f(n)*f(m-n));
 	printf("%d\n",s);
+	return 1;
 }
