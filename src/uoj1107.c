@@ -28,7 +28,7 @@ main(int argc, char const *argv[])
 
 	infile=fopen("case1.in","r");
 
-	while(fgets(data[i],12,infile)!=NULL){
+	while(fgets(data[i],12,)!=NULL){
 		i++;
 	}
 	for (int j = 0; j < i; ++j){
