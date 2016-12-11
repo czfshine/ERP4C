@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "string.h"
 
-char *[13] revstr(char *str, size_t len)
+void revstr(char *str, size_t len)
 {
 
     char    *start = str;
@@ -33,7 +33,7 @@ main(int argc, char const *argv[])
 	}
 	for (int j = 0; j < i; ++j){
 		int len=strlen(data[i]);
-		data[i]=revstr(data[i],len);
+		revstr(data[i],len);
 	}
 	for (int j = 0; j < i; ++j)//fuck!!!!!!!!!!!!!!!!!
 	{
