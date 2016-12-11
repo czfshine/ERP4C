@@ -1,16 +1,23 @@
 #include "stdio.h"
 #include "string.h"
 
-char * printstrre(char * s){
-	int n=strlen(s);
-	char out[n];
-	for (int i = n-1; i>=0; --i)
-	{
-		out[n-i]=s[i];
-	}
-	out[n]='\0';
+char *revstr(char *str, size_t len)
+{
 
-	return out;
+    char    *start = str;
+    char    *end = str + len - 1;
+    char    ch;
+
+    if (str != NULL)
+    {
+        while (start < end)
+        {
+            ch = *start;
+            *start++ = *end;
+            *end-- = ch;
+        }
+    }
+    return str;
 }
 main(int argc, char const *argv[])
 {	char data[10000][13]={0};
@@ -24,7 +31,10 @@ main(int argc, char const *argv[])
 	while(fgets(data[i],12,infile)!=NULL){
 		i++;
 	}
-
+	for (int j = 0; j < i; ++j){
+		int len=strlen(ddata[i]);
+		data[i]=revstr(data[i],len);
+	}
 	for (int j = 0; j < i; ++j)//fuck!!!!!!!!!!!!!!!!!
 	{
 		for (int k = 0; k < j; ++k)
