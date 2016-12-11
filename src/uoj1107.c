@@ -52,8 +52,8 @@ main(int argc, char const *argv[])
 
 	for (int j = 0; j < i; ++j)
 	{
-		//printf("%s",data[j]);
-		printstrre(data[j]);
+		printf("%s",data[j]);
+		//printstrre(data[j]);
 		//fputs(data[j],outfile);
 	}
 	fclose(infile);
