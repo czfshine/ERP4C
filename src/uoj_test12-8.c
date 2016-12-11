@@ -7,7 +7,7 @@ main()
 
     if((fp=fopen("case.in","r"))==NULL) 
         return 0; 
-    while((ch=getchar(fp))!=EOF) 
+    while((ch=getc(fp))!=EOF) 
     { 
         if ('A'<=ch && ch<='Z') 
             ch = ch + 32; 
