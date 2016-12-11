@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 				if((n<b&&n<c)&&(n+b>c&&n+c>b&&b+c>n)){
 					printf("%d %d",b,c);
 					flag=1;
-					break;
+					//break;
 				}
 		}
 
