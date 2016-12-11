@@ -1,14 +1,14 @@
 #include "stdio.h"
+
+int f(int n){
+	if(n==1)return 1;
+	return f(n-1)*n;
+}
 int main(int argc, char const *argv[])
 {
 	int n,m;
 	scanf("%d%d",&m,&n);
-	int sum=1;
-	if(n<m/2){n=m-n;}
-	for (int i = m; i > n; --i)
-	{
-		sum*=i;
-	}
-	printf("%d",sum);
+	if(n>m){n=m-n;}
+	printf("%d",f(m)/f(m-n)/f(n))
 	return 0;
 }
