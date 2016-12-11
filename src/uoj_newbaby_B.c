@@ -8,12 +8,12 @@ void sort(){
 }
 int main(int argc, char const *argv[])
 {
-	int n,m;
-	a=5,b=2,c=3;
+	int n,m,count=0;
 	scanf("%d%d",&n,&m);
 	
 	a=b=c=n;
 	while(a!=m){
+		count++;
 		printf("%d %d %d",a,b,c);
 		if(m+b>c&&m+c>b){
 			a=m;
