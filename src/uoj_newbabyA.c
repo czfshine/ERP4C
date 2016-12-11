@@ -13,6 +13,7 @@ int main(int argc, char const *argv[])
 			if(b*b+a==c*c&& b!=0)
 				printf("%d %d\n",b,c);
 		}
+		
 	}
 	return 0;
 }
