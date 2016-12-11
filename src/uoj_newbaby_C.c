@@ -29,6 +29,7 @@ int main(int argc, char const *argv[])
 			printf("%d\n",A);
 			continue;
 		}
+		
 		if(len>D){
 			int sub=len-D;
 			int i;
