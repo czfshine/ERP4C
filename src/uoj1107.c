@@ -2,7 +2,7 @@
 #include "string.h"
 
 void printstrre(char * s){
-	int n=len(s);
+	int n=strlen(s);
 	for (int i = n-1; i>=0; ++i)
 	{
 		printf("%c",s[i]);
