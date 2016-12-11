@@ -33,7 +33,6 @@ int main(int argc, char const *argv[])
 		if(len>D){
 			int sub=len-D;
 			int i;
-
 			printf("%d",A);
 			for (i = 0; i < D; ++i)
 				printf("%c",B[i]);
