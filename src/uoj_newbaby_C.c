@@ -10,6 +10,7 @@ int main(int argc, char const *argv[])
 		char B[102];
 
 		scanf("%d.%se%d",&A,B,&D);
+		printf("%d%s%d",A,B,D);
 	}
 	return 0;
 }
