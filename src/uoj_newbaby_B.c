@@ -60,9 +60,9 @@ int main(int argc, char const *argv[])
 	while(scanf("%d%d",&n,&m)>0){
 		count=0;
 		a=b=c=m;
-		while(a!=n){
+		while(c!=n){
 			printf("%d%d%d",a,b,c);
-			a=min(b+c-1,n);
+			c=min(a+b-1,n);
 			sort();
 		}
 
