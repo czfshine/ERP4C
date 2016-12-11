@@ -2,8 +2,8 @@
 
 int main(int argc, char const *argv[])
 {
-	int n;
-	scanf("%d",&n);
+	int a;
+	scanf("%d",&a);
 	for (int i =a%2; i < a; i+=2)
 	{
 		if(a%i==0){
