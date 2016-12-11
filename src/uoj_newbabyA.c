@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
 			int b=abs((i-a/i)/2);
 			if(b*b+a==c*c&& b!=0)
 				if((n<b&&n<c)&&(n+b>c&&n+c>b&&b+c>n)){
-					printf("%d %d\n",b,c);
+					printf("%d %d",b,c);
 					flag=1;
 					break;
 				}
