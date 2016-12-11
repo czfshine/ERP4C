@@ -1,12 +1,16 @@
 #include "stdio.h"
 #include "string.h"
 
-void printstrre(char * s){
+char * printstrre(char * s){
 	int n=strlen(s);
+	char out[n];
 	for (int i = n-1; i>=0; --i)
 	{
-		printf("%c",s[i]);
+		out=[n-i]=s[i];
 	}
+	out[n]='\0'
+
+	return out;
 }
 main(int argc, char const *argv[])
 {	char data[10000][13]={0};
