@@ -32,9 +32,9 @@ main(int argc, char const *argv[])
 		i++;
 	}
 	for (int j = 0; j < i; ++j){
-		int len=strlen(data[i]);
-		revstr(data[i],len);
-		printf("%sggg",data[i]);
+		int len=strlen(data[j]);
+		revstr(data[j],len);
+		printf("%sggg",data[j]);
 	}
 	for (int j = 0; j < i; ++j)//fuck!!!!!!!!!!!!!!!!!
 	{
