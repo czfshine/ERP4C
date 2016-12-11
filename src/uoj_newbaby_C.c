@@ -58,6 +58,7 @@ int main(int argc, char const *argv[])
 				printf("0");
 			}
 		}
+		printf("\n");
 	}
 	return 0;
 }
