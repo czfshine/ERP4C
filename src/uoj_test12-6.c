@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
 	scanf("%d",&n);
 
 	int k=n/2;
-	for (int j = -k; j < k; ++j)
+	for (int j = -k; j <= k; ++j)
 	{
 		for (int i = 0; i < abs(j); ++i)
 		{
