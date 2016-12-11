@@ -61,7 +61,7 @@ int main(int argc, char const *argv[])
 		count=0;
 		a=b=c=m;
 		while(c!=n){
-			printf("%d%d%d",a,b,c);
+			printf("%d %d %d\n",a,b,c);
 			c=min(a+b-1,n);
 			sort();
 		}
