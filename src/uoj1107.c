@@ -34,7 +34,7 @@ main(int argc, char const *argv[])
 	for (int j = 0; j < i; ++j){
 		int len=strlen(data[i]);
 		revstr(data[i],len);
-		printf("%s",data[i]);
+		printf("%sggg",data[i]);
 	}
 	for (int j = 0; j < i; ++j)//fuck!!!!!!!!!!!!!!!!!
 	{
