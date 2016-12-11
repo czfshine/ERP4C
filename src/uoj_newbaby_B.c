@@ -2,9 +2,9 @@
 int a,b,c;
 void sort(){
 	int t;
-	if(a>b){t=a,a=b,b=t;}
-	if(b>c){t=b,b=c,c=t;}
-	if(a>c){t=a,a=c,c=t;}
+	if(a<b){t=a,a=b,b=t;}
+	if(b<c){t=b,b=c,c=t;}
+	if(a<c){t=a,a=c,c=t;}
 }
 int main(int argc, char const *argv[])
 {
