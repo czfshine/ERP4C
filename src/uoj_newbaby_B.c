@@ -15,13 +15,12 @@ int main(int argc, char const *argv[])
 		a=b=c=n;
 		while(a!=m){
 			count++;
-			printf("%d %d %d\n",a,b,c);
+			//printf("%d %d %d\n",a,b,c);
 			if(m+b>c&&m+c>b){
 				a=m;
-				sort();
-				continue;
+			}else{
+				a=b-c+1;
 			}
-			a=b-c+1;
 			sort();
 		}
 		printf("%d",count);
