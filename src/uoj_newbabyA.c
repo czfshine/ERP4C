@@ -1,10 +1,12 @@
 #include "stdio.h"
 #include <stdlib.h>
+#define min(x,y) x<y?x:y
 int main(int argc, char const *argv[])
 {
 	int a,n,flag=0;
 	scanf("%d",&n);
 	a=n*n;
+	int mina=0,minb=0;
 	for (int i =a%2?1:2; i < a; i+=2)
 	{
 
@@ -14,7 +16,13 @@ int main(int argc, char const *argv[])
 			int b=abs((i-a/i)/2);
 			if(b*b+a==c*c&& b!=0)
 				if((n<b&&n<c)&&(n+b>c&&n+c>b&&b+c>n)){
-					printf("%d %d\n",b,c);
+					if(mina==0){
+						mina=c,minb=b;
+					}else{
+						mina=min(mina,c);
+						minb=min(minb,b);
+					}
+					printf("%d %d\n",minb,mina);
 					flag=1;
 					//break;
 				}
