@@ -17,7 +17,7 @@ void revstr(char *str, size_t len)
             *end-- = ch;
         }
     }
-    return str;
+
 }
 main(int argc, char const *argv[])
 {	char data[10000][13]={0};
