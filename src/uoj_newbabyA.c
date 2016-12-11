@@ -9,12 +9,12 @@ int main(int argc, char const *argv[])
 	{
 
 		if((a%i)==0){
-			printf("%d %d\n",a,i);
+			//printf("%d %d\n",a,i);
 			int c=(i+a/i)/2;
 			int b=abs((i-a/i)/2);
 			if(b*b+a==c*c&& b!=0)
 				if(n<b&&n<c){
-					if(flag==0) printf("%d %d",b,c);
+					if(flag==0) printf("%d %d",b*b-c*c,a);
 					flag=1;
 				}
 		}
