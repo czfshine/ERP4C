@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
 						mina=min(mina,c);
 						minb=min(minb,b);
 					}
-					printf("%d %d\n",minb,mina);
+					//printf("%d %d\n",minb,mina);
 					flag=1;
 					//break;
 				}
@@ -30,6 +30,9 @@ int main(int argc, char const *argv[])
 
 	}
 
-	if(!flag) printf("N0");
+	if(flag) {
+		printf("%d %d\n",minb,mina);}
+		else
+			printf("N0");
 	return 0;
 }
