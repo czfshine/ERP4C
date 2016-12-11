@@ -9,28 +9,16 @@ int main(int argc, char const *argv[])
 	for (int j = -k; j <= k; ++j)
 	{
 		for (int i = 0; i <= abs(j); ++i)
-		{
 			printf("*");
-		}
 		for (int i = 0; i < ((k-abs(j))*2)-1; ++i)
-		{
 			printf(" ");
-
-		}
-
-		if(abs(j)==k){
+		if(abs(j)==k)
 			for (int i = 0; i < k; ++i)
-			{
 				printf("*");
-			}
-		}
-		else{
+		else
 			for (int i = 0; i <= abs(j); ++i)
-			{
 				printf("*");
-			}
-		}
-		printf("0\n");
+		printf("\n");
 	}
 	return 0;
 }
