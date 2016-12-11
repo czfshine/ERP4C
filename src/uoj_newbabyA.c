@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 		if(a%i==0){
 			int c=(i+a/i)/2;
 			int b=abs((i-a/i)/2);
-			if(b*b+a==c*c)
+			if(b*b+a==c*c&& b!=0)
 				printf("%d %d\n",b,c);
 		}
 	}
