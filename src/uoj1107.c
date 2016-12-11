@@ -1,6 +1,13 @@
 #include "stdio.h"
 #include "string.h"
 
+void printstrre(char * s){
+	int n=len(s);
+	for (int i = n-1; i>=0; ++i)
+	{
+		printf("%c",s[i]);
+	}
+}
 main(int argc, char const *argv[])
 {	char data[10000][13]={0};
 	char *s1,*s2;
@@ -31,7 +38,8 @@ main(int argc, char const *argv[])
 
 	for (int j = 0; j < i; ++j)
 	{
-		printf("%s",data[j]);
+		//printf("%s",data[j]);
+		printstrre(data[j]);
 		//fputs(data[j],outfile);
 	}
 	fclose(infile);
