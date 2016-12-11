@@ -21,6 +21,7 @@ int main(int argc, char const *argv[])
 			continue;
 		}
 		a=b-c+1;
+		sort();
 	}
 	return 0;
 }
