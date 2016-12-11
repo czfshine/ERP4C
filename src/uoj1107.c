@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "string.h"
 
-char [13] revstr(char *str, size_t len)
+char *[13] revstr(char *str, size_t len)
 {
 
     char    *start = str;
