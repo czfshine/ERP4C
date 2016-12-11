@@ -18,6 +18,17 @@ int main(int argc, char const *argv[])
 
 		}
 
+		if(abs(j)==k){
+			for (int i = 0; i < k; ++i)
+			{
+				printf("*");
+			}
+		else{
+			for (int i = 0; i <= abs(j); ++i)
+			{
+				printf("*");
+			}
+		}
 		printf("0\n");
 	}
 	return 0;
