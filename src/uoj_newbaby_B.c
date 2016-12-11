@@ -21,7 +21,7 @@
 */
 
 /*
-
+fuck!
 int main(int argc, char const *argv[])
 {
 	int n,m,count=0;
