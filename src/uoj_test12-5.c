@@ -1,6 +1,6 @@
 #include "stdio.h"
 char lucky(int n){
-
+	int a;
 	while(n>0){
 		a=n%10;
 		n/=10;
