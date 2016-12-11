@@ -23,6 +23,7 @@ int main(int argc, char const *argv[])
 			{
 				printf("*");
 			}
+		}
 		else{
 			for (int i = 0; i <= abs(j); ++i)
 			{
