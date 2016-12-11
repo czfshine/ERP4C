@@ -9,8 +9,19 @@ int main(int argc, char const *argv[])
 		int A,D;
 		char B[102];
 
-		scanf("%d.%se%d",&A,B,&D);
-		printf("%d%s%d",A,B,D);
+		//too young too simple
+		//scanf("%d.%se%d",&A,B,&D);
+		//printf("%d%s%d",A,B,D);
+
+		scanf("%d",&A);
+		char ch;
+		int cur=0;
+		while((ch=getc())!='e')
+			B[cur++]=ch;
+		B[cur]='\0';
+
+		scnaf("%d",&D);
+		//printf("%d%s%d",A,B,D);
 	}
 	return 0;
 }
