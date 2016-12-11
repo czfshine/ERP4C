@@ -19,7 +19,7 @@ int main()
 				a[j+1]=a[j];
 
 			}
-			a[i]=x;
+			a[i-1]=x;
 			break;
 		}
 	}
