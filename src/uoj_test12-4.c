@@ -12,7 +12,7 @@ int main()
 	scanf("%d",&x);
 	for (i= 0; i < 15; ++i)
 	{
-		if(x>=a[i]){
+		if(x<=a[i]){
 			
 			for (int j = i; j < 16; ++j)
 			{
