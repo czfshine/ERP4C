@@ -53,7 +53,6 @@ void sort(){
 	if(b<c){t=b,b=c,c=t;}
 	if(a<c){t=a,a=c,c=t;}
 }
-
 int main(int argc, char const *argv[])
 {
 	int n,m,count=0;
