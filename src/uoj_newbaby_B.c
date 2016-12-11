@@ -1,5 +1,6 @@
 #include "stdio.h"
 int a,b,c;
+
 void sort(){
 	int t;
 	if(a<b){t=a,a=b,b=t;}
@@ -9,7 +10,7 @@ void sort(){
 int main(int argc, char const *argv[])
 {
 	int n,m,count=0;
-	
+
 	while(scanf("%d%d",&n,&m)>0){
 		count=0;
 		a=b=c=n;
