@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
 		//printf("%d%s%d\n\n",A,B,D);
 
 		int len=strlen(B);
-		if(len==1&&B[0]=='0'){
+		if(len==1&&B[0]=='0'&&D==0){
 			printf("%d\n",A);
 			continue;
 		}
