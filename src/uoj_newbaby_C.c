@@ -23,7 +23,6 @@ int main(int argc, char const *argv[])
 
 		scanf("%d",&D);
 		//printf("%d%s%d\n\n",A,B,D);
-
 		int len=strlen(B);
 		printf("%d",A);
 		if(len>D){
