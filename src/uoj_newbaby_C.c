@@ -29,19 +29,25 @@ int main(int argc, char const *argv[])
 			printf("%d\n",A);
 			continue;
 		}
-		printf("%d",A);
+		
 		if(len>D){
 			int sub=len-D;
 			int i;
+
+			printf("%d",A);
 			for (i = 0; i < D; ++i)
 				printf("%c",B[i]);
 			printf(".");
 			for (int j = 0; j < sub; ++j)
 				printf("%c",B[D+j]);
 		}else if(len==D){
+			if(A!=0)
+			printf("%d",A);
 			for (int i = 0; i < D; ++i)
 				printf("%c",B[i]);
 		}else{
+			if(A!=0)
+			printf("%d",A);
 			int sub=D-len;
 			int i;
 			for (i = 0; i < len; ++i)
