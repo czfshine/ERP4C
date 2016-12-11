@@ -9,7 +9,7 @@ void sort(){
 int main(int argc, char const *argv[])
 {
 	int n,m;
-	a=1,b=2,c=3;
+	a=5,b=2,c=3;
 	printf("%d %d %d",a,b,c);
 	sort();
 	printf("%d %d %d",a,b,c);
