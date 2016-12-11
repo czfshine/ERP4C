@@ -1,6 +1,7 @@
 #include "stdio.h"
 #include <stdlib.h>
 #define min(x,y) x<y?x:y
+/*
 int main(int argc, char const *argv[])
 {
 	long long  a,n,flag=0;
@@ -23,5 +24,24 @@ int main(int argc, char const *argv[])
 
 	}
 	if(!flag) printf("N0");
+	return 0;
+}*/
+int main(int argc, char const *argv[])
+{int n;
+	scnaf("%d",&n);
+	if(n>=5){
+	if(n%2==0){
+		printf("%d %d",n*n/4+1,n*n/4-1);
+	}else{
+		printf("%d %d",n*n/2+1,n*n/2-1);
+	}}
+	else{
+		if(n==4||n==2||n==1){
+			printf("NO");
+		}else
+		{
+			printf("4 5");
+		}
+	}
 	return 0;
 }
