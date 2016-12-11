@@ -7,8 +7,8 @@ int main(int argc, char const *argv[])
 	a=a*a;
 	printf("1");
 	for (int i =a%2; i < a; i+=2)
-	{printf("1");
-a%i;
+	{a%i;printf("1");
+
 		if(a%i==0){
 			printf("1");
 			int c=(i+a/i)/2;
