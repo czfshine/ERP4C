@@ -8,23 +8,19 @@ void display()
 int main() 
 { 
 	int x;
-	int i ;
+	int i;
 	scanf("%d",&x);
 	for (i= 0; i < 15; ++i)
 	{
 		if(x<=a[i]){
-			
 			for (int j = 14; j >=i; --j)
-			{
 				a[j+1]=a[j];
-			}
 			a[i]=x;
 			break;
 		}
 	}
-	if(i==15){
+	if(i==15)
 		a[15]=x;
-	}
     display(); 
     return 0; 
 }
