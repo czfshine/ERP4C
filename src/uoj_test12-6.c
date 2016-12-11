@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include "stdlib.h"
 int main(int argc, char const *argv[])
 {
 	int n;
@@ -9,7 +10,7 @@ int main(int argc, char const *argv[])
 	{
 		for (int i = 0; i < abs(j); ++i)
 		{
-			printf("*")；
+			printf("*");
 		}
 		for (int i = 0; i < abs(k+j); ++i)
 		{
