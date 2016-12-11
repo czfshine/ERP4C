@@ -10,9 +10,6 @@ int main(int argc, char const *argv[])
 {
 	int n,m;
 	a=5,b=2,c=3;
-	printf("%d %d %d",a,b,c);
-	sort();
-	printf("%d %d %d",a,b,c);
 	scanf("%d%d",&n,&m);
 	
 	a=b=c=n;
