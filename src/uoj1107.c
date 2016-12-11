@@ -6,10 +6,9 @@ main(int argc, char const *argv[])
 	char *s1,*s2;
 
 	int i=0;
-	FILE * infile,*outfile;
+	FILE * infile;
 
 	infile=fopen("case1.in","r");
-	outfile=fopen("answer.txt","w");
 
 	while(fgets(data[i],12,infile)!=NULL){
 		i++;
@@ -32,11 +31,9 @@ main(int argc, char const *argv[])
 
 	for (int j = 0; j < i; ++j)
 	{
-		//printf("%s1",data[j]);
-		fputs(data[j],outfile);
+		printf("%s1",data[j]);
+		//fputs(data[j],outfile);
 	}
-	fputs("\n",outfile);
 	fclose(infile);
-	fclose(outfile);
 
 }
