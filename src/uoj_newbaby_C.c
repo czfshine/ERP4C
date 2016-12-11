@@ -39,6 +39,24 @@ int main(int argc, char const *argv[])
 			{
 				printf("%c",B[D+j]);
 			}
+		}else if(len==D){
+			printf("%d",A);
+			for (int i = 0; i < D; ++i)
+			{
+				printf("%c",B[i]);
+			}
+		}else{
+			int sub=D-len;
+			printf("%d",A);
+			int i;
+			for (i = 0; i < len; ++i)
+			{
+				printf("%c",B[i]);
+			}
+			for (int j = 0; j < sub; ++j)
+			{
+				printf("0");
+			}
 		}
 	}
 	return 0;
