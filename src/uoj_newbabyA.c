@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
 	for (int i =a%2; i < a; i+=2)
 	{a%i;printf("1");
 
-		if(a%i==0){
+		if((a%i)==0){
 			printf("1");
 			int c=(i+a/i)/2;
 			int b=abs((i-a/i)/2);
@@ -19,6 +19,5 @@ int main(int argc, char const *argv[])
 		}
 
 	}
-printf("1");
 	return 0;
 }
