@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 			int b=abs((i-a/i)/2);
 			if(b*b+a==c*c&& b!=0)
 				if(n<b&&n<c){
-					printf("%d %d\n",b,c);
+					if(flag==0) printf("%d %d\n",b,c);
 					flag=1;
 				}
 		}
