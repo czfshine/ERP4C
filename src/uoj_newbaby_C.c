@@ -20,8 +20,8 @@ int main(int argc, char const *argv[])
 			B[cur++]=ch;
 		B[cur]='\0';
 
-		scnaf("%d",&D);
-		//printf("%d%s%d",A,B,D);
+		scanf("%d",&D);
+		printf("%d%s%d",A,B,D);
 	}
 	return 0;
 }
