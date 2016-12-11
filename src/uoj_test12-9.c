@@ -1,10 +1,10 @@
 #include "stdio.h"
 int main(int argc, char const *argv[])
 {
-	int x,y,r;
-	scanf("%d%d%d",&x,&y,&r);
+	float x,y,r;
+	scanf("%f%f%f",&x,&y,&r);
 
-	int m=x<y?x:y;
+	float m=x<y?x:y;
 	if(m>=r*2)
 		printf("Y");
 	else
