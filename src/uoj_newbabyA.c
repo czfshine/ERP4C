@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
 	if(n%2==0){
 		printf("%d %d",n*n/4-1,n*n/4+1);
 	}else{
-		printf("%d %d",n*n/2-1,n*n/2+1);
+		printf("%d %d",n*n/2,n*n/2+1);
 	}}
 	else{
 		if(n==4||n==2||n==1){
