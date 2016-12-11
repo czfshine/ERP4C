@@ -23,7 +23,7 @@ int main()
 			break;
 		}
 	}
-	if(!i<15){
+	if(i==15){
 		a[15]=x;
 	}
     display(); 
