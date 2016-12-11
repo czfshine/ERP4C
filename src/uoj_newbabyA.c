@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
 }*/
 int main(int argc, char const *argv[])
 {int n;
-	scnaf("%d",&n);
+	scanf("%d",&n);
 	if(n>=5){
 	if(n%2==0){
 		printf("%d %d",n*n/4+1,n*n/4-1);
