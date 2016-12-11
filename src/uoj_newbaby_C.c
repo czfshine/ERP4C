@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
 		B[cur]='\0';
 
 		scanf("%d",&D);
-		printf("%d%s%d\n",A,B,D);
+		printf("%d%s%d\n\n",A,B,D);
 
 		int len=strlen(B);
 
