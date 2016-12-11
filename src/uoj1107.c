@@ -31,7 +31,7 @@ main(int argc, char const *argv[])
 
 	for (int j = 0; j < i; ++j)
 	{
-		printf("%s1",data[j]);
+		printf("%s",data[j]);
 		//fputs(data[j],outfile);
 	}
 	fclose(infile);
