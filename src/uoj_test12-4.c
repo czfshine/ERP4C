@@ -8,8 +8,9 @@ void display()
 int main() 
 { 
 	int x;
+	int i ;
 	scanf("%d",&x);
-	for (int i = 0; i < 15; ++i)
+	for (i= 0; i < 15; ++i)
 	{
 		if(x>=a[i]){
 			
