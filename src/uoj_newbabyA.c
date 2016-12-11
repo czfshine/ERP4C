@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
 	scanf("%d",&a);
 	a=a*a;
 	printf("1");
-	for (int i =a%2; i < a; i+=2)
+	for (int i =a%2?1:2; i < a; i+=2)
 	{a%i;printf("1");
 
 		if((a%i)==0){
