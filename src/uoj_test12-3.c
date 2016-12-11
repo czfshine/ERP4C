@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 	{
 		sum2*=i;
 	}
-	printf("%d %d ",sum,sum2);
+	printf("%d %d ",sum,n);
 	printf("%d",sum/sum2);
 	return 0;
 }
