@@ -20,6 +20,7 @@ int main(int argc, char const *argv[])
 				a=b-c+1;
 			sort();
 		}
+		printf("%d%d%d",a,b,c);
 		printf("%d\n",count);
 	}
 	return 0;
