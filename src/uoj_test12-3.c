@@ -4,6 +4,7 @@ long long f(int n){
 	if(n==1)return 1;
 	return f(n-1)*n;
 }
+
 int main(int argc, char const *argv[])
 {
 	int n,m;
