@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
 	long long  a,n,flag=0;
 	scanf("%lld",&n);
 	a=n*n;
-	for (long long  i =a%2?1:2; i < a; i+=2)
+	for (long long  i =1; i < a; i++)
 	{
 
 		if((a%i)==0){
