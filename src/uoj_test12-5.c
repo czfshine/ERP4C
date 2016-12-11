@@ -12,6 +12,11 @@ char lucky(int n){
 }
 int main(int argc, char const *argv[])
 {
-	lucky(12345);
+	for (int i = 0; i < 1000; ++i)
+	{
+		if(lucky(i)){
+			printf("%d\n",i);
+		}
+	}
 	return 0;
 }
