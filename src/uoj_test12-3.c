@@ -1,19 +1,16 @@
-#include "stdio.h"
-int main(int argc, char const *argv[])
+#include <stdio.h>
+float f(int n)
 {
-	int n,m;
+	if(n==0 || n==1)
+		return 1;
+	else if(n>1)
+		return f(n-1)*n;
+	return 1;
+}
+void main()
+{
+	int m,n,s;
 	scanf("%d%d",&m,&n);
-	int sum=1;
-	for (int i = m; i > n; --i)
-	{
-		sum*=i;
-	}
-	int sum2=1;
-	for (int i = 1; i <= n; ++i)
-	{
-		sum2*=i;
-	}
-	printf("%d %d ",sum,n);
-	printf("%d",sum/sum2);
-	return 0;
+	s=fun(m)/(fun(n)*fun(m-n));
+	printf("%d\n",s);
 }
