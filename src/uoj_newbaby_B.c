@@ -15,6 +15,7 @@ int main(int argc, char const *argv[])
 		count=0;
 		a=b=c=n;
 		while(a!=m){
+			printf("%d %d %d\n",a,b,c);
 			count++;
 			if(m+b>c&&m+c>b)
 				a=m;
