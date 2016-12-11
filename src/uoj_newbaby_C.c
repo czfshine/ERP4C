@@ -53,7 +53,7 @@ int main(int argc, char const *argv[])
 			{
 				printf("%c",B[i]);
 			}
-			for (int j = 0; j < sub-1; ++j)
+			for (int j = 0; j < sub; ++j)
 			{
 				printf("0");
 			}
