@@ -44,6 +44,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 */
+#define min(x,y) (x)<(y)?(x):(y)
 int a,b,c;
 
 void sort(){
