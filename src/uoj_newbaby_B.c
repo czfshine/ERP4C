@@ -9,18 +9,15 @@ void sort(){
 int main(int argc, char const *argv[])
 {
 	int n,m,count=0;
-	//scanf("%d%d",&n,&m);
 	while(scanf("%d%d",&n,&m)>0){
 		count=0;
 		a=b=c=n;
 		while(a!=m){
 			count++;
-			//printf("%d %d %d\n",a,b,c);
-			if(m+b>c&&m+c>b){
+			if(m+b>c&&m+c>b)
 				a=m;
-			}else{
+			else
 				a=b-c+1;
-			}
 			sort();
 		}
 		printf("%d",count);
