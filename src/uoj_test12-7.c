@@ -16,6 +16,6 @@ int main(int argc, char const *argv[])
 			m=min(m,fabs(data[i]-data[j]));
 		}
 	}
-	printf("%f",m);
+	printf("%.2f",m);
 	return 0;
 }
