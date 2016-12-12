@@ -20,7 +20,7 @@ void f(int n,char * str){
 		}
 
 	}
-	if(!flag) printf("N0");
+	if(!flag) sprintf(str,"N0");
 }
 
 void s (int n,char * str){
