@@ -1,5 +1,5 @@
 #include "stdio.h"
-
+#include "stdlib.h"
 void f(int n){
 	long long  a,flag=0;
 	a=n*n;
