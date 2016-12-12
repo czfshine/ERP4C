@@ -27,19 +27,25 @@ int main(int argc, char const *argv[])
 	return 0;
 }*/
 int main(int argc, char const *argv[])
-{int n;
+{	int n;
 	scanf("%d",&n);
 	if(n>=5)
-	if(n%2==0)
-		printf("%d %d",n*n/4-1,n*n/4+1);
-	else
-		printf("%d %d",n*n/2,n*n/2+1);
-	
+		if(n%2==0)
+			printf("%d %d",n*n/4-1,n*n/4+1);
+		else
+			printf("%d %d",n*n/2,n*n/2+1);
 	else
 		if(n==4||n==2||n==1)
 			printf("NO");
 		else
 			printf("4 5");
-	
+
+	if(n==4||n==2||n==1)
+		printf("NO");
+	else
+		if(n%2==0)
+			printf("%d %d",n*n/4-1,n*n/4+1);
+		else
+			printf("%d %d",n*n/2,n*n/2+1);
 	return 0;
 }
