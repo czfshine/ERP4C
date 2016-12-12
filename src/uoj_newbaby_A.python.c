@@ -1,6 +1,6 @@
 //23333333333333333333
 #include "stdio.h"
-#define or ||
+
 int main(int argc, char const *argv[])
 {	int n;
 	scanf("%d",&n);
