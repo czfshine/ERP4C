@@ -6,9 +6,7 @@ void f(int n,char * str){
 	a=n*n;
 	for (long long  i =1; i < a; i++)
 	{
-
-		if((a%i)==0){
-			//printf("%d %d\n",a,i);
+		if((a%i)==0){//把n*n分解成a*i
 			long long c=(i+a/i)/2;
 			long long b=abs((i-a/i)/2);
 			if(b*b+a==c*c&& b!=0)
