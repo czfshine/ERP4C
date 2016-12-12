@@ -46,9 +46,9 @@ int main(int argc, char const *argv[])
 		//printf("----%d----",i);
 		f(i,s1);
 //printf("\n");
-		s(i.s2);
+		s(i,s2);
 		//、、printf("\n");
-		if(strcmp(s1,s2)!==0)
+		if(strcmp(s1,s2)!=0)
 				printf("%d",i);
 	}
 	return 0;
