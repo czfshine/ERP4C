@@ -12,6 +12,16 @@ int main(int argc, char const *argv[])
 
 		if((a%i)==0){
 			//printf("%d %d\n",a,i);
+			/*
+			n*n=c*c-b*b=(c-b)*(c+b)=a*i
+
+			a=c-b
+			i=c+b
+
+			c=(a+i)/2
+			b=(a-i)/2
+			*/
+			/*
 			long long c=(i+a/i)/2;
 			long long b=abs((i-a/i)/2);
 			if(b*b+a==c*c&& b!=0)
@@ -51,9 +61,6 @@ int main(int argc, char const *argv[])
 			printf("%d %d",n*n/2,n*n/2+1);
 	*/
 
-	if(n==4||n==2||n==1)
-		printf("NO");
-	else
-		printf("%d %d",(n%2==0)?(n*n/4-1):(n*n/2),(n%2==0)?(n*n/4+1):(n*n/2+1));
+	printf((n==4||n==2||n==1)?"%s":"%d %d",(n==4||n==2||n==1)?"NO":((n%2==0)?(n*n/4-1):(n*n/2),(n%2==0)?(n*n/4+1):(n*n/2+1)));
 	return 0;
 }
