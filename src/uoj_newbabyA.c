@@ -60,7 +60,10 @@ int main(int argc, char const *argv[])
 		else
 			printf("%d %d",n*n/2,n*n/2+1);
 	*/
-
-	printf((n==4||n==2||n==1)?"%s":"%d %d",(n==4||n==2||n==1)?"NO":((n%2==0)?(n*n/4-1):(n*n/2),(n%2==0)?(n*n/4+1):(n*n/2+1)));
+	//printf((n==4||n==2||n==1)?"%s":"%d %d",(n==4||n==2||n==1)?"NO":((n%2==0)?(n*n/4-1):(n*n/2),(n%2==0)?(n*n/4+1):(n*n/2+1)));
+	if(n==4||n==2||n==1)
+		printf("NO");
+	else
+		printf("%d %d",(n%2==0)?(n*n/4-1):(n*n/2),(n%2==0)?(n*n/4+1):(n*n/2+1));
 	return 0;
 }
