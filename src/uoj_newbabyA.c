@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
 		}
 
 	}
-	if(!flag) printf("N0");
+	if(!flag) printf("N0");//FUCK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	return 0;
 }*/
 int main(int argc, char const *argv[])
