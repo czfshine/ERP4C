@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <cstring>
+#include <queue>
 using namespace std;
 
 map <string ,int> dict;
