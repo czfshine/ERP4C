@@ -39,9 +39,18 @@ struct{
 	void push(string str){
 		if(dict[str]>mincount){
 			mincount=dict[str];
-		
-			
-			
+			if(count<5){
+				node t;
+				t.s=str;
+				t.count=dict[str];
+				pq.push(t);
+			}else{
+				pq.pop();
+				node t;
+				t.s=str;
+				t.count=dict[str];
+				pq.push(t);
+			}
 		}
 	}
 }listt;
