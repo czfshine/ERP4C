@@ -10,9 +10,9 @@ main()
         { 
 
             if(j>i) 
-                a[i][j] = 0;
+                a[i][j] = i*10+j;
             else 
-                a[i][j] = 1;
+                a[i][j] = i*10+j;
 
 
         } 
