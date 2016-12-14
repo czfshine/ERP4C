@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 			sum+=4*N-(2*temp-1)*4;
 			temp++;
 		}
-		printf("%lld",sum);
+		printf("%lld,%d",sum,temp);
 
 		
 	}
