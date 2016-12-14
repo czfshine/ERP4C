@@ -53,6 +53,7 @@ string getword(){
 	return s;
 }
 void printdict(){
+	map <string, int>::iterator dit;
 	 for ( dit = dict.begin( ); dit != dict.end( ); dit++ ){
 	 	coout<<dit<<endl;
 	 }
