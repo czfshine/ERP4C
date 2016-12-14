@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 		while(4*N*temp-temp*temp >a){
 			temp--;
 		}
-		printf("%d",temp);
+		printf("%lld",temp+1);
 	}
 	return 0;
 }
