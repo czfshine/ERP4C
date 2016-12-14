@@ -20,6 +20,11 @@ int main(int argc, char const *argv[])
 			temp++;
 		}
 		printf("%lld,%d",sum,N-(temp-2)*2);
+		if(sum-a<2){
+			int dx=temp-1;
+			int dy=temp;
+			printf("%d %d",dx,dy);
+		}
 		printf("%lld",sum-a);
 		
 	}
