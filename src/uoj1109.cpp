@@ -37,6 +37,7 @@ int main(int argc, char const *argv[])
 {
 	#ifndef LOCAL
 	fp=fopen("case1.in","r");
+	printf("used LOCAL");
 	#endif
 	return 0;
 }
