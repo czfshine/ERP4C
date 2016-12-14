@@ -12,8 +12,8 @@ void rev(char *str ,int len){
 }
 int main(int argc, char const *argv[])
 {
-	char data[101]="123";
-	rev(data,3);
+	char data[101]="12g3";
+	rev(data,4);
 	printf("%s",data);
 	int sum;
 
