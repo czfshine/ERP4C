@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
 		long long sum=0,temp=1;
 		long long t=N/2+1;
 		while(sum<a&& temp<=t){
-			//printf("%lld",sum);
+			printf("%lld\n",sum);
 			sum+=4*N-(2*temp-1)*4;
 			temp++;
 		}
