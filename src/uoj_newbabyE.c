@@ -9,8 +9,8 @@ int main(int argc, char const *argv[])
 		long long N,a;
 		scanf("%lld%lld",&N,&a);
 		long long sum=0,temp=1;
-
-		while(sum<=a){
+		long long t=sum/2+1;
+		while(sum<a&& temp<t){
 			printf("%lld",sum);
 			sum+=4*N-(2*temp-1)*4;
 			temp++;
