@@ -52,6 +52,11 @@ string getword(){
 	transform(s.begin(), s.end(), s.begin(), (int (*)(int))tolower);  
 	return s;
 }
+void printdict(){
+	 for ( dit = dict.begin( ); dit != dict.end( ); dit++ ){
+	 	coout<<dit<<endl;
+	 }
+}
 int main(int argc, char const *argv[])
 {
 	#ifndef LOCAL
@@ -61,9 +66,11 @@ int main(int argc, char const *argv[])
 	#endif
 	string word;
 	while(!end){
-			word=getword();
+		word=getword();
 		if(!dict.count(word)) dict[word]=0;
-	cout<<word<<endl;}
+		cout<<word<<endl;
+	}
+	printdict();
 
 	return 0;
 }
