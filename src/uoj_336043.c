@@ -15,7 +15,7 @@ main()
                     a[i][j]=9;
 
 */ if(abs(j-m)<abs(i-m)+1) 
-                a[i][j] = m+2-abs(i-m); 
+                a[i][j] = m+2-abs(i-m+1); 
             else 
                 a[i][j] = m+2-abs(j-m+1); 
 
