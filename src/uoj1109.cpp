@@ -45,7 +45,7 @@ struct{
 				t.count=dict[str];
 				pq.push(t);
 			}else{
-				pq.pop();
+				pq.top();
 				node t;
 				t.s=str;
 				t.count=dict[str];
@@ -58,8 +58,8 @@ struct{
 		for (int i = 0; i < 5; ++i)
 		{
 			node t;
-			t=pq.pop();
-			cout<<t.string<<endl;
+			t=pq.top();
+			cout<<t.s<<endl;
 		}
 	}
 }listt;
