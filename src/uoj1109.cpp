@@ -6,9 +6,28 @@
 using namespace std;
 
 map <string ,int> Dict;
+FILE *fp;
+//debug
+fp=stdio;
+string getword(){
+	char ch;
+	string s;
+	while((ch=getc(fp))!=EOF){
+		if(ch=='-'){
 
-void getword(string &s){
+			if(getc(fp)=='\n'){
+				continue;
+			}else{
+				fseek(fp,ftell(fp)-1);
+				break;
+			}
+		}
 
+		if(ch>'A'&&ch<'Z' || ch>'a'&&ch<'z')
+			s.push_back(ch);
+		else
+			break;
+	}
 }
 int main(int argc, char const *argv[])
 {
