@@ -14,6 +14,7 @@ bool end=false;
 #else
 FILE *fp;
 #endif
+
 char last=0;
 string getword(){
 	char ch;
