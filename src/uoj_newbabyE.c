@@ -84,7 +84,7 @@ if(yes){
 			continue;
 		}
 		//printf("%lld",sum-a);
-		
+		printf("\n");
 	}
 	return 0;
 }
