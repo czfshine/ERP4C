@@ -1,5 +1,6 @@
 #include "stdio.h"
 #include <math.h>
+#define min(x,y) x<y?x:y
 double dist(double x1,double y1,double x2,double y2){
 
 	return (sqrt(fabs((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1))));
