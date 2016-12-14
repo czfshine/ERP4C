@@ -25,6 +25,6 @@ int main(int argc, char const *argv[])
 			m=min(m,dist(x[i],y[i],x[j],y[j]));
 		}
 	}
-	printf("%.2lf",m);
+	printf("%.3lf",m);
 	return 0;
 }
