@@ -18,7 +18,7 @@ string getword(){
 			if(getc(fp)=='\n'){
 				continue;
 			}else{
-				fseek(fp,ftell(fp)-1);
+				fseek(fp,ftell(fp)-1,SEEK_CUR);
 				break;
 			}
 		}
