@@ -9,7 +9,9 @@ main()
         for(j=0; j<n; j++) 
         { 
 
-                a[i][j] = i-j;
+                if(abs(j-m)<i)
+                    a[i][j]=0;
+                else a[i][j]=1;
 
 
         } 
