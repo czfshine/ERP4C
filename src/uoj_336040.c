@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 			{
 				printf(" ");
 			}
-			printf("%d",n-abs(i)+1);
+			if(abs(i)!=n) printf("%d",n-abs(i)+1);
 			printf("\n");
 	}
 	return 0;
