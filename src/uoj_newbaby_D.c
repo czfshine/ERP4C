@@ -36,7 +36,7 @@ int main(int argc, char const *argv[])
 		for (int k = 3; k < (n-i)*2-2 ; ++k)
 			printf(" ");
 			if(i!=n-2)printf("*");
-			for (int j = 0; j < i+1; ++j)
+			for (int j = 0; j < i+2; ++j)
 			printf(" ");
 
 		for (int j = 0; j < i+1; ++j)
