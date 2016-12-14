@@ -19,11 +19,16 @@ FILE *fp;
 
 char last=0;
 char ch;
-
 struct node{
 	string s;
 	int count;
 };
+struct cmp{
+	bool operator() (const node a, const node b) const { 
+		return a.count < b.count;
+	}
+};
+
 struct{
 	int mincount;
 	string min;
