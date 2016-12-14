@@ -47,6 +47,7 @@ struct{
 				count++;
 			}else{
 				pq.top();
+				pq.pop();
 				node t;
 				t.s=str;
 				t.count=dict[str];
@@ -60,6 +61,7 @@ struct{
 		{
 			node t;
 			t=pq.top();
+			pq.pop();
 			cout<<t.s<<"=is="<<t.count<<endl;
 		}
 	}
