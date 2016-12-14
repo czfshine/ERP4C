@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 
-map<Set,int> IDcache;
+map <string ,int> IDcache;
 int main(int argc, char const *argv[])
 {
 	/* code */
