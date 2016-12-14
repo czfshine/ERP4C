@@ -13,8 +13,8 @@ void rev(char *str ,int len){
 int main(int argc, char const *argv[])
 {
 	char data[101]="123";
-	rev(data);
-	printf("%s",data,3);
+	rev(data,3);
+	printf("%s",data);
 	int sum;
 
 	return 0;
