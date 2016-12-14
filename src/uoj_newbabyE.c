@@ -5,7 +5,7 @@ int main(int argc, char const *argv[])
 	int T;
 	scanf("%d",&T);
 	for (int kkk = 0; kkk < T; ++kkk)
-	{
+	{if(kkk)printf("\n");
 		long long N,a;
 		scanf("%lld%lld",&N,&a);
 		if(N*N==a&&N%2==1){
@@ -84,7 +84,7 @@ if(yes){
 			continue;
 		}
 		//printf("%lld",sum-a);
-		printf("\n");
+		
 	}
 	return 0;
 }
