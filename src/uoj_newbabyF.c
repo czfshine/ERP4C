@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
 					data[j]=1;
 
 	char str[31];
-	find("12345678",6);
+	find("12345678",8);
 
 	return 0;
 }
