@@ -44,6 +44,7 @@ struct{
 				t.s=str;
 				t.count=dict[str];
 				pq.push(t);
+				count++;
 			}else{
 				pq.top();
 				node t;
