@@ -20,12 +20,12 @@ int main(int argc, char const *argv[])
 			}
 
 		if(abs(i)!=n) printf("*");
-		if(i)
+
 		for (int j = 0; j < abs(i)*2-1; ++j)
 		{
 			printf(" ");
 		}
-		printf("*");
+		if(i) printf("*");
 		printf("\n");
 	}
 	return 0;
