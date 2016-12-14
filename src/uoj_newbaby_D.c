@@ -16,8 +16,10 @@ int main(int argc, char const *argv[])
 		if(abs(i)!=n)
 			for (int j= 0; j < abs(i)-1; ++j)
 			{
-				/* code */
+				printf("*");
 			}
+
+		printf("*");
 		printf("\n");
 	}
 	return 0;
