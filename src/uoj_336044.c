@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
 
 	char data[101]="12g3",ch;
 	int sum=0,n;
-	while(){
+	while(1){
 		int cur=0;
 		while((ch=getchar())!=' ')
 		{	if(ch=='\n') break;
