@@ -18,6 +18,7 @@ string getword(){
 	char ch;
 	string s;
 	while((ch=getc(fp))!=EOF){
+		printf("is :%c\n".ch);
 		if(ch=='-'){
 
 			if(getc(fp)=='\n'){
