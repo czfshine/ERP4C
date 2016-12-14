@@ -32,6 +32,7 @@ string getword(){
 		else
 			break;
 	}
+	return s;
 }
 int main(int argc, char const *argv[])
 {
