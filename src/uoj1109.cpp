@@ -6,9 +6,16 @@
 using namespace std;
 
 map <string ,int> Dict;
-FILE *fp;
 //debug
-fp=stdin;
+#ifdef LOCAL
+#define fp stdin 
+#else
+FILE *fp;
+fp=fopen("case1.in","r");
+#endif
+
+
+
 string getword(){
 	char ch;
 	string s;
