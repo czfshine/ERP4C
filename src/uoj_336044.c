@@ -17,6 +17,7 @@ int main(int argc, char const *argv[])
 	while(scanf("%s",data)>0){
 		rev(data,strlen(data)-1);
 		sscanf(data,"%d",&n);
+		printf("%s",data);
 		sum+=n;
 	}
 	printf("%d",sum);
