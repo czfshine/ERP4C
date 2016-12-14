@@ -23,6 +23,7 @@ int main(int argc, char const *argv[])
 		int dx=temp-1;
 		int dy=temp-1;
 		if(sum-a<)
+			1+1;
 
 		//printf("%lld",sum-a);
 		
