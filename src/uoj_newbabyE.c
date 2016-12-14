@@ -8,8 +8,10 @@ int main(int argc, char const *argv[])
 	{
 		long long N,a;
 		scanf("%lld%lld",&N,&a);
-		if(N*N==a)
+		if(N*N==a){
 			printf("%lld %lld",N/2+1,N/2+1);
+			continue;
+		}
 		long long sum=0,temp=1;
 		long long t=N/2+1;
 		while(sum<=a&& temp<=t){
