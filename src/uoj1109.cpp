@@ -27,7 +27,7 @@ string getword(){
 		printf("is :%c\n",ch);
 		if(ch=='-'){
 
-			if(getc(fp)=='\n'){
+			if((ch=getc(fp))=='\n'){
 				continue;
 			}else{
 				last=ch;
