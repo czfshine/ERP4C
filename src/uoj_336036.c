@@ -15,6 +15,6 @@ int main(int argc, char const *argv[])
 	if(p<d*r ||p/(p-d*r)<1)
 		printf("God\n");
 	else
-		printf("%.1lf",log(p/(p-d*r))/log(1+r));
+		printf("%.1f",log(p/(p-d*r))/log(1+r));
 	return 0;
 }
