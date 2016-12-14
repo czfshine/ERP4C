@@ -8,12 +8,10 @@ int main(int argc, char const *argv[])
 	{
 		long long N,a;
 		scanf("%lld%lld",&N,&a);
-		long long temp;
-		temp=a/(4*N)+2;
+		long long temp=0;
 
-		while(4*N*temp-temp*temp >a){
-			printf("%lld\n",4*N*temp-temp*temp);
-			temp--;
+		while(4*N*temp-temp*temp <a){
+			temp++;
 		}
 		printf("%lld",temp+1);
 	}
