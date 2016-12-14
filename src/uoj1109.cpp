@@ -37,16 +37,18 @@ struct{
 	priority_queue<node,vector<node>,cmp>pq;
 
 	void push(string str){
-		if(dict[str]>mincount){
-			mincount=dict[str];
-			cout<<str<<endl;
-			if(count<5){
+		if(count<5){
 				node t;
 				t.s=str;
 				t.count=dict[str];
 				pq.push(t);
 				count++;
+				mincount=min(dict[str],mincount);
 			}else{
+		if(dict[str]>mincount){
+			mincount=dict[str];
+			cout<<str<<endl;
+			
 				pq.top();
 				pq.pop();
 				node t;
