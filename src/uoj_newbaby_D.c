@@ -25,7 +25,9 @@ int main(int argc, char const *argv[])
 		{
 			printf(" ");
 		}
-		if(i) printf("*");if(abs(i)!=n)
+		if(i) printf("*");
+
+if(abs(i)!=n)
 			for (int j= 0; j < (n-abs(i))*2-1; ++j)
 			{
 				printf(" ");
@@ -33,13 +35,6 @@ int main(int argc, char const *argv[])
 
 		if(abs(i)!=n) printf("*");
 
-		if(abs(i)!=n)
-			for (int j= 0; j < (n-abs(i))*2-1; ++j)
-			{
-				printf(" ");
-			}
-
-		if(abs(i)!=n) printf("*");
 		printf("\n");
 	}
 	return 0;
