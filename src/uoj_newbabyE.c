@@ -25,6 +25,7 @@ int main(int argc, char const *argv[])
 			int dy=temp;
 			printf("%d %d",dx,dy+(sum-a));
 		}
+		
 		//printf("%lld",sum-a);
 		
 	}
