@@ -31,9 +31,10 @@ int main(int argc, char const *argv[])
 		data[cur]='\0';
 		rev(data,strlen(data));
 		sscanf(data,"%d",&n);
-		printf("%s ",data);
-		if(ch=='\n') break;
+		//printf("%s ",data);
 		sum+=n;
+		if(ch=='\n') break;
+		
 	}
 	printf("%d",sum);
 	return 0;
