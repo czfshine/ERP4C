@@ -59,7 +59,7 @@ struct{
 		{
 			node t;
 			t=pq.top();
-			cout<<t.s<<endl;
+			cout<<t.s"="<<t.count<<endl;
 		}
 	}
 }listt;
