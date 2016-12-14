@@ -13,9 +13,6 @@ map <string ,int> Dict;
 FILE *fp;
 
 #endif
-
-
-
 string getword(){
 	char ch;
 	string s;
