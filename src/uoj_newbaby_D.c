@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
 			}
 
 		if(abs(i)!=n) printf("*");
-		for (int j = 0; j < abs(i); ++j)
+		for (int j = 0; j < abs(i)*2-1; ++j)
 		{
 			printf(" ");
 		}
