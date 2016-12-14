@@ -11,9 +11,10 @@ int main(int argc, char const *argv[])
 		long long temp=0;
 
 		while(4*N*temp-temp*temp <a){
+			printf("%lld",4*N*temp-temp*temp);
 			temp++;
 		}
-		printf("%lld",temp+1);
+		
 	}
 	return 0;
 }
