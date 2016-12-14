@@ -12,8 +12,9 @@ int find(char * str,int len){
 		s[i]=str[i];
 		sscanf(s,"%d",&a);
 		find(str+i,len-1);
-		if(a>0) printf("%d\n",a);
+		if(a>0) printf("%d",a);
 	}
+	printf("\n");
 	
 }
 int main(int argc, char const *argv[])
