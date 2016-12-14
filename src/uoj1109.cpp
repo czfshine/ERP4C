@@ -31,7 +31,6 @@ struct cmp{
 
 struct{
 	int mincount;
-	string min;
 	char count;
 
 	priority_queue<node,vector<node>,cmp>pq;
