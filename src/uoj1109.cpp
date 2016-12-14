@@ -53,6 +53,15 @@ struct{
 			}
 		}
 	}
+
+	void print(){
+		for (int i = 0; i < 5; ++i)
+		{
+			node t;
+			t=pq.pop();
+			cout<<t.string<<endl;
+		}
+	}
 }listt;
 string getword(){
 	
