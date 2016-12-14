@@ -5,7 +5,7 @@ int main(int argc, char const *argv[])
 {
 	double d,p,r;
 
-	scanf("%lf%lf%lf",&d,&p,&r)
+	scanf("%lf%lf%lf",&d,&p,&r);
 
 	if(d==0)
 		printf("0.0\n");
