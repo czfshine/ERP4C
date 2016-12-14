@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
 				printf(" ");
 			}
 
-		printf("*");
+		if(abs(i)!=n) printf("*");
 		printf("\n");
 	}
 	return 0;
