@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
 			printf(" ");
 			printf("*");
 		for (int k = 3; k < (n-i)*2-2 ; ++k)
-			printf("*");
+			printf(" ");
 			printf("*");
 		printf("\n");
 	}
