@@ -3,7 +3,7 @@ char data [100000]={0};
 
 int find(char * str,int len){
 	char  s[31]={0};
-	int a;
+	int a=0;
 	if(len<=1){
 		printf("a");
 	}
