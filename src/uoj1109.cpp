@@ -39,6 +39,7 @@ struct{
 	void push(string str){
 		if(dict[str]>mincount){
 			mincount=dict[str];
+			cout<<str<<endl;
 			if(count<5){
 				node t;
 				t.s=str;
