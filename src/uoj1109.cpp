@@ -19,6 +19,34 @@ FILE *fp;
 
 char last=0;
 char ch;
+
+struct node{
+	string s;
+	int count;
+}
+struct{
+	int mincount;
+	string min;
+	char count;
+	set<string>sdata;
+
+	priority_queue<node,vector<node>,cmp>pq;
+
+	void push(string str){
+		if(dict[str]>mincount){
+			mincount=dict[str];
+			if(count<5)
+				sdata.insert(str);
+				min=str;
+				count++;
+			else{
+				sdata.erase(min);
+				sdata.insert(str);
+				min=str;
+			}
+		}
+	}
+}pq;
 string getword(){
 	
 	string s;
@@ -67,13 +95,14 @@ int main(int argc, char const *argv[])
 	printf("used LOCAL");
 	#endif
 	string word;
-	priority_queue< map<string,int> >pq;
+
 	while(!end){
 		word=getword();
 		if(!dict.count(word)) dict[word]=1;
 		else{
 			dict[word]++;
 		}
+
 		cout<<word<<endl;
 	}
 	printdict();
