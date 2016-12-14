@@ -39,7 +39,7 @@ struct{
 			
 		}
 	}
-};
+}listt;
 string getword(){
 	
 	string s;
