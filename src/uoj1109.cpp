@@ -92,6 +92,7 @@ void printdict(){
 	map <string, int>::iterator dit;
 	 for ( dit = dict.begin( ); dit != dict.end( ); dit++ ){
 	 	cout<<dit->first<<"="<<dit->second<<endl;
+	 	listt.push(dit->first);
 	 }
 }
 int main(int argc, char const *argv[])
@@ -103,6 +104,8 @@ int main(int argc, char const *argv[])
 	#endif
 	string word;
 
+	listt.count=0;
+	listt.mincount=0;
 	while(!end){
 		word=getword();
 		if(!dict.count(word)) dict[word]=1;
