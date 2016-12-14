@@ -66,7 +66,7 @@ int main(int argc, char const *argv[])
 	printf("used LOCAL");
 	#endif
 	string word;
-	priority_queue<map<string,int>>pq;
+	priority_queue< map<string,int> >pq;
 	while(!end){
 		word=getword();
 		if(!dict.count(word)) dict[word]=1;
