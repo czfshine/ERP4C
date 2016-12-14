@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
 		for (int k = 0; k < i*2+1-2 ; ++k)
 			printf(" ");
 			if(i!=0) printf("*");
-			for (int j = 0; j < i+2; ++j)
+			for (int j = 0; j < i; ++j)
 			printf(" ");
 
 
