@@ -19,12 +19,20 @@ void rev(char *str ,int len){
 }
 int main(int argc, char const *argv[])
 {
-	char data[101]="12g3";
+
+	char data[101]="12g3",ch;
 	int sum=0,n;
-	while(scanf("%s",data)>0){
+	while(){
+		int cur=0;
+		while((ch=getchar())!=' ')
+		{	if(ch=='\n') break;
+			data[cur++]=ch;
+		}
+		data[cur]='\0';
 		rev(data,strlen(data));
 		sscanf(data,"%d",&n);
 		printf("%s",data);
+		if(ch=='\n') break;
 		sum+=n;
 	}
 	printf("%d",sum);
