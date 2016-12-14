@@ -20,6 +20,5 @@ int main(int argc, char const *argv[])
 		sum+=n;
 	}
 	printf("%d",sum);
-
 	return 0;
 }
