@@ -10,7 +10,7 @@ main()
         { 
 
                 if(abs(j-m)<abs(i-m)+1)
-                    a[i][j]=abs(i-m);
+                    a[i][j]=n-abs(i-m);
                 else
                     a[i][j]=9;
 
