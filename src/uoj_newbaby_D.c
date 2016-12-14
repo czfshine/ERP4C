@@ -47,6 +47,7 @@ int main(int argc, char const *argv[])
 			if(i!=n-2)printf("*");
 			for (int j = 0; j < i+1; ++j)
 			printf(" ");
+		
 		printf("\n");
 	}
 	return 0;
