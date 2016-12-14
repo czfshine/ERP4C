@@ -4,6 +4,7 @@
 #include <map>
 #include <cstdlib>
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 map <string ,int> Dict;
@@ -16,15 +17,18 @@ FILE *fp;
 #endif
 
 char last=0;
+char ch;
 string getword(){
-	char ch;
+	
 	string s;
+
 	if (last){
 		s.push_back(last);
 		last=0;
 	}
+
 	while((ch=getc(fp))!=EOF){
-		printf("is :%c\n",ch);
+		//printf("is :%c\n",ch);
 		if(ch=='-'){
 
 			if((ch=getc(fp))=='\n'){
@@ -33,13 +37,19 @@ string getword(){
 				last=ch;
 				break;
 			}
+
 		}
+
 		if(ch>='A'&&ch<='Z' || ch>='a'&&ch<='z')
 			s.push_back(ch);
 		else
 			break;
+
 	}
+
 	if(ch==EOF) end=true;
+
+	transform(s.begin(), s.end(), s.begin(), (int (*)(int))tolower);  
 	return s;
 }
 int main(int argc, char const *argv[])
