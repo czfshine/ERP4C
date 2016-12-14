@@ -8,7 +8,9 @@ int main(int argc, char const *argv[])
 	{
 		for (int j = 1; j < n-i; ++j)
 			printf(" ");
-		for (int k = 0; k < i*2+1 ; ++k)
+		    printf("*");
+		for (int k = 0; k < i*2+1-2 ; ++k)
+			printf(" ");
 			printf("*");
 		printf("\n");
 	}
