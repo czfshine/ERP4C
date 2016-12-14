@@ -34,7 +34,6 @@ string getword(){
 				break;
 			}
 		}
-
 		if(ch>='A'&&ch<='Z' || ch>='a'&&ch<='z')
 			s.push_back(ch);
 		else
