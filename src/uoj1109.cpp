@@ -55,7 +55,7 @@ string getword(){
 void printdict(){
 	map <string, int>::iterator dit;
 	 for ( dit = dict.begin( ); dit != dict.end( ); dit++ ){
-	 	cout<<dit->first<<endl;
+	 	cout<<dit->first<<"="<<DIT->second<<endl;
 	 }
 }
 int main(int argc, char const *argv[])
