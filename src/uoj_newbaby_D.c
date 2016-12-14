@@ -18,6 +18,7 @@ int main(int argc, char const *argv[])
 			{
 				/* code */
 			}
+		printf("\n");
 	}
 	return 0;
 }
