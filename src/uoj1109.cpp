@@ -59,9 +59,12 @@ int main(int argc, char const *argv[])
 	#else
 	printf("used LOCAL");
 	#endif
+	string word;
+	while(!end){
+			word=getword();
+		if(!dict.count(word)) dict[word]=0;
+	printf("%s",word);}
 
-	while(!end)
-	cout << getword()<<endl;
 	return 0;
 }
 
