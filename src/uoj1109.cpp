@@ -126,6 +126,7 @@ int main(int argc, char const *argv[])
 	}
 	printdict();
 
+	listt.print();
 	return 0;
 }
 
