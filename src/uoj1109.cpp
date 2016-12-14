@@ -11,7 +11,6 @@ map <string ,int> Dict;
 #define fp stdin 
 #else
 FILE *fp;
-
 #endif
 string getword(){
 	char ch;
