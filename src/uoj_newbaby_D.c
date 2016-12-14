@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 		if(abs(i)!=n)
 			for (int j= 0; j < abs(i); ++j)
 			{
-				printf("*");
+				printf(" ");
 			}
 
 		printf("*");
