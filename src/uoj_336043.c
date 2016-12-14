@@ -9,7 +9,7 @@ main()
         for(j=0; j<n; j++) 
         { 
 
-                if(abs(j-m)<abs(i-m))
+                if(abs(j-m)<abs(i-m)+1)
                     a[i][j]=0;
                 else
                     a[i][j]=1;
