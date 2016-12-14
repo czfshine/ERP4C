@@ -69,6 +69,9 @@ int main(int argc, char const *argv[])
 	while(!end){
 		word=getword();
 		if(!dict.count(word)) dict[word]=0;
+		else{
+			dict[word]++;
+		}
 		cout<<word<<endl;
 	}
 	printdict();
