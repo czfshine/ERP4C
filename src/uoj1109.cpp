@@ -11,7 +11,7 @@ map <string ,int> Dict;
 #define fp stdin 
 #else
 FILE *fp;
-fp=fopen_s("case1.in","r");
+
 #endif
 
 
@@ -38,6 +38,8 @@ string getword(){
 }
 int main(int argc, char const *argv[])
 {
-	/* code */
+	#ifndef LOCAL
+	fp=fopen("case1.in","r");
+	#endif
 	return 0;
 }
