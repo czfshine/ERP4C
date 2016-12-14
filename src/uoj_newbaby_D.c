@@ -4,12 +4,20 @@ int main(int argc, char const *argv[])
 {
 	int n;
 	scanf("%d",&n);
-	for (int i = -n; i < n; ++i)
+	for (int i = -n; i <= n; ++i)
 	{
-		for (int i = 0; i < abs(n); ++i)
+		for (int j = 0; j < n-abs(i); ++j)
 		{
-			/* code */
+			printf(" ");
 		}
+
+		printf("*");
+
+		if(abs(i)!=n)
+			for (int j= 0; j < abs(i)-1; ++j)
+			{
+				/* code */
+			}
 	}
 	return 0;
 }
