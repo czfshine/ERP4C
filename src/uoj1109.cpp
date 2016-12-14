@@ -14,9 +14,12 @@ bool end=false;
 #else
 FILE *fp;
 #endif
+char last=0;
 string getword(){
 	char ch;
 	string s;
+	if (last)
+		s.push_back(ch);
 	while((ch=getc(fp))!=EOF){
 		printf("is :%c\n",ch);
 		if(ch=='-'){
