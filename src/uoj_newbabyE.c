@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 		scanf("%lld%lld",&N,&a);
 		long long sum=0,temp=1;
 
-		while(sum<a){
+		while(sum<=a){
 			sum+=4*N-(2*temp-1)*4;
 			temp++;
 		}
