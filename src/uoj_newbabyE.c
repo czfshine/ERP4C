@@ -19,15 +19,10 @@ int main(int argc, char const *argv[])
 			sum+=4*N-(2*temp-1)*4;
 			temp++;
 		}
-		printf("%lld,%d",sum,temp);
-		if(sum-a<temp-1){
-			int dx=temp-1;
-			int dy=temp;
-			printf("%d %d",dx,dy+(sum-a));
-		}else if(sum-a<temp*2-1){
-
-		}else if(sum-a<temp*3-1){
-		}
+		printf("%lld,%d",sum,N-temp*2+2);
+		int dx=temp-1;
+		int dy=temp-1;
+		if(sum-a<)
 
 		//printf("%lld",sum-a);
 		
