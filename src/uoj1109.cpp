@@ -10,8 +10,8 @@ map <string ,int> Dict;
 #ifdef LOCAL
 #define fp stdin 
 #else
-FILE fp;
-fp=fopen("case1.in","r");
+FILE *fp;
+fp=fopen_s("case1.in","r");
 #endif
 
 
