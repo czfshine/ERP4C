@@ -7,7 +7,7 @@
 #include <cstring>
 using namespace std;
 
-map <string ,int> Dict;
+map <string ,int> dict;
 bool end=false;
 //debug
 #ifdef LOCAL
@@ -63,7 +63,7 @@ int main(int argc, char const *argv[])
 	while(!end){
 			word=getword();
 		if(!dict.count(word)) dict[word]=0;
-	printf("%s",word);}
+	cout<<word<<endl;}
 
 	return 0;
 }
