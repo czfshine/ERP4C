@@ -5,14 +5,14 @@ int find(char * str,int len){
 	char  s[31]={0};
 	int a=0;
 	if(len<=1){
-		printf("a");
+		//printf("a");
 	}
 	for (int i = 0; i < len; ++i)
 	{
 		s[i]=str[i];
 		sscanf(s,"%d",&a);
 		find(str+i,len-1);
-		printf("%d\n",a);
+		if(a>0) printf("%d\n",a);
 	}
 	
 }
