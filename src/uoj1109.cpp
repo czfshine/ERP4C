@@ -3,6 +3,7 @@
 #include <string>
 #include <map>
 #include <cstdlib>
+#include <iostream>
 using namespace std;
 
 map <string ,int> Dict;
@@ -39,7 +40,7 @@ int main(int argc, char const *argv[])
 	#else
 	printf("used LOCAL");
 	#endif
-	cout<< getword()<<endl;
+	cout << getword()<<endl;
 	return 0;
 }
 
