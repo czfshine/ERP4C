@@ -9,7 +9,7 @@ main()
         for(j=0; j<n; j++) 
         { 
 
-            a[i][j]=abs(i-m+j-m);
+            a[i][j]=abs(i-j);
 
         } 
 for(i=0; i<n; i++) 
