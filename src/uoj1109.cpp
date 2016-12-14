@@ -28,7 +28,7 @@ string getword(){
 			}
 		}
 
-		if(ch>'A'&&ch<'Z' || ch>'a'&&ch<'z')
+		if(ch>='A'&&ch<='Z' || ch>='a'&&ch<='z')
 			s.push_back(ch);
 		else
 			break;
