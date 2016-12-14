@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
 		printf("%lld,%d",sum,N-temp*2+2);
 		int dx=temp-1;
 		int dy=temp-1;
-		if(sum-a<)
+		if(sum-a<1)
 			1+1;
 
 		//printf("%lld",sum-a);
