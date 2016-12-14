@@ -39,6 +39,7 @@ int main(int argc, char const *argv[])
 	#else
 	printf("used LOCAL");
 	#endif
+	cout<< getword()<<endl;
 	return 0;
 }
 
