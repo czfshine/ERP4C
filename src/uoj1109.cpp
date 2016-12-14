@@ -20,7 +20,7 @@ string getword(){
 	char ch;
 	string s;
 	if (last){
-		s.push_back(ch);
+		s.push_back(last);
 		last=0;
 	}
 	while((ch=getc(fp))!=EOF){
