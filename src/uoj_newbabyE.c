@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
 			sum+=4*N-(2*temp-1)*4;
 			temp++;
 		}
-		//printf("%lld,%d",sum,N-(temp-2)*2);
+		printf("%lld,%d",sum,temp);
 		if(sum-a<2){
 			int dx=temp-1;
 			int dy=temp;
