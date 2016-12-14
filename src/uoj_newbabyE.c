@@ -20,10 +20,13 @@ int main(int argc, char const *argv[])
 			temp++;
 		}
 		printf("%lld,%d",sum,temp);
-		if(sum-a<2){
+		if(sum-a<temp-1){
 			int dx=temp-1;
 			int dy=temp;
 			printf("%d %d",dx,dy+(sum-a));
+		}else if(sum-a<temp*2-1){
+
+		}else if(sum-a<temp*3-1){
 		}
 
 		//printf("%lld",sum-a);
