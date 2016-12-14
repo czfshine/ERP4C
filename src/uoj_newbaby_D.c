@@ -18,7 +18,9 @@ int main(int argc, char const *argv[])
 	{
 		for (int j = 0; j < i+1; ++j)
 			printf(" ");
-		for (int k = 3; k < (n-i)*2 ; ++k)
+			printf("*");
+		for (int k = 3; k < (n-i)*2-2 ; ++k)
+			printf("*");
 			printf("*");
 		printf("\n");
 	}
