@@ -66,7 +66,7 @@ if(yes){
 			sum++;
 		}
 if(yes){
-			printf("%d %d",dx,dy);
+			printf("%d %d",dx-1,dy);
 			continue;
 		}
 		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
