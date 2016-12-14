@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
 	{
 		long long N,a;
 		scanf("%lld%lld",&N,&a);
-		if(N*N==a){
+		if(N*N==a&&N%2==1){
 			printf("%lld %lld",N/2+1,N/2+1);
 			continue;
 		}
@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
 			int dy=temp;
 			printf("%d %d",dx,dy+(sum-a));
 		}
-		
+
 		//printf("%lld",sum-a);
 		
 	}
