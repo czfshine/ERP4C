@@ -35,6 +35,7 @@ int main(int argc, char const *argv[])
 				yes=1;
 				break;
 			}
+			sum++;
 		}
 		if(yes){
 			printf("%d %d",dx,dy);
@@ -48,6 +49,7 @@ int main(int argc, char const *argv[])
 				yes=1;
 				break;
 			}
+			sum++;
 		}
 if(yes){
 			printf("%d %d",dx,dy);
@@ -61,6 +63,7 @@ if(yes){
 				yes=1;
 				break;
 			}
+			sum++;
 		}
 if(yes){
 			printf("%d %d",dx,dy);
@@ -74,6 +77,7 @@ if(yes){
 				yes=1;
 				break;
 			}
+			sum++;
 		}
 
 if(yes){
