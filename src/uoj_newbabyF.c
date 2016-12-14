@@ -4,10 +4,14 @@ char data [100000]={0};
 int find(char * str,int len){
 	char  s[31]={0};
 	int a;
+	if(len<=1){
+		printf("a");
+	}
 	for (int i = 0; i < len; ++i)
 	{
 		s[i]=str[i];
 		sscanf(s,"%d",&a);
+		find(str+i,len-1);
 		printf("%d\n",a);
 	}
 	
