@@ -19,8 +19,10 @@ char last=0;
 string getword(){
 	char ch;
 	string s;
-	if (last)
+	if (last){
 		s.push_back(ch);
+		last=0;
+	}
 	while((ch=getc(fp))!=EOF){
 		printf("is :%c\n",ch);
 		if(ch=='-'){
@@ -28,7 +30,7 @@ string getword(){
 			if(getc(fp)=='\n'){
 				continue;
 			}else{
-				fseek(fp,ftell(fp)-1,SEEK_CUR);
+				last=ch;
 				break;
 			}
 		}
