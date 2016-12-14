@@ -7,7 +7,7 @@
 using namespace std;
 
 map <string ,int> Dict;
-bool end;
+bool end=false;
 //debug
 #ifdef LOCAL
 #define fp stdin 
@@ -43,6 +43,7 @@ int main(int argc, char const *argv[])
 	#else
 	printf("used LOCAL");
 	#endif
+
 	cout << getword()<<endl;
 	return 0;
 }
