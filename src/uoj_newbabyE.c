@@ -15,17 +15,17 @@ int main(int argc, char const *argv[])
 		long long sum=0,temp=1;
 		long long t=N/2+1;
 		while(sum<=a&& temp<=t){
-			printf("%lld",sum);
+			//printf("%lld",sum);
 			sum+=4*N-(2*temp-1)*4;
 			temp++;
 		}
-		printf("%lld,%d",sum,N-(temp-2)*2);
+		//printf("%lld,%d",sum,N-(temp-2)*2);
 		if(sum-a<2){
 			int dx=temp-1;
 			int dy=temp;
 			printf("%d %d",dx,dy);
 		}
-		printf("%lld",sum-a);
+		//printf("%lld",sum-a);
 		
 	}
 	return 0;
