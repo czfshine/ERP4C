@@ -6,6 +6,7 @@ int find(char * str,int len){
 	int a=0;
 	if(len<=1){
 		//printf("a");
+		return 0;
 	}
 	for (int i = 0; i < len; ++i)
 	{
