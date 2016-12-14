@@ -8,7 +8,7 @@ using namespace std;
 map <string ,int> Dict;
 FILE *fp;
 //debug
-fp=stdio;
+fp=stdin;
 string getword(){
 	char ch;
 	string s;
