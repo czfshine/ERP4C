@@ -10,9 +10,9 @@ main()
         { 
 
             if(j>i) 
-                a[i][j] = abs(i-m+1); 
+                a[i][j] = i-m+1; 
             else 
-                a[i][j] = abs(j-m+1); 
+                a[i][j] = j-m+1 ;
 
 
         } 
