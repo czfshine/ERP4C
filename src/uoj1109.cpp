@@ -23,7 +23,7 @@ char ch;
 struct node{
 	string s;
 	int count;
-}
+};
 struct{
 	int mincount;
 	string min;
