@@ -8,16 +8,16 @@ main()
     for(i=0; i<n; i++) 
         for(j=0; j<n; j++) 
         { 
-/*
+
                 if(abs(j-m)<abs(i-m)+1)
                     a[i][j]=m+1-abs(i-m);
                 else
                     a[i][j]=9;
 
-*/ if(abs(j-m)<abs(i-m)+1) 
+/* if(abs(j-m)<abs(i-m)+1) 
                 a[i][j] = m+2-abs(i-m+1); 
             else 
-                a[i][j] = m+2-abs(j-m+1); 
+                a[i][j] = m+2-abs(j-m+1); */
 
 
         } 
