@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
 		for (int i = 0; i < N-(temp-2 )*2; ++i)
 		{
 			if(sum!=a){
-				dx++；
+				dx++;
 			}else{
 				yes=1;
 				break;
@@ -42,7 +42,7 @@ int main(int argc, char const *argv[])
 		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
 		{
 			if(sum!=a){
-				dy++；
+				dy++;
 			}else{
 				yes=1;
 				break;
@@ -55,7 +55,7 @@ if(yes){
 		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
 		{
 			if(sum!=a){
-				dx--；
+				dx--;
 			}else{
 				yes=1;
 				break;
@@ -68,7 +68,7 @@ if(yes){
 		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
 		{
 			if(sum!=a){
-				dy--；
+				dy--;
 			}else{
 				yes=1;
 				break;
