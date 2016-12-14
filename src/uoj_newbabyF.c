@@ -8,7 +8,7 @@ int find(char * str,int len){
 	{
 		s[i]=str[i];
 		sscanf(s,"%d",&a);
-		printf("%d",a);
+		printf("%d\n",a);
 	}
 	
 }
