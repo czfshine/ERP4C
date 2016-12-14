@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 			printf("*");
 		for (int k = 3; k < (n-i)*2-2 ; ++k)
 			printf(" ");
-			printf("*");
+			if(i!=2)printf("*");
 		printf("\n");
 	}
 	return 0;
