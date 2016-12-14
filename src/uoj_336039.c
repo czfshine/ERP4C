@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
 		{
 			for (int k = 0; k < N; ++k)
 			{
-				printf("%c%c%c\n",data[i],data[j],ddata[k]);
+				printf("%c%c%c\n",data[i],data[j],data[k]);
 			}
 		}
 	}
