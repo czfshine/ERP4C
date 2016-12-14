@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
 		    printf("*");
 		for (int k = 0; k < i*2+1-2 ; ++k)
 			printf(" ");
-			if(i!=1) printf("*");
+			if(i!=0) printf("*");
 		printf("\n");
 	}
 	for (int i = 0; i < n-1; ++i)
