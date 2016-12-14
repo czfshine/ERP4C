@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <string>
 #include <map>
-#include <cfile>
+#include <cstdlib>
 using namespace std;
 
 map <string ,int> Dict;
