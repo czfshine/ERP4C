@@ -26,7 +26,7 @@ int main(int argc, char const *argv[])
 		int dy=temp-1;
 		sum++;
 		printf("%d,%d",dx,dy);
-		for (int i = 0; i < N-(temp-2 )*2; ++i)
+		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
 		{
 			if(sum!=a){
 				
@@ -66,7 +66,7 @@ if(yes){
 			sum++;
 		}
 if(yes){
-			printf("%d %d",dx-1,dy);
+			printf("%d %d",dx,dy);
 			continue;
 		}
 		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
