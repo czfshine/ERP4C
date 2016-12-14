@@ -12,6 +12,7 @@ int main(int argc, char const *argv[])
 			printf("%lld %lld",N/2+1,N/2+1);
 			continue;
 		}
+		int yes=0;
 		long long sum=0,temp=1;
 		long long t=N/2+1;
 		while(sum<a&& temp<=t){
@@ -23,10 +24,61 @@ int main(int argc, char const *argv[])
 		printf("%lld,%lld",sum,N-(temp-2 )*2);
 		int dx=temp-1;
 		int dy=temp-1;
+		sum++;
 		printf("%d,%d",dx,dy);
-		if(sum-a<1)
-			1+1;
+		for (int i = 0; i < N-(temp-2 )*2; ++i)
+		{
+			if(sum!=a){
+				dx++；
+			}else{
+				yes=1;
+				break;
+			}
+		}
+		if(yes){
+			printf("%d %d",dx,dy);
+			continue;
+		}
+		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
+		{
+			if(sum!=a){
+				dy++；
+			}else{
+				yes=1;
+				break;
+			}
+		}
+if(yes){
+			printf("%d %d",dx,dy);
+			continue;
+		}
+		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
+		{
+			if(sum!=a){
+				dx--；
+			}else{
+				yes=1;
+				break;
+			}
+		}
+if(yes){
+			printf("%d %d",dx,dy);
+			continue;
+		}
+		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
+		{
+			if(sum!=a){
+				dy--；
+			}else{
+				yes=1;
+				break;
+			}
+		}
 
+if(yes){
+			printf("%d %d",dx,dy);
+			continue;
+		}
 		//printf("%lld",sum-a);
 		
 	}
