@@ -10,9 +10,9 @@ main()
         { 
 
             if(j>i) 
-                a[i][j] = m+1-abs(i-m+1); 
+                a[i][j] = m+1-abs(i-m); 
             else 
-                a[i][j] = m+1-abs(j-m+1); 
+                a[i][j] = m+1-abs(j-m); 
 
         } 
 for(i=0; i<n; i++) 
