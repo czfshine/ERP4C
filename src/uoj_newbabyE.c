@@ -16,16 +16,16 @@ int main(int argc, char const *argv[])
 		long long sum=0,temp=1;
 		long long t=N/2+1;
 		while(sum<a&& temp<=t){
-			printf("%lld\n",sum);
+		//	printf("%lld\n",sum);
 			sum+=4*N-(2*temp-1)*4;
 			temp++;
 		}
 		sum-=4*N-(2*temp-3)*4;
-		printf("%lld,%lld",sum,N-(temp-2 )*2);
+		//printf("%lld,%lld",sum,N-(temp-2 )*2);
 		int dx=temp-1;
 		int dy=temp-1;
 		sum++;
-		printf("%d,%d",dx,dy);
+		//printf("%d,%d",dx,dy);
 		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
 		{
 			if(sum!=a){
