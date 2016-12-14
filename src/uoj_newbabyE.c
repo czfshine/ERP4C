@@ -22,6 +22,7 @@ int main(int argc, char const *argv[])
 		printf("%lld,%d",sum,temp);
 		int dx=temp-1;
 		int dy=temp-1;
+		printf("%d,%d",dx,dy);
 		if(sum-a<1)
 			1+1;
 
