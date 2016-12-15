@@ -17,7 +17,7 @@ void print(int s,int e){
 }
 int tonum(int s,int c){
 	int l=0;
-	for (int i = s; i <= e; ++i)
+	for (int i = s; i <= c; ++i)
 	{
 		l=l*10+str[i]-'0';
 	}
