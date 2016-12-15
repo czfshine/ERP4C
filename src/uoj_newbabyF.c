@@ -20,11 +20,13 @@ int find(int s){
 	//printf("%d %s\n",s,str+s);
 	if(s==end) return 1+1;//print("%s",str+s);
 	for (int i = s+1; i < (min(end,s+6)); ++i)
-	{	print(s,i);
-		vis[s][i]=find(i);
+	{	if(!vis[s][i]){print(s,i);
+		vis[s][i]=find(i);}
 	}
 	if(end-s>6)
 		vis[s+6][s]=find(s+6);
+
+	return 1;
 }
 int main(int argc, char const *argv[])
 {	
