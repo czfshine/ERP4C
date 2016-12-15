@@ -8,7 +8,7 @@ int vis[31][31]={0};
 
 void print(int s,int e){
 
-	for (int i = s; i < e; ++i)
+	for (int i = s; i <= e; ++i)
 	{
 		putchar(str[i]);
 	}
