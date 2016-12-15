@@ -50,7 +50,7 @@ int find(int s){
 
 			if(is_p(tonum(s,i))){
 				print(s,i);
-				printf("%d %d",s,i);
+				printf("%d %d\n",s,i);
 				vis[s][i]=find(i);
 				if(vis[s][i]==1){
 					if(i==end)
