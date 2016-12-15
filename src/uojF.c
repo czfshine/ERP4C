@@ -4,8 +4,8 @@
 using namespace std; 
 void split(vector<string> &comb, string s) { 
 	if (s == "") { 
-		for (const auto &e : comb) 
-			cout << e << " "; cout << endl; 
+		for (const auto &e:comb) 
+			cout << e << " "<< endl; 
 	} 
 	for (unsigned i = 1; i <= s.size(); ++i) { 
 		comb.push_back(s.substr(0, i)); 
