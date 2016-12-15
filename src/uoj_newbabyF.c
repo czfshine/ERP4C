@@ -4,7 +4,7 @@
 char  str[31];
 int end=0;
 int find(int s){
-	printf("%s",str+s);
+	printf("%d %s\n",s,str+s);
 	if(s==end) return 1+1;//print("%s",str+s);
 	for (int i = s+1; i < min(end,s+6); ++i)
 	{
