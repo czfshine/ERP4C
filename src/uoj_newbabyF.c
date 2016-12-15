@@ -55,7 +55,7 @@ int find(int s){
 	}
 	if(end-s>6){
 		vis[s+6][end]=find(s+6);
-		if(vis[s][i]==1){
+		if(vis[s][end]==1){
 					flag=1;
 		}
 	}
