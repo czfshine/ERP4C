@@ -57,10 +57,11 @@ int find(int s){
 							printf("YES");
 							ok=1;
 						}
+						flag=1;
 					}
-					flag=1;
-				}
+					
 				
+
 				vis[s][i]=find(i);
 				if(vis[s][i]==1){
 					if(i==end)
