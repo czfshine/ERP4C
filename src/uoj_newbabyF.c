@@ -43,7 +43,7 @@ int find(int s){
 	}
 
 	int flag=0;
-	for (int i = s+1; i < (min(end,s+6)); ++i)
+	for (int i = s+1; i <= (min(end,s+6)); ++i)
 	{	
 		if(vis[s][i]==0){
 
