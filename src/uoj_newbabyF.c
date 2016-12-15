@@ -33,7 +33,7 @@ int tonum(int s,int c){
 }
 int ok=0;
 int find(int s){
-	//print(s,end);
+	print(s,end);
 	//printf("%d %s\n",s,str+s);
 
 	if(s==end){
