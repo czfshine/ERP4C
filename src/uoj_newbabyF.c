@@ -3,7 +3,7 @@
 #define min(x,y) x<y?x:y
 char  str[31];
 int end=0;
-int vis[31];
+int vis[31][31]={0};
 
 
 void print(int s,int e){
