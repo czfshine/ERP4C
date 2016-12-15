@@ -31,6 +31,7 @@ int tonum(int s,int c){
 	}
 	return l;
 }
+int ok=0;
 int find(int s){
 	//print(s,e);
 	//printf("%d %s\n",s,str+s);
@@ -52,7 +53,11 @@ int find(int s){
 				vis[s][i]=find(i);
 				if(vis[s][i]==1){
 					if(i==end)
-						{printf("yes");
+					{
+						if(!ok){
+							printf("yes");
+							ok=1;
+						}
 					}
 					flag=1;
 				}
@@ -77,6 +82,8 @@ int main(int argc, char const *argv[])
 	scanf("%s",str);
 	end=strlen(str);
 	find(0);
+	if(!ok)
+		printf("no");
 
 	return 0;
 }
