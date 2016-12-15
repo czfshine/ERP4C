@@ -4,7 +4,7 @@
 using namespace std; 
 void split(vector<string> &comb, string s) { 
 	if (s == "") { 
-		for(int j = 0; j < combsize(); j++)
+		for(int j = 0; j < comb.size(); j++)
 			cout << comb[j];
 		count " "<< endl; 
 	} 
