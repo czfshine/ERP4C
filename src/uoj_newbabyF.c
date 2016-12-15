@@ -38,7 +38,7 @@ int find(int s){
 
 	if(s==end){
 		if(is_p(tonum(s,s))){
-				print(s,s);
+				//print(s,s);
 			}
 		return vis[s][s]=is_p(tonum(s,s));
 	}
@@ -49,13 +49,13 @@ int find(int s){
 		if(vis[s][i]==0){
 
 			if(is_p(tonum(s,i))){
-				print(s,i);
+				//print(s,i);
 				vis[s][i]=find(i);
 				if(vis[s][i]==1){
 					if(i==end)
 					{
 						if(!ok){
-							printf("yes");
+							printf("YES");
 							ok=1;
 						}
 					}
@@ -83,7 +83,7 @@ int main(int argc, char const *argv[])
 	end=strlen(str);
 	find(0);
 	if(!ok)
-		printf("no");
+		printf("NO");
 
 	return 0;
 }
