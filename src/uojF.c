@@ -16,7 +16,6 @@ void split(vector<string> &comb, string s) {
 		comb.pop_back();
 	}
 } 
-
 int main() { 
 	string s; 
 	cin >> s; 
