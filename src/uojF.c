@@ -53,7 +53,7 @@ int find(int cur){
 				printf("OK");
 				return 1;
 			}else{
-				if(cur!=i)find(i);
+				find(i+1);
 			}	
 		}
 		
