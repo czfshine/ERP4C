@@ -38,7 +38,7 @@ int ok=0,no=0;
 
 int find(int cur){
 
-	if(ok ||no)
+	if(ok+no>0)
 		return 0;
 	//printf("%d",cur);
 	for (int i = cur; i <=end; ++i)
