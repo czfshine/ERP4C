@@ -45,6 +45,7 @@ int find(int cur){
 			no=1;
 			return -1;
 		}
+		printf("%d",cur);
 		if(is_p(tonum(cur,i))){
 			if(i==end){
 				ok=1;
