@@ -60,7 +60,6 @@ int find(int cur){
 	}
 }
 
-
 int main(int argc, char const *argv[])
 {	
 	scanf("%s",str);
