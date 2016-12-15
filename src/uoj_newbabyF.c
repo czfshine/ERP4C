@@ -36,7 +36,7 @@ int find(int s){
 	//print(s,end);
 	//printf("%d %s\n",s,str+s);
 
-	if(s==end){
+	if(s==end-1){
 		if(is_p(tonum(s,s))){
 				//print(s,s);
 			}
@@ -44,7 +44,7 @@ int find(int s){
 	}
 
 	int flag=0;
-	for (int i = s+1; i < (min(end,s+6)); ++i)
+	for (int i = s+1; i <= (min(end,s+6)); ++i)
 	{	
 		if(vis[s][i]==0){
 
