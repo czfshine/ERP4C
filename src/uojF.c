@@ -37,7 +37,7 @@ int tonum(int s,int c){
 int ok=0,no=0;
 
 int find(int cur){
-	//printf("%d",cur);
+	printf("%d",cur);
 	for (int i = cur; i <=end; ++i)
 	{
 		if(i-cur>=6)
