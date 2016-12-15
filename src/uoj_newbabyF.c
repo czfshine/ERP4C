@@ -1,10 +1,11 @@
 #include "stdio.h"
-
-char * str[]="12345678";
-int end=7;
+#include "string.h"
+#define min (x,y) x<y?x:y
+char * str[31];
+int end=0;
 int find(int s){
 	printf("%s",str+s);
-	if(s==end) 1+1//print("%s",str+s);
+	if(s==end) 1+1;//print("%s",str+s);
 	for (int i = s; i < min(end,s+6); ++i)
 	{
 		find(i);
@@ -14,6 +15,8 @@ int find(int s){
 }
 int main(int argc, char const *argv[])
 {	
+	scanf("%s",str);
+	end=strlen(str)-1;
 	find(0);
 
 	return 0;
