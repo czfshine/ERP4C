@@ -50,7 +50,7 @@ int find(int cur){
 		}
 		//printf("%d",cur);
 		if(is_p(tonum(cur,i))){
-			//printf("%d %d\n",cur,i);
+			printf("%d %d\n",cur,i);
 			if(i==end){
 				
 				if(!ok) printf("OK");
