@@ -43,8 +43,6 @@ int find(int s){
 	for (int i = s+1; i < (min(end,s+6)); ++i)
 	{	
 		if(vis[s][i]==0){
-			print(s,i);
-			printf("%d\n",tonum(s,i));
 			if(is_p(tonum(s,i))){
 				vis[s][i]=find(i);
 				if(vis[s][i]==1){
@@ -60,8 +58,10 @@ int find(int s){
 		}
 	}
 
-	if(flag)
+	if(flag){
+		print(s,i);
 		return 1;
+	}
 	else
 		return -1;
 }
