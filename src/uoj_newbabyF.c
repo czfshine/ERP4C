@@ -33,7 +33,7 @@ int tonum(int s,int c){
 }
 int ok=0;
 int find(int s){
-	print(s,end);
+	//print(s,end);
 	//printf("%d %s\n",s,str+s);
 
 	if(s==end){
@@ -49,7 +49,7 @@ int find(int s){
 		if(vis[s][i]==0){
 
 			if(is_p(tonum(s,i))){
-				//print(s,i);
+				print(s,i);
 				vis[s][i]=find(i);
 				if(vis[s][i]==1){
 					if(i==end)
