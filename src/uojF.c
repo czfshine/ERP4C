@@ -50,7 +50,7 @@ int find(int cur){
 				ok=1;
 				return 1;
 			}else{
-				find(i);
+				if(cur!=i)find(i);
 			}	
 		}
 		
