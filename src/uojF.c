@@ -6,7 +6,7 @@ void split(vector<string> &comb, string s) {
 	if (s == "") { 
 		for(int j = 0; j < comb.size(); j++)
 			cout << comb[j];
-		cout " "<< endl; 
+		cout <<" "<< endl; 
 	} 
 	for (unsigned i = 1; i <= s.size(); ++i) { 
 		comb.push_back(s.substr(0, i)); 
