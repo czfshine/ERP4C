@@ -36,7 +36,7 @@ int find(int s){
 	//print(s,end);
 	//printf("%d %s\n",s,str+s);
 
-	if(s==end-1){
+	if(s==end){
 		if(is_p(tonum(s,s))){
 				//print(s,s);
 			}
