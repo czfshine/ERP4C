@@ -36,8 +36,8 @@ int find(int s){
 	//printf("%d %s\n",s,str+s);
 
 	if(s==end){
-		if(is_p(tonum(s,i))){
-				print(s,i);
+		if(is_p(tonum(s,s))){
+				print(s,s);
 			}
 		return vis[s][s]=is_p(tonum(s,s));
 	}
