@@ -29,7 +29,7 @@ int find(int s){
 	if(s==end) return 1+1;//print("%s",str+s);
 	for (int i = s+1; i < (min(end,s+6)); ++i)
 	{	if(!vis[s][i]){print(s,i);
-		printf("%d",tonum(s,i));
+		printf("%d\n",tonum(s,i));
 		vis[s][i]=find(i);}
 	}
 	if(end-s>6)
