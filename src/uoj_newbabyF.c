@@ -15,12 +15,21 @@ void print(int s,int e){
 
 	printf("\n");
 }
+int tonum(int s,int c){
+	int l=0;
+	for (int i = s; i <= e; ++i)
+	{
+		l=l*10+str[i]-'0';
+	}
+	return l;
+}
 int find(int s){
 	//print(s,e);
 	//printf("%d %s\n",s,str+s);
 	if(s==end) return 1+1;//print("%s",str+s);
 	for (int i = s+1; i < (min(end,s+6)); ++i)
 	{	if(!vis[s][i]){print(s,i);
+		printf("%d",tonum(s,i));
 		vis[s][i]=find(i);}
 	}
 	if(end-s>6)
