@@ -1,9 +1,17 @@
 #include "stdio.h"
 #include "string.h"
+#include <alog>
 #define min(x,y) x<y?x:y
 char  str[31];
 int end=0;
 int vis[31][31]={0};
+int is_p(int n)
+{
+    for(int i = 2; i * i <= n; i++) {
+        if(n % i == 0) return 0;
+    }    
+    return 1;
+}
 
 
 void print(int s,int e){
@@ -26,16 +34,36 @@ int tonum(int s,int c){
 int find(int s){
 	//print(s,e);
 	//printf("%d %s\n",s,str+s);
-	if(s==end) return 1+1;//print("%s",str+s);
-	for (int i = s+1; i < (min(end,s+6)); ++i)
-	{	if(!vis[s][i]){print(s,i);
-		printf("%d\n",tonum(s,i));
-		vis[s][i]=find(i);}
-	}
-	if(end-s>6)
-		vis[s+6][end]=find(s+6);
 
-	return 1;
+	if(s==end){
+		return vis[s][s]=is_p(tonum(s,s));
+	}
+
+	int flag=0;
+	for (int i = s+1; i < (min(end,s+6)); ++i)
+	{	
+		if(vis[s][i]==0){
+			print(s,i);
+			printf("%d\n",tonum(s,i));
+			if(is_p(tonum(s,i))){
+				vis[s][i]=find(i);
+				if(vis[s][i]==1){
+					flag=1;
+				}
+			}
+		}
+	}
+	if(end-s>6){
+		vis[s+6][end]=find(s+6);
+		if(vis[s][i]==1){
+					flag=1;
+		}
+	}
+
+	if(flag)
+		return 1;
+	else
+		return -1;
 }
 int main(int argc, char const *argv[])
 {	
