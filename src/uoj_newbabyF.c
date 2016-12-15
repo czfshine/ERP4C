@@ -21,10 +21,10 @@ int find(int s){
 	if(s==end) return 1+1;//print("%s",str+s);
 	for (int i = s+1; i < (min(end,s+6)); ++i)
 	{	print(s,i);
-		vis[i]=find(i);
+		vis[s][i]=find(i);
 	}
 	if(end-s>6)
-		vis[s+6]=find(s+6);
+		vis[s+6][s]=find(s+6);
 }
 int main(int argc, char const *argv[])
 {	
