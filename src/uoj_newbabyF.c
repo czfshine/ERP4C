@@ -51,6 +51,16 @@ int find(int s){
 			if(is_p(tonum(s,i))){
 				print(s,i);
 				printf("%d %d\n",s,i);
+
+				if(i==end){
+					if(!ok){
+							printf("YES");
+							ok=1;
+						}
+					}
+					flag=1;
+				}
+				
 				vis[s][i]=find(i);
 				if(vis[s][i]==1){
 					if(i==end)
@@ -65,7 +75,7 @@ int find(int s){
 			}
 		}
 	}
-	
+
 	if(end-s>6){
 		vis[s+6][end]=find(s+6);
 		if(vis[s][end]==1){
