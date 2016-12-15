@@ -24,7 +24,7 @@ int find(int s){
 		vis[s][i]=find(i);}
 	}
 	if(end-s>6)
-		//vis[s+6][s]=find(s+6);
+		vis[s+6][e]=find(s+6);
 
 	return 1;
 }
