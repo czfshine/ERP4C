@@ -44,7 +44,7 @@ int find(int s){
 	}
 
 	int flag=0;
-	for (int i = s+1; i <= (min(end,s+6)); ++i)
+	for (int i = s+1; i < (min(end,s+6)); ++i)
 	{	
 		if(vis[s][i]==0){
 
@@ -52,7 +52,7 @@ int find(int s){
 				print(s,i);
 				printf("%d %d\n",s,i);
 
-				if(i==end){
+				if(i==end-1){
 					if(!ok){
 							printf("YES");
 							ok=1;
