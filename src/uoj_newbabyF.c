@@ -51,7 +51,9 @@ int find(int s){
 				print(s,i);
 				vis[s][i]=find(i);
 				if(vis[s][i]==1){
-
+					if(i==end)
+						{printf("yes");
+					}
 					flag=1;
 				}
 			}
