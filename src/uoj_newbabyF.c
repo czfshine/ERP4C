@@ -1,6 +1,6 @@
 #include "stdio.h"
 #include "string.h"
-#include <alog>
+
 #define min(x,y) x<y?x:y
 char  str[31];
 int end=0;
