@@ -64,7 +64,7 @@ int find(int s){
 
 				vis[s][i]=find(i);
 				if(vis[s][i]==1){
-					if(i==end)
+					if(i==end-1)
 					{
 						if(!ok){
 							printf("YES");
