@@ -5,11 +5,11 @@ int main(int argc, char const *argv[])
 	int T;
 	scanf("%d",&T);
 	for (int kkk = 0; kkk < T; ++kkk)
-	{if(kkk)printf("\n");
+	{
 		long long N,a;
 		scanf("%lld%lld",&N,&a);
 		if(N*N==a&&N%2==1){
-			printf("%lld %lld",N/2+1,N/2+1);
+			printf("%lld %lld\n",N/2+1,N/2+1);
 			continue;
 		}
 		int yes=0;
@@ -37,7 +37,7 @@ int main(int argc, char const *argv[])
 			sum++;
 		}
 		if(yes){
-			printf("%d %d",dx,dy);
+			printf("%d %d\n",dy,dx);
 			continue;
 		}
 		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
@@ -51,7 +51,7 @@ int main(int argc, char const *argv[])
 			sum++;
 		}
 if(yes){
-			printf("%d %d",dx,dy);
+			printf("%d %d\n",dy,dx);
 			continue;
 		}
 		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
@@ -65,7 +65,7 @@ if(yes){
 			sum++;
 		}
 if(yes){
-			printf("%d %d",dx,dy);
+			printf("%d %d\n",dy,dx);
 			continue;
 		}
 		for (int i = 0; i < N-(temp-2 )*2-1; ++i)
@@ -80,7 +80,7 @@ if(yes){
 		}
 
 if(yes){
-			printf("%d %d",dx,dy);
+			printf("%d %d\n",dy,dx);
 			continue;
 		}
 		//printf("%lld",sum-a);

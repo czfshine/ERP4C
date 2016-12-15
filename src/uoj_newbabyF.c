@@ -1,38 +1,20 @@
 #include "stdio.h"
-char data [100000]={0};
 
-int find(char * str,int len){
-	char  s[31]={0};
-	int a=0;
-	if(len<=1){
-		//printf("a");
-		return 0;
-	}
-	for (int i = 0; i < len; ++i)
+char * str[31]="12345678";
+int end=7;
+int find(int s){
+	print("%s",str+s);
+	if(s==end) 1+1//print("%s",str+s);
+	for (int i = s; i < min(end,s+6); ++i)
 	{
-		s[i]=str[i];
-		sscanf(s,"%d",&a);
-		find(str+i,len-1);
-		if(a>0) printf("%d",a);
+		find(i);
 	}
-	printf("\n");
-	
+	if(e-s>6)
+		find(s+6);
 }
 int main(int argc, char const *argv[])
-{
-	
-	data[0]=1;
-	data[1]=1;
-	data[2]=0;
-	int j,i;
-	for (i = 2; i < 100000; ++i)
-		if(!data[i])
-			for (j = i+1; j < 100000; ++j)
-				if(j%i==0)
-					data[j]=1;
-
-	char str[31];
-	find("12345678",8);
+{	
+	find("12345678",0);
 
 	return 0;
 }
