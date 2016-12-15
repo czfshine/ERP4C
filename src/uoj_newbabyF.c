@@ -46,6 +46,7 @@ int find(int s){
 			if(is_p(tonum(s,i))){
 				vis[s][i]=find(i);
 				if(vis[s][i]==1){
+					print(s,i);
 					flag=1;
 				}
 			}
@@ -59,7 +60,6 @@ int find(int s){
 	}
 
 	if(flag){
-		print(s,i);
 		return 1;
 	}
 	else
