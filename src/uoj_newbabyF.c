@@ -6,7 +6,7 @@ int end=0;
 int find(int s){
 	printf("%s",str+s);
 	if(s==end) return 1+1;//print("%s",str+s);
-	for (int i = s; i < min(end,s+6); ++i)
+	for (int i = s+1; i < min(end,s+6); ++i)
 	{
 		find(i);
 	}
