@@ -31,7 +31,7 @@ int find(int s){
 int main(int argc, char const *argv[])
 {	
 	scanf("%s",str);
-	end=strlen(str)-1;
+	end=strlen(str);
 	find(0);
 
 	return 0;
