@@ -44,6 +44,8 @@ int next(FILE * infile,char * word){
 		word[i]='\0';
 		return 1;
 	}
+
+
 	return 0;
 }
 //打开文件
@@ -98,6 +100,7 @@ main()
 	infile=open(filename);
 
 	while(next(infile,tmp_w))
+		if(strlen(tmp_w)>0)
 		counter(tmp_w);
 
 	ksort();
