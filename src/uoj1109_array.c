@@ -29,6 +29,7 @@ int next(FILE * infile,char * word){
 				break;
 			}
 		}
+		
 		if(isalpha(ch)){
 			word[i++]=tolower(ch);
 			if (i>20) 
