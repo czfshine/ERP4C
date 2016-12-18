@@ -173,6 +173,7 @@ main()
 	while (cur<l-1){
 		while(count[cur++]==num&&cur<l-1){}
 		num=count[cur-1];
+	printf("%d",num)''
 		printf("%d\n",cur);
     }
 	printf("%d",len());
