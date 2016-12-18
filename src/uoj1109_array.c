@@ -97,6 +97,8 @@ void counter(char * word){
 		count[lindex]=1;
 		strcpy(words[lindex++],word);
 	}
+
+	print();
 }
 
 int len(){
@@ -191,7 +193,7 @@ void print(){
 
 		printf("\n");
 	}
-printf("---------------------");
+printf("---------------------\n");
 
 }
 
