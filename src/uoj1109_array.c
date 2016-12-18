@@ -29,7 +29,7 @@ int next(FILE * infile,char * word){
 				break;
 			}
 		}
-		
+
 		if(isalpha(ch)){
 			word[i++]=tolower(ch);
 			if (i>20) 
@@ -56,7 +56,7 @@ FILE* open(char * filename){
 int canfind(char * word ){
 	int i=0;
 	while(words[i][0]!='\0' &&(strcmp(words[i++],word)!=0 )){
-
+		printf("%s,%s,%s",words[i],word);
 	}
 	if(words[i][0]=='\0'){
 		return 0;
