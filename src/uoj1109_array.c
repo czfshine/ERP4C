@@ -92,7 +92,7 @@ void counter(char * word){
 
 int len(){
 	int i=0;
-	while(words[i][0]!='\0'){}
+	while(words[i++][0]!='\0'){}
 		return i;
 }
 //以key排序
