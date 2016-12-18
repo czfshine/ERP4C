@@ -93,11 +93,35 @@ void counter(char * word){
 int len(){
 	int i=0;
 	while(words[i++][0]!='\0'){}
-		return i;
+		return i-1;
+}
+
+void swap(char *w1,char *w2){
+	char ts[21];
+	char * t=ts;
+	while(*t=*w1){}
+	while(*w1=*w2){}
+	while(*w2=*t){}
 }
 //以key排序
 void ksort(){
+	int l=len();
 
+	for (int i = 0; i < l; ++i)
+	{
+		for (int j = i; j < l; ++j)
+		{
+			if(strcmp(words[i],word[j])>0){
+
+				swap(words[i],word[j]);
+
+				int t;
+				t=count[i];
+				count[i]=count[j];
+				count[j]=t;
+			}
+		}
+	}
 }
 
 
