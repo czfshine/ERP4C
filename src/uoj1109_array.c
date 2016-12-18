@@ -70,7 +70,7 @@ int canfind(char * word ){
 		//printf("%s,%s,%d\n",words[i],word,i);
 	}
 	
-	printf("-----%s,%s,%d,%d,%d\n",words[i-1],word,i,words[i-1][0]!='\0',strcmp(words[i-1],word));
+	printf("-----%s,%s,%d,%d,%d\n",words[i-1],word,i,words[i-1][0]!='\0',strcmp(words[i-1],word)!=0);
 	if(words[i][0]=='\0'){
 		return 0;
 	}else{
