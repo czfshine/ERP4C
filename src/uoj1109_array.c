@@ -21,6 +21,7 @@ int next(FILE * infile,char * word){
 
 	
 	while((ch=getc(infile))!=EOF){
+		printf("%c",ch);
 		if(ch=='-'){
 			if((ch=getc(infile))=='\n'){
 				continue;
