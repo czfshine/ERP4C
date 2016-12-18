@@ -65,11 +65,10 @@ int canfind(char * word ){
 	if(words[i][0]=='\0'){
 		return 0;
 	}else{
-
-		return i;
+		
+		return i-1;
 	}
 }
-
 //计数器
 void counter(char * word){
 	//printf("%s\n",word);
@@ -77,10 +76,10 @@ void counter(char * word){
 
 	//printf("%s,%d\n",word,canfind(word));
 	if(index=canfind(word)){
-		count[index-1]++;
+		count[index]++;
 	}else{
-		count[lindex-1]=1;
-		strcpy(words[lindex],word);
+		count[lindex]=1;
+		strcpy(words[lindex++],word);
 	}
 }
 //以key排序
