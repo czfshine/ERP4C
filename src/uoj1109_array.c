@@ -21,12 +21,13 @@ int next(FILE * infile,char * word){
 
 	
 	while((ch=getc(infile))!=EOF){
-		printf("%c",ch);
+		//printf("%c",ch);
 		if(ch=='-'){
 			if((ch=getc(infile))=='\n'){
 				continue;
 			}else{
-				fseek(infile,-1L,SEEK_CUR);
+				if(isalpha(ch)){
+				fseek(infile,-1L,SEEK_CUR);}
 				break;
 			}
 		}
@@ -41,13 +42,13 @@ int next(FILE * infile,char * word){
 		}
 
 	}
-	
+
 	if(i>0){
 		word[i]='\0';
 		return 1;
 	}
 
-printf("%s\n",word);
+//printf("%s\n",word);
 	return 0;
 }
 //打开文件
