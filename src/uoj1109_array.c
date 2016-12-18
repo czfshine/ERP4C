@@ -99,13 +99,9 @@ int len(){
 void swap(char *w1,char *w2){
 	char ts[21];
 	char * t=ts;
-	printf("%s\n",w1);
 	strcpy(t,w1);
-	printf("%s\n",t);
 	strcpy(w1,w2);
-	printf("%s\n",w1);
 	strcpy(w2,t);
-	printf("%s\n",w2);
 }
 //以key排序
 void ksort(){
@@ -115,7 +111,7 @@ void ksort(){
 	{
 		for (int j = 0; j < i; ++j)
 		{
-			if(strcmp(words[i],words[j])>0){
+			if(strcmp(words[i],words[j])<0){
 
 				swap(words[i],words[j]);
 
