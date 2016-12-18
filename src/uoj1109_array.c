@@ -101,11 +101,11 @@ void swap(char *w1,char *w2){
 	char * t=ts;
 	printf("%s\n",w1);
 	while(*t++=*w1++){}
-		printf("%s\n",w1);
+	printf("%s\n",t);
 	while(*w1++=*w2++){}
-		printf("%s\n",w1);
+	printf("%s\n",w1);
 	while(*w2++=*t++){}
-		printf("%s\n",w1);
+	printf("%s\n",w2);
 }
 //以key排序
 void ksort(){
