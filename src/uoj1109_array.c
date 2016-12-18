@@ -60,7 +60,7 @@ int canfind(char * word ){
 }
 //计数器
 void counter(char * word){
-	printf("%s\n",word);
+	//printf("%s\n",word);
 	int index=0;
 
 	printf("%s,%d\n",word,canfind(word));
