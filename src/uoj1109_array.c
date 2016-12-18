@@ -110,17 +110,17 @@ void vsort(){
 
 	for (int i = 0; i < l; ++i)
 	{
-		for (int j = 0; j < i; ++j)
+		for (int j = i+1; j < l; ++j)
 		{
 			if(count[i]>count[j]){
-				if(strcmp(words[i],words[j])>0){
+				
 				swap(words[i],words[j]);
 
 				int t;
 				t=count[i];
 				count[i]=count[j];
 				count[j]=t;
-			}
+			
 			}
 		}
 	}
@@ -132,7 +132,7 @@ void ksort(){
 
 	for (int i = 0; i < l; ++i)
 	{
-		for (int j = 0; j < i; ++j)
+		for (int j = i+1; j < l; ++j)
 		{
 			if(strcmp(words[i],words[j])<0){
 
