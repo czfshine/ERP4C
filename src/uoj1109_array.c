@@ -197,7 +197,12 @@ main()
 		if(strlen(tmp_w)>0)
 			counter(tmp_w);
 
-	sortk_v();
+	printf("input&count test:\n");
+    print();
+    sortk_v();
+    printf("sort test\n");
+    print();
+    printf("output test\n");
 	output();
 } 
 
