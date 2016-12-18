@@ -176,7 +176,7 @@ void sortk_v(){
 	int num=count[0];
 	int cur=0;
 	int l=len();
-	print();
+	//print();
 	while (cur<l-1){
 		int s_cur=cur;
 		while(count[cur++]==num&&cur<l-1){}
