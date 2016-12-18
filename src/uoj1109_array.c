@@ -113,7 +113,7 @@ void vsort(){
 		for (int j = 0; j < i; ++j)
 		{
 			if(count[i]>count[j]){
-				if(strcmp(words[i],words[j])<0){
+				if(strcmp(words[i],words[j])>0){
 				swap(words[i],words[j]);
 
 				int t;
