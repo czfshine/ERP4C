@@ -172,7 +172,8 @@ main()
 	int l=len();
 	while (cur<l-1){
 		while(count[cur++]==num&&cur<l-1){}
-		printf("%d",cur);
+		num=count[cur--];
+		printf("%d\n",cur);
     }
 	printf("%d",len());
 } 
