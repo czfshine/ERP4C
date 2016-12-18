@@ -130,9 +130,9 @@ void vsort(){
 void ksort(int s,int e){
 	int l=len();
 
-	for (int i = 0; i < l; ++i)
+	for (int i = s; i < e+1; ++i)
 	{
-		for (int j = i+1; j < l; ++j)
+		for (int j = i+1; j < e+1; ++j)
 		{
 			if(strcmp(words[i],words[j])>0){
 
