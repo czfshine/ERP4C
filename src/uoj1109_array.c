@@ -69,8 +69,8 @@ int canfind(char * word ){
 	while(words[i][0]!='\0' &&(strcmp(words[i++],word)!=0 )){
 		//printf("%s,%s,%d\n",words[i],word,i);
 	}
-
-	printf("-----%s,%s,%d,%d\n",words[i-1],word,i,words[i][0]=='\0');
+	
+	printf("-----%s,%s,%d,%d\n",words[i-1],word,i,strcmp(words[i-1],word));
 	if(words[i][0]=='\0'){
 		return 0;
 	}else{
