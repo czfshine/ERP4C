@@ -184,7 +184,7 @@ void print(){
 	for (int i = 0; i < lindex; ++i)
 	{
 		printf("%04d-%s",count[i],words[i]);
-		for (int j = 0; j < strlen(words); ++j)
+		for (int j = 0; j < strlen(words[i]); ++j)
 		{
 			printf(" %d",words[i][j]);
 		}
