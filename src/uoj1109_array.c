@@ -155,6 +155,14 @@ void print(){
 		printf("%04d-%s\n",count[i],words[i]);
 	}
 }
+
+void output(){
+
+	for (int i = 0; i < 5; ++i)
+	{
+		printf("%s %d",words[i],count[i]);
+	}
+}
 main() 
 { 
 	char filename[]="case1.in";
