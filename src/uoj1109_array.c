@@ -166,6 +166,7 @@ main()
 		if(strlen(tmp_w)>0)
 		counter(tmp_w);
 	ksort();
+	print();
 	vsort();
 	print();
 
