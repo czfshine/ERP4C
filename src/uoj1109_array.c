@@ -83,7 +83,7 @@ int canfind(char * word ){
 void counter(char * word){
 	int index=0;
 
-	if(index=canfind(word)!=-1){
+	if((index=canfind(word))!=-1){
 		count[index]++;
 	}else{
 		count[lindex]=1;
