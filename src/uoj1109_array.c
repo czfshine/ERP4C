@@ -17,7 +17,7 @@ int lindex=0;
 //@return:!0 sucess
 //@return: 0 fail
 int next(FILE * infile,char * word){
-	char ch,,i=0;
+	char ch,i=0;
 
 	
 	while((ch=getc(infile))!=EOF){
