@@ -175,7 +175,7 @@ main()
 		if(strlen(tmp_w)>0)
 		counter(tmp_w);
 	vsort();
-	 print();
+	 //print();
 	int num=count[0];
 	int cur=0;
 	int l=len();
@@ -194,8 +194,8 @@ main()
 		//printf("%d",num);
 		//printf("%d\n",cur);
     }
-    print();
-	printf("%d",len());
+    //print();
+	//printf("%d",len());
 	output();
 } 
 
