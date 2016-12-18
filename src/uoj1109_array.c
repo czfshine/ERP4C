@@ -67,7 +67,7 @@ FILE* open(char * filename){
 int canfind(char * word ){
 	int i=0;
 	while(words[i][0]!='\0' &&(strcmp(words[i++],word)!=0 )){
-		printf("%s,%s,%d\n",words[i],word,i);
+		//printf("%s,%s,%d\n",words[i],word,i);
 	}
 
 	//printf("%s,%s,%d\n",words[i-1],word,i);
@@ -86,7 +86,7 @@ void counter(char * word){
 	//printf("%s\n",word);
 	int index=0;
 
-	//printf("%s,%d\n",word,canfind(word));
+	printf("%s,%d\n",word,canfind(word));
 	if(index=canfind(word)){
 		if(index==-1){
 			count[0]++;
