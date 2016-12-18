@@ -176,6 +176,7 @@ main()
 		printf("%d",num);
 		printf("%d\n",cur);
     }
+    
 	printf("%d",len());
 } 
 
