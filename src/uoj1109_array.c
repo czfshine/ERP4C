@@ -22,23 +22,29 @@ int next(FILE * infile,char * word){
 	
 	while((ch=getc(infile))!=EOF){
 		//printf("%c",ch);
-		if(ch=='-'){
-			if((ch=getc(infile))=='\n'){
-				
-			}else{
-				fseek(infile,-1L,SEEK_CUR);
-			}
-			continue;
-		}
 
 		if(isalpha(ch)){
 			word[i++]=tolower(ch);
 			if (i>20) 
 				pass;
 		}else{
+			if(ch!='-'){
 			word[i]='\0';
-			return 1;
+			return 1;}
 		}
+
+		if(ch=='-'){
+			if((ch=getc(infile))=='\n'){
+				continue;
+			}else{
+				fseek(infile,-1L,SEEK_CUR);
+				word[i]='\0';
+				break;
+			}
+			
+		}
+
+		
 
 	}
 
