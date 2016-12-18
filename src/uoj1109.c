@@ -58,36 +58,20 @@ am 1
 
 **************************************
 Author0*/
-#include "stdio.h"
-//todo
-struct node{
-	int count;
-	struct node *child[26];
-};
-struct max{
-	char word[21];
-	int count;
-	struct max* next;
-};
 
 
-void getword(FILE *fp,char * str){
+#include "stdio.h" 
+#include "math.h" 
+#include "string.h" 
+#include "stdlib.h" 
 
-}
-
-void addnode(struct node * root,char * word ){
+char data [10001][21];
 
 
-}
+main() 
+{ 
 
-void find5max(struct node * root,char * * data){
+} 
 
-}
-void q(char * * data){
 
-}
-int main(int argc, char const *argv[])
-{
-	char word[21]="";
-	return 0;
-}
+

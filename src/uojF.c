@@ -8,39 +8,18 @@ int end=0;
 
 int is_p(int n)
 {
-    for(int i = 2; i * i <= n; i++) {
-        if(n % i == 0) return 0;
-    }    
+    for(int i = 2; i * i <= n; i++) if(n % i == 0) return 0;
     return 1;
 }
 
-
-
-void print(int s,int e){
-
-	for (int i = s; i <= e; ++i)
-	{
-		putchar(str[i]);
-	}
-
-	printf("\n");
-}
 int tonum(int s,int c){
 	int l=0;
 	for (int i = s; i <= c; ++i)
-	{
 		l=l*10+str[i]-'0';
-	}
 	return l;
 }
-
 int ok=0,no=0;
-
 int find(int cur){
-	//printf("%d",cur);
-	//if(ok+no>0)
-	//	return 0;
-	//printf("%d",cur);
 	for (int i = cur; i <=end; ++i)
 	{
 		if(i-cur>=6)
@@ -48,11 +27,8 @@ int find(int cur){
 			no=1;
 			return -1;
 		}
-		//printf("%d",cur);
 		if(is_p(tonum(cur,i))){
-			//printf("%d %d\n",cur,i);
 			if(i==end){
-				
 				if(!ok) printf("YES");
 				ok=1;
 				return 1;
@@ -71,7 +47,6 @@ int main(int argc, char const *argv[])
 	find(0);
 	if(!ok)
 		printf("NO");
-
 	return 0;
 }
 
