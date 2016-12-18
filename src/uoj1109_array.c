@@ -183,7 +183,7 @@ void sortk_v(){
 		if(num!=1){
 
 			ksort(s_cur-1,cur-2);
-			printf("%d,%d\n",s_cur-1,cur-2);
+			//printf("%d,%d\n",s_cur-1,cur-2);
 		}else{
 			ksort(s_cur-1,l-1);
 			//printf("%d,%d",s_cur-1,l-1);
@@ -228,7 +228,7 @@ main()
 		if(strlen(tmp_w)>0)
 		counter(tmp_w);
 	sortk_v();
-   	print();
+   //	print();
 	//printf("%d",len());
 	output();
 } 
