@@ -61,7 +61,7 @@ int canfind(char * word ){
 		//printf("%s,%s,%d\n",words[i],word,i);
 	}
 
-	printf("%s,%s,%d\n",words[i-1],word,i);
+	//printf("%s,%s,%d\n",words[i-1],word,i);
 	if(words[i][0]=='\0'){
 		return 0;
 	}else{
@@ -89,6 +89,12 @@ void counter(char * word){
 		strcpy(words[lindex++],word);
 	}
 }
+
+int len(){
+	int i=0;
+	while(words[i][0]!='\0'){}
+		return i;
+}
 //以key排序
 void ksort(){
 
@@ -115,5 +121,7 @@ main()
 
 	ksort();
 	print();
+
+	printf("%d",len());
 } 
 
