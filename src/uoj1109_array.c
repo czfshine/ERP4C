@@ -28,10 +28,10 @@ int next(FILE * infile,char * word){
 				continue;
 			}else{
 				
-				//fseek(infile,-1L,SEEK_CUR);
-				printf("%d",ftell(infile));
-				fseek(infile,ftell(infile)+1,SEEK_SET);
-				break;
+				fseek(infile,-1L,SEEK_CUR);
+				//printf("%d",ftell(infile));
+				//fseek(infile,ftell(infile)+1,SEEK_SET);
+				continue;
 			}
 		}
 
