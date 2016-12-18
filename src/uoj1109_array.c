@@ -196,6 +196,6 @@ main()
     }
     print();
 	printf("%d",len());
-	output()
+	output();
 } 
 
