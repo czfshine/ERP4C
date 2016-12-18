@@ -171,12 +171,19 @@ main()
 	int cur=0;
 	int l=len();
 	while (cur<l-1){
+		int s_cur=cur;
 		while(count[cur++]==num&&cur<l-1){}
+		if(num!=1){
+
+			ksort(s_cur,cur-2);
+		}else{
+			ksort(s_cur,l-1);
+		}
 		num=count[cur-1];
 		printf("%d",num);
 		printf("%d\n",cur);
     }
-    
+
 	printf("%d",len());
 } 
 
