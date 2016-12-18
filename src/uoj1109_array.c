@@ -183,8 +183,8 @@ main()
 			printf("%d,%d",s_cur,l-1);
 		}
 		num=count[cur-1];
-		printf("%d",num);
-		printf("%d\n",cur);
+		//printf("%d",num);
+		//printf("%d\n",cur);
     }
     print();
 	printf("%d",len());
