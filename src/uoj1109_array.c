@@ -67,7 +67,7 @@ FILE* open(char * filename){
 void print();
 int canfind(char * word ){
 	int i=0;
-	printf("%s,%s\n",words[lindex-1],word);
+	//printf("%s,%s\n",words[lindex-1],word);
 	//print();
 
 
@@ -227,7 +227,7 @@ main()
 		if(strlen(tmp_w)>0)
 		counter(tmp_w);
 	sortk_v();
-    print();
+   // print();
 	//printf("%d",len());
 	output();
 } 
