@@ -23,16 +23,10 @@ int next(FILE * infile,char * word){
 	while((ch=getc(infile))!=EOF){
 		//printf("%c",ch);
 		if(ch=='-'){
-			if((ch=getc(infile))=='\n'){
-				printf("%c",ch);
-				continue;
-			}else{
-				
+			if((ch=getc(infile))!='\n'){
 				fseek(infile,-1L,SEEK_CUR);
-				//printf("%d",ftell(infile));
-				//fseek(infile,ftell(infile)+1,SEEK_SET);
-				continue;
 			}
+			continue;
 		}
 
 		if(isalpha(ch)){
