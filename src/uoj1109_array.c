@@ -100,9 +100,9 @@ void swap(char *w1,char *w2){
 	char ts[21];
 	char * t=ts;
 	printf("%s",w1);
-	while(*t=*w1){}
-	while(*w1=*w2){}
-	while(*w2=*t){}
+	while(*t++=*w1++){}
+	while(*w1++=*w2++){}
+	while(*w2++=*t++){}
 }
 //以key排序
 void ksort(){
