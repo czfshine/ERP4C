@@ -99,7 +99,7 @@ void counter(char * word){
 		strcpy(words[lindex++],word);
 	}
 
-	print();
+	//print();
 }
 
 int len(){
