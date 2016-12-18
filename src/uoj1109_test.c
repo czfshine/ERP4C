@@ -197,7 +197,7 @@ main()
         if(strlen(tmp_w)>0)
             counter(tmp_w);
     #ifdef LOCAL
-    printf("input&count test：\n");
+    printf("input&count test:\n");
     print();
     sortk_v();
     printf("sort test\n");
