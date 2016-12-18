@@ -103,6 +103,28 @@ void swap(char *w1,char *w2){
 	strcpy(w1,w2);
 	strcpy(w2,t);
 }
+
+void vsort(){
+
+	int l=len();
+
+	for (int i = 0; i < l; ++i)
+	{
+		for (int j = 0; j < i; ++j)
+		{
+			if(count[i]<count[j]){
+
+				swap(words[i],words[j]);
+
+				int t;
+				t=count[i];
+				count[i]=count[j];
+				count[j]=t;
+			}
+		}
+	}
+
+}
 //以key排序
 void ksort(){
 	int l=len();
@@ -125,6 +147,7 @@ void ksort(){
 }
 
 
+
 void print(){
 	for (int i = 0; i < lindex; ++i)
 	{
@@ -143,7 +166,7 @@ main()
 		if(strlen(tmp_w)>0)
 		counter(tmp_w);
 
-	ksort();
+	vsort();
 	print();
 
 	printf("%d",len());
