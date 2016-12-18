@@ -67,8 +67,8 @@ FILE* open(char * filename){
 void print();
 int canfind(char * word ){
 	int i=0;
-
-	print();
+	printf("%s,%s\n",words[lindex],word);
+	//print();
 	while(words[i][0]!='\0' &&(strcmp(words[i++],word)!=0 )){
 		//printf("%s,%s,%d\n",words[i],word,i);
 	}
