@@ -184,7 +184,7 @@ void output(){
 
 main() 
 { 
-char filename[]="case1.in";
+	char filename[]="case1.in";
 	char tmp_w[21];
     FILE * infile;
     #ifdef LOCAL
@@ -196,7 +196,14 @@ char filename[]="case1.in";
     while(next(infile,tmp_w))
         if(strlen(tmp_w)>0)
             counter(tmp_w);
-
+    #ifdef LOCAL
+    printf("input&count test：\n");
+    print();
     sortk_v();
+    printf("sort test\n");
+    print();
+    printf("output test\n");
+    #endif
+    
     output();
 } 
