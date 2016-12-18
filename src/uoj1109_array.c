@@ -110,7 +110,7 @@ void ksort(){
 
 	for (int i = 0; i < l; ++i)
 	{
-		for (int j = i; j < l; ++j)
+		for (int j = 0; j < i; ++j)
 		{
 			if(strcmp(words[i],words[j])>0){
 
