@@ -64,6 +64,7 @@ FILE* open(char * filename){
 		pass;
 	return in;
 }
+void print();
 int canfind(char * word ){
 	int i=0;
 
