@@ -227,7 +227,7 @@ main()
 		if(strlen(tmp_w)>0)
 		counter(tmp_w);
 	sortk_v();
-   // print();
+   	print();
 	//printf("%d",len());
 	output();
 } 
