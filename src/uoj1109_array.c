@@ -27,8 +27,9 @@ int next(FILE * infile,char * word){
 				printf("%c",ch);
 				continue;
 			}else{
-				if(isalpha(ch)){
-				fseek(infile,-1L,SEEK_CUR);}
+				
+				//fseek(infile,-1L,SEEK_CUR);
+					printf("%c",ftell(infile));
 				break;
 			}
 		}
