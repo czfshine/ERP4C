@@ -22,7 +22,7 @@ int next(FILE * infile,char * word){
 	
 	while((ch=getc(infile))!=EOF){
 		if(ch=='-'){
-			if((ch=getc(fp))=='\n'){
+			if((ch=getc(infile))=='\n'){
 				continue;
 			}else{
 				fseek(infile,-1L,SEEK_CUR);
