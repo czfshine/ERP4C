@@ -183,7 +183,7 @@ main()
 		printf("%d",num);
 		printf("%d\n",cur);
     }
-
+    print();
 	printf("%d",len());
 } 
 
