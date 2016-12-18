@@ -184,7 +184,8 @@ void output(){
 
 main() 
 { 
-
+char filename[]="case1.in";
+	char tmp_w[21];
     FILE * infile;
     #ifdef LOCAL
     	infile=stdin;
