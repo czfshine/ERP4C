@@ -41,13 +41,13 @@ int next(FILE * infile,char * word){
 		}
 
 	}
-	printf("%s\n",word);
+	
 	if(i>0){
 		word[i]='\0';
 		return 1;
 	}
 
-
+printf("%s\n",word);
 	return 0;
 }
 //打开文件
