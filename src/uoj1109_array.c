@@ -29,7 +29,8 @@ int next(FILE * infile,char * word){
 			}else{
 				
 				//fseek(infile,-1L,SEEK_CUR);
-					printf("%d",ftell(infile));
+				printf("%d",ftell(infile));
+				fseek(infile,ftell(infile)-1,SEEK_SET);
 				break;
 			}
 		}
