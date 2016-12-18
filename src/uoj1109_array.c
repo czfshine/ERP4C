@@ -70,7 +70,7 @@ int canfind(char * word ){
 		//printf("%s,%s,%d\n",words[i],word,i);
 	}
 
-	printf("%s,%s,%d\n",words[i-1],word,i);
+	printf("-----%s,%s,%d\n",words[i-1],word,i);
 	if(words[i][0]=='\0'){
 		return 0;
 	}else{
@@ -86,7 +86,7 @@ void counter(char * word){
 	//printf("%s\n",word);
 	int index=0;
 
-	//printf("%s,%d\n",word,canfind(word));
+	printf("%s,%d\n",word,canfind(word));
 	if(index=canfind(word)){
 		if(index==-1){
 			count[0]++;
