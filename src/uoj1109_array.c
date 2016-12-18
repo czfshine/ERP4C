@@ -81,6 +81,7 @@ int canfind(char * word ){
 		return i-1;
 	}
 }
+void print();
 //计数器
 void counter(char * word){
 	//printf("%s\n",word);
