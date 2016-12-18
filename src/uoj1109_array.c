@@ -65,7 +65,10 @@ int canfind(char * word ){
 	if(words[i][0]=='\0'){
 		return 0;
 	}else{
-		
+		if (i==1)
+		{
+			return -1;
+		}
 		return i-1;
 	}
 }
