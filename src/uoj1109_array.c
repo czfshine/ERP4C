@@ -126,8 +126,8 @@ void vsort(){
 	}
 
 }
-//以key排序
-void ksort(){
+//以key在区间排序
+void ksort(int s,int e){
 	int l=len();
 
 	for (int i = 0; i < l; ++i)
@@ -166,11 +166,11 @@ main()
 	while(next(infile,tmp_w))
 		if(strlen(tmp_w)>0)
 		counter(tmp_w);
-	ksort();
-	print();
 	vsort();
-	print();
-
+	int num=count[0];
+	int cur=0;
+	while(count[cur++]==num){}
+	printf("%d",cur);
 	printf("%d",len());
 } 
 
