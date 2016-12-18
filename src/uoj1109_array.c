@@ -17,18 +17,23 @@ int lindex=0;
 //@return:!0 sucess
 //@return: 0 fail
 int next(FILE * infile,char * word){
-	char ch,i=0;
+	char ch,,i=0;
 
 	
 	while((ch=getc(infile))!=EOF){
+		if(ch=='-'){
+			if((ch=getc(fp))=='\n'){
+				continue;
+			}else{
+				fseek(infile,-1L,SEEK_CUR);
+				break;
+			}
+		}
 		if(isalpha(ch)){
 			word[i++]=tolower(ch);
 			if (i>20) 
 				pass;
-		}else if(ch=='-'){
-			ch=getc(infile);
 		}else{
-
 			word[i]='\0';
 			return 1;
 		}
