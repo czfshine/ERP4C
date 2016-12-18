@@ -169,8 +169,11 @@ main()
 	vsort();
 	int num=count[0];
 	int cur=0;
-	while(count[cur++]==num){}
-	printf("%d",cur);
+	int l=len();
+	while (cur<l-1){
+		while(count[cur++]==num&&cur<l-1){}
+		printf("%d",cur);
+    }
 	printf("%d",len());
 } 
 
