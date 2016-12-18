@@ -100,7 +100,6 @@ void swap(char *w1,char *w2){
 	strcpy(w2,t);
 }
 
-
 void vsort(){
 
 	int l=lindex,t;
