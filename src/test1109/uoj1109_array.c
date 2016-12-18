@@ -186,6 +186,8 @@ main()
 { 
 
     FILE * infile;
+    char filename[]="case1.in";
+	char tmp_w[21];
     #ifdef LOCAL
     	infile=stdio;
     #else

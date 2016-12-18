@@ -187,7 +187,7 @@ main()
 
     FILE * infile;
     #ifdef LOCAL
-    	infile=stdio;
+    	infile=stdin;
     #else
    		infile=open(filename);
     #endif
