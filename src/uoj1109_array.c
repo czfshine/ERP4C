@@ -167,6 +167,7 @@ main()
 		if(strlen(tmp_w)>0)
 		counter(tmp_w);
 	vsort();
+	 print();
 	int num=count[0];
 	int cur=0;
 	int l=len();
