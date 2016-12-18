@@ -113,7 +113,7 @@ void ksort(){
 		{
 			if(strcmp(words[i],words[j])>0){
 
-				swap(words[i],word[j]);
+				swap(words[i],words[j]);
 
 				int t;
 				t=count[i];
