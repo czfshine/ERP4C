@@ -19,14 +19,15 @@ int lindex=0;
 int next(FILE * infile,char * word){
 	char ch,i=0;
 
-	
+	int is=0;
 	while((ch=getc(infile))!=EOF){
 		//printf("%c",ch);
 		if(ch=='-'){
 			if((ch=getc(infile))!='\n'){
 				fseek(infile,-1L,SEEK_CUR);
 			}
-			continue;
+			is=1;
+			break;
 		}
 
 		if(isalpha(ch)){
@@ -40,7 +41,7 @@ int next(FILE * infile,char * word){
 
 	}
 
-	if(i>0){
+	if(i>0||is){
 		word[i]='\0';
 		return 1;
 	}
@@ -197,7 +198,7 @@ main()
 		if(strlen(tmp_w)>0)
 		counter(tmp_w);
 	sortk_v();
-    print();
+   // print();
 	//printf("%d",len());
 	output();
 } 
