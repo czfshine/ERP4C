@@ -151,7 +151,7 @@ void vsort(){
 //以key在区间排序
 void ksort(int s,int e){
 	int l=len();
-
+	if(s<0) s=0;
 	for (int i = s; i < e+1; ++i)
 	{
 		for (int j = i+1; j < e+1; ++j)
