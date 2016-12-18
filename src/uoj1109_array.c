@@ -56,7 +56,7 @@ FILE* open(char * filename){
 int canfind(char * word ){
 	int i=0;
 	while(words[i][0]!='\0' &&(strcmp(words[i++],word)!=0 )){
-		printf("%s,%s,%d",words[i],word,i);
+		printf("%s,%s,%d\n",words[i],word,i);
 	}
 	if(words[i][0]=='\0'){
 		return 0;
