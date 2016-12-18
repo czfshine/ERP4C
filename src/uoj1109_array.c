@@ -80,6 +80,7 @@ int canfind(char * word ){
 		}
 		return i-1;
 	}
+	
 }
 void print();
 //计数器
