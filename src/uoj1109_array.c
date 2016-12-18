@@ -69,7 +69,7 @@ void counter(char * word){
 	//printf("%s\n",word);
 	int index=0;
 
-	printf("%s,%d\n",word,canfind(word));
+	//printf("%s,%d\n",word,canfind(word));
 	if(index=canfind(word)){
 		count[index]++;
 	}else{
