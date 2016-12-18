@@ -92,7 +92,6 @@ void counter(char * word){
 
 }
 
-//交换字符串
 void swap(char *w1,char *w2){
 	char ts[21];
 	char * t=ts;
@@ -101,7 +100,6 @@ void swap(char *w1,char *w2){
 	strcpy(w2,t);
 }
 
-//按value排序
 void vsort(){
 
 	int l=lindex,t;
@@ -123,7 +121,7 @@ void vsort(){
 
 }
 
-//以key在区间[s,e]排序
+//以key在区间排序
 void ksort(int s,int e){
 	int l=lindex,t;
 	if(s<0) s=0;
@@ -143,7 +141,6 @@ void ksort(int s,int e){
 	}
 }
 
-//key在value下的二重排序
 void sortk_v(){
 
 	vsort();
@@ -164,7 +161,6 @@ void sortk_v(){
 
 }
 
-// 输出当前单词表
 void print(){
 	for (int i = 0; i < lindex; ++i)
 	{
@@ -177,7 +173,6 @@ void print(){
 
 }
 
-//输出结果
 void output(){
 
 	for (int i = 0; i < OUTPUTMAX; ++i)
@@ -185,19 +180,22 @@ void output(){
 	
 }
 
+
+
 main() 
 { 
-	char filename[]="case1.in";
-	char tmp_w[21];
 
-	FILE * infile;
-	infile=open(filename);
+    FILE * infile;
+    #ifdef LOCAL
+    	infile=stdio;
+    #else
+   		infile=open(filename);
+    #endif
 
-	while(next(infile,tmp_w))
-		if(strlen(tmp_w)>0)
-			counter(tmp_w);
+    while(next(infile,tmp_w))
+        if(strlen(tmp_w)>0)
+            counter(tmp_w);
 
-	sortk_v();
-	output();
+    sortk_v();
+    output();
 } 
-
