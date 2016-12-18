@@ -202,4 +202,3 @@ main()
 	//printf("%d",len());
 	output();
 } 
-
