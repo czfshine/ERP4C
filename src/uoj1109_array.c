@@ -160,7 +160,7 @@ void output(){
 
 	for (int i = 0; i < 5; ++i)
 	{
-		printf("%s %d",words[i],count[i]);
+		printf("%s %d\n",words[i],count[i]);
 	}
 }
 main() 
