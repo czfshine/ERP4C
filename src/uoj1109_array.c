@@ -39,6 +39,7 @@ int next(FILE * infile,char * word){
 			}else{
 				fseek(infile,-1L,SEEK_CUR);
 				word[i]='\0';
+				return 1;
 				break;
 			}
 			
