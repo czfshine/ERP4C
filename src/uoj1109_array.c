@@ -111,7 +111,7 @@ void ksort(){
 	{
 		for (int j = i; j < l; ++j)
 		{
-			if(strcmp(words[i],word[j])>0){
+			if(strcmp(words[i],words[j])>0){
 
 				swap(words[i],word[j]);
 
