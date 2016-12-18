@@ -147,7 +147,29 @@ void ksort(int s,int e){
 	}
 }
 
+void sortk_v(){
 
+	vsort();
+	 //print();
+	int num=count[0];
+	int cur=0;
+	int l=len();
+	while (cur<l-1){
+		int s_cur=cur;
+		while(count[cur++]==num&&cur<l-1){}
+		if(num!=1){
+
+			ksort(s_cur,cur-2);
+			//printf("%d,%d",s_cur,cur-2);
+		}else{
+			ksort(s_cur-1,l-1);
+			//printf("%d,%d",s_cur-1,l-1);
+		}
+		num=count[cur-1];
+		//printf("%d",num);
+		//printf("%d\n",cur);
+    }
+}
 
 void print(){
 	for (int i = 0; i < lindex; ++i)
@@ -174,26 +196,7 @@ main()
 	while(next(infile,tmp_w))
 		if(strlen(tmp_w)>0)
 		counter(tmp_w);
-	vsort();
-	 //print();
-	int num=count[0];
-	int cur=0;
-	int l=len();
-	while (cur<l-1){
-		int s_cur=cur;
-		while(count[cur++]==num&&cur<l-1){}
-		if(num!=1){
-
-			ksort(s_cur,cur-2);
-			//printf("%d,%d",s_cur,cur-2);
-		}else{
-			ksort(s_cur-1,l-1);
-			//printf("%d,%d",s_cur-1,l-1);
-		}
-		num=count[cur-1];
-		//printf("%d",num);
-		//printf("%d\n",cur);
-    }
+	sortk_v();
     //print();
 	//printf("%d",len());
 	output();
