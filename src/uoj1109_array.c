@@ -24,6 +24,7 @@ int next(FILE * infile,char * word){
 		//printf("%c",ch);
 		if(ch=='-'){
 			if((ch=getc(infile))=='\n'){
+				printf("%c",ch);
 				continue;
 			}else{
 				if(isalpha(ch)){
