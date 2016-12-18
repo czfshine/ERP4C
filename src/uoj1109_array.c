@@ -177,8 +177,10 @@ main()
 		if(num!=1){
 
 			ksort(s_cur,cur-2);
+			printf("%d,%d",s_cur,cur-2);
 		}else{
 			ksort(s_cur,l-1);
+			printf("%d,%d",s_cur,l-1);
 		}
 		num=count[cur-1];
 		printf("%d",num);
