@@ -72,7 +72,7 @@ int main()
             int bijiao=0; //比较为0说明是新单词
 
             for(g=0;g<k;g++)   //依次比对每一个结构体
-            {
+            {   printf("%s,%s,%d",wordtry,a[g].word,strcmp(wordtry,a[g].word));
                 if(strcmp(wordtry,a[g].word)==0)
                 {
                     bijiao=1;
@@ -80,7 +80,7 @@ int main()
                     break;
                 }
             }
-            
+
             if(bijiao==0)
             {
                 while(t[temp]){//假设了第一个字符就是字母来开始
