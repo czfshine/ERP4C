@@ -67,7 +67,7 @@ int main()
             temp=j;
 
             while(t[j]){//假设了第一个字符就是字母来开始
-                if(t[j]!==3)
+                if(t[j]!=3)
                     wordtry[toptry++]=ch[j++];
                 else j++;
             }   //先把单词存放在暂时的用于比对储存的
