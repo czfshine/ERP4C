@@ -46,7 +46,7 @@ int main()
     fclose(fp);   /*把连字符和回车的特殊情况写3当做是字母*/
 
     #ifdef DEBUG
-    printf("array t[]:\n")''
+    printf("array t[]:\n");
     int debug_j=0;
     for (int debug_j = 0; debug_j < i; ++debug_j)
     {
