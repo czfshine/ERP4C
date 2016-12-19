@@ -30,13 +30,13 @@ int main()
         ch[i]=tolower(ch[i]);
 
         if(ch[i]=='\n'&&ch[i-1]=='-')
-           {t[i]=3; i++;continue;}
+           {t[i]=1; i++;continue;}
 
         if(!isalpha(ch[i]))
         {
             if(ch[i]=='-'&&ch[i+1]=='\n')
             {
-                t[i]=3;
+                t[i]=1;
             }
             else t[i]=0;
         }
