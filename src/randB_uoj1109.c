@@ -80,7 +80,7 @@ int main()
                     break;
                 }
             }
-
+            
             if(bijiao==0)
             {
                 while(t[temp]){//假设了第一个字符就是字母来开始
