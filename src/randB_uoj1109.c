@@ -64,11 +64,12 @@ int main()
             temp=j;
 
             while(t[j]){//假设了第一个字符就是字母来开始
-                if(t[j]!=3&&t[j+1]!=3)
+                if(t[j]!=3&&t[j+1]!=3)//跳过连字符和换行
                     wordtry[toptry++]=ch[j++];//先把单词存放在暂时的用于比对储存的
                 else j++;
             }   
-            wordtry[toptry]=0;
+            wordtry[toptry]=0;//字符串结束符啊啊啊啊啊啊啊啊啊啊啊，不然下面的比较就不成立了
+            
             int bijiao=0; //比较为0说明是新单词
 
             for(g=0;g<k;g++)   //依次比对每一个结构体
