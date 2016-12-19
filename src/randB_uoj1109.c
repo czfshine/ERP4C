@@ -30,13 +30,13 @@ int main()
         ch[i]=tolower(ch[i]);
 
         if(ch[i]=='\n'&&ch[i-1]=='-')
-           {t[i]=1; i++;continue;}
+           {t[i-1]=1;t[i]=3; i++;continue;}//忘了i++ ，t[i-1]=1 sad:(
 
         if(!isalpha(ch[i]))
         {
-            if(ch[i]=='-'&&ch[i+1]=='\n')
+            if(ch[i]=='-'&&ch[i+1]=='\n')//你他妈在逗我，i+1一定为0
             {
-                t[i]=1;
+                t[i]=3;
             }
             else t[i]=0;
         }
@@ -54,6 +54,8 @@ int main()
     }
     printf("\n");
     #endif
+
+
     int j=0,g,temp;
     char wordtry[21];
     for(i=0;t[i]!=2;i++)   //k代表结构体第几组
@@ -64,29 +66,30 @@ int main()
             int dancitop=0,toptry=0;
             temp=j;
 
-            while(ch[j]<='z'&&ch[j]>='a'||ch[j]<='Z'&&ch[j]>='A') //假设了第一个字符就是字母来开始
-            {
-                wordtry[toptry++]=ch[j++];   //先把单词存放在暂时的用于比对储存的
-            }
+            while(isalpha(ch[j])){//假设了第一个字符就是字母来开始
+                wordtry[toptry++]=ch[j++];
+
+            }   //先把单词存放在暂时的用于比对储存的
 
             int bijiao=0; //比较为0说明是新单词
 
-                for(g=0;g<k;g++)   //依次比对每一个结构体
+            for(g=0;g<k;g++)   //依次比对每一个结构体
+            {
+                if(strcmp(wordtry,a[g].word)==0)
                 {
-                    if(strcmp(wordtry,a[g].word)==0)
-                     {
-                        bijiao=1;
-                        a[g].num+=1;
-                        break;
-                     }
-                }
-                if(bijiao==0)
-                {
-                    while(ch[temp]<='z'&&ch[temp]>='a'||ch[temp]<='Z'&&ch[temp]>='A')
-                    a[k].word[dancitop++]=ch[temp++];
+                    bijiao=1;
+                    a[g].num+=1;
+                    break;
+                    }
+            }
 
-                    k++;//注意如果全部结束此时k+1了
-                }
+            if(bijiao==0)
+            {
+                while(ch[temp]<='z'&&ch[temp]>='a'||ch[temp]<='Z'&&ch[temp]>='A')
+                a[k].word[dancitop++]=ch[temp++];
+
+                k++;//注意如果全部结束此时k+1了
+            }
 
         }
         if(t[i]==0&&t[i+1]==1)  //储存下一个单词开头的位置
