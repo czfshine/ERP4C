@@ -147,7 +147,7 @@ void zidian(struct danci a[])
         if(start<0) start=0;
         num?end=cur-2:end=l-1;
         num=a[cur-1].num;
-
+        printf("%d,%d",strat,end);
         for(i=start;i<end;i++)
         {
             for(j=i+1;j<end;j++)
