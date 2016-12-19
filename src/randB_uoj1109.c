@@ -30,13 +30,13 @@ int main()
         ch[i]=tolower(ch[i]);
 
         if(ch[i]=='\n'&&ch[i-1]=='-')
-           {t[i-1]=1;t[i]=1; i++;continue;}//忘了i++ ，t[i-1]=1 sad:(
+           {t[i-1]=1;t[i]=3; i++;continue;}//忘了i++ ，t[i-1]=1 sad:(
 
         if(!isalpha(ch[i]))
         {
             if(ch[i]=='-'&&ch[i+1]=='\n')//你他妈在逗我，i+1一定为0
             {
-                t[i]=1;
+                t[i]=3;
             }
             else t[i]=0;
         }
@@ -67,8 +67,9 @@ int main()
             temp=j;
 
             while(t[j]){//假设了第一个字符就是字母来开始
-                //printf("%c",ch[j]);
-                wordtry[toptry++]=ch[j++];
+                if(t[j]!==3)
+                    wordtry[toptry++]=ch[j++];
+                else j++;
             }   //先把单词存放在暂时的用于比对储存的
             printf("%s---end\n",wordtry);
             int bijiao=0; //比较为0说明是新单词
