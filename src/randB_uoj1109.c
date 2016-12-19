@@ -106,7 +106,7 @@ int main()
     else
     {
         bijiaocishu(a);
-        //zidian(a);
+        zidian(a);
         for(g=0;g<k;g++)
             printf("%s %d\n",a[g].word,a[g].num);
     }
