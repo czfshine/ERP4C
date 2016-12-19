@@ -2,7 +2,7 @@
 #include "string.h"
 #include <stdio.h>
 #include "ctype.h"
-#define DEBUG 0
+//#define DEBUG 0
 struct danci
 {
     int num;
