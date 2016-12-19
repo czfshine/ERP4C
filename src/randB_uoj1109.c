@@ -68,7 +68,7 @@ int main()
                     wordtry[toptry++]=ch[j++];//先把单词存放在暂时的用于比对储存的
                 else j++;
             }   
-
+            wordtry[toptry]=0;
             int bijiao=0; //比较为0说明是新单词
 
             for(g=0;g<k;g++)   //依次比对每一个结构体
