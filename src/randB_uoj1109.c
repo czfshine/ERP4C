@@ -1,3 +1,9 @@
+#include <stdlib.h>
+#include "string.h"
+
+
+
+
 struct danci
 {
     int num;
