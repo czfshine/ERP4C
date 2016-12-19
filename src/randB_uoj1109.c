@@ -72,7 +72,7 @@ int main()
             int bijiao=0; //比较为0说明是新单词
 
             for(g=0;g<k;g++)   //依次比对每一个结构体
-            {   printf("%s,%s,%d",wordtry,a[g].word,strcmp(wordtry,a[g].word));
+            {   printf("%s,%s,%d\n",wordtry,a[g].word,strcmp(wordtry,a[g].word));
                 if(strcmp(wordtry,a[g].word)==0)
                 {
                     bijiao=1;
