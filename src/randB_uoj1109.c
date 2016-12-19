@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 
+#define DEBUG 1
 
 struct danci
 {
@@ -29,22 +30,30 @@ int main()
         if(ch[i]<='Z'&&ch[i]>='A')
             ch[i]+=32;
         if(ch[i]=='\n'&&ch[i-1]=='-')
-           {t[i]=1; continue;}
+           {t[i]=3; continue;}
 
         if(!(ch[i]<='Z'&&ch[i]>='A'||ch[i]<='z'&&ch[i]>='a'))
         {
             if(ch[i]=='-'&&ch[i+1]=='\n')
             {
-                t[i]=1;
+                t[i]=3;
             }
             else t[i]=0;
         }
         i++;
     }
     t[i]=2;//表示全文结束
-    fclose(fp);   /*把连字符和回车的特殊情况写1当做是字母*/
+    fclose(fp);   /*把连字符和回车的特殊情况写3当做是字母*/
 
-
+    #ifdef DEBUG
+    printf("array t[]:\n")
+    int debug_j=0;
+    for (int debug_j = 0; debug_j < i; ++debug_j)
+    {
+        printf("%d ",t[debug_j])''
+    }
+    printf("\n");
+    #endif
     int j=0,g,temp;
     char wordtry[21];
     for(i=0;t[i]!=2;i++)   //k代表结构体第几组
