@@ -70,7 +70,7 @@ int main()
                 //printf("%c",ch[j]);
                 wordtry[toptry++]=ch[j++];
             }   //先把单词存放在暂时的用于比对储存的
-            printf("%s",wordtry);
+            printf("%s\n",wordtry);
             int bijiao=0; //比较为0说明是新单词
 
             for(g=0;g<k;g++)   //依次比对每一个结构体
