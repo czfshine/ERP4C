@@ -134,11 +134,13 @@ void zidian(struct danci a[])
 {
     struct danci temp;
     int i,j,g;
-    
     int num=a[0].num;
     int cur=0;
     int l=k;
+
     while (cur<l-1){
+
+        //得到不同的数字区间
         int s_cur=cur;
         while(a[cur++].num==num&&cur<l-1){}
 
@@ -147,7 +149,9 @@ void zidian(struct danci a[])
         if(start<0) start=0;
         num?end=cur-1:end=l;
         num=a[cur-1].num;
-        printf("%d,%d",start,end);
+
+
+        //在区间内排序
         for(i=start;i<end;i++)
         {
             for(j=i+1;j<end;j++)
