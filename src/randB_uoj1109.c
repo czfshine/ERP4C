@@ -134,25 +134,7 @@ void zidian(struct danci a[])
 {
     struct danci temp;
     int i,j,g;
-    for(i=0;i<k-1;i++)
-    {
-        g=i;
-        for(j=i+1;j<k;j++)
-        {
-              if(a[j].num!=a[j+1].num)
-                continue;
-              if(strcmp(a[j].word,a[g].word)<0)
-              {
-                  g=j;
-                  temp=a[g];
-                  a[g]=a[i];
-                  a[i]=temp;
-              }
-
-        }
-    }
-
-
+    
     int num=a[0].num;
     int cur=0;
     int l=k;
@@ -163,7 +145,20 @@ void zidian(struct danci a[])
         int start,end;
         start=s_cur-1;
         num?end=cur-2:end=l-1;
-
         num=a[cur-1].num;
+
+        for(i=start;i<end;i++)
+        {
+            for(j=i+1;j<end;j++)
+            {
+                if(strcmp(a[i].word,a[j].word)<0)
+                {
+                    temp=a[i];
+                    a[i]=a[j];
+                     a[j]=temp;
+                }
+            }
+        }
+
     }
 }
