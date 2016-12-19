@@ -50,7 +50,7 @@ int main()
     int debug_j=0;
     for (int debug_j = 0; debug_j < i; ++debug_j)
     {
-        printf("%d ",t[debug_j]);
+        printf("%c%d ",ch[debug_j],t[debug_j]);
     }
     printf("\n");
     #endif
