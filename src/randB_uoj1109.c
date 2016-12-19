@@ -66,7 +66,7 @@ int main()
             int dancitop=0,toptry=0;
             temp=j;
 
-            while(isalpha(ch[j])){//假设了第一个字符就是字母来开始
+            while(t[j]){//假设了第一个字符就是字母来开始
                 wordtry[toptry++]=ch[j++];
 
             }   //先把单词存放在暂时的用于比对储存的
