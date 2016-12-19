@@ -21,18 +21,17 @@ int main()
     fp=fopen("case1.in","r");
     if(fp==NULL)
         exit(0);
-    char ch[200000];int i=0,t[200000];   //1代表是字母，0不是
+    char ch[200000],t[200000];int i=0;   //1代表是字母，0不是,用char省内存
     while((ch[i]=fgetc(fp))!=EOF)
     {
-        if(ch[i]<='Z'&&ch[i]>='A'||ch[i]<='z'&&ch[i]>='a')
+        if(isalpha(ch[i]))
             t[i]=1;
+        ch[i]=tolower(ch[i]);
 
-        if(ch[i]<='Z'&&ch[i]>='A')
-            ch[i]+=32;
         if(ch[i]=='\n'&&ch[i-1]=='-')
-           {t[i]=3; continue;}
+           {t[i]=3; i++;continue;}
 
-        if(!(ch[i]<='Z'&&ch[i]>='A'||ch[i]<='z'&&ch[i]>='a'))
+        if(!isalpha(ch[i]))
         {
             if(ch[i]=='-'&&ch[i+1]=='\n')
             {
