@@ -69,7 +69,7 @@ int main()
                 else j++;
             }   
             wordtry[toptry]=0;//字符串结束符啊啊啊啊啊啊啊啊啊啊啊，不然下面的比较就不成立了
-            
+
             int bijiao=0; //比较为0说明是新单词
 
             for(g=0;g<k;g++)   //依次比对每一个结构体
@@ -121,11 +121,11 @@ void bijiaocishu(struct danci a[])
 
     for(i=0;i<k-1;i++)
     {
-        for(j=0;j<k-1-i;j++)
-        if(a[j].num<a[j+1].num)
+        for(j=i;j<k-1;j++)//排序都写错orz
+        if(a[i].num<a[j+1].num)
         {
-            temp=a[j];
-            a[j]=a[j+1];
+            temp=a[i];
+            a[i]=a[j+1];
             a[j+1]=temp;
         }
     }
