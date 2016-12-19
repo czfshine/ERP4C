@@ -151,4 +151,19 @@ void zidian(struct danci a[])
 
         }
     }
+
+
+    int num=a[0].num;
+    int cur=0;
+    int l=k;
+    while (cur<l-1){
+        int s_cur=cur;
+        while(a[cur++].num==num&&cur<l-1){}
+
+        int start,end;
+        strat=s_cur-1;
+        num?end=cur-2:end=l-1;
+
+        num=a[cur-1].num;
+    }
 }
