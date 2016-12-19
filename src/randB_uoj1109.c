@@ -68,10 +68,11 @@ int main()
 
             while(t[j]){//假设了第一个字符就是字母来开始
                 if(t[j]!=3&&t[j+1]!=3)
-                    wordtry[toptry++]=ch[j++];
+                    wordtry[toptry++]=ch[j++];//先把单词存放在暂时的用于比对储存的
                 else j++;
-            }   //先把单词存放在暂时的用于比对储存的
-            printf("%s---end\n",wordtry);
+            }   
+            //printf("%s---end\n",wordtry);
+
             int bijiao=0; //比较为0说明是新单词
 
             for(g=0;g<k;g++)   //依次比对每一个结构体
@@ -86,8 +87,12 @@ int main()
 
             if(bijiao==0)
             {
-                while(ch[temp]<='z'&&ch[temp]>='a'||ch[temp]<='Z'&&ch[temp]>='A')
-                a[k].word[dancitop++]=ch[temp++];
+                while(t[temp]){//假设了第一个字符就是字母来开始
+                if(t[temp]!=3&&t[temp+1]!=3)
+                   a[k].word[dancitop++]=ch[temp++];
+                else temp++;
+            }   
+                
 
                 k++;//注意如果全部结束此时k+1了
             }
