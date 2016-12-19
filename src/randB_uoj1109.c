@@ -1,11 +1,8 @@
 #include <stdlib.h>
 #include "string.h"
 #include <stdio.h>
-
 #include "ctype.h"
-
 #define DEBUG 1
-
 struct danci
 {
     int num;
@@ -22,7 +19,7 @@ int main()
     fp=fopen("case1.in","r");
     if(fp==NULL)
         exit(0);
-    char ch[200000],t[200000];int i=0;   //1代表是字母，0不是,用char省内存
+    char ch[200000]={0},t[200000]={0};int i=0;   //1代表是字母，0不是,用char省内存
     while((ch[i]=fgetc(fp))!=EOF)
     {
         if(isalpha(ch[i]))
@@ -34,7 +31,7 @@ int main()
 
         if(!isalpha(ch[i]))
         {
-            if(ch[i]=='-'&&ch[i+1]=='\n')//你他妈在逗我，i+1一定为0
+            if(ch[i]=='-'&&ch[i+1]=='\n')//你他妈在逗我，ch i+1一定为0
             {
                 t[i]=3;
             }
@@ -71,7 +68,6 @@ int main()
                     wordtry[toptry++]=ch[j++];//先把单词存放在暂时的用于比对储存的
                 else j++;
             }   
-            //printf("%s---end\n",wordtry);
 
             int bijiao=0; //比较为0说明是新单词
 
@@ -82,21 +78,18 @@ int main()
                     bijiao=1;
                     a[g].num+=1;
                     break;
-                    }
+                }
             }
 
             if(bijiao==0)
             {
                 while(t[temp]){//假设了第一个字符就是字母来开始
-                if(t[temp]!=3&&t[temp+1]!=3)
-                   a[k].word[dancitop++]=ch[temp++];
-                else temp++;
-            }   
-                
-
+                    if(t[temp]!=3&&t[temp+1]!=3)
+                      a[k].word[dancitop++]=ch[temp++];
+                    else temp++;
+                }   
                 k++;//注意如果全部结束此时k+1了
             }
-
         }
         if(t[i]==0&&t[i+1]==1)  //储存下一个单词开头的位置
         {
