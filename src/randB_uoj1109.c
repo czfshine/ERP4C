@@ -152,11 +152,11 @@ void zidian(struct danci a[])
         {
             for(j=i+1;j<end;j++)
             {
-                if(strcmp(a[i].word,a[j].word)<0)
+                if(strcmp(a[i].word,a[j].word)>0)
                 {
                     temp=a[i];
                     a[i]=a[j];
-                     a[j]=temp;
+                    a[j]=temp;
                 }
             }
         }
