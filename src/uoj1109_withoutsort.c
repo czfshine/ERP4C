@@ -4,7 +4,7 @@
 #include "stdlib.h"
 #include "ctype.h"
 char words[10001][21]= {0},tmp_w[21]; //keys
-int  count[10001]= {0}, lindex=0,t=0;    //values
+int  count[10001]= {0}, lindex=0,t=0,index=0;    //values
 int next(FILE * infile,char * word){
     char ch,i=0;
     while((ch=getc(infile))!=EOF)
@@ -18,12 +18,10 @@ int next(FILE * infile,char * word){
     	}
     return 0;
 }
-int canfind(char * word ){
-    
-    
-}
+
 void counter(char * word){
-	int i=0,index=0;
+
+	int i=0;
 	if(lindex>2&&strcmp(words[lindex-1],word)==0) index= lindex-1;
     else {while(words[i][0]!='\0' &&(strcmp(words[i++],word)!=0 )) {}
     index= (words[i][0]=='\0')?-1:i-1;}
