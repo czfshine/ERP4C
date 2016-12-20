@@ -48,7 +48,7 @@ int main()
   if(i>0){
     w[i]='\0';
   }
-printf("%s\n",w);
+    printf("%s\n",w);
 
     for(j=0; j<k; j++) //与已存在的进行对比，防止有重复
     {
@@ -58,11 +58,11 @@ printf("%s\n",w);
             m=1;
        }
 
-        if(m) {word[j].num++;break;}
+        if(m) {word[j].num++;m=0;break;}
        
     }
 
-     if(m)
+     if(!m)
         {
             word[k].num=1;
             strcpy(word[k].a,w);
