@@ -42,7 +42,6 @@ int main()
     m=0;
     k=1;
     while(next(fp,w)){
-  printf("%s\n",w);
     for(j=0; j<k; j++) //与已存在的进行对比，防止有重复
     {
         if(strcmp(w,word[j].a)==0)
