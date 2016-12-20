@@ -12,7 +12,7 @@ int next(FILE * infile,char * word){
             word[i++]=tolower(ch);
         else{
         	if(ch=='-')
-            	((ch=getc(infile))=='\n')?continue:fseek(infile,-1L,SEEK_CUR);
+            	((ch=getc(infile))=='\n')?continue;:fseek(infile,-1L,SEEK_CUR);
 			word[i]='\0';
            	return 1;
     	}
