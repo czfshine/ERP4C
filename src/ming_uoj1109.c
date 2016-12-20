@@ -21,7 +21,6 @@ int main()
     m=0;
     k=1;
     while(ch!=EOF){
-
    i=0;
   
   while((ch=getc(fp))!=EOF){
