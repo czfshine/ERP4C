@@ -13,7 +13,7 @@ int next(FILE * infile,char * word){
         else{if(ch=='-')
             if((ch=getc(infile))=='\n')
                 continue;
-            else{
+            else
                 fseek(infile,-1L,SEEK_CUR);
                
   
