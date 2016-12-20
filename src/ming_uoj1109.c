@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#define DEBUG
 struct working
 {
     char a[21];
@@ -58,6 +59,10 @@ int main()
                           }
                       }
         }
+
+        #ifdef DEBUG
+        printf("input end\n");
+        #endif
 
              for(i=0;i<k&&i<5;i++)//输出已有单词中前5个最多的单词
              {
