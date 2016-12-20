@@ -187,7 +187,7 @@ void output(){
     {
         int t=0;
 
-        for(j=0; j<lindex; j++)
+        for(int j=0; j<lindex; j++)
         {
             if(count[j]>count[t]) t=j;
             else if(count[j]==count[t])
