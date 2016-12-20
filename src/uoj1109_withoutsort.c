@@ -180,9 +180,6 @@ void print(){
 //输出结果
 void output(){
 
-	for (int i = 0; i < OUTPUTMAX; ++i)
-		printf("%s %d\n",words[i],count[i]);
-
 	for(int i=0; i<lindex&&i<5; i++) //输出已有单词中前5个最多的单词
     {
         int t=0;
