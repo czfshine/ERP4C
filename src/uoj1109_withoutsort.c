@@ -10,15 +10,11 @@ int next(FILE * infile,char * word){
     while((ch=getc(infile))!=EOF)
         if(isalpha(ch))
             word[i++]=tolower(ch);
-        else{if(ch=='-')
-            if((ch=getc(infile))=='\n')
-                continue;
-            else
-                fseek(infile,-1L,SEEK_CUR);
-               
-  
-word[i]='\0';
-           	 return 1;
+        else{
+        	if(ch=='-')
+            	((ch=getc(infile))=='\n')?continue:fseek(infile,-1L,SEEK_CUR);
+			word[i]='\0';
+           	return 1;
     	}
     return 0;
 }
