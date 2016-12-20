@@ -58,8 +58,8 @@ int main()
                               break;//与已存在的比较
                           }
                            #ifdef DEBUG
-        					printf("input char is:%c\n",ch);
-       						#endif
+       						 printf("1:%c\n",ch);
+      						  #endif
                           if(m) word[j].num++;
                           else
                           {
@@ -67,6 +67,10 @@ int main()
                               strcpy(word[k].a,w);
                               k++;//存入新单词
                           }
+
+                           #ifdef DEBUG
+       					 printf("2%c\n",ch);
+      					  #endif
                       }
 
         }
