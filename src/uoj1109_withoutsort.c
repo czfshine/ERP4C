@@ -8,9 +8,9 @@ int  count[10001]={0}, lindex=0;     //values
 int next(FILE * infile,char * word){
 	char ch,i=0;
 	while((ch=getc(infile))!=EOF)
-		if(isalpha(ch)){
+		if(isalpha(ch))
 			word[i++]=tolower(ch);
-		}else if(ch=='-')
+		else if(ch=='-')
 			if((ch=getc(infile))=='\n')
 				continue;
 			else{
@@ -22,7 +22,6 @@ int next(FILE * infile,char * word){
 			word[i]='\0';
 			return 1;
 		}
-	
 	return 0;
 }
 int canfind(char * word ){
