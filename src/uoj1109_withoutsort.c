@@ -7,7 +7,7 @@ char words[10001][21]={0}; //keys
 int  count[10001]={0}, lindex=0;     //values
 int next(FILE * infile,char * word){
 	char ch,i=0;
-	while((ch=getc(infile))!=EOF){
+	while((ch=getc(infile))!=EOF)
 		if(isalpha(ch)){
 			word[i++]=tolower(ch);
 		}else if(ch=='-')
@@ -22,8 +22,7 @@ int next(FILE * infile,char * word){
 			word[i]='\0';
 			return 1;
 		}
-		
-	}
+	
 	return 0;
 }
 int canfind(char * word ){
@@ -35,14 +34,21 @@ int canfind(char * word ){
 }
 void counter(char * word){
 	int index=0;
-	if((index=canfind(word))!=-1){
+	if((index=canfind(word))!=-1)
 		count[index]++;
-	}else{
+	else{
 		count[lindex]=1;
 		strcpy(words[lindex++],word);
 	}
 }
-void output(){
+main() 
+{ 
+	char tmp_w[21];
+	FILE * infile;
+	infile=fopen("case1.in","r");
+	while(next(infile,tmp_w))
+		if(strlen(tmp_w)>0)
+			counter(tmp_w);
 	for(int i=0; i<lindex&&i<5; i++) //输出已有单词中前5个最多的单词
     {
         int t=0;
@@ -55,22 +61,11 @@ void output(){
             }
         }
         if(strlen(words[t])>0){
-        printf("%s %d\n",words[t],count[t]);
-        count[t]=0;}
+        	printf("%s %d\n",words[t],count[t]);
+        	count[t]=0;}
         else{
           count[t]=0;
           i--;
         }
     }
-}
-main() 
-{ 
-	char tmp_w[21];
-	FILE * infile;
-	infile=fopen("case1.in","r");
-	while(next(infile,tmp_w))
-		if(strlen(tmp_w)>0)
-			counter(tmp_w);
-	output();
-	
 } 
