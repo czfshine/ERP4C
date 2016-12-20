@@ -6,7 +6,6 @@
 #include "ctype.h"
 
 #define pass //I can't do anything. This world is mad!
-
 #define OUTPUTMAX 5
 char words[10001][21]={0}; //keys
 int  count[10001]={0};     //values
