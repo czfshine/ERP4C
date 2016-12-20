@@ -70,7 +70,7 @@ int main()
          #ifdef DEBUG
         for (int jj = 0; jj < k; ++jj)
         {
-          printf("%s,%d\n",word[jjj].a,word[jjj].num);
+          printf("%s,%d\n",word[jj].a,word[jj].num);
         }
         #endif
 
