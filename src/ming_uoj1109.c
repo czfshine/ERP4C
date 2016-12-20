@@ -19,7 +19,11 @@ int main()
     m=0;
     k=0;
     while((ch=fgetc(fp))!=EOF)
-    {
+    {	
+    	#ifdef DEBUG
+        printf("input char is:%c\n",ch);
+        #endif
+
         if(ch>='A'&&ch<='Z') ch=ch+32;//小写转化为大写
         if(ch>='a'&&ch<='z')
             {
