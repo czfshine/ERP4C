@@ -23,6 +23,7 @@ int next(FILE * infile,char * word)//得到下一个单词
         }
     return 0;
 }
+
 void counter(char * word)//计数
 {
     int i=0;
