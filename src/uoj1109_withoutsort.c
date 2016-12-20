@@ -26,7 +26,8 @@ int next(FILE * infile,char * word){
 		}
 		
 	}
-	if(i>0){
+	if(i){
+		printf("d");
 		word[i]='\0';
 		return 1;
 	}
