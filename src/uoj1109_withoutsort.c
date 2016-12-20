@@ -58,7 +58,8 @@ main()
                 if(strcmp(words[j],words[t])<0) t=j;
             }
         }
-        count[t]=0;
+        
         (strlen(words[t])>0)?printf("%s %d\n",words[t],count[t]):i--;
+        count[t]=0;
     }
 } 
