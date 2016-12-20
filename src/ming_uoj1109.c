@@ -51,24 +51,26 @@ int main()
 
     }
     w[i]=0;
+
     for(j=0; j<k; j++) //与已存在的进行对比，防止有重复
     {
         printf("%s,%s\n",w,word[j].a);
         if(strcmp(w,word[j].a)==0)
         {
             m=1;
-            break;//与已存在的比较
-        }
+       }
 
+        if(m) {word[j].num++;break;}
+       
+    }
 
-        if(m) word[j].num++;
-        else
+     if(m)
         {
             word[k].num=1;
             strcpy(word[k].a,w);
             k++;//存入新单词
+            m=0;
         }
-    }
   }
 
 
