@@ -51,7 +51,7 @@ main()
     FILE * infile;
     infile=fopen("case1.in","r");
     while(next(infile,tmp_w))
-        (strlen(tmp_w)>0)?counter(tmp_w):void;
+        (strlen(tmp_w)>0)?counter(tmp_w);
     for(int i=0; i<lindex&&i<5; i++,t=0) //输出已有单词中前5个最多的单词
     {
         for(int j=0; j<lindex; j++)
