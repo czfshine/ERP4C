@@ -49,7 +49,7 @@ int main()
     w[i]='\0';
     return 1;
   }
-
+printf("%s".w);
     for(j=0; j<k; j++) //与已存在的进行对比，防止有重复
     {
         printf("%s,%s\n",w,word[j].a);
