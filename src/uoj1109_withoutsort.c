@@ -50,7 +50,6 @@ main()
 			counter(tmp_w);
 	for(int i=0; i<lindex&&i<5; i++,t=0) //输出已有单词中前5个最多的单词
     {
-        
         for(int j=0; j<lindex; j++)
         {
             if(count[j]>count[t]) t=j;
@@ -59,12 +58,10 @@ main()
                 if(strcmp(words[j],words[t])<0) t=j;
             }
         }
-        if(strlen(words[t])>0){
+        count[t]=0;
+        (strlen(words[t])>0)?
         	printf("%s %d\n",words[t],count[t]);
-        	count[t]=0;}
-        else{
-          count[t]=0;
-          i--;
-        }
+        :
+          	i--;
     }
 } 
