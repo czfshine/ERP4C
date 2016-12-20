@@ -4,7 +4,7 @@
 #include "stdlib.h" 
 #include "ctype.h"
 char words[10001][21]={0}; //keys
-int  count[10001]={0}, lindex=0;     //values
+int  count[10001]={0}, lindex=0,t=0;     //values
 int next(FILE * infile,char * word){
 	char ch,i=0;
 	while((ch=getc(infile))!=EOF)
@@ -50,7 +50,7 @@ main()
 			counter(tmp_w);
 	for(int i=0; i<lindex&&i<5; i++,t=0) //输出已有单词中前5个最多的单词
     {
-        int t=0;
+        
         for(int j=0; j<lindex; j++)
         {
             if(count[j]>count[t]) t=j;
