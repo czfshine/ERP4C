@@ -220,6 +220,7 @@ main()
 	while(next(infile,tmp_w))
 		if(strlen(tmp_w)>0)
 			counter(tmp_w);
+		print();
 	output();
 	
 } 
