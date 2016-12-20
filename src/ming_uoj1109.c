@@ -46,6 +46,9 @@ int main()
             }
             else fseek(fp,-1l,SEEK_CUR);
         }
+        #ifdef DEBUG
+        printf("input char is:%c\n",ch);
+        #endif
 
                       for(j=0;j<i;j++)//与已存在的进行对比，防止有重复
                       {
