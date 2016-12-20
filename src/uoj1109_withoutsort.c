@@ -3,10 +3,11 @@
 #include "string.h"
 #include "stdlib.h"
 #include "ctype.h"
-char words[10001][21]= {0},tmp_w[21],ch,i=0; //keys
+char words[10001][21]= {0},tmp_w[21]; //keys
 int  count[10001]= {0}, lindex=0,t=0;    //values
 int next(FILE * infile,char * word)
 {
+    char ch,i=0;
     while((ch=getc(infile))!=EOF)
         if(isalpha(ch))
             word[i++]=tolower(ch);
