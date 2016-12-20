@@ -91,8 +91,13 @@ int main()
                 if(strcmp(word[j].a,word[t].a)<0) t=j;
             }
         }
+        if(strlen(word[t].a)>0)
         printf("%s %d\n",word[t].a,word[t].num);
-    word[t].num=0;
+        word[t].num=0;
+        else{
+          word[t].num=0;
+          i--;
+        }
     }
     
     fclose(fp);
