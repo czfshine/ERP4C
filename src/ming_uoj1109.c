@@ -10,6 +10,27 @@ struct working
     char a[21];
     int num;
 } word[10000];
+
+int next(FILE * infile,char * word)//得到下一个单词
+{
+    char ch,i=0;
+    while((ch=getc(infile))!=EOF)
+        if(isalpha(ch)) 
+          word[i++]=tolower(ch);
+        else
+        {
+            if(ch=='-')
+                if((ch=getc(infile))=='\n') 
+                  continue;
+                else 
+                  fseek(infile,-1L,SEEK_CUR);
+            word[i]='\0';
+            return 1;
+        }
+    return 0;
+}
+
+
 int main()
 {
     FILE *fp;
@@ -20,33 +41,7 @@ int main()
     i=0;
     m=0;
     k=1;
-    while(ch!=EOF){
-   i=0;
-  
-  while((ch=getc(fp))!=EOF){
-    if(isalpha(ch)){
-      w[i++]=tolower(ch);
-      
-    }else{
-      if(ch!='-'){
-      w[i]='\0';
-      break;}
-    }
-
-    if(ch=='-'){
-      if((ch=getc(fp))=='\n'){
-        continue;
-      }else{
-        fseek(fp,-1L,SEEK_CUR);
-        w[i]='\0';
-        break;
-      }
-      
-    }
-  }
-  if(i>0){
-    w[i]='\0';
-  }
+    while(next(fp,w)){
   printf("%s\n",w);
     for(j=0; j<k; j++) //与已存在的进行对比，防止有重复
     {
