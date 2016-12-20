@@ -48,11 +48,9 @@ int main()
   if(i>0){
     w[i]='\0';
   }
-    //printf("%s\n",w);
 
     for(j=0; j<k; j++) //与已存在的进行对比，防止有重复
     {
-        //printf("%s,%s\n",w,word[j].a);
         if(strcmp(w,word[j].a)==0)
         {
             m=1;
@@ -70,14 +68,6 @@ int main()
             m=0;
         }
   }
-
-
-#ifdef DEBUG
-    for (int jj = 0; jj < k; ++jj)
-    {
-       // printf("%s,%d\n",word[jj].a,word[jj].num);
-    }
-#endif
 
     for(i=0; i<k&&i<5; i++) //输出已有单词中前5个最多的单词
     {
