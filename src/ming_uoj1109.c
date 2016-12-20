@@ -19,7 +19,7 @@ int main()
     m=0;
     k=1;
     while((ch=fgetc(fp))!=EOF)
-    {	
+    {	i=0;
     	 #ifdef DEBUG
         printf("input end\n");
         #endif
