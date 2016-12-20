@@ -83,7 +83,7 @@ int main()
     {
         t=0;
         while(word[t].num==0) t++;
-        for(j=0; j<i; j++)
+        for(j=0; j<k; j++)
         {
             if(word[j].num>word[t].num) t=j;
             else if(word[j].num==word[t].num)
