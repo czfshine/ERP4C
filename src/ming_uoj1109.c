@@ -27,8 +27,7 @@ int main()
   while((ch=getc(fp))!=EOF){
     if(isalpha(ch)){
       w[i++]=tolower(ch);
-      if (i>20) 
-        pass;
+      
     }else{
       if(ch!='-'){
       w[i]='\0';
@@ -39,7 +38,7 @@ int main()
       if((ch=getc(fp))=='\n'){
         continue;
       }else{
-        fseek(infile,-1L,SEEK_CUR);
+        fseek(fp,-1L,SEEK_CUR);
         w[i]='\0';
         break;
       }
