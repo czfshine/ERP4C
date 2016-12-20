@@ -17,7 +17,7 @@ int main()
     int i,f,m,j,k,t,min;
     i=0;
     m=0;
-    k=0;
+    k=1;
     while((ch=fgetc(fp))!=EOF)
     {	
     	
