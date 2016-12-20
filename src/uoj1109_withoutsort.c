@@ -12,10 +12,8 @@ int next(FILE * infile,char * word){
             word[i++]=tolower(ch);
         else{
         	if(ch=='-')
-            	if((ch=getc(infile))=='\n')
-                	continue;
-            	else
-                	fseek(infile,-1L,SEEK_CUR);
+            	if((ch=getc(infile))=='\n') continue;
+            	else fseek(infile,-1L,SEEK_CUR);
 			word[i]='\0';
            	return 1;
     	}
@@ -23,15 +21,13 @@ int next(FILE * infile,char * word){
 }
 int canfind(char * word ){
     int i=0;
-    if(lindex>2&&strcmp(words[lindex-1],word)==0)
-        return lindex-1;
+    if(lindex>2&&strcmp(words[lindex-1],word)==0) return lindex-1;
     while(words[i][0]!='\0' &&(strcmp(words[i++],word)!=0 )) {}
     return (words[i][0]=='\0')?-1:i-1;
 }
 void counter(char * word){
     int index=0;
-    if((index=canfind(word))!=-1)
-        count[index]++;
+    if((index=canfind(word))!=-1) count[index]++;
     else{
         count[lindex]=1;
         strcpy(words[lindex++],word);
@@ -40,9 +36,7 @@ void counter(char * word){
 main(){
     FILE * infile;
     infile=fopen("case1.in","r");
-    while(next(infile,tmp_w))
-        if(strlen(tmp_w)>0)
-            counter(tmp_w);
+    while(next(infile,tmp_w)) if(strlen(tmp_w)>0) counter(tmp_w);
     for(int i=0; i<lindex&&i<5; i++,t=0){
         for(int j=0; j<lindex; j++)
             if(count[j]>count[t]||(count[j]==count[t]&&strcmp(words[j],words[t])<0)) t=j;
