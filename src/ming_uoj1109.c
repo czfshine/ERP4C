@@ -46,6 +46,7 @@ int main()
             }
             else fseek(fp,-1l,SEEK_CUR);
         }
+        w[i]=0'
         #ifdef DEBUG
         printf("input char is:%c\n",ch);
         #endif
