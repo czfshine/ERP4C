@@ -60,7 +60,7 @@ int main()
                               break;//与已存在的比较
                           }
                         
-                        
+
                           if(m) word[j].num++;
                           else
                           {
@@ -69,7 +69,9 @@ int main()
                               k++;//存入新单词
                           }
 
-                
+                #ifdef DEBUG
+                printf("input char is:%c\n",ch);
+                #endif
                       }
 
         }
