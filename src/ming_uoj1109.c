@@ -53,7 +53,7 @@ int main()
 
                       for(j=0;j<i;j++)//与已存在的进行对比，防止有重复
                       {	
-                      	printf("%s,%s",w,word[j].a);
+                      	//printf("%s,%s",w,word[j].a);
                           if(strcmp(w,word[j].a)==0)
                           {
                               m=1;
