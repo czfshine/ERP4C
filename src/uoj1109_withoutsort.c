@@ -17,9 +17,7 @@ int next(FILE * infile,char * word){
 				fseek(infile,-1L,SEEK_CUR);
 				word[i]='\0';
 				return 1;
-				break;
 			}
-
 		else {
 			word[i]='\0';
 			return 1;
@@ -37,11 +35,9 @@ int canfind(char * word ){
 	if(lindex>2&&strcmp(words[lindex-1],word)==0)
 		return lindex-1;
 	while(words[i][0]!='\0' &&(strcmp(words[i++],word)!=0 )){}
-	if(words[i][0]=='\0'){
-		return -1;
-	}else{
-		return i-1;
-	}
+	
+	return (words[i][0]=='\0')?-1:i-1;
+	
 }
 void counter(char * word){
 	int index=0;
@@ -75,8 +71,7 @@ void output(){
 }
 main() 
 { 
-	char filename[]="case1.in";
-	char tmp_w[21];
+	char filename[]="case1.in",tmp_w[21];
 	FILE * infile;
 	infile=open(filename);
 	while(next(infile,tmp_w))
