@@ -20,7 +20,9 @@ int main()
     k=1;
     while((ch=fgetc(fp))!=EOF)
     {	
-    	
+    	 #ifdef DEBUG
+        printf("input end\n");
+        #endif
         if(ch>='A'&&ch<='Z') ch=ch+32;//小写转化为大写
         if(ch>='a'&&ch<='z')
             {
@@ -62,17 +64,11 @@ int main()
                               strcpy(word[k].a,w);
                               k++;//存入新单词
                           }
-
-                #ifdef DEBUG
-                printf("input char is:%c\n",ch);
-                #endif
                       }
 
         }
 
-        #ifdef DEBUG
-        printf("input end\n");
-        #endif
+       
 
              for(i=0;i<k&&i<5;i++)//输出已有单词中前5个最多的单词
              {
