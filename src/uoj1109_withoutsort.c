@@ -48,7 +48,7 @@ main()
 	while(next(infile,tmp_w))
 		if(strlen(tmp_w)>0)
 			counter(tmp_w);
-	for(int i=0; i<lindex&&i<5; i++) //输出已有单词中前5个最多的单词
+	for(int i=0; i<lindex&&i<5; i++,t=0) //输出已有单词中前5个最多的单词
     {
         int t=0;
         for(int j=0; j<lindex; j++)
