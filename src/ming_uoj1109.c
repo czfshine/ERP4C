@@ -51,15 +51,14 @@ int main()
         #endif
 
                       for(j=0;j<i;j++)//与已存在的进行对比，防止有重复
-                      {
+                      {	
+                      	printf("%s,%s",w,word[j].a);
                           if(strcmp(w,word[j].a)==0)
                           {
                               m=1;
                               break;//与已存在的比较
                           }
-                           #ifdef DEBUG
-       						 printf("1:%c\n",ch);
-      						  #endif
+                          
                           if(m) word[j].num++;
                           else
                           {
@@ -68,9 +67,7 @@ int main()
                               k++;//存入新单词
                           }
 
-                           #ifdef DEBUG
-       					 printf("2%c\n",ch);
-      					  #endif
+                
                       }
 
         }
