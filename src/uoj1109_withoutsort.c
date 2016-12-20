@@ -50,7 +50,7 @@ main()
 			counter(tmp_w);
 	for(int i=0; i<lindex&&i<5; i++,t=0) //输出已有单词中前5个最多的单词
     {
-        for(int j=0; j<lindex; j++)b
+        for(int j=0; j<lindex; j++)
             if(count[j]>count[t]) t=j;
             else if(count[j]==count[t])
                 if(strcmp(words[j],words[t])<0) t=j;
