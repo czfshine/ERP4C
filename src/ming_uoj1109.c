@@ -19,38 +19,35 @@ int main()
     m=0;
     k=1;
     while(ch!=EOF){
-      i=0;
-    while((ch=fgetc(fp))!=EOF)
-    {
-        
 
-        if(ch>='A'&&ch<='Z') ch=ch+32;//小写转化为大写
-        if(ch>='a'&&ch<='z')
-        {
-            w[i]=ch;
-            i++;
-        }//找一个元素的单词
-
-        else if(ch=='-')
-        {
-            ah=fgetc(fp);
-            if(ah=='\n')
-            {
-                ch=fgetc(fp);
-                if(ch>='a'&&ch<='z')
-                {
-                    w[i]=ch;
-                    ch=fgetc(fp);
-                    i++;
-                }
-            }
-            else fseek(fp,-1l,SEEK_CUR);
-        }else{
-          break;
-        }
-
+   i=0;
+  
+  while((ch=getc(fp))!=EOF){
+    if(isalpha(ch)){
+      w[i++]=tolower(ch);
+      if (i>20) 
+        pass;
+    }else{
+      if(ch!='-'){
+      w[i]='\0';
+      break;}
     }
-    w[i]=0;
+
+    if(ch=='-'){
+      if((ch=getc(fp))=='\n'){
+        continue;
+      }else{
+        fseek(infile,-1L,SEEK_CUR);
+        w[i]='\0';
+        break;
+      }
+      
+    }
+  }
+  if(i>0){
+    w[i]='\0';
+    return 1;
+  }
 
     for(j=0; j<k; j++) //与已存在的进行对比，防止有重复
     {
