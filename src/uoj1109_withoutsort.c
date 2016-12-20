@@ -26,11 +26,6 @@ int next(FILE * infile,char * word){
 		}
 		
 	}
-	if(i){
-		printf("d");
-		word[i]='\0';
-		return 1;
-	}
 	return 0;
 }
 FILE* open(char * filename){
