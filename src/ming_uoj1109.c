@@ -68,7 +68,7 @@ int main()
         }
   }
 
-    for(i=0; i<k&&i<50; i++) //输出已有单词中前5个最多的单词
+    for(i=0; i<k&&i<5; i++) //输出已有单词中前5个最多的单词
     {
         t=0;
         while(word[t].num==0) t++;
@@ -80,7 +80,7 @@ int main()
                 if(strcmp(word[j].a,word[t].a)<0) t=j;
             }
         }
-        
+
         if(strlen(word[t].a)>0){
         printf("%s %d\n",word[t].a,word[t].num);
         word[t].num=0;}
