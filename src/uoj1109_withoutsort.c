@@ -59,9 +59,6 @@ main()
             }
         }
         count[t]=0;
-        (strlen(words[t])>0)?
-        	printf("%s %d\n",words[t],count[t]);
-        :
-          	i--;
+        (strlen(words[t])>0)?printf("%s %d\n",words[t],count[t]):i--;
     }
 } 
