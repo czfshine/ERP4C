@@ -18,9 +18,11 @@ int main()
     i=0;
     m=0;
     k=1;
+    while(ch!=EOF){
+      i=0;
     while((ch=fgetc(fp))!=EOF)
     {
-        i=0;
+        
 
         if(ch>='A'&&ch<='Z') ch=ch+32;//小写转化为大写
         if(ch>='a'&&ch<='z')
@@ -46,7 +48,6 @@ int main()
         }else{
           break;
         }
-       
 
     }
     w[i]=0;
@@ -68,6 +69,7 @@ int main()
             k++;//存入新单词
         }
     }
+  }
 
 
 #ifdef DEBUG
