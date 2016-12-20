@@ -59,7 +59,8 @@ int main()
                               m=1;
                               break;//与已存在的比较
                           }
-                          
+                        
+                        
                           if(m) word[j].num++;
                           else
                           {
