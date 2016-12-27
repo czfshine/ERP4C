@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <windows.h>
+#include <stdlib.h>
 /*颜色对应值： 
 　　0=黑色                8=灰色　　
   　 1=蓝色                9=淡蓝色                　　                        
@@ -60,6 +61,8 @@ main()
         color(15);        //应为这里大于15，所以，下面的颜色应该是白色；
         printf("%s", "hello"); 
         printf("%s\n", " world");
+
+        system("cls");
 
 
 
