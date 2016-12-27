@@ -51,7 +51,7 @@ void	ShowKey	(HWND	hwnd,	int	iType,char	*szMessage,WPARAM	wParam,LPARAM	lParam)
 				szFormat[iType],
 				szMessage,	//消息
 				wParam,	//虚拟键代码
-				(BYTE)	(iType	?	wParam	:‘	’),//显示字符值
+				(BYTE)(iType	?	wParam	:‘	’),//显示字符值
 				LOWORD	(lParam),	//	重复次数
 				HIWORD	(lParam)	&	0xFF,	//	OEM键盘扫描码
 				//判断是否为增强键盘的扩展键
