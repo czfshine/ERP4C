@@ -5,8 +5,10 @@
 #include "ctype.h"
 #define pass //I can't do anything. This world is mad!
 #define OUTPUTMAX 5
-char words[10001][21]={0}; //keys
-int  count[10001]={0};     //values
+#define WORDMAX 100001
+#define WORDLENMAX 100
+char words[WORDMAX][WORDLENMAX+1]={0}; //keys
+int  count[WORDMAX]={0};     //values
 int lindex=0;
 //将下一个单词压入word
 //@para: infile 输入文件
@@ -18,7 +20,7 @@ int next(FILE * infile,char * word){
 	while((ch=getc(infile))!=EOF){
 		if(isalpha(ch)){
 			word[i++]=tolower(ch);
-			if (i>20) 
+			if (i>WORDLENMAX) 
 				pass;
 		}else{
 			if(ch!='-'){
@@ -137,8 +139,9 @@ void print(){
 	for (int i = 0; i < lindex; ++i)
 	{
 		printf("%04d-%s",count[i],words[i]);
-		for (int j = 0; j < strlen(words[i]); ++j)
-			printf(" %d",words[i][j]);
+		for (int j = 0; j < strlen(words[i]); ++j){
+			//printf(" %d",words[i][j]);
+		}
 		printf("\n");
 	}
 	printf("---------------------\n");
@@ -158,7 +161,9 @@ main()
 	while(next(infile,tmp_w))
 		if(strlen(tmp_w)>0)
 			counter(tmp_w);
+	print()
 	sortk_v();
+	print()
 	output();
 	
 } 
