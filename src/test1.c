@@ -1,6 +1,7 @@
-struct abc{
+#include "stdio.h"
+struct {
 	char a[30];
-}
+}abc;
 
 int main(int argc, char const *argv[])
 {
