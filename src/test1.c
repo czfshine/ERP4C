@@ -1,9 +1,9 @@
-#include <stdio.h>
-main(){
-	
-int y=10;
-do{
-   y--;}
-   while(--y);
-   printf("%d",y--);
+struct abc{
+	char a[30];
+}
+
+int main(int argc, char const *argv[])
+{
+	printf("%d",sizeof(abc));
+	return 0;
 }
