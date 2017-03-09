@@ -7,6 +7,7 @@ int is(char * num,int * p){
 		if(*(p+((*num)-'0'))){
 			return 1;
 		}
+		num++;
 	}
 
 	return 0;
@@ -65,7 +66,7 @@ int main(int argc, char const *argv[])
 					numB++;
 				}
 			}
-			
+
 	}
 
 	printf("%d\n%d",numA,numB);
