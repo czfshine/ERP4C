@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
 	int T;
 	scanf("%d",&T);
 
-	char po[T][64]
+	char po[T][64];
 	for (int i = 0; i < count; ++i)
 	{
 		scanf("%s",po+i);
