@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int main(int argc, char const *argv[])
 {
-	freopen("test.txt","r",stdout);
+	freopen("test.txt","w",stdout);
 
 	srand(1);
 
