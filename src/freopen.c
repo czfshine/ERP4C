@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 int main(int argc, char const *argv[])
 {
 	freopen("test.txt","r",stdout);
