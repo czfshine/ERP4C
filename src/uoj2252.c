@@ -50,6 +50,7 @@ int main(int argc, char const *argv[])
 	{
 		scanf("%s",po+i);
 	}
+
 	int numA=0,numB=0;
 	while(T--){
 		int A=(is(po[T],pA));
@@ -64,6 +65,7 @@ int main(int argc, char const *argv[])
 					numB++;
 				}
 			}
+			
 	}
 
 	printf("%d\n%d",numA,numB);
