@@ -22,8 +22,8 @@ Sample Output
 Author0*/
 #include "stdio.h" 
 //23333333333333333333333
-void binary(int n){
-  	char b[16]={0};
+void binary(long long n){
+  	char b[32]={0};
     sprintf(b,"%o",n);
     int cur=0;
     switch(b[cur]){
@@ -54,7 +54,7 @@ void binary(int n){
 
 main() 
 { 
-    int n; 
-    scanf("%d", &n); 
+    long long n; 
+    scanf("%ld64", &n); 
     binary(n); 
 } 
