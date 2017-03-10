@@ -16,7 +16,7 @@ struct cmp{
 	bool operator() (user A,user B){
 		return A.num>B.num;
 	}
-}
+;}
 
 int main(int argc, char const *argv[])
 {
