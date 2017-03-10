@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <queue>
+#include <vector>
 char name[100000][20];
 char u[100000];
 char ed[100000];
