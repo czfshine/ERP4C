@@ -5,6 +5,18 @@ char u[100000];
 char ed[100000];
 
 
+struct user
+{
+	char name[20];
+	char num;
+};
+
+struct cmp{
+	bool operator (user A,user,b){
+		return A.num>B.num;
+	}
+}
+priority_queue<user,vector<user>,cmp> pq;
 int main(int argc, char const *argv[])
 {
 	int n;
