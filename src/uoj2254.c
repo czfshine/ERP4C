@@ -12,7 +12,7 @@ struct user
 };
 
 struct cmp{
-	bool operator (user A,user,b){
+	bool operator() (user A,user,b){
 		return A.num>B.num;
 	}
 }
