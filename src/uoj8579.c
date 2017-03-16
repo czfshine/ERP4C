@@ -90,7 +90,7 @@ int main()
  printf("Please input the init size of the linklist:\n");
  scanf("%d",&n);
  printf("Please input the %d element of the linklist:\n", n);
- if(CreateLink_L(T))     // 判断链表是否创建成功，请填空
+ if(CreateLink_L(T,n))     // 判断链表是否创建成功，请填空
  {
 	 printf("A Link List Has Created.\n");
 	 LoadLink_L(T);
