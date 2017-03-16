@@ -111,7 +111,8 @@ int main(int argc, char const *argv[])
   int n;
   scanf("%d",&n);
 ElemType a;
-  for (int i = 0; i < n; ++i)
+
+  for (int i = 1; i <= n; ++i)
   {
     scanf("%d",&a);
     ListInsert_Sq(A,i,a);
