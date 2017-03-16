@@ -55,7 +55,21 @@ LinkList q ;
 q=p;
  if(i==0 || p==NULL) return ERROR; // 请填空
  else
- {
+ {	if(i==1){
+
+LinkList qq = (LinkList)malloc(sizeof(LNode));
+
+ 		qq->next=L->next;
+
+ 		L->next=qq;
+
+ 		qq->data=e;
+
+ 		return OK;
+
+
+
+ }
 	 while(p)    // 请填空
 	 {
 		 
