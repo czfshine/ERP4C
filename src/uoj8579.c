@@ -67,6 +67,15 @@ q=p;
 
  }
 
+ if(i<j){
+ 	return ERROR;
+ }else{
+ 	if(i==j){
+
+ 	}else{
+ 		
+ 	}
+ }
  printf("%d %d\n",j,q->data);
  return OK;
 
