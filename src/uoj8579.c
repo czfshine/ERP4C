@@ -163,6 +163,7 @@ e=qq->data;
 
 int main()
 {
+	
  LinkList T;
  int a,n,i;
  ElemType x, e;
