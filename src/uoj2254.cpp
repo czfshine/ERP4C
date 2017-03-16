@@ -12,9 +12,15 @@ struct user
 	char num;
 };
 
+struct cmp{
+	bool operator() (user A,user B){
+		return A.num>B.num;
+	}
+};
 
 int main(int argc, char const *argv[])
 {
+	priority_queue<user,vector<user>,cmp> pq;
 	int n;
 	scanf("%d",&n);
 
