@@ -53,13 +53,13 @@ LinkList p = L->next;
 int j=0;
 LinkList q ;
 q=p;
- if(p==NULL); // 请填空
+ if(i==0 || p==NULL) return ERROR; // 请填空
  else
  {
 	 while(p)    // 请填空
 	 {
 		 
-		 if(j==i){break;}
+		 if(j==i-1){break;}
 		 j++;
 		 q=p;
 		p=p->next;   // 请填空
