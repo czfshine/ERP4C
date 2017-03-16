@@ -102,19 +102,62 @@ LinkList qq = (LinkList)malloc(sizeof(LNode));
 }
 
 int LinkDelete_L(LinkList &L,int i, ElemType &e){
+
+
 LinkList p = L->next;
- if(p==NULL)printf("The List is empty!"); // 请填空
+int j=0;
+LinkList q,qq ;
+q=p;
+ if(i==0 || p==NULL) return ERROR; // 请填空
  else
- {
-	 printf("The LinkList is:");
-	 while(!p)    // 请填空
+ {	if(i==1){
+
+ 		if(L->next){
+qq=L->next;
+L->next=L->next->next;
+e=qq->data;
+ 		}else{
+
+ 			return ERROR;
+ 		}
+ 		return OK;
+
+
+
+ }
+	 while(p)    // 请填空
 	 {
-		printf("%d ",p->data); 
+		 
+		 if(j==i-1){break;}
+		 j++;
+		 q=p;
 		p=p->next;   // 请填空
 	 }
+
+
  }
- printf("\n");
- return OK;
+
+ if(i-1<j){
+ 	return ERROR;
+ }else{
+ 	if(i-1==j){
+ 		
+
+ 		 		if(q->next){
+qq=q->next;
+q->next=q->next->next;
+e=qq->data;
+ 		}else{
+
+ 			return ERROR;
+ 		}
+ 		return OK;
+ 	}else{
+ 	return ERROR;
+ 	}
+ }
+
+
 
 }
 
