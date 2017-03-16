@@ -55,7 +55,6 @@ int j=0;
  if(p==NULL); // 请填空
  else
  {
-	
 	 while(p)    // 请填空
 	 {
 		 j++;
