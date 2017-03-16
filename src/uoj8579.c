@@ -21,7 +21,8 @@ int CreateLink_L(LinkList &L,int n){
   q = L;
   for (i=0; i<n; i++) {
 	 scanf("%d", &e);
-    p = (LinkList)malloc(sizeof(LNode));  // 生成新结点
+    p = (LinkList)malloc(sizeof(LNode));
+    p->next=NULL;  // 生成新结点
     q->next=p;
     p->data=e;
     q=p;
