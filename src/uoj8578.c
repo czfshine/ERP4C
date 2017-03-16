@@ -117,7 +117,7 @@ ElemType a;
     ListInsert_Sq(A,i,a);
   }
 
-  Load_Sq(A);
+  Load_Sq(A,"");
     
   return 0;
 }
