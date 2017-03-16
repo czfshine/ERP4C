@@ -106,7 +106,7 @@ Status List_union(SqList &A,SqList &B,SqList & C){
 Status rever(SqList S){
   ElemType Temp;
   for (int i = 0; i < S.length/2; ++i)
-  {Temp=s.elem[i];
+  {Temp=S.elem[i];
     S.elem[i]=S.elem[S.length-1-i];
     S.elem[S.length-1-i]=Temp;
   }
