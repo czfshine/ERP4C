@@ -37,7 +37,7 @@ int LoadLink_L(LinkList &L){
  else
  {
 	 printf("The LinkList is:");
-	 while(!p)    // 请填空
+	 while(p)    // 请填空
 	 {
 		printf("%d ",p->data); 
 		p=p->next;   // 请填空
