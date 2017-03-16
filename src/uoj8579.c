@@ -60,7 +60,7 @@ q=p;
 	 {
 		 j++;
 		 if(j==i){break;}
-		 q=p
+		 q=p;
 		p=p->next;   // 请填空
 	 }
 
