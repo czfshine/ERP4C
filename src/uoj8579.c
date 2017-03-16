@@ -71,14 +71,18 @@ q=p;
  	return ERROR;
  }else{
  	if(i==j){
+ 		LinkList qq = (LinkList)malloc(sizeof(LNode));
 
+ 		qq->next=q->next;
+
+ 		q->next=qq;
+
+ 		qq->data=e;
+ 		return OK;
  	}else{
- 		
+ 	return ERROR;
  	}
  }
- printf("%d %d\n",j,q->data);
- return OK;
-
 
 }
 
