@@ -127,6 +127,9 @@ ElemType a;
   }
 
   Load_Sq(A,"");
+  rever(A);
+Load_Sq(A,"");
+  
     
   return 0;
 }
