@@ -58,8 +58,9 @@ q=p;
  {
 	 while(p)    // 请填空
 	 {
-		 j++;
+		 
 		 if(j==i){break;}
+		 j++;
 		 q=p;
 		p=p->next;   // 请填空
 	 }
