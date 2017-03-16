@@ -64,7 +64,7 @@ int j=0;
 
 
  }
-
+ 
  printf("%d %d\n",j,i);
  return OK;
 
