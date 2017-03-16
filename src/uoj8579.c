@@ -51,7 +51,8 @@ int LoadLink_L(LinkList &L){
 int LinkInsert_L(LinkList &L,int i,ElemType e){
 LinkList p = L->next;
 int j=0;
-
+LinkList q ;
+q=p;
  if(p==NULL); // 请填空
  else
  {
@@ -59,13 +60,14 @@ int j=0;
 	 {
 		 j++;
 		 if(j==i){break;}
+		 q=p
 		p=p->next;   // 请填空
 	 }
 
 
  }
- 
- printf("%d %d\n",j,i);
+
+ printf("%d %d\n",j,q->data);
  return OK;
 
 
