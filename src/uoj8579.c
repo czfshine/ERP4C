@@ -50,17 +50,20 @@ int LoadLink_L(LinkList &L){
 
 int LinkInsert_L(LinkList &L,int i,ElemType e){
 LinkList p = L->next;
- if(p==NULL)printf("The List is empty!"); // 请填空
+int j;
+ if(p==NULL); // 请填空
  else
  {
-	 printf("The LinkList is:");
+	
 	 while(!p)    // 请填空
 	 {
-		printf("%d ",p->data); 
+		 j++;
+		 if(j==i){break;}
 		p=p->next;   // 请填空
 	 }
  }
- printf("\n");
+
+ printf("%d %d\n",j,p->data);
  return OK;
 
 
