@@ -119,6 +119,5 @@ ElemType a;
 
   Load_Sq(A);
     
-
   return 0;
 }
