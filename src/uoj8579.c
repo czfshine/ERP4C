@@ -51,6 +51,7 @@ int LoadLink_L(LinkList &L){
 int LinkInsert_L(LinkList &L,int i,ElemType e){
 LinkList p = L->next;
 int j=0;
+
  if(p==NULL); // 请填空
  else
  {
