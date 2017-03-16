@@ -67,7 +67,7 @@ int Load_Sq(SqList &L,char * name)
   if( L.length==0) printf("The List is empty!");  // 请填空
   else
   {
-    printf("List %s:",name);
+    printf("The %sList is:",name);
     for(i=0;i<L.length;i++)
             printf("%d ",L.elem[i]);  // 请填空
   }
@@ -128,8 +128,8 @@ ElemType a;
 
   Load_Sq(A,"");
   rever(A);
-Load_Sq(A,"");
-  
+  Load_Sq(A,"turned ");
+
     
   return 0;
 }
