@@ -61,10 +61,11 @@ int j=0;
 		 if(j==i){break;}
 		p=p->next;   // 请填空
 	 }
-	 
+
+
  }
 
- printf("%d %d\n",j,p->data);
+ printf("%d %d\n",j,i);
  return OK;
 
 
