@@ -68,10 +68,10 @@ q=p;
 
  }
 
- if(i<j){
+ if(i-1<j){
  	return ERROR;
  }else{
- 	if(i==j){
+ 	if(i-1==j){
  		LinkList qq = (LinkList)malloc(sizeof(LNode));
 
  		qq->next=q->next;
