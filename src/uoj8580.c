@@ -98,7 +98,7 @@ Status Linkunion_L(LinkList a,LinkList b,LinkList c){
 			{pc=pb;return OK;}
 		if(pb=NULL)
 			{pc=pa;return OK;}
-		printf("%d",pa->data);
+		printf("%d",pb->data);
 
 
 		if((pa->data)>(pb->data)){
