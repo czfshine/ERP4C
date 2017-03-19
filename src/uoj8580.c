@@ -85,6 +85,32 @@ Status ListDelete_L(LinkList &L, int i, ElemType &e) {  // 算法2.10
   return OK;
 } // ListDelete_L
 
+Status Linkunion_L(LinkList a,LinkList b,LinkList c){
+
+	LinkList pa,pb,pc;
+
+	pa=a->next,pb=b-next;
+	pc=c;
+	int i=1;
+	while(pa||pb){
+		if(pa==NULL)
+			{pc=pb;return OK;}
+		if(pb=NULL)
+			{pc=pa;return OK;}
+		if(pa->data>pb->data){
+			pc->next=pa;
+			pc=pa;
+			pa=pa->next;
+		}else
+		{
+			pc->next=pb;
+			pc=pb;
+			pa=pb->next;
+		}
+	}
+
+	
+}
 
 int main(int argc, char const *argv[])
 {
@@ -93,11 +119,13 @@ int main(int argc, char const *argv[])
 	 scanf("%d",n);
 	 LinkList A;
 	 CreateLink_L(A,n);
-
+	 LoadLink_L(C);
 	 scanf("%d",m);
-	 LinkList B;
+	 LinkList B，C;
 	 CreateLink_L(B,m);
-	 
+LoadLink_L(C);
+	 Linkunion_L(A,B，C);
+LoadLink_L(C);
 
 
 	return 0;
