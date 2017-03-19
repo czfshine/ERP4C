@@ -11,7 +11,6 @@ typedef struct LNode
  struct LNode *next;
 }LNode,*LinkList;
 
-
 int CreateLink_L(LinkList &L,int n){
 // 创建含有n个元素的单链表
   LinkList p,q;
