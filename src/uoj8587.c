@@ -112,7 +112,7 @@ Status visit(SElemType c)
     }
    DestroyStack(s);
  }
-init main()
+int main()
  {
      LineEdit(); 
  }
