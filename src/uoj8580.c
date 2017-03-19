@@ -33,13 +33,13 @@ int CreateLink_L(LinkList &L,int n){
   return OK;
 }
 
-int LoadLink_L(LinkList &L){
+int LoadLink_L(LinkList &L,char * name){
 // 单链表遍历
  LinkList p = L->next;
  if(p==NULL)printf("The List is empty!"); // 请填空
  else
  {
-	 printf("The LinkList is:");
+	 printf("List %s:",name);
 	 while(p)    // 请填空
 	 {
 		printf("%d ",p->data); 
@@ -93,19 +93,19 @@ Status Linkunion_L(LinkList a,LinkList b,LinkList c){
 	pc=c;
 	int i=1;
 	while(pa||pb){
-		printf("%d\n",i++);
+		
 		if(pa==NULL)
 			{pc->next=pb;return OK;}
 		if(pb==NULL)
 			{pc->next=pa;return OK;}
 
 		if((pa->data)<(pb->data)){
-			printf("%d",4);
+			
 			pc->next=pa;
 			pc=pa;
 			pa=pa->next;
 		}else
-		{	printf("%d",2);
+		{	
 			pc->next=pb;
 			pc=pb;
 			pb=pb->next;
@@ -122,14 +122,14 @@ int main(int argc, char const *argv[])
 	 scanf("%d",&n);
 	 LinkList A;
 	 CreateLink_L(A,n);
-	 LoadLink_L(A);
+	 LoadLink_L(A,"A");
 	 scanf("%d",&m);
 	 LinkList B,C;
 	  C=(LinkList)malloc(sizeof(LNode));  
 	 CreateLink_L(B,m);
-LoadLink_L(B);
+		LoadLink_L(B,"B");
 	 Linkunion_L(A,B,C);
-LoadLink_L(C);
+	LoadLink_L(C,"C");
 
 
 	return 0;
