@@ -103,7 +103,7 @@ Status visit(SElemType c)
                   break; // 仅当栈非空时退栈
          case '@':ClearStack(s);
                   break; // 重置s为空栈
-         default :Push(S,ch); // 有效字符进栈
+         default :Push(s,ch); // 有效字符进栈
        }
        ch=getchar(); // 从终端接收下一个字符
      }
@@ -112,7 +112,7 @@ Status visit(SElemType c)
     }
    DestroyStack(s);
  }
- void main()
+init main()
  {
      LineEdit(); 
  }
