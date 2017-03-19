@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<malloc.h>
+#include <stdio.h>
+#include <malloc.h>
 #define ERROR 0
 #define OK 1 
 #define ElemType int
@@ -15,6 +15,7 @@ int CreateLink_L(LinkList &L,int n){
 // 创建含有n个元素的单链表
   LinkList p,q;
   int i;
+   printf("g");
   ElemType e;
   L = (LinkList)malloc(sizeof(LNode));
   printf("g");
