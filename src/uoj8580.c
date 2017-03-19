@@ -111,7 +111,7 @@ Status Linkunion_L(LinkList a,LinkList b,LinkList c){
 			printf("%d",i++);
 			pc->next=pb;
 			pc=pb;
-			pa=pb->next;
+			pb=pb->next;
 		}
 	}
 
