@@ -89,7 +89,7 @@ Status Linkunion_L(LinkList a,LinkList b,LinkList c){
 
 	LinkList pa,pb,pc;
 
-	pa=a->next,pb=b-next;
+	pa=a->next,pb=b->next;
 	pc=c;
 	int i=1;
 	while(pa||pb){
