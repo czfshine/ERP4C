@@ -124,7 +124,7 @@ int main(int argc, char const *argv[])
 	 LinkList B,C;
 	 CreateLink_L(B,m);
 LoadLink_L(B);
-	 Linkunion_L(A,B，C);
+	 Linkunion_L(A,B,C);
 LoadLink_L(C);
 
 
