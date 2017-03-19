@@ -63,6 +63,7 @@ Status Push(SqStack &S,SElemType e)
 
    
  }
+ 
 Status StackTraverse(SqStack S,Status(*visit)(SElemType))
  { // 从栈顶到栈底依次输出栈中的每个元素
 	SElemType *p = (SElemType *)malloc(sizeof(SElemType)); 
