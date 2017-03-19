@@ -73,7 +73,7 @@ Status StackTraverse(SqStack S,Status(*visit)(SElemType))
 		p++;
 		while(p<=S.top)             
 		{
-			visit(*p)
+			visit(*p);
 			p++;               
 		}
 	}
