@@ -67,6 +67,7 @@ Status Push(SqStack &S,SElemType e)
 Status StackTraverse(SqStack S,Status(*visit)(SElemType))
  { // 从栈顶到栈底依次输出栈中的每个元素
 	SElemType *p = (SElemType *)malloc(sizeof(SElemType)); 
+
 	p = S.base;       
 		while(p<S.top)             
 		{
@@ -104,7 +105,7 @@ Status visit(SElemType c)
        ch=getchar(); // 从终端接收下一个字符
      }
      StackTraverse(s,visit); // 将从栈底到栈顶的栈内字符输出
-    ; // 重置s为空栈
+    ClearStack(s); // 重置s为空栈
     }
    DestroyStack(s);
  }
