@@ -17,6 +17,7 @@ int CreateLink_L(LinkList &L,int n){
   int i;
   ElemType e;
   L = (LinkList)malloc(sizeof(LNode));
+  printf("g");
   L->next = NULL;              // 先建立一个带头结点的单链表
   q = L;
   printf("g");
