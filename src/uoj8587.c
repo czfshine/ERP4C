@@ -70,7 +70,7 @@ Status StackTraverse(SqStack S,Status(*visit)(SElemType))
 	if(S.top==S.base)printf("The Stack is Empty!");  
 	else
 	{
-		p++;
+		
 		while(p<=S.top)             
 		{
 			visit(*p);
