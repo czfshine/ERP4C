@@ -100,7 +100,6 @@ Status Linkunion_L(LinkList a,LinkList b,LinkList c){
 			{pc=pa;return OK;}
 		printf("%d",i++);
 		if(pa->data>pb->data){
-			
 			pc->next=pa;
 			pc=pa;
 			pa=pa->next;
@@ -125,6 +124,7 @@ int main(int argc, char const *argv[])
 	 LoadLink_L(A);
 	 scanf("%d",&m);
 	 LinkList B,C;
+	  C=(LinkList)malloc(sizeof(LNode));  
 	 CreateLink_L(B,m);
 LoadLink_L(B);
 	 Linkunion_L(A,B,C);
