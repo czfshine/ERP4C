@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <malloc.h>
+#include<stdio.h>
+#include<malloc.h>
 #define ERROR 0
 #define OK 1 
 #define ElemType int
@@ -11,17 +11,16 @@ typedef struct LNode
  struct LNode *next;
 }LNode,*LinkList;
 
+
 int CreateLink_L(LinkList &L,int n){
 // 创建含有n个元素的单链表
   LinkList p,q;
   int i;
-   printf("g");
   ElemType e;
   L = (LinkList)malloc(sizeof(LNode));
-  printf("g");
   L->next = NULL;              // 先建立一个带头结点的单链表
+  q = (LinkList)malloc(sizeof(LNode));
   q = L;
-  printf("g");
   for (i=0; i<n; i++) {
 	 scanf("%d", &e);
     p = (LinkList)malloc(sizeof(LNode));
@@ -117,11 +116,11 @@ int main(int argc, char const *argv[])
 {
 	 int n,m;
 
-	 scanf("%d",n);
+	 scanf("%d",&n);
 	 LinkList A;
 	 CreateLink_L(A,n);
 	 LoadLink_L(A);
-	 scanf("%d",m);
+	 scanf("%d",&m);
 	 LinkList B,C;
 	 CreateLink_L(B,m);
 LoadLink_L(B);
