@@ -119,11 +119,11 @@ int main(int argc, char const *argv[])
 	 scanf("%d",n);
 	 LinkList A;
 	 CreateLink_L(A,n);
-	 LoadLink_L(C);
+	 LoadLink_L(A);
 	 scanf("%d",m);
 	 LinkList B，C;
 	 CreateLink_L(B,m);
-LoadLink_L(C);
+LoadLink_L(B);
 	 Linkunion_L(A,B，C);
 LoadLink_L(C);
 
