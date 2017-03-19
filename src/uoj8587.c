@@ -26,7 +26,7 @@ Status InitStack(SqStack &S)
 	 return OK;
  }
 Status StackEmpty(SqStack S)
- { if(S.top==S.base)return TRUE;else rreturn FALSE;
+ { if(S.top==S.base)return TRUE;else return FALSE;
    
  }
 Status ClearStack(SqStack &S)
