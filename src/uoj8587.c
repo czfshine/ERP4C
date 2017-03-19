@@ -26,7 +26,7 @@ Status InitStack(SqStack &S)
 	 return OK;
  }
 Status StackEmpty(SqStack S)
- { // 若栈S为空栈，则返回TRUE，否则返回FALSE
+ { if(S.top==S.base)return TRUE;else rreturn FALSE;
    
  }
 Status ClearStack(SqStack &S)
