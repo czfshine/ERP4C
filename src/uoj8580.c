@@ -121,7 +121,7 @@ int main(int argc, char const *argv[])
 	 CreateLink_L(A,n);
 	 LoadLink_L(A);
 	 scanf("%d",m);
-	 LinkList B，C;
+	 LinkList B,C;
 	 CreateLink_L(B,m);
 LoadLink_L(B);
 	 Linkunion_L(A,B，C);
