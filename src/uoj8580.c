@@ -93,13 +93,14 @@ Status Linkunion_L(LinkList a,LinkList b,LinkList c){
 	pc=c;
 	int i=1;
 	while(pa||pb){
-		printf("%d",i++);
+		printf("%d\n",i++);
 		if(pa==NULL)
 			{pc=pb;return OK;}
 		if(pb==NULL)
 			{pc=pa;return OK;}
 
 		if((pa->data)>(pb->data)){
+			
 			pc->next=pa;
 			pc=pa;
 			pa=pa->next;
