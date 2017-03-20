@@ -96,7 +96,7 @@ Status visit(SElemType c)
     {
        switch(ch)
        {
-         case '#':if(StackEmpty(s))Pop(s,c);
+         case '#':Pop(s,c);
                   break; // 仅当栈非空时退栈
          case '@':ClearStack(s);
                   break; // 重置s为空栈
