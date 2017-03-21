@@ -32,7 +32,7 @@ int main()
 					else printf("The Element %d is Successfully Inserted!\n", x); 
 					break;
 			case 2: scanf("%d",&i);
-					if(i<1 ||i>=v.size){
+					if(i<1 ||i>=v.size()){
 						printf("Delete Error!\n");
 					}else{
 						e=v.at(i-1)
