@@ -18,6 +18,7 @@ int main()
 	{
 		printf("A Sequence List Has Created.\n");
 	}
+	vector<ElemType>::iterator tempIterator=v.begin();
 	while(1)
 	{
 		printf("1:Insert element\n2:Delete element\n3:Load all elements\n0:Exit\nPlease choose:\n");
@@ -37,7 +38,7 @@ int main()
 					else printf("The Element %d is Successfully Deleted!\n", e);
 					break;
 			case 3: 
-			vector<ElemType>::iterator tempIterator=v.begin();
+			
 			for( tempIterator = v.begin(); tempIterator != v.end(); tempIterator++ )
     				std::cout << *tempIterator;
     		cout << endl;
