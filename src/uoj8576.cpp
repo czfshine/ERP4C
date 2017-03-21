@@ -26,10 +26,13 @@ int main()
 		switch(a)
 		{
 			case 1: scanf("%d%d",&i,&x);
-					
-					 v.insert(v.begin()+i-1,x);
-					if(0) printf("Insert Error!\n"); // 判断i值是否合法，请填空
-					else printf("The Element %d is Successfully Inserted!\n", x); 
+					if(i<1||i-1>v.size()){
+						printf("Insert Error!\n");
+						else{
+
+							 v.insert(v.begin()+i-1,x);
+							 printf("The Element %d is Successfully Inserted!\n", x); 
+						}
 					break;
 			case 2: scanf("%d",&i);
 					if(i<1 ||i>=v.size()){
