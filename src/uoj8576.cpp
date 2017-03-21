@@ -31,7 +31,7 @@ int main()
 			case 2: scanf("%d",&i);
 			v.erase(v.begin()+i);
 
-					if() printf("Delete Error!\n"); // 判断i值是否合法，请填空
+					if(0) printf("Delete Error!\n"); // 判断i值是否合法，请填空
 					else printf("The Element %d is Successfully Deleted!\n", e);
 					break;
 			case 3: 
