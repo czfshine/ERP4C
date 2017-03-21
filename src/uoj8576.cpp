@@ -26,7 +26,7 @@ int main()
 		switch(a)
 		{
 			case 1: scanf("%d%d",&i,&x);
-			
+
 					if(i<1||i-1>v.size()){
 						printf("Insert Error!\n");}
 					else{
@@ -41,7 +41,7 @@ int main()
 						printf("Delete Error!\n");
 					}else{
 						e=v.at(i-1);
-						v.erase(v.begin()+i);
+						v.erase(v.begin()+i-1);
 						printf("The Element %d is Successfully Deleted!\n", e);
 					}
 					break;
