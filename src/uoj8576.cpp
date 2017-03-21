@@ -1,4 +1,6 @@
 #include <stdio.h>
+
+#include <iosream>
 #include <vector>
 #define OK 1 
 #define ERROR 0
