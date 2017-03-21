@@ -37,7 +37,7 @@ int main()
 			case 3: 
 			vector<ElemType>::iterator tempIterator;
 			for( tempIterator = v.begin(); tempIterator != v.end(); tempIterator++ )
-    				cout << *tempIterator;
+    				std::cout << *tempIterator;
     		cout << endl;
 					break;
 			case 0: return 1;
