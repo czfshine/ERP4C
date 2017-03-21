@@ -37,7 +37,7 @@ int main()
 					else printf("The Element %d is Successfully Deleted!\n", e);
 					break;
 			case 3: 
-			vector<ElemType>::iterator * tempIterator;
+			vector<ElemType>::iterator tempIterator;
 			for( tempIterator = v.begin(); tempIterator != v.end(); tempIterator++ )
     				std::cout << *tempIterator;
     		cout << endl;
