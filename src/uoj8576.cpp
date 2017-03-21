@@ -18,7 +18,7 @@ int main()
 	{
 		printf("A Sequence List Has Created.\n");
 	}
-	vector<ElemType>::iterator tempIterator=v.begin();
+	vector<ElemType>::iterator tempIterator;
 	while(1)
 	{
 		printf("1:Insert element\n2:Delete element\n3:Load all elements\n0:Exit\nPlease choose:\n");
@@ -26,13 +26,15 @@ int main()
 		switch(a)
 		{
 			case 1: scanf("%d%d",&i,&x);
+			
 					if(i<1||i-1>v.size()){
 						printf("Insert Error!\n");}
-						else{
+					else{
 
-							 v.insert(v.begin()+i-1,x);
-							 printf("The Element %d is Successfully Inserted!\n", x); 
-						}
+						v.insert(v.begin()+i-1,x);
+						printf("The Element %d is Successfully Inserted!\n", x); 
+					}
+
 					break;
 			case 2: scanf("%d",&i);
 					if(i<1 ||i>=v.size()){
@@ -44,10 +46,18 @@ int main()
 					}
 					break;
 			case 3: 
-			
-			for( tempIterator = v.begin(); tempIterator != v.end(); tempIterator++ )
-    				std::cout << *tempIterator;
-    		cout << endl;
+				
+					if(v.size()==0) 
+						printf("The List is empty!");  // 请填空
+					else
+					{
+						printf("The List is: ");
+						for( tempIterator = v.begin(); tempIterator != v.end(); tempIterator++ )
+    						cout << *tempIterator <<" ";
+					}
+
+					printf("\n");
+
 					break;
 			case 0: return 1;
 		}
