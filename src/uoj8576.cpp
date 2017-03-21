@@ -11,7 +11,7 @@ int main()
 	std::vector<ElemType> v;
 	int a, i;
 	ElemType e, x;
-	if(v)    // 判断顺序表是否创建成功
+	if(v.empty())    // 判断顺序表是否创建成功
 	{
 		printf("A Sequence List Has Created.\n");
 	}
