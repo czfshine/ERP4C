@@ -27,7 +27,7 @@ int main()
 		{
 			case 1: scanf("%d%d",&i,&x);
 					if(i<1||i-1>v.size()){
-						printf("Insert Error!\n");
+						printf("Insert Error!\n");}
 						else{
 
 							 v.insert(v.begin()+i-1,x);
