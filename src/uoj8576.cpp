@@ -23,9 +23,9 @@ int main()
 		switch(a)
 		{
 			case 1: scanf("%d%d",&i,&x);
-					vector<ElemType>::iterator I;
-					 I = v.begin()+i;
-					if(v.insert(I,x)) printf("Insert Error!\n"); // 判断i值是否合法，请填空
+					
+					 
+					if(v.insert(v.begin()+i,x)) printf("Insert Error!\n"); // 判断i值是否合法，请填空
 					else printf("The Element %d is Successfully Inserted!\n", x); 
 					break;
 			case 2: scanf("%d",&i);
