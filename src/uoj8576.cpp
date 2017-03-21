@@ -24,8 +24,8 @@ int main()
 		{
 			case 1: scanf("%d%d",&i,&x);
 					
-					 
-					if(v.insert(v.begin()+i,x)) printf("Insert Error!\n"); // 判断i值是否合法，请填空
+					 v.insert(v.begin()+i,x);
+					if(0) printf("Insert Error!\n"); // 判断i值是否合法，请填空
 					else printf("The Element %d is Successfully Inserted!\n", x); 
 					break;
 			case 2: scanf("%d",&i);
