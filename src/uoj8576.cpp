@@ -32,10 +32,13 @@ int main()
 					else printf("The Element %d is Successfully Inserted!\n", x); 
 					break;
 			case 2: scanf("%d",&i);
-			v.erase(v.begin()+i);
-
-					if(0) printf("Delete Error!\n"); // 判断i值是否合法，请填空
-					else printf("The Element %d is Successfully Deleted!\n", e);
+					if(i<1 ||i>=v.size){
+						printf("Delete Error!\n");
+					}else{
+						e=v.at(i-1)
+						v.erase(v.begin()+i);
+						printf("The Element %d is Successfully Deleted!\n", e);
+					}
 					break;
 			case 3: 
 			
