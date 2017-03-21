@@ -6,6 +6,7 @@
 #define LISTINCREMENT 10
 #define ElemType int
 
+using namespace std;
 int main()
 {
 	std::vector<ElemType> v;
