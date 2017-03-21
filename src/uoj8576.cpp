@@ -35,7 +35,7 @@ int main()
 					if(i<1 ||i>=v.size()){
 						printf("Delete Error!\n");
 					}else{
-						e=v.at(i-1)
+						e=v.at(i-1);
 						v.erase(v.begin()+i);
 						printf("The Element %d is Successfully Deleted!\n", e);
 					}
