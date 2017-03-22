@@ -6,7 +6,7 @@
 #include <string>
 #include <stack>
 
-using space std;
+using namespace std;
 
 stack<string> lv1;
 stack<string> lv2;
