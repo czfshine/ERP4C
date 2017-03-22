@@ -17,7 +17,7 @@ queue<char *> lv3;
 queue<char *> lv4;
 
 
-char temp[22]=0;
+char temp[22]={0};
 int templv;
 int temptime=0;
 int usernum;
