@@ -79,7 +79,7 @@ int main(int argc, char const *argv[])
 			if(i%5==0)
 				pop();
 		}
-		while(pop()){}
+		//while(pop()){}
 			
 			
 		
