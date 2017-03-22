@@ -50,10 +50,10 @@ int main(int argc, char const *argv[])
 		int time;
 		scanf("%d%d",&usernum,&time);
 		for (int i = 0; i < time; ++i)
-		{	if(users<=usernum){
-				read(i);
-				cout<<i<<"\n"<<lv1.size()<<lv2.size()<<lv3.size()<<endl;
-			}
+		{	
+			read(i);
+			cout<<i<<"\n"<<lv1.size()<<lv2.size()<<lv3.size()<<endl;
+			if(users==usernum) break;
 		}
 			
 			
