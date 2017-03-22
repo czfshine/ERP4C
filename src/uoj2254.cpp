@@ -50,7 +50,7 @@ int read(int now){
 
 }
 int pop(){
-printf("pop");
+//printf("pop");
 if(lv4.size()>0){
 		printf("%s\n",lv4.front().c_str());
 		lv4.pop();
