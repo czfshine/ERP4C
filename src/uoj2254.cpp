@@ -12,6 +12,7 @@ using namespace std;
 queue<string> lv1;
 queue<string> lv2;
 queue<string> lv3;
+queue<string> lv4;
 
 string temp;
 int templv;
@@ -32,8 +33,10 @@ int read(int now){
 					lv1.push(temp);break;
 				case 2:
 					lv2.push(temp);break;
-				case 3:
+					case 3:
 					lv3.push(temp);break;
+					case 4:
+					lv4.push(temp);break;
 			}
 		}
 		users++;
@@ -48,6 +51,12 @@ int read(int now){
 
 }
 int pop(){
+
+if(lv4.size()>0){
+		cout<<lv4.front()<<endl;
+		lv4.pop();
+		return 4;
+	}
 
 	if(lv3.size()>0){
 		cout<<lv3.front()<<endl;
