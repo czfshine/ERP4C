@@ -18,7 +18,7 @@ int temptime=0;
 int usernum;
 int users=0;
 int read(int now){
-	if(now < temptime) return 0;
+	if(now < temptime || users>usernum) return 0;
 
 	do{
 		printf("test\n");
