@@ -9,10 +9,10 @@
 
 using namespace std;
 
-typedef struct 
+typedef  struct 
 {
 	char str[21];
-} string;
+} string ;
 
 queue<string> lv1;
 queue<string> lv2;
