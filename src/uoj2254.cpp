@@ -5,12 +5,13 @@
 #include <iostream>
 #include <string>
 #include <stack>
+#include <queue>
 
 using namespace std;
 
-stack<string> lv1;
-stack<string> lv2;
-stack<string> lv3;
+queue<string> lv1;
+queue<string> lv2;
+queue<string> lv3;
 
 string temp;
 int templv;
