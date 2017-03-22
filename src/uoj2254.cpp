@@ -11,7 +11,7 @@ using namespace std;
 
 typedef char * string ;
 
-queue<string> lv1;
+queue<char *> lv1;
 queue<string> lv2;
 queue<string> lv3;
 queue<string> lv4;
