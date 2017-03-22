@@ -42,7 +42,6 @@ int read(int now){
 		users++;
 		if(users<=usernum){
 			temp.resize(21); //需要预先分配空间
-
 			scanf("%d%d%s",&temptime,&templv,&temp[0]);
 		}
 		else
@@ -55,25 +54,25 @@ int read(int now){
 int pop(){
 
 if(lv4.size()>0){
-		cout<<lv4.front()<<endl;
+		printf("%s\n",lv4.front().c_str());
 		lv4.pop();
 		return 4;
 	}
 
 	if(lv3.size()>0){
-		cout<<lv3.front()<<endl;
+		printf("%s\n",lv4.front().c_str());
 		lv3.pop();
 		return 3;
 	}
 
 	if(lv2.size()>0){
-		cout<<lv2.front()<<endl;
+		printf("%s\n",lv4.front().c_str());
 		lv2.pop();
 		return 2;
 	}
 
 	if(lv1.size()>0){
-		cout<<lv1.front()<<endl;
+		printf("%s\n",lv4.front().c_str());
 		lv1.pop();
 		return 1;
 	}
