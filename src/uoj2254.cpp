@@ -37,6 +37,8 @@ int read(int now){
 		}
 		if(users<usernum)
 			cin >>temptime>>templv>>temp;
+		else
+			return 0;
 		users++;
 	}while(temptime<=now);
 
