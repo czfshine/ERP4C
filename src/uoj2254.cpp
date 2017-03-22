@@ -53,7 +53,7 @@ int main(int argc, char const *argv[])
 		{	
 			read(i);
 			cout<<i<<"\n"<<lv1.size()<<lv2.size()<<lv3.size()<<endl;
-			if(users==usernum) break;
+			
 		}
 			
 			
