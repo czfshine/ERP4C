@@ -47,6 +47,26 @@ int read(int now){
 
 
 }
+void pop(){
+
+	if(lv3.size()>0){
+		cout<<lv3.front()<<endl;
+		lv3.pop();
+		return;
+	}
+
+	if(lv2.size()>0){
+		cout<<lv2.front()<<endl;
+		lv2.pop();
+		return;
+	}
+
+	if(lv1.size()>0){
+		cout<<lv1.front()<<endl;
+		lv1.pop();
+		return;
+	}
+}
 int main(int argc, char const *argv[])
 {
 		int time;
@@ -55,7 +75,8 @@ int main(int argc, char const *argv[])
 		{	
 			read(i);
 			cout<<i<<"\n"<<lv1.size()<<lv2.size()<<lv3.size()<<endl;
-			
+			if(i%5==0)
+				pop();
 		}
 			
 			
