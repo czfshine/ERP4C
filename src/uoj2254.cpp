@@ -48,8 +48,6 @@ int read(int now){
 			return 0;
 	}while(temptime<=now);
 
-
-
 }
 int pop(){
 
@@ -90,10 +88,5 @@ int main(int argc, char const *argv[])
 				pop();
 		}
 		//while(pop()){}
-			
-			
-		
-	 
-	
 	return 0;
 }
