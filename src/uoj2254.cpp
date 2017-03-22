@@ -21,7 +21,7 @@ int read(int now){
 	if(now < temptime) return 0;
 
 	do{
-
+		printf("test\n");
 		if(temp.empty()){
 
 		}else{
