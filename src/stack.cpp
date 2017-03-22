@@ -7,10 +7,10 @@
 #include <stack>
 
 
-stack<string> s1;
+
 
 int main(int argc, char const *argv[])
-{
+{stack <string> s1;
 	string a("gggg");
 
 	s1.push(a);
