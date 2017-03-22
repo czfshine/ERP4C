@@ -6,7 +6,7 @@
 #include <string>
 #include <stack>
 
-typedef user pair<int,string>
+
 
 stack<string> lv1;
 stack<string> lv2;
