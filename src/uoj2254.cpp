@@ -3,16 +3,18 @@
 #include <vector>
 #include <utility>
 #include <iostream>
-#include <string>
+//#include <string>
 #include <stack>
 #include <queue>
 
 using namespace std;
+typedef string char[21];
 
 queue<string> lv1;
 queue<string> lv2;
 queue<string> lv3;
 queue<string> lv4;
+
 
 string temp;
 int templv;
@@ -81,7 +83,7 @@ int main(int argc, char const *argv[])
 {
 		int time;
 		scanf("%d%d",&usernum,&time);
-		for (int i = 0; i < time; ++i)
+		for (int i = 0; i < time && i< usernum * 5; ++i)
 		{	
 			read(i);
 			//cout<<i<<"\n"<<lv1.size()<<lv2.size()<<lv3.size()<<endl;
