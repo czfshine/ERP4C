@@ -8,7 +8,7 @@
 #include <queue>
 
 using namespace std;
-typedef string char[21];
+typedef char[21]  string;
 
 queue<string> lv1;
 queue<string> lv2;
