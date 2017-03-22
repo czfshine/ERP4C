@@ -42,7 +42,7 @@ int read(int now){
 }
 int main(int argc, char const *argv[])
 {
-		whlie(1){
+		while(1){
 			read();
 			cout<<lv1.size()<<lv2.size()<<lv3.size();
 		}
