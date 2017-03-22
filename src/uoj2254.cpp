@@ -50,7 +50,7 @@ int read(int now){
 
 }
 int pop(){
-
+printf("pop");
 if(lv4.size()>0){
 		printf("%s\n",lv4.front().c_str());
 		lv4.pop();
@@ -80,6 +80,7 @@ int main(int argc, char const *argv[])
 {
 		int time;
 		scanf("%d%d",&usernum,&time);
+
 		for (int i = 0; i < time && i< usernum *5; ++i)
 		{	
 			read(i);
