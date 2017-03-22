@@ -35,9 +35,9 @@ int read(int now){
 					lv3.push(temp);break;
 			}
 		}
-		if(users<usernum)
+		if(users<usernum){
 			cin >>temptime>>templv>>temp;
-			users++;
+			users++;}
 		else
 			return 0;
 	}while(temptime<=now);
