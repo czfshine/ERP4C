@@ -11,13 +11,13 @@ using namespace std;
 
 typedef char* string ;
 
-queue<string> lv1;
-queue<string> lv2;
-queue<string> lv3;
-queue<string> lv4;
+queue<char *> lv1;
+queue<char *> lv2;
+queue<char *> lv3;
+queue<char *> lv4;
 
 
-string temp;
+char temp[22]=0;
 int templv;
 int temptime=0;
 int usernum;
@@ -27,7 +27,7 @@ int read(int now){
 
 	do{
 		
-		if(temp.empty()){
+		if(temp[0]=='\0'){
 
 		}else{
 
