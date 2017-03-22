@@ -60,19 +60,19 @@ if(lv4.size()>0){
 	}
 
 	if(lv3.size()>0){
-		printf("%s\n",lv4.front().c_str());
+		printf("%s\n",lv3.front().c_str());
 		lv3.pop();
 		return 3;
 	}
 
 	if(lv2.size()>0){
-		printf("%s\n",lv4.front().c_str());
+		printf("%s\n",lv2.front().c_str());
 		lv2.pop();
 		return 2;
 	}
 
 	if(lv1.size()>0){
-		printf("%s\n",lv4.front().c_str());
+		printf("%s\n",lv1.front().c_str());
 		lv1.pop();
 		return 1;
 	}
