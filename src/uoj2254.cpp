@@ -44,7 +44,7 @@ int main(int argc, char const *argv[])
 {
 		int usernum,time;
 		scanf("%d%d",&usernum,&time);
-		for (int i = 1; i < time; ++i)
+		for (int i = 0; i < time; ++i)
 		{
 			read(i);
 			cout<<i<<"\n"<<lv1.size()<<lv2.size()<<lv3.size();
