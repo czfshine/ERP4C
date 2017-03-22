@@ -41,7 +41,9 @@ int read(int now){
 		}
 		users++;
 		if(users<=usernum){
-			cin >>temptime>>templv>>temp;
+			temp.resize(21); //需要预先分配空间
+
+			scanf("%d%d%s",&temptime,&templv,&temp[0]);
 		}
 		else
 			return 0;
