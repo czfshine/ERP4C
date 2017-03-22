@@ -1,45 +1,48 @@
 #include <stdio.h>
 #include <queue>
 #include <vector>
-char name[100000][20];
-char u[100000];
-char ed[100000];
+#include <utility>
+
+#include <string>
+#include <stack>
+
+typedef user pair<int,string>
+
+stack<string> lv1;
+stack<string> lv2;
+stack<string> lv3;
+
+string temp;
+int templv;
+int read(int now){
+
+	int t,n;
+	string name;
+	do{
+
+		if(temp.empty()){
+
+		}else{
+
+			switch(templv){
+				case 1:
+					lv1.push(temp);break;
+				case 2:
+					lv2.push(temp);break;
+				case 3:
+					lv3.push(temp);break;
+			}
+		}
+
+	}while(t>now);
 
 
-struct user
-{
-	char name[20];
-	char num;
-};
 
-struct cmp{
-	bool operator() (user A,user B){
-		return A.num>B.num;
-	}
-};
-
+}
 int main(int argc, char const *argv[])
 {
-	priority_queue<user,vector<user>,cmp> pq;
-	int n;
-	scanf("%d",&n);
 
-	int maxmin;
-	scanf("%d",&maxmin);
-
-	int usern;
-	if (maxmin/5){
-
-		usern=(maxmin/5) +1;
-	}else
-	{
-		usern=maxmin/5;
-	}
-
-
-	for (int i = 0; i < maxmin; ++i)
-	{
-		
-	}
+	
+	
 	return 0;
 }
