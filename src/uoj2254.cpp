@@ -15,7 +15,7 @@ stack<string> lv3;
 string temp;
 int templv;
 int temptime=0;
-int usernum,
+int usernum;
 int users=0;
 int read(int now){
 	if(now < temptime) return 0;
