@@ -22,7 +22,7 @@ int read(int now){
 	if(now < temptime || users>usernum) return 0;
 
 	do{
-		printf("test\n");
+		
 		if(temp.empty()){
 
 		}else{
@@ -47,25 +47,26 @@ int read(int now){
 
 
 }
-void pop(){
+int pop(){
 
 	if(lv3.size()>0){
 		cout<<lv3.front()<<endl;
 		lv3.pop();
-		return;
+		return 3;
 	}
 
 	if(lv2.size()>0){
 		cout<<lv2.front()<<endl;
 		lv2.pop();
-		return;
+		return 2;
 	}
 
 	if(lv1.size()>0){
 		cout<<lv1.front()<<endl;
 		lv1.pop();
-		return;
+		return 1;
 	}
+	return 0;
 }
 int main(int argc, char const *argv[])
 {
@@ -74,10 +75,11 @@ int main(int argc, char const *argv[])
 		for (int i = 0; i < time; ++i)
 		{	
 			read(i);
-			cout<<i<<"\n"<<lv1.size()<<lv2.size()<<lv3.size()<<endl;
+			//cout<<i<<"\n"<<lv1.size()<<lv2.size()<<lv3.size()<<endl;
 			if(i%5==0)
 				pop();
 		}
+		while(pop()){}
 			
 			
 		
