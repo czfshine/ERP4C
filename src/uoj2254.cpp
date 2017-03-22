@@ -14,7 +14,7 @@ typedef  struct
 	char str[21];
 } string ;
 
-queue<string> lv1;
+queue<char[32]> lv1;
 queue<string> lv2;
 queue<string> lv3;
 queue<string> lv4;
