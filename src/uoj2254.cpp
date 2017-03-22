@@ -14,10 +14,11 @@ stack<string> lv3;
 
 string temp;
 int templv;
-int read(int now){
+int temptime=0;
 
-	int t,n;
-	string name;
+int read(int now){
+	if(now < temptime) return 0;
+
 	do{
 
 		if(temp.empty()){
@@ -33,16 +34,19 @@ int read(int now){
 					lv3.push(temp);break;
 			}
 		}
-
-	}while(t>now);
+		cin >>temptime>>templv>>temp;
+	}while(temptime>=now);
 
 
 
 }
 int main(int argc, char const *argv[])
 {
-
-	
+		whlie(1){
+			read();
+			cout<<lv1.size()<<lv2.size()<<lv3.size();
+		}
+	 
 	
 	return 0;
 }
