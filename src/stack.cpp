@@ -18,5 +18,7 @@ int main(int argc, char const *argv[])
 	s1.push(a);
 	a="1111";
 	cout << "mystack.top() is now " << s1.top() << endl;  
+	s1.push(a);
+	cout << "mystack.top() is now " << s1.top() << endl;
 	return 0;
 }
