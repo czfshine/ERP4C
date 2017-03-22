@@ -8,7 +8,11 @@
 #include <queue>
 
 using namespace std;
-typedef char  string[21];
+
+typedef struct 
+{
+	char str[21];
+} string;
 
 queue<string> lv1;
 queue<string> lv2;
