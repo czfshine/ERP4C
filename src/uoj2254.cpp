@@ -35,7 +35,7 @@ int read(int now){
 			}
 		}
 		cin >>temptime>>templv>>temp;
-	}while(temptime>=now);
+	}while(temptime<=now);
 
 
 
