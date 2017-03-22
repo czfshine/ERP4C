@@ -15,7 +15,8 @@ stack<string> lv3;
 string temp;
 int templv;
 int temptime=0;
-
+int usernum,
+int users=0;
 int read(int now){
 	if(now < temptime) return 0;
 
@@ -34,7 +35,9 @@ int read(int now){
 					lv3.push(temp);break;
 			}
 		}
-		cin >>temptime>>templv>>temp;
+		if(users<usernum)
+			cin >>temptime>>templv>>temp;
+		users++;
 	}while(temptime<=now);
 
 
@@ -42,7 +45,7 @@ int read(int now){
 }
 int main(int argc, char const *argv[])
 {
-		int usernum,time;
+		int time;
 		scanf("%d%d",&usernum,&time);
 		for (int i = 0; i < time; ++i)
 		{
