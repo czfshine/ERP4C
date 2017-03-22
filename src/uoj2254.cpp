@@ -9,9 +9,9 @@
 
 using namespace std;
 
-typedef char * string ;
+typedef char* string ;
 
-queue<char *> lv1;
+queue<string> lv1;
 queue<string> lv2;
 queue<string> lv3;
 queue<string> lv4;
