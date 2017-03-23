@@ -4,7 +4,7 @@ main(int argc, char const *argv[])
 {
 	int n;
 	scanf("%d",&n);
-	int lv[n];
+	int data[n];
 	for (int i = 0; i < n; ++i)
 	{
 		/* code */
