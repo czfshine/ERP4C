@@ -41,9 +41,10 @@ main(int argc, char const *argv[])
 		{
 			p[cur]=ch*10000+i;
 			cur++;
+			
 		}
 	}
-	
+
 	for (int i = 0; i < cur; ++i)
 	{
 		printf("%d ",*(f+i));
