@@ -26,6 +26,17 @@ main(int argc, char const *argv[])
 			cur=0;
 		}
 
+		if(ch==1){
+			p[cur]=-1;
+			cur++;
+			break;
+		}
+		if(ch==0){
+			p[cur]=-2;
+			cur++;
+			break;
+		}
+
 		for (int i = 0; i < data[ch-'a']; ++i)
 		{
 			p[cur+i]=ch*10000+i;
