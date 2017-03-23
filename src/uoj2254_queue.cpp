@@ -39,7 +39,7 @@ main(int argc, char const *argv[])
 
 		for (int i = 0; i < data[ch-'a']; ++i)
 		{
-			p[cur+i]=ch*10000+i;
+			p[cur]=ch*10000+i;
 			cur++;
 		}
 	}
