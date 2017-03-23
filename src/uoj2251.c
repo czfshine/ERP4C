@@ -11,7 +11,17 @@ int main(int argc, char const *argv[])
 		//n 写错
 		data[i]=1;
 	}
-	
+	if(m==1){
+		for (int i = s; i <= n; ++i)
+		{
+			printf("%d ",i);
+		}
+		for (int i = 1; i < s; ++i)
+		{
+			printf("%d ",i);
+		}
+		return 0;
+	}
 	int l=0,d=1,cur;
 	l=n;
 	cur=s-1;
@@ -22,7 +32,7 @@ int main(int argc, char const *argv[])
 				d++;
 				if((d%m)==0){
 					data[(cur+1)%n]=0;
-					if(l==1)printf("%d",(cur+1)%n+1);
+					printf("%d ",(cur+1)%n+1);
 					cur=(cur+1)%n;
 					l--;
 					break;
