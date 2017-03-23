@@ -19,7 +19,7 @@ main(int argc, char const *argv[])
 	char ch;
 	int *p=f;
 	int cur=0;
-	while(scanf("%c",ch)>0){
+	while(scanf("%c",&ch)>0){
 
 		if(ch=='='){
 			p=s;
