@@ -55,8 +55,9 @@ int main(int argc, char const *argv[])
             if(!pq.empty()){
                 cout<<pq.top().second<<endl;
                 pq.pop();
-                outusernum++;
+               
             }
+             outusernum++;
             p+=5;
         }
         pq.push(make_pair(lv*100000+ttweight,name));
