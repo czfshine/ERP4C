@@ -6,13 +6,14 @@
 #include <string>
 #include <stack>
 #include <queue>
+#include <list>
 //TODO
 using namespace std;
 
-queue<string> lv1;
-queue<string> lv2;
-queue<string> lv3;
-queue<string> lv4;
+list<string> lv1;
+list<string> lv2;
+list<string> lv3;
+list<string> lv4;
 
 string temp;
 int templv;
@@ -30,13 +31,13 @@ int read(int now){
 
 			switch(templv){
 				case 1:
-					lv1.push(temp);break;
+					lv1.push_back(temp);break;
 				case 2:
-					lv2.push(temp);break;
+					lv2.push_back(temp);break;
 					case 3:
-					lv3.push(temp);break;
+					lv3.push_back(temp);break;
 					case 4:
-					lv4.push(temp);break;
+					lv4.push_back(temp);break;
 			}
 		}
 		users++;
@@ -53,25 +54,25 @@ int pop(){
 //printf("pop");
 if(lv4.size()>0){
 		printf("%s\n",lv4.front().c_str());
-		lv4.pop();
+		lv4.pop_front();
 		return 4;
 	}
 
 	if(lv3.size()>0){
 		printf("%s\n",lv3.front().c_str());
-		lv3.pop();
+		lv3.pop_front();
 		return 3;
 	}
 
 	if(lv2.size()>0){
 		printf("%s\n",lv2.front().c_str());
-		lv2.pop();
+		lv2.pop_front();
 		return 2;
 	}
 
 	if(lv1.size()>0){
 		printf("%s\n",lv1.front().c_str());
-		lv1.pop();
+		lv1.pop_front();
 		return 1;
 	}
 	return 0;
@@ -81,7 +82,7 @@ int main(int argc, char const *argv[])
 		int time;
 		scanf("%d%d",&usernum,&time);
 
-		for (int i = 0; i <= time ; ++i)
+		for (int i = 0; i < time ; ++i)
 		{	
 			read(i);
 			//cout<<i<<"\n"<<lv1.size()<<lv2.size()<<lv3.size()<<endl;

@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "任务-exec1",
+      "appliesTo": "src/uoj17993/exec1.cpp",
+      "type": "command"
+    }
+  ]
+}
