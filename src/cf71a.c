@@ -10,6 +10,8 @@ int main(){
 		scanf("%s",strings[i]);
 	}
 
+	
+
 	for(i=0;i<n;i++){
 		len=strlen(strings[i]);
 		if(len<=10){
