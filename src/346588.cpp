@@ -4,10 +4,10 @@
 #include <stdio.h>
 #include <vector>
 using namespace std;
-typedef  pair<int,int> node;
+typedef  pair<long long ,long long> node;
 
 
-int re[1000000];
+long long re[1000000];
 int main(int argc, char const *argv[])
 {
 	priority_queue<node ,vector<node> ,greater<node> > pq;
