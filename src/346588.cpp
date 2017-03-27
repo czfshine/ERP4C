@@ -3,7 +3,7 @@
 #include <utility>
 
 using namespace std;
-typedef  node pair<int,int>;
+typedef  pair<int,int> node;
 
 
 int re[1000000];
