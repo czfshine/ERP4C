@@ -13,6 +13,7 @@ int main(int argc, char const *argv[])
 
 	pq.push(make_pair(1,2));
 	node n;
+	int i=0;
 	while(1){
 
 		node n=pq.top();
@@ -30,6 +31,8 @@ int main(int argc, char const *argv[])
 				pq.push(make_pair(n.first*5,0));
 			break;
 		}
+		re[i++]=n.first;
+
 
 	}
 	return 0;
