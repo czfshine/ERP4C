@@ -22,10 +22,10 @@ int main(int argc, char const *argv[])
 		pq.pop();
 		switch(n.second){
 			case 2:
-				pq.push(node(n.first*2,3));
+				pq.push(node(n.first*2,2));
 
 			case 3:
-				pq.push(node(n.first*3,5));
+				pq.push(node(n.first*3,3));
 
 			case 5:
 				pq.push(node(n.first*5,5));
