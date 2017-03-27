@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
 	node n;
 	while(1){
 
-		node n=pq.front();
+		node n=pq.top();
 
 		pq.pop();
 
@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 				pq.push(make_pair(n.first*2,3));
 			break;
 			case 3:
-				pq.push(make_pair(n.first*3,5);
+				pq.push(make_pair(n.first*3,5));
 			break;
 			case 5:
 				pq.push(make_pair(n.first*5,0));
