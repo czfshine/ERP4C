@@ -6,7 +6,7 @@
 typedef pair<int,int> node;
 
 
-int re[1000000]
+int re[1000000];
 int main(int argc, char const *argv[])
 {
 	priority_queue<node> pq;
