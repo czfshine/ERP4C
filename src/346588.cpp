@@ -37,6 +37,7 @@ int main(int argc, char const *argv[])
 	int re1[1300]={0};
 	for (int i = 1; i < 1200; ++i)
 		re1[i]=re1[i-1]+(re[i]-re[i-1]-1);
+	
 	while(T--){
 		int num;
 		scanf("%d",&num);
