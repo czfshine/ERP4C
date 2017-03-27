@@ -7,7 +7,7 @@ using namespace std;
 typedef  pair<long long ,long long> node;
 
 
-long long re[1000000];
+long long re[1300];
 int main(int argc, char const *argv[])
 {
 	priority_queue<node ,vector<node> ,greater<node> > pq;
@@ -32,10 +32,24 @@ int main(int argc, char const *argv[])
 		}
 		re[i++]=n.first;
 	}
-	for (int j = 0; j < i; ++j)
+	int T;
+	scanf("%d",&T);
+	int re1[1300]={0};
+	for (int i = 1; i < 1200; ++i)
 	{
-		printf("%d\n",re[j]);
+		re1[i]=re1[i-1]+(re[i]-re[i-1]);
+		printf("%d",re1[i]);
 	}
+	/*while(T--){
+		int num;
+		scanf("%d",num);
+		i=0;
+		while(re[i]<num){
+			i++;
+		}
+		if()
+
+	}*/
     
 	return 0;
 }
