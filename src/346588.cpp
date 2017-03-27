@@ -36,10 +36,7 @@ int main(int argc, char const *argv[])
 	scanf("%d",&T);
 	int re1[1300]={0};
 	for (int i = 1; i < 1200; ++i)
-	{
 		re1[i]=re1[i-1]+(re[i]-re[i-1]-1);
-		if(i<10) printf("%d\n",re1[i]);
-	}
 	while(T--){
 		int num;
 		scanf("%d",&num);
@@ -47,10 +44,7 @@ int main(int argc, char const *argv[])
 		while(re1[i]<num){
 			i++;
 		}
-
-
 		printf("%d\n",i+num);
-
 	}
   
 	return 0;
