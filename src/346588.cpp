@@ -14,12 +14,10 @@ int main(int argc, char const *argv[])
 	pq.push(make_pair(1,2));
 	node n;
 	int i=0;
-	while(1){
+	while(i<1000){
 
 		node n=pq.top();
-
 		pq.pop();
-
 		switch(n.second){
 			case 2:
 				pq.push(make_pair(n.first*2,3));
