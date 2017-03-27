@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
 	pq.push(node(1,2));
 	node n;
 	int i=0;
-	while(i<1000){
+	while(i<1200){
 
 		node n=pq.top();
 		//printf("%d",i);
