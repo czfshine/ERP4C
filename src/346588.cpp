@@ -1,8 +1,8 @@
-#include <iossteam>
-
+#include <iossteam
 #include <queue>
 #include <utility>
 
+using namespace std;
 typedef  node pair<int,int>;
 
 
