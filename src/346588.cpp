@@ -40,16 +40,16 @@ int main(int argc, char const *argv[])
 		re1[i]=re1[i-1]+(re[i]-re[i-1]);
 		printf("%d\n",re1[i]);
 	}
-	/*while(T--){
+	while(T--){
 		int num;
 		scanf("%d",num);
 		i=0;
-		while(re[i]<num){
+		while(re1[i]<num){
 			i++;
 		}
-		if()
+		printf("%d\n",re1);
 
-	}*/
+	}
   
 	return 0;
 }
