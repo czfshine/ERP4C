@@ -47,6 +47,7 @@ int main(int argc, char const *argv[])
 		while(re1[i]<num){
 			i++;
 		}
+
 		
 		printf("%d: %d\n",i,re1[i+1]);
 
