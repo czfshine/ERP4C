@@ -42,7 +42,7 @@ int main(int argc, char const *argv[])
 	}
 	while(T--){
 		int num;
-		scanf("%d",num);
+		scanf("%d",&num);
 		i=0;
 		while(re1[i]<num){
 			i++;
