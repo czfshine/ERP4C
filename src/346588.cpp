@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
 	for (int i = 1; i < 1200; ++i)
 	{
 		re1[i]=re1[i-1]+(re[i]-re[i-1]-1);
-		printf("%d\n",re1[i]);
+		if(i<10) printf("%d\n",re1[i]);
 	}
 	while(T--){
 		int num;
