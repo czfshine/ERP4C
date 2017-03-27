@@ -1,7 +1,8 @@
 #include <iostream>
 #include <queue>
 #include <utility>
-
+#include <stdio.h>
+#include <vector>
 using namespace std;
 typedef  pair<int,int> node;
 
@@ -9,29 +10,32 @@ typedef  pair<int,int> node;
 int re[1000000];
 int main(int argc, char const *argv[])
 {
-	priority_queue<node> pq;
+	priority_queue<node ,vector<node> ,greater<node> > pq;
 
-	pq.push(make_pair(1,2));
+	pq.push(node(1,2));
 	node n;
 	int i=0;
 	while(i<1000){
 
 		node n=pq.top();
+		//printf("%d",i);
 		pq.pop();
 		switch(n.second){
 			case 2:
-				pq.push(make_pair(n.first*2,3));
-			break;
+				pq.push(node(n.first*2,3));
+
 			case 3:
-				pq.push(make_pair(n.first*3,5));
-			break;
+				pq.push(node(n.first*3,5));
+
 			case 5:
-				pq.push(make_pair(n.first*5,0));
-			break;
+				pq.push(node(n.first*5,5));
 		}
 		re[i++]=n.first;
-
-
 	}
+	for (int j = 0; j < i; ++j)
+	{
+		printf("%d\n",re[j]);
+	}
+    
 	return 0;
 }
