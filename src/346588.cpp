@@ -3,7 +3,7 @@
 #include <queue>
 #include <utility>
 
-typedef pair<int,int> node;
+typedef  node pair<int,int>;
 
 
 int re[1000000];
