@@ -10,7 +10,7 @@ typedef  pair<long long ,long long> node;
 long long re[1000000];
 int main(int argc, char const *argv[])
 {
-	priority_queue<node ,vector<node> ,greater<node> > pq;
+	priority_queue<node ,vector<node> ,less<node> > pq;
 
 	pq.push(node(1,2));
 	node n;
