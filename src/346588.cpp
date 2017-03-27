@@ -48,8 +48,8 @@ int main(int argc, char const *argv[])
 			i++;
 		}
 
-		
-		printf("%d: %d\n",i,re1[i+1]);
+
+		printf("%d\n",i+num);
 
 	}
   
