@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
 	int s=0,a;
 	while(cin >>n){
 		s=(n+1)*n/2;
-		cout<<s;
+		cout<<s<<endl<<endl;
 	}
 	return 0;
 }
