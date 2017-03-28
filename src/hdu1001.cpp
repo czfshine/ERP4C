@@ -1,15 +1,14 @@
 #include <iostream>
 using namespace std;
-
+a
 int main(int argc, char const *argv[])
 {
 	int n;
-	cin >>n;
+	
 	int s=0,a;
-	while(n--){
-		cin>>a;
-		s+=a;
+	while(cin >>n;){
+		s=(n+1)*n/2;
+		cout<<s;
 	}
-	cout<<s;
 	return 0;
 }
