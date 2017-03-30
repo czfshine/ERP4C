@@ -131,7 +131,7 @@ void check()
     //printf("请输入表达式\n");
      scanf("%s",ch);
      p=ch;
-     while(*p) S.StackTraverse(fun);// 没到串尾
+     while(*p) s.StackTraverse(fun);// 没到串尾
        switch(*p)
        {
          case '(':
