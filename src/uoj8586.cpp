@@ -122,10 +122,10 @@ void check()
        switch(*p)
        {
          case '(':
-         case '[':s.Push(*p) p++;
+         case '[':s.Push(*p) ;p++;
                   break; // 左括号入栈，且p++
          case ')':
-         case ']':if(!StackEmpty(s)) // 栈不空
+         case ']':if(!s.StackEmpty()) // 栈不空
                   {
                    s.Pop(e); // 弹出栈顶元素
                     if(*p==')'&&e!='('||*p==']'&&e!='[') {
@@ -145,7 +145,7 @@ void check()
                   }
          default: p++; // 其它字符不处理，指针向后移
        }
-     if(StackEmpty(s)) // 字符串结束时栈空
+     if(s.StackEmpty()) // 字符串结束时栈空
        printf("matching\n");
      else
        printf("lack of right parenthesis\n");
@@ -154,5 +154,5 @@ void check()
 int main()
 {
     
-	check()
+	check();
 }
