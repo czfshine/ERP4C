@@ -117,7 +117,7 @@ Status Linkunion_L(LinkList a,LinkList b,LinkList c){
 
 Status Linkturn(LinkList &L){
 
-    struct LinkList * end=NULL,*p,*q,*c;
+    LinkList * end=NULL,*p,*q,*c;
 
     p=L->next;
 
