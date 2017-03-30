@@ -88,7 +88,7 @@ struct SqStack
 
 	}
 
-	Status StackTraverse(void * fn(SElemType e))
+	Status StackTraverse(void * fn(SElemType& e))
 	{
 	// 从栈顶到栈底依次输出栈中的每个元素
 		SElemType *p = (SElemType *)malloc(sizeof(SElemType));
