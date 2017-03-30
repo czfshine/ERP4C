@@ -25,7 +25,7 @@ struct SqStack
 		if(base==NULL)return;
 		top=base+1;
 		stacksize=STACK_INIT_SIZE;
-		printf("DDD");
+		//printf("DDD");
 		return;
 	}
 
@@ -88,7 +88,7 @@ struct SqStack
 
 	}
 
-	Status StackTraverse()
+	Status StackTraverse((void *) fn(SElemType e))
 	{
 	// 从栈顶到栈底依次输出栈中的每个元素
 		SElemType *p = (SElemType *)malloc(sizeof(SElemType));
@@ -110,6 +110,10 @@ struct SqStack
 }; // 顺序栈
 
 
+void fun(SElemType &e){
+
+	printf("%d",e);
+}
 
 int main()
 {
@@ -127,6 +131,6 @@ int main()
 		n/=8;
 	}
 
-	S.StackTraverse();
+	S.StackTraverse(fun);
 	
 }
