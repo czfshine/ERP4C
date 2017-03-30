@@ -25,7 +25,7 @@ struct SqStack
 		if(base==NULL)return;
 		top=base+1;
 		stacksize=STACK_INIT_SIZE;
-
+		printf("DDD");
 		return;
 	}
 
