@@ -118,6 +118,10 @@ struct SqStack
 	}
 }; // 顺序栈
 
+void fun(SElemType &e){
+
+	printf("%d",e);
+}
 
 void check()
  { // 对于输入的任意一个字符串，检验括号是否配对
@@ -127,7 +131,7 @@ void check()
     //printf("请输入表达式\n");
      scanf("%s",ch);
      p=ch;
-     while(*p) // 没到串尾
+     while(*p) S.StackTraverse(fun);// 没到串尾
        switch(*p)
        {
          case '(':
