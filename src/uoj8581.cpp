@@ -131,11 +131,10 @@ Status Linkturn(LinkList &L){
       ListDelete_L(L,L->data,e) ;
       ListInsert_L(out,i,e);
       i++;
-      printf("%d",e);
-
     }
 
     L=out;
+    return OK;
 
 }
 int main(int argc, char const *argv[])
@@ -147,6 +146,6 @@ int main(int argc, char const *argv[])
    CreateLink_L(A,n);
    LoadLink_L(A,"A");
    Linkturn(A);
-LoadLink_L(A,"A");
+    LoadLink_L(A,"A");
   return 0;
 }
