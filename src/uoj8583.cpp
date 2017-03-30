@@ -130,12 +130,12 @@ while(1)
 		case 2: if(S.Pop(e)) printf("Pop Error!\n"); // 判断Pop是否合法，请填空
 			  else printf("The Element %d is Successfully Poped!\n", e);
 		  	  break;
-		case 3: if(S.top(e))printf("Get Top Error!\n"); // 判断Get Top是否合法，请填空
+		case 3: if(S.GetTop(e))printf("Get Top Error!\n"); // 判断Get Top是否合法，请填空
 			  else printf("The Top Element is %d!\n", e);
 		   	  break;
 			case 4: printf("The Length of the Stack is %d!\n",S.StackLength()); //请填空
 				  break;
-			case 5: S.StackTraverse()  //请填空
+			case 5: S.StackTraverse();  //请填空
 				  break;
 			case 0: return 1;
 		}
