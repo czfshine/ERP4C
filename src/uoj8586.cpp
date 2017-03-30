@@ -160,7 +160,7 @@ void check()
                     printf("lack of left parenthesis\n");
                     exit(ERROR);
                   }
-         default: p++; // 其它字符不处理，指针向后移
+         default: p++; break; // 其它字符不处理，指针向后移
        }
    }
 
