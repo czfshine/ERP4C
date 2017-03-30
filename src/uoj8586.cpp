@@ -8,7 +8,7 @@ using namespace std;
 #define STACK_INIT_SIZE 100 // 存储空间初始分配量
 #define STACKINCREMENT 10 // 存储空间分配增量
 
-typedef int SElemType; // 定义栈元素类型
+typedef char SElemType; // 定义栈元素类型
 typedef int Status; // Status是函数的类型,其值是函数结果状态代码，如OK等
 
 struct SqStack
@@ -96,7 +96,7 @@ struct SqStack
 		if(StackLength() ==0 )printf("The Stack is Empty!"); //请填空
 		else
 		{
-			
+
 			p--;
 			while(p-base>=1)            //请填空
 			{
@@ -127,15 +127,15 @@ void check()
  { // 对于输入的任意一个字符串，检验括号是否配对
    SqStack s;
    SElemType ch[80],*p,e;
-   
+
     //printf("请输入表达式\n");
      scanf("%s",ch);
      p=ch;
      while(*p) {
 
-     	s.StackTraverse(fun);// 没到串尾
+     	//s.StackTraverse(fun);// 没到串尾
 
-     	printf("%c\n",*p);
+     	//printf("%c\n",*p);
        switch(*p)
        {
          case '(':
@@ -174,6 +174,6 @@ void check()
 
 int main()
 {
-    
+
 	check();
 }
