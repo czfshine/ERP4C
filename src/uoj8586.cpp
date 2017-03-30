@@ -107,6 +107,15 @@ struct SqStack
 		printf("\n");
 		return OK;
 	}
+
+	int StackEmpty(){
+
+		if(StackLength()>0){
+			return 0
+		}else{
+			return 1;
+		}
+	}
 }; // 顺序栈
 
 
