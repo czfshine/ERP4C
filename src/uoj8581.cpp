@@ -121,13 +121,19 @@ Status Linkunion_L(LinkList a,LinkList b,LinkList c){
 Status Linkturn(LinkList &L){
 
     LinkList out;
+    CreateLink_L(out,0);
+
 
     ElemType e;
-    while(L->data>0){
-    ListDelete_L(L,L->data,e) ;
 
-    printf("%d",e);
-  }
+    int i=1;
+    while(L->data>0){
+      ListDelete_L(L,L->data,e) ;
+      ListInsert_L(out,i,e);
+      printf("%d",e);
+    }
+
+    L=out;
 
 
 }
