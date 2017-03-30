@@ -117,7 +117,7 @@ Status Linkunion_L(LinkList a,LinkList b,LinkList c){
 
 Status Linkturn(LinkList &L){
 
-    LinkList * end=NULL,*p,*q,*c;
+    LNode * end=NULL,*p,*q,*c;
 
     p=L.next;
 
