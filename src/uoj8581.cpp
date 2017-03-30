@@ -18,7 +18,8 @@ int CreateLink_L(LinkList &L,int n){
   int i;
   ElemType e;
   L = (LinkList)malloc(sizeof(LNode));
-  L->next = NULL;              // 先建立一个带头结点的单链表
+  L->next = NULL; 
+  L->data=n;             // 先建立一个带头结点的单链表
   q = (LinkList)malloc(sizeof(LNode));
   q = L;
   for (i=0; i<n; i++) {
@@ -65,6 +66,7 @@ Status ListInsert_L(LinkList &L, int i, ElemType e) {  // 算法2.9
   s = (LinkList)malloc(sizeof(LNode));  // 生成新结点
   s->data = e;  s->next = p->next;      // 插入L中
   p->next = s;
+  L->data++;
   return OK;
 } // LinstInsert_L
 
@@ -82,6 +84,7 @@ Status ListDelete_L(LinkList &L, int i, ElemType &e) {  // 算法2.10
   p->next = q->next;           // 删除并释放结点
   e = q->data;
   free(q);
+  L->data--;
   return OK;
 } // ListDelete_L
 
@@ -117,39 +120,17 @@ Status Linkunion_L(LinkList a,LinkList b,LinkList c){
 
 Status Linkturn(LinkList &L){
 
-    LNode * end=NULL,*p,*q,*c;
+    LinkList out;
 
-    p=L->next;
+    ElemType e;
+    while(L->data>0){
+    ListDelete_L(L,L->data, ElemType &e) ;
 
-    while(1){
-        while(1){
-            if(p->next->next==NULL){
-                q=p->next;
-                p->next=NULL;
-                break;
-            }
-
-            p=p->next;
-        }
-
-        if(end==NULL){
-        end=q;
-        c=q;
-        }else{
-        c->next=q;
-        c=q;
-        }
-
-        if (p==L){
-            c->next=p;
-            break;}
-
-        p=L;
-    }
-
-    L=end;
+    printf("%d",e);
+  }
 
 
+    for
 }
 int main(int argc, char const *argv[])
 {
