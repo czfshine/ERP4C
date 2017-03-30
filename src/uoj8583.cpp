@@ -89,7 +89,7 @@ struct SqStack
 	{
 	// 从栈顶到栈底依次输出栈中的每个元素
 		SElemType *p = (SElemType *)malloc(sizeof(SElemType)); 
-		p = *top;        //请填空
+		p = top;        //请填空
 		if(StackLength() ==0 )printf("The Stack is Empty!"); //请填空
 		else
 		{
