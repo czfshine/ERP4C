@@ -131,7 +131,11 @@ void check()
     //printf("请输入表达式\n");
      scanf("%s",ch);
      p=ch;
-     while(*p) {s.StackTraverse(fun);// 没到串尾
+     while(*p) {
+
+     	s.StackTraverse(fun);// 没到串尾
+
+     	cout<<*p;
        switch(*p)
        {
          case '(':
@@ -159,7 +163,7 @@ void check()
          default: p++; // 其它字符不处理，指针向后移
        }
    }
-   
+
      if(s.StackEmpty()) // 字符串结束时栈空
        printf("matching\n");
      else
