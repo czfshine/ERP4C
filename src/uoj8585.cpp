@@ -96,11 +96,11 @@ struct SqStack
 		if(StackLength() ==0 )printf("The Stack is Empty!"); //请填空
 		else
 		{
-			printf("The Stack is: ");
+			
 			p--;
 			while(p-base>=1)            //请填空
 			{
-				printf("%d ", *p);
+				fn(*p);
 				p--;               //请填空
 			}
 		}
