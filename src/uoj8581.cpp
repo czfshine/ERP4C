@@ -146,6 +146,6 @@ int main(int argc, char const *argv[])
    CreateLink_L(A,n);
    LoadLink_L(A,"A");
    Linkturn(A);
-
+LoadLink_L(A,"A");
   return 0;
 }
