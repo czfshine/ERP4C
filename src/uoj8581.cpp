@@ -119,7 +119,7 @@ Status Linkturn(LinkList &L){
 
     LNode * end=NULL,*p,*q,*c;
 
-    p=L.next;
+    p=L->next;
 
     while(1){
         while(1){
