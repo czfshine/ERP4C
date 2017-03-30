@@ -111,7 +111,7 @@ struct SqStack
 	int StackEmpty(){
 
 		if(StackLength()>0){
-			return 0
+			return 0;
 		}else{
 			return 1;
 		}
