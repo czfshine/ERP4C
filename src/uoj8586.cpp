@@ -139,8 +139,9 @@ void check()
        switch(*p)
        {
          case '(':
-         case '[':s.Push(*p) ;p++;
-                  break; // 左括号入栈，且p++
+         case '[':{s.Push(*p) ;p++;
+                  break;
+                  } // 左括号入栈，且p++
          case ')':
          case ']':if(!s.StackEmpty()) // 栈不空
                   {
