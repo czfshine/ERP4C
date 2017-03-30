@@ -115,6 +115,42 @@ Status Linkunion_L(LinkList a,LinkList b,LinkList c){
   
 }
 
+Status Linkturn(LinkList &L){
+
+    struct LinkList * end=NULL,*p,*q,*c;
+
+    p=L->next;
+
+    while(1){
+        while(1){
+            if(p->next->next==NULL){
+                q=p->next;
+                p->next=NULL;
+                break;
+            }
+
+            p=p->next;
+        }
+
+        if(end==NULL){
+        end=q;
+        c=q;
+        }else{
+        c->next=q;
+        c=q;
+        }
+
+        if (p==head){
+            c->next=p;
+            break;}
+
+        p=head;
+    }
+
+    L=end;
+
+
+}
 int main(int argc, char const *argv[])
 {
    int n,m;
