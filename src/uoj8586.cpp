@@ -158,12 +158,14 @@ void check()
                   }
          default: p++; // 其它字符不处理，指针向后移
        }
+   }
+   
      if(s.StackEmpty()) // 字符串结束时栈空
        printf("matching\n");
      else
        printf("lack of right parenthesis\n");
    }
-}
+
 
 int main()
 {
