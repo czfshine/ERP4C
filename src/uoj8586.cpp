@@ -135,7 +135,7 @@ void check()
 
      	s.StackTraverse(fun);// 没到串尾
 
-     	cout<<*p;
+     	printf("%c",*p);
        switch(*p)
        {
          case '(':
