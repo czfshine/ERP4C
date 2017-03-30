@@ -40,7 +40,7 @@ int LoadLink_L(LinkList &L,char * name){
  if(p==NULL)printf("The List is empty!"); // 请填空
  else
  {
-   printf("The List%s is:",name);
+   printf("The %sList is:",name);
    while(p)    // 请填空
    {
     printf("%d ",p->data); 
@@ -146,6 +146,6 @@ int main(int argc, char const *argv[])
    CreateLink_L(A,n);
    LoadLink_L(A,"");
    Linkturn(A);
-    LoadLink_L(A,"turned");
+    LoadLink_L(A,"turned ");
   return 0;
 }
