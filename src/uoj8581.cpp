@@ -130,7 +130,9 @@ Status Linkturn(LinkList &L){
     while(L->data>0){
       ListDelete_L(L,L->data,e) ;
       ListInsert_L(out,i,e);
+      i++;
       printf("%d",e);
+
     }
 
     L=out;
