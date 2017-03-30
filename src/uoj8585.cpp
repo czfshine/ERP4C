@@ -114,7 +114,7 @@ struct SqStack
 int main()
 {
     int a;
-    SqStack S;
+    SqStack S();
 	SElemType e;
 
 	long long n;
