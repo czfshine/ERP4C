@@ -19,11 +19,11 @@ struct SqStack
 	// 构造一个空栈S，该栈预定义大小为STACK_INIT_SIZE
 	// 请补全代码
 		base=(SElemType*) malloc(STACK_INIT_SIZE*(sizeof(SElemType)));
-		if(base==NULL)return ERROR;
+		if(base==NULL)return;
 		top=base+1;
 		stacksize=STACK_INIT_SIZE;
 
-		return OK;
+		return;
 	}
 
 	Status Push(SElemType e)
