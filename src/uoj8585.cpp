@@ -14,7 +14,7 @@ struct SqStack
      SElemType *top; // 栈顶指针
      int stacksize;  // 当前已分配的存储空间，以元素为单位
 
-     Status SqStack()
+     void SqStack()
 	{
 	// 构造一个空栈S，该栈预定义大小为STACK_INIT_SIZE
 	// 请补全代码
@@ -113,5 +113,5 @@ int main()
     int a;
     SqStack S;
 	SElemType x, e;
-	
+
 }
