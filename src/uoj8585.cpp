@@ -1,5 +1,6 @@
 #include<malloc.h>
 #include<stdio.h>
+#include <iostream>
 #define OK 0
 #define ERROR 1
 #define STACK_INIT_SIZE 100 // 存储空间初始分配量
@@ -112,6 +113,10 @@ int main()
 {
     int a;
     SqStack S;
-	SElemType x, e;
+	SElemType e;
+
+	long long n;
+
+	cin>>n;
 
 }
