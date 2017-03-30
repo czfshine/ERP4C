@@ -119,6 +119,7 @@ int main()
 
 	long long n;
 
+	cin>>n;
 
 	while(n>0){
 
@@ -127,6 +128,5 @@ int main()
 	}
 
 	S.StackTraverse();
-	cin>>n;
-
+	
 }
