@@ -18,7 +18,7 @@ struct SqStack
 	{      
 	// 构造一个空栈S，该栈预定义大小为STACK_INIT_SIZE
 	// 请补全代码
-		base=malloc(STACK_INIT_SIZE*(sizeof(SElemType)));
+		base=(SElemType*) malloc(STACK_INIT_SIZE*(sizeof(SElemType)));
 		if(base=NULL)return ERROR;
 		top=base+1;
 		stacksize=STACK_INIT_SIZE;
@@ -32,7 +32,7 @@ struct SqStack
 		// 请补全代码
 		if(top-base>=stacksize){
 
-			base=remalloc(base,(stacksize+STACKINCREMENT)*sizeof(Element));
+			base=realloc(base,(stacksize+STACKINCREMENT)*sizeof(SElement));
 
 			if(base==NULL){
 
