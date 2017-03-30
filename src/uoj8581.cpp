@@ -159,6 +159,7 @@ int main(int argc, char const *argv[])
    LinkList A;
    CreateLink_L(A,n);
    LoadLink_L(A,"A");
+   Linkturn(A);
 
   return 0;
 }
