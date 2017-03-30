@@ -140,11 +140,11 @@ Status Linkturn(LinkList &L){
         c=q;
         }
 
-        if (p==head){
+        if (p==L){
             c->next=p;
             break;}
 
-        p=head;
+        p=L;
     }
 
     L=end;
