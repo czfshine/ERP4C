@@ -32,7 +32,7 @@ struct SqStack
 		// 请补全代码
 		if(top-base>=stacksize){
 
-			base=realloc(base,(stacksize+STACKINCREMENT)*sizeof(SElement));
+			base=realloc(base,(stacksize+STACKINCREMENT)*sizeof(SElemType));
 
 			if(base==NULL){
 
