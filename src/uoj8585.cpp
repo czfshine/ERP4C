@@ -124,7 +124,7 @@ int main()
 	while(n>0){
 
 		S.Push(n%8);
-		n%=8;
+		n/=8;
 	}
 
 	S.StackTraverse();
