@@ -124,13 +124,12 @@ Status Linkturn(LinkList &L){
 
     ElemType e;
     while(L->data>0){
-    ListDelete_L(L,L->data, ElemType &e) ;
+    ListDelete_L(L,L->data,e) ;
 
     printf("%d",e);
   }
 
 
-    for
 }
 int main(int argc, char const *argv[])
 {
