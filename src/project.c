@@ -11,7 +11,7 @@ void in(int ID,int count);
 
 
 /*******TEST************/
-enum Tstatus (PASS,FAIL);
+enum Tstatus {PASS,FAIL};
 Tstatus T_maxid(){
 
 }
