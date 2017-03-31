@@ -14,6 +14,7 @@ void in(int ID,int count);
 enum Tstatus {PASS,FAIL};
 Tstatus T_maxid(){
 
+	return PASS;
 }
 
 int main(int argc, char const *argv[])
