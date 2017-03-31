@@ -67,7 +67,7 @@ print(v)
 	outfile:close()
 	print(v)
 
-	os.execute("\"..\\..\\CodeBlocks\\MinGW\\bin\\g++\" ".."../data/uoj"..v..".c -o ../data/uoj"..v..".exe")
+	os.execute("\"..\\..\\bin\\mingw32\\bin\\g++\" ".."../data/uoj"..v..".c -o ../data/uoj"..v..".exe")
 
 end
 )

@@ -2,4 +2,4 @@
 src/test.c
 src/log
 *.html
-./data
+data/
