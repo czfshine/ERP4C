@@ -5,7 +5,7 @@
 int main(int argc, char const *argv[])
 {
 	char ch;
-
+	while(1){
 	while((ch=getchar())!=EOF){
 
 		if(ch==':') break;
@@ -20,6 +20,6 @@ int main(int argc, char const *argv[])
 	}
 	putchar('\n');
 	while((ch=getchar())!=EOF)if(ch=='\n') break;
-
+}
 	return 0;
 }
