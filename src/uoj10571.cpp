@@ -5,7 +5,9 @@
 int main(int argc, char const *argv[])
 {
 	char ch;
-	while(1){
+	int T;
+	scanf("%d",&T);
+	while(T--){
 		while((ch=getchar())!=EOF){
 
 			if(ch==':') break;
