@@ -1,8 +1,7 @@
 //#hdu 4018
 #include <string>
 #include <iostream>
-
-string s;
+#include <stdio.h>
 int main(int argc, char const *argv[])
 {
 	char ch;
