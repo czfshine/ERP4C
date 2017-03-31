@@ -13,12 +13,13 @@ int main(int argc, char const *argv[])
 	getchar();getchar();
 
 	while((ch=getchar())!=EOF){
-		putchar(ch);
+		
 		if(ch==':') break;
 		if(ch=='/') break;
+		putchar(ch);
 	}
 	putchar('\n');
-
+	while((ch=getchar())!=EOF)if(ch=='\n') break;
 
 	return 0;
 }
