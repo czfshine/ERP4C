@@ -44,8 +44,9 @@ int  main(){
 		S[j]=0;   // S[0]用于存储字符串中字符个数
 		printf("%s\n",S+1);
 		get_next(S,next);
+		printf("%d",j);     
 		printf("NEXT J is:");
-		printf("%d",j);                          
+
 		for(j=1;j<=S[0];j++)
 			printf("%d",next[j]);
 		printf("\n");
