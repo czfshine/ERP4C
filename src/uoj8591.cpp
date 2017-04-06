@@ -10,7 +10,7 @@ void get_next(SString T,int next[]){
 	next[1]=0;
 	j=0;
 	while(i<T[0]){	
-		printf("%d\n",j);
+		printf("%d\n ??",j);
 
 		if(j == 0 || T[i]==T[j]){
 			++i;
