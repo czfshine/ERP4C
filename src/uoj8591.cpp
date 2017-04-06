@@ -6,12 +6,11 @@ typedef unsigned char SString[MAXSTRLEN+1];	// 0号单元存放串的长度
 
 void get_next(SString T,int next[]){
 
-	int i,j;
+	int i=1,j;
 	next[1]=0;
 	j=0;
 	printf("%d",j);
 	while(i<T[0]){	
-		
 
 		if(j == 0 || T[i]==T[j]){
 			++i;
