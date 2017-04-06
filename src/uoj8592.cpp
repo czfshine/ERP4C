@@ -50,6 +50,7 @@ int Index_KMP(SString S,SString T,int pos){
 		}
 
 	}
+	pirntf("%d",j);
 	if(j>T[0]) return  i-T[0];
 	return 0;
 }
