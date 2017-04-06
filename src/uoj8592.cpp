@@ -35,7 +35,7 @@ int Index_KMP(SString S,SString T,int pos){
 // 利用模式串T的next函数求T在主串S中第pos个字符之后的位置
 // KMP算法。请补全代码
 	int i=pos,j=1;
-	int next[T[0]]={0};
+	int next[2000]={0};
 	get_next(T,next);
 
 	while(i<=S[0] &&j<=T[0]){
