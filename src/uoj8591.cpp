@@ -46,9 +46,8 @@ int  main(){
 		get_next(S,next);
 		printf("%d",j);     
 		printf("NEXT J is:");
-
 		for(j=1;j<=S[0];j++)
-			printf("%d\n",next[j]);
+			printf("%d\n",*next[j]);
 		printf("\n");
 	}
 }
