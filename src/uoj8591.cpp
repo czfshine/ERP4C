@@ -9,7 +9,7 @@ void get_next(SString T,int next[]){
 	int i,j;
 	next[1]=0;
 	j=0;
-
+	printf("%d",j);
 	while(i<T[0]){	
 		
 
@@ -43,8 +43,7 @@ int  main(){
 		S[0]=j-1; 
 		S[j]=0;   // S[0]用于存储字符串中字符个数
 		printf("%s\n",S+1);
-		get_next(S,next);
-		printf("%d",j);     
+		get_next(S,next);    
 		printf("NEXT J is:");
 		for(j=1;j<=S[0];j++)
 			printf("%d\n",next[j]);
