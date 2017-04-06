@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
 	scanf("%d",&T);
 	int i=1;
 	while(i<=T){
-		printf("Case #%d",i++);
+		printf("Case #%d: ",i++);
 		while((ch=getchar())!=EOF){
 
 			if(ch==':') break;
