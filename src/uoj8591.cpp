@@ -11,7 +11,6 @@ void get_next(SString T,int next[]){
 	int i,j;
 	next[1]=0;
 	j=0;
-
 	while(i<T[0]){
 
 		if(j == 0 || T[i]==T[j]){
