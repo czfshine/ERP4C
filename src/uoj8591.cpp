@@ -16,9 +16,13 @@ void get_next(SString T,int next[]){
 		if(j == 0 || T[i]==T[j]){
 			++i;
 			++j;
-			next[i]=j;}
+			next[i]=j;  
+		}
+
 		else{
-			j=next[j];	}
+			j=next[j];	
+		}
+
 	}
 }
 int  main(){
@@ -36,8 +40,9 @@ int  main(){
 			S[j]=ch;
 			ch=getchar();
 		}
-		S[0]=j-1;    // S[0]用于存储字符串中字符个数
-		//printf("%s",S+1);
+		S[0]=j-1; 
+		S[j]=0;   // S[0]用于存储字符串中字符个数
+		printf("%s\n",S+1);
 		get_next(S,next);
 		printf("NEXT J is:");                          
 		for(j=1;j<=S[0];j++)
