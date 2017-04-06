@@ -26,7 +26,7 @@ void get_next(SString T,int next[]){
 	}
 }
 int  main(){
-	int next[MAXSTRLEN];
+	int next[MAXSTRLEN]={0};
 	SString S;
 	int n,i,j;
 	char ch;
