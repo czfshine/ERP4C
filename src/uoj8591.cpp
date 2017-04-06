@@ -15,12 +15,12 @@ void get_next(SString T,int next[]){
 			++i;
 			++j;
 
-			if(T[i]!=T[j]){
+			//if(T[i]!=T[j]){
 				next[i]=j;
-			}else{
-				
-				next[i]=next[j];
-			} 
+			//}else{
+
+			//	next[i]=next[j];
+			//} 
 		}
 
 		else
