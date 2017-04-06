@@ -18,7 +18,7 @@ void get_next(SString T,int next[]){
 			++j;
 			next[i]=j;}
 		else{
-			j=next[j]i;	}
+			j=next[j];	}
 	}
 }
 int  main(){
