@@ -9,6 +9,7 @@ void get_next(SString T,int next[]){
 	int i,j;
 	next[1]=0;
 	j=0;
+
 	while(i<T[0]){	
 		
 
@@ -18,7 +19,7 @@ void get_next(SString T,int next[]){
 			next[i]=j;}
 		else{
 			j=next[j];
-		}
+		printf("%d\n ??",j);	}
 	}
 }
 int  main(){
