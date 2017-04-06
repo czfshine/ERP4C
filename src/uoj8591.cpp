@@ -38,7 +38,7 @@ int  main(){
 			ch=getchar();
 		}
 		S[0]=j-1;    // S[0]用于存储字符串中字符个数
-		printf("%s",s+1);
+		printf("%s",S+1);
 		get_next(S,next);
 		printf("NEXT J is:");                          
 		for(j=1;j<=S[0];j++)
