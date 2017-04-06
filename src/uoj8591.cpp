@@ -9,7 +9,6 @@ void get_next(SString T,int next[]){
 	int i,j;
 	next[1]=0;
 	j=0;
-	printf("%d\n ??",j);
 	while(i<T[0]){	
 		
 
