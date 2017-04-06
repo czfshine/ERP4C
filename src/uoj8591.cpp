@@ -1,5 +1,5 @@
-#include "stdio.h"
-#include "stdlib.h"
+#include <cstdio>
+#include <cstdlib>
 #include <iostream>
 #define  MAXSTRLEN  255                   // 用户可在255以内定义最大串长
 typedef unsigned char SString[MAXSTRLEN+1];	// 0号单元存放串的长度
@@ -18,8 +18,7 @@ void get_next(SString T,int next[]){
 			++j;
 			next[i]=j;}
 		else{
-			j=next[j];
-		printf("%d\n ??",j);	}
+			j=next[j]i;	}
 	}
 }
 int  main(){
