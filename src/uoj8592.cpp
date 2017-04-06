@@ -51,15 +51,15 @@ int Index_KMP(SString S,SString T,int pos){
 
 	}
 	if(j>T[0]) return  i-T[0];
-	return 0
+	return 0;
 }
-void main()
+int main()
 {
 SString T,S;
  int i,j,n;
  char ch;
  int pos;
- scanf(“%d”,&n);    // 指定n对需进行模式匹配的字符串
+ scanf("%d",&n);    // 指定n对需进行模式匹配的字符串
 ch=getchar();
 for(j=1;j<=n;j++)
 {
