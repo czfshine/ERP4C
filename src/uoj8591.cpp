@@ -5,9 +5,7 @@
 typedef unsigned char SString[MAXSTRLEN+1];	// 0号单元存放串的长度
 
 void get_next(SString T,int next[]){
-// 算法4.7
-// 求模式串T的next函数值并存入数组next
-   // 请补全代码
+
 	int i,j;
 	next[1]=0;
 	j=0;
