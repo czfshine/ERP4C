@@ -22,10 +22,10 @@ int main(int argc, char const *argv[])
 	list<int [3]>Larray;
 	
 
-	typedef user struct {
+	typedef struct {
 		char name[21];
 		int id;
-	};
+	}  user ;
 	list<user> Lu;
 
 
