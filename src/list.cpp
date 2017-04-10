@@ -20,7 +20,9 @@ int main(int argc, char const *argv[])
 
 	list<double> Ld;
 	list<int [3]>Larray;
-	struct user{
+	
+
+	typedef user struct {
 		char name[21];
 		int id;
 	};
