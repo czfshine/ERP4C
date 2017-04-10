@@ -36,11 +36,11 @@ int main(int argc, char const *argv[])
 	l.push_back(2);
 
 
-	
+
 	//返回第一个元素的引用
-	int n= l.front()    // = 1
+	int n= l.front()   ; // = 1
     //返回最后一元素的引用
-	n = l.back()     // = 2
+	n = l.back() ;    // = 2
 	//返回第一个元素的迭代器(iterator)
 	list<int>::iterator it = l.begin();    // *it = 1
     //返回最后一个元素的下一位置的指针(list为空时end()=begin())
