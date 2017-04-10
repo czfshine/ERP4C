@@ -6,6 +6,11 @@
 using namespace std;
 
 
+typedef struct {
+	char name[21];
+	int id;
+}  note ;
+
 
 int main(int argc, char const *argv[])
 {
@@ -20,12 +25,6 @@ int main(int argc, char const *argv[])
 
 	list<double> Ld;
 	list<int [3]>Larray;
-	
-
-	typedef struct {
-		char name[21];
-		int id;
-	}  user ;
 	list<user> Lu;
 
 
