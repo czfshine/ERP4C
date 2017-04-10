@@ -68,6 +68,6 @@ int main(int argc, char const *argv[])
     //返回最后一个元素的下一位置的指针(list为空时end()=begin())
     it = l.end();
 
-    l.erase(it - 1);//删除一个元素或一个区域的元素    
+    l.erase(it --);//删除一个元素或一个区域的元素    
 	return 0;
 }
