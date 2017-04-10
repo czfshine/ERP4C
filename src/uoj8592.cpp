@@ -39,7 +39,7 @@ int Index_KMP(SString S,SString T,int pos){
 	get_next(T,next);
 
 	while(i<=S[0] &&j<=T[0]){
-printf("%d",j);
+		printf("%d",j);
 		if(j==0 || S[i] == T[i]){
 			++i;
 			++j;
