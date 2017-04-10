@@ -34,17 +34,40 @@ int main(int argc, char const *argv[])
 	l.push_front(1);
 	//尾部
 	l.push_back(2);
+	l.push_back(3);
+
+	l.pop_back()//删除链表尾的一个元素
+	l.pop_front()//删除链表头的一元素
+	l.clear()//删除所有元素
+
+	l.push_back(3);
+	l.push_back(3);
+	l.push_back(4);
+
+	l.remove(4)//删除链表中匹配值的元素(匹配元素全部删除)
+
+	//remove_if()删除条件满足的元素(遍历一次链表)，参数为自定义的回调函数
+	// 小于2的值删除
+
+	l.push_back(1);
+	bool myFun(const int& value) { return (value < 2); }
+	l.remove_if(myFun);    // list1(3)　
 
 
+	//empty()判断是否链表为空
+
+	//大小
+	list<int>::size_type nRet = l.size();      
 
 	//返回第一个元素的引用
-	int n= l.front()   ; // = 1
+	int n= l.front()   ; 
     //返回最后一元素的引用
-	n = l.back() ;    // = 2
+	n = l.back() ;   
 	//返回第一个元素的迭代器(iterator)
-	list<int>::iterator it = l.begin();    // *it = 1
+	list<int>::iterator it = l.begin();    
     //返回最后一个元素的下一位置的指针(list为空时end()=begin())
-    it = l.end();    
+    it = l.end();
 
+    l.erase(it-1)//删除一个元素或一个区域的元素    
 	return 0;
 }
