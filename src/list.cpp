@@ -23,9 +23,9 @@ int main(int argc, char const *argv[])
 	struct user{
 		char name[21];
 		int id;
-	}
+	};
 	list<user> Lu;
-	
+
 
 
 	l.push(1);
