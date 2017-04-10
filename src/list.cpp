@@ -29,9 +29,14 @@ int main(int argc, char const *argv[])
 
 
 	//链表操作
+	//一个链表
 	list<int> l;
+	//在链表头部插入元素
 	l.push_front(1);
-	l.push(2);
+	//尾部
+	l.push_back(2);
+
+	
 
 
 	return 0;
