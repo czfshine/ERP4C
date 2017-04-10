@@ -28,8 +28,9 @@ int main(int argc, char const *argv[])
 	list<note> Lu;
 
 
-
-	l.push(1);
+	//链表操作
+	list<int> l;
+	l.push_front(1);
 	l.push(2);
 
 
