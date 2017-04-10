@@ -11,7 +11,7 @@ typedef struct {
 	int id;
 }  note ;
 
-
+bool myFun(const int& value) { return (value < 2); }
 int main(int argc, char const *argv[])
 {
 	//建立
@@ -44,13 +44,13 @@ int main(int argc, char const *argv[])
 	l.push_back(3);
 	l.push_back(4);
 
-	l.remove(4)//删除链表中匹配值的元素(匹配元素全部删除)
+	l.remove(4);//删除链表中匹配值的元素(匹配元素全部删除)
 
 	//remove_if()删除条件满足的元素(遍历一次链表)，参数为自定义的回调函数
 	// 小于2的值删除
 
 	l.push_back(1);
-	bool myFun(const int& value) { return (value < 2); }
+
 	l.remove_if(myFun);    // list1(3)　
 
 
@@ -68,6 +68,6 @@ int main(int argc, char const *argv[])
     //返回最后一个元素的下一位置的指针(list为空时end()=begin())
     it = l.end();
 
-    l.erase(it-1)//删除一个元素或一个区域的元素    
+    l.erase(it-1);//删除一个元素或一个区域的元素    
 	return 0;
 }
