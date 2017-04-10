@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
 
 	list<double> Ld;
 	list<int [3]>Larray;
-	list<user> Lu;
+	list<note> Lu;
 
 
 
