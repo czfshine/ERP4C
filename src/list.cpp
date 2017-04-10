@@ -36,9 +36,9 @@ int main(int argc, char const *argv[])
 	l.push_back(2);
 	l.push_back(3);
 
-	l.pop_back()//删除链表尾的一个元素
-	l.pop_front()//删除链表头的一元素
-	l.clear()//删除所有元素
+	l.pop_back();//删除链表尾的一个元素
+	l.pop_front();//删除链表头的一元素
+	l.clear();//删除所有元素
 
 	l.push_back(3);
 	l.push_back(3);
