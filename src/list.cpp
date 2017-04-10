@@ -24,7 +24,6 @@ int main(int argc, char const *argv[])
 	//其他元素类型的链表
 
 	list<double> Ld;
-	list<int [3]>Larray;
 	list<note> Lu;
 
 
@@ -36,7 +35,7 @@ int main(int argc, char const *argv[])
 	//尾部
 	l.push_back(2);
 
-	
+
 
 
 	return 0;
