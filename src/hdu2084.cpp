@@ -33,7 +33,7 @@ const double FINF = 1e18;
 
 #define REP(i,j,k) for(int i =(j);i<=(k);i++)
 #define REPD(i,j,k) for(int i =(j);i>=(k);i--)
-#define print(x) cout<<(x)<<endl;
+#define print(x) cout<<x<<endl;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
 
