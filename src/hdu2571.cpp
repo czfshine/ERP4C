@@ -24,7 +24,7 @@ typedef pair<ll, ll>pll;
 typedef pair<double, double>pdd;
 
 const double eps = 1e-6;
-const ll LINF = 0x3f3f3f3f3f3f3f3f;
+const long long  LINF = 0x3f3f3f3f3f3f3f3f;
 const int INF = 0x3f3f3f3f;
 const double FINF = 1e18;
 
