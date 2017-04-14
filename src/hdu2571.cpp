@@ -74,10 +74,10 @@ void Solve(){
 	print(dp[n][m]);
 
 
-	REP(i,1,n)
+	REP(i,0,n)
 	{
 
-		REP(j,1,m){
+		REP(j,0,m){
 
 			cout<<a[i][j]<<"\t";
 		}
@@ -85,10 +85,10 @@ void Solve(){
 	}
 
 
-	REP(i,1,n)
+	REP(i,0,n)
 	{
 
-		REP(j,1,m){
+		REP(j,0,m){
 
 			cout<<dp[i][j]<<"\t";
 		}
