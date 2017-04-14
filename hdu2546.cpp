@@ -66,7 +66,7 @@ void Solve(){
 	m-=5;
 
 	REP(i,1,n-1)
-	REP(j,m,p[i])
+	REPD(j,m,p[i])
 	dp[j]=max(dp[j],dp[j-p[i]]+p[i]);
 
 	print(m+5-dp[m]-Max);
