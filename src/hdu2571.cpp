@@ -80,7 +80,7 @@ void Solve(){
 
 			cout<<dp[i][j]<<"\t";
 		}
-		cout<<"\n"；
+		cout<<"\n";
 	}
 	return ;
 }
