@@ -60,24 +60,15 @@ void Solve(){
 		dp[0][i]=-105;
 	REP(i,0,n-1)
 		dp[i][0]=-105;
-
-
 	dp[0][1]=dp[1][0]=0;
-
 	REP(i,1,n)
 	REP(j,1,m)
 	{
 
 		dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
-
-		REP(k,2,m){
-			if(j%k==0){
-
+		REP(k,2,m)
+			if(j%k==0)
 				dp[i][j]=max(dp[i][j],dp[i][j/k]);
-			}
-
-		}
-
 		dp[i][j]+=a[i][j];
 	}
 	print(dp[n][m]);
