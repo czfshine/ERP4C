@@ -72,6 +72,16 @@ void Solve(){
 		dp[i][j]+=a[i][j];
 	}
 	print(dp[n][m]);
+
+	REP(i,1,n)
+	{
+
+		REP(j,1,m){
+
+			cout<<dp[i][j]<<"\t";
+		}
+		cout<<"\n"；
+	}
 	return ;
 }
 
