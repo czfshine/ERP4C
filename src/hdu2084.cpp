@@ -62,8 +62,8 @@ void Solve(){
 
 	REPD(i,n,1)
 	REP(j,1,i){
-		print(a[i][j]<<" "<<dp[i+1][j]<<" "<<dp[i+1][j-1]);
-		dp[i][j]=a[i][j]+max(dp[i+1][j],dp[i+1][j-1]);
+		print(a[i][j]<<" "<<dp[i+1][j]<<" "<<dp[i+1][j+1]);
+		dp[i][j]=a[i][j]+max(dp[i+1][j],dp[i+1][j+1]);
 	}
 
 	REP(i,1,n){
