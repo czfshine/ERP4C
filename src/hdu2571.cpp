@@ -73,6 +73,18 @@ void Solve(){
 	}
 	print(dp[n][m]);
 
+
+	REP(i,1,n)
+	{
+
+		REP(j,1,m){
+
+			cout<<a[i][j]<<"\t";
+		}
+		cout<<"\n";
+	}
+
+
 	REP(i,1,n)
 	{
 
