@@ -62,7 +62,7 @@ void Solve(){
 
 	REPD(i,n,1)
 	REP(j,1,i){
-		dp[i][j]=a[i][j]+max(dp[i-1][j],dp[i-1][j-1]);
+		dp[i][j]=a[i][j]+max(dp[i+1][j],dp[i+1][j-1]);
 	}
 
 	cout<<dp[1][1]<<endl;
