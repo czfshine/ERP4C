@@ -45,7 +45,7 @@ void Init(){
 }
 
 void Solve(){
-
+	print(LINF);
 	return ;
 }
 
