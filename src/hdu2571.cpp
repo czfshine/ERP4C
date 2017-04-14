@@ -90,7 +90,6 @@ int main(){
 	int T ;
 	scanf("%d",&T);
 	while(T--)
-	/* code */
 	Init(),Solve();
 	return 0;
 }
