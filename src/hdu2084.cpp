@@ -74,7 +74,7 @@ int main(){
 	freopen("hdu2084.in","r",stdin);
 
 	int T;
-	scnaf("%d",&T);
+	scanf("%d",&T);
 
 
 	while(T--)
