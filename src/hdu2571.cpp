@@ -24,7 +24,7 @@ typedef pair<ll, ll>pll;
 typedef pair<double, double>pdd;
 
 const double eps = 1e-6;
-const long long  LINF = 0x3f3f3f3f3f3f3f3fLL;
+const ll  LINF = 0x3f3f3f3f3f3f3f3fLL;
 const int INF = 0x3f3f3f3f;
 const double FINF = 1e18;
 
@@ -45,7 +45,7 @@ void Init(){
 }
 
 void Solve(){
-	print(LINF);
+
 	return ;
 }
 
@@ -53,7 +53,7 @@ int main(){
 
 	freopen("data.in","r",stdin);
 
-
+	/* code */
 	Init(),Solve();
 	return 0;
 }
