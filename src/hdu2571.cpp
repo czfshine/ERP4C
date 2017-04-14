@@ -15,7 +15,7 @@
 
 using namespace std;
 
-typedef  long long ll;
+#define ll long long 
 #define lson l,mid,id<<1
 #define rson mid+1,r,id<<1|1
 
