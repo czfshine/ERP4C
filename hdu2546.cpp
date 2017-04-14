@@ -54,7 +54,7 @@ void Init(){
 
 void Solve(){
 	
-	int Max=p[n]
+	int Max=p[n];
 	m-=5;
 
 	REP(i,1,n-1)
