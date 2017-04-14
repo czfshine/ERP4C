@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1492080574 source:g:\my_oj\src\zoj\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<queue>
+	<map>
+	<set>
+	<stack>
+	<cstring>
+	<string>
+	<vector>
+	<iomanip>
+	<unordered_set>
+	<unordered_map>
+	<cmath>
+	<list>
+	<bitset>
+
