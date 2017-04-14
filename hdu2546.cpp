@@ -42,8 +42,8 @@ int p[2017],dp[2017];
 int n;
 void Init(){
 
-	memset(p,2017*sizeof(int),0);
-	memset(dp,2017*sizeof(int),0);
+	memset(p,0,2017*sizeof(int));
+	memset(dp,0,2017*sizeof(int));
 
 	REP(i,1,n)
 		scanf("%d",p+i);
