@@ -36,16 +36,37 @@ const double FINF = 1e18;
 #define print(x) cout<<(x)<<endl;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
+char c[1000];
+int dp[105][2];
 
 void Init(){
-
-
+	cin>>c+1;
 
 	return ;
 }
 
 void Solve(){
 
+	int len=strlen(c+1);
+
+	dp[0][0]=0;
+	dp[0][1]=2;
+
+	REP(i,1,len){
+
+		if(c[i]>='A'&&c[i]<='Z'){
+
+			dp[i][1]=min(dp[i-1][1]+1,dp[i-1][0]+2);
+			dp[i][0]=min(dp[i-1][1]+2,dp[i-1][0]+2);
+
+		}else{
+			dp[i][0]=min(dp[i-1][0]+1,dp[i-1][1]+2);
+			dp[i][1]=min(dp[i-1][0]+2,dp[i-1][1]+2);
+
+		}
+
+	}
+	print(min(dp[len][0],dp[len][1]+1));
 	return ;
 }
 
