@@ -59,7 +59,7 @@ void Init(){
 void Solve(){
 	
 	dp[0][0]=0;
-	fill(dp,dp+105*105,0);
+	memset(dp,105*105*sizeof(int),0);
 	REPD(i,n,1)
 	REP(j,1,i)
 		dp[i][j]=a[i][j]+max(dp[i+1][j],dp[i+1][j+1]);
