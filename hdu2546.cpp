@@ -58,6 +58,11 @@ void Solve(){
 	int m;
 	scanf("%d",&m);
 
+	if(m<5){
+
+		print(m);
+		return ;
+	}
 	m-=5;
 
 	REP(i,1,n-1)
