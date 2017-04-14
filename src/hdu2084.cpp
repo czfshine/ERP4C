@@ -65,7 +65,7 @@ void Solve(){
 		dp[i][j]=a[i][j]+max(dp[i-1][j],dp[i-1][j-1]);
 	}
 
-	cout<<dp[n][n]<<endl;
+	cout<<dp[1][1]<<endl;
 	return ;
 }
 
