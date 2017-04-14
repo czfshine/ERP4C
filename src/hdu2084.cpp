@@ -61,15 +61,11 @@ void Solve(){
 	dp[0][0]=0;
 
 	REPD(i,n,1)
-	REP(j,1,i){
-		print(a[i][j]<<" "<<dp[i+1][j]<<" "<<dp[i+1][j+1]);
+	REP(j,1,i)
 		dp[i][j]=a[i][j]+max(dp[i+1][j],dp[i+1][j+1]);
-	}
+	
+	print(dp[1][1]);
 
-	REP(i,1,n){
-	REP(j,1,n){
-	cout<<dp[i][j]<<"\t";}
-	cout<<endl;}
 	return ;
 }
 
