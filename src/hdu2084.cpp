@@ -38,16 +38,34 @@ const double FINF = 1e18;
 
 
 
+int a[105][105];
+int n;
+
+int dp[105][105]={0};
 
 void Init(){
+	scanf("%d",&n);
 
+
+	REP(i,1,n)
+	REP(j,1,i){
+
+		scanf("%d",&a[i][j]);
+	}
 
 	return ;
 }
 
 void Solve(){
 	
+	dp[0][0]=0;
 
+	REPD(i,n,1)
+	REP(j,1,i){
+		dp[i][j]=a[i][j]+max(dp[i-1][j],dp[i-1][j-1]);
+	}
+
+	cout<<dp[n][n]<<endl;
 	return ;
 }
 
@@ -55,8 +73,11 @@ int main(){
 
 	freopen("hdu2084.in","r",stdin);
 
+	int T;
+	scnaf("%d",&T);
 
 
+	while(T--)
 	Init(),Solve();
 	return 0;
 }
