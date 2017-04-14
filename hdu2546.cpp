@@ -48,7 +48,7 @@ void Init(){
 	REP(i,1,n)
 		scanf("%d",p+i);
 
-	sort(p+1,p+1+n);
+	sort(p+1,p+1+n,greater<int>);
 	return ;
 }
 
