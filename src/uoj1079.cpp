@@ -56,16 +56,16 @@ void Solve(int t){
 		int b=i*i;
 
 		int k1=sqrt(a+b);
-			if(k1*k1==a+b&& k1>0){
-				printf("%d %d %d\n",max(i,k1),min(i,k1));
+			if(k1*k1==a+b&& k1>0 && i>=k1){
+				printf("%d %d\n",i,k1);
 			}
 		int k2=sqrt(a-b);
-			if(k2*k2+b==a&& k2>0){
-				printf("%d %d %d\n",max(i,k2),min(i,k2));
+			if(k2*k2+b==a&& k2>0 && i>=k2){
+				printf("%d %d\n",i,k2);
 			}
 		int k3=sqrt(b-a);
-			if(k3*k3+a==b&& k3>0){
-				printf("%d %d %d\n",max(i,k3),min(i,k3));
+			if(k3*k3+a==b&& k3>0 && i>=k3){
+				printf("%d %d\n",i,k3);
 			}
 	}
 	if(t>1) printf("\n");
