@@ -57,15 +57,15 @@ void Solve(int t){
 
 		int k1=sqrt(a+b);
 			if(k1*k1+b==a&& k1>0){
-				print("%d %d %d\n",max(i,k1),min(i,k1));
+				printf("%d %d %d\n",max(i,k1),min(i,k1));
 			}
 		int k2=sqrt(a-b);
 			if(k2*k2+b==a&& k2>0){
-				print("%d %d %d\n",max(i,k2),min(i,k2));
+				printf("%d %d %d\n",max(i,k2),min(i,k2));
 			}
 		int k3=sqrt(b-a);
 			if(k3*k3+b==a&& k1>0){
-				print("%d %d %d\n",max(i,k3),min(i,k3));
+				printf("%d %d %d\n",max(i,k3),min(i,k3));
 			}
 	}
 	if(t>1) printf("\n");
