@@ -68,7 +68,7 @@ void Solve(int t){
 				printf("%d %d\n",i,k3);
 			}
 	}
-	if(t>1) printf("\n");
+	if(t>=1) printf("\n");
 
 	return ;
 }
