@@ -51,7 +51,7 @@ void Solve(int t){
 
 	int a=n*n;
 
-	REPD(i,2051,3){
+	REPD(i,2501,3){
 
 		int b=i*i;
 
@@ -68,7 +68,7 @@ void Solve(int t){
 				printf("%d %d\n",i,k3);
 			}
 	}
-	if(t>=1) printf("1\n");
+	if(t>=1) printf("\n");
 
 	return ;
 }
