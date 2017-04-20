@@ -85,7 +85,6 @@ int Onchild(BiTree T)
 
 
 BiTree T;
-
 void Init(){
 
     CreateBiTree(T);
