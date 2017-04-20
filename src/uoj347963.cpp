@@ -37,23 +37,23 @@ const double FINF = 1e18;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
 
-string in;
+string i;
 
 
 void Init(){
 
-	cin>>in;
+	cin>>i;
 	return ;
 }
 
 void Solve(){
 	
-	int len=in.size():
+	int len=i.size():
 
 	REP(k,1,len/2){
 
-		if(in[k-1]!='#'){
-			cout<<in[2*k-1]<<in[2*k]<<endl;
+		if(i[k-1]!='#'){
+			cout<<i[2*k-1]<<i[2*k]<<endl;
 		}
 
 	}
