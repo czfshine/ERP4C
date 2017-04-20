@@ -51,7 +51,7 @@ void Solve(){
 	int len=i.size();
 	int ans=0;
 
-	REP(k,1,len/2){
+	REP(k,1,((len+1)/2-1)){
 
 		if(i[k-1]!='#')
 			if((i[2*k-1]=='#' && i[2*k] !='#')||(i[2*k-1]!='#' && i[2*k] =='#'))
@@ -64,7 +64,9 @@ void Solve(){
 int main(){
 
 	freopen("uoj347963.in","r",stdin);
-
+	int t;
+	scanf("%d",&t);
+	while(t--)
 	Init(),Solve();
 	return 0;
 }
