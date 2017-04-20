@@ -56,7 +56,7 @@ typedef struct BiTNode{
 
 Status CreateBiTree(BiTree &T) {  // 算法6.4
   // 按先序次序输入二叉树中结点的值（一个字符），’#’字符表示空树，
-  // 构造二叉链表表示的二叉树T。
+  // 构造二叉链表表示的二叉树ABC###D##T。
   char ch;
   scanf("%c",&ch);
   if (ch=='#') T = NULL;
@@ -67,7 +67,7 @@ Status CreateBiTree(BiTree &T) {  // 算法6.4
     CreateBiTree(T->rchild); // 构造右子树
   }
   return OK;
-} // CreateBiTree
+} // CreateBiTreeABC###D##
 
 
 int Onchild(BiTree T)
