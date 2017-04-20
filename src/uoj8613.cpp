@@ -46,7 +46,7 @@ int n;
 
 
 void Init(){
-	print(1);
+
     REP(i,1,n){scanf("%d",&(a[i]));g[i]=a[i]+i;}
     REP(i,n+1,n+n/2){a[i]=a[i-n];g[i]=a[i]+i;}
 	return ;
@@ -56,7 +56,7 @@ void Solve(){
 	
 	q[1]=1;
     int head=1,tail=1;
-    for(int i=2;i<=n+n/2;i++)
+    REP(i,2,n+n/2)
     {
         while(i-q[head]>n/2)head++;
         dp[i]=g[i]+a[q[head]]-q[head];
@@ -64,7 +64,7 @@ void Solve(){
         q[++tail]=i;
     }
     int ans=0;
-    for(int i=2;i<=n+n/2;i++)
+    REP(i,2,n+n/2)
         ans=max(ans,dp[i]);
     printf("%d",(ans));
 	return ;
