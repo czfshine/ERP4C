@@ -41,7 +41,7 @@ const int maxn=1000+10;
 char a[maxn];  
 int dp[maxn];  
 
-int k,k,n;  
+int j,k,n;  
 
 void Init(){
 	scanf("%s",a+1);
