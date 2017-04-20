@@ -49,14 +49,17 @@ void Init(){
 void Solve(){
 	
 	int len=i.size();
+	int ans=0;
 
 	REP(k,1,len/2){
 
 		if(i[k-1]!='#'){
-			cout<<i[2*k-1]<<i[2*k]<<endl;
+			if((i[2*k-1]=='#' && i[2*k] !='#')||(i[2*k-1]!='#' && i[2*k] =='#'))
+				ans++;;
 		}
 
 	}
+	cout<<ans;
 	return ;
 }
 
