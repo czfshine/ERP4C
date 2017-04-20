@@ -41,7 +41,7 @@ const int maxn=1000+10;
 char a[maxn];  
 int dp[maxn];  
 
-int n;  
+int k,k,n;  
 
 void Init(){
 	scanf("%s",a+1);
@@ -52,7 +52,7 @@ void Solve(){
 	
 	n=strlen(a+1);  
     dp[0]=0;  
-    REP(i,1,n) dp[i]=inf;  
+    REP(i,1,n) dp[i]=INF;  
       REP(i,1,n) {  
         for(j=i,k=i;j<=n&&k>0;j++,k--) {  
             if(a[j]==a[k]) dp[j]=min(dp[j],dp[k-1]+1);  
@@ -63,7 +63,7 @@ void Solve(){
             else break;  
         }  
     }  
-    
+
     printf("%d\n",dp[n]);  
 	return ;
 }
