@@ -57,7 +57,7 @@ void Solve(){
 			if((i[2*k-1]=='#' && i[2*k] !='#')||(i[2*k-1]!='#' && i[2*k] =='#'))
 					ans++;
 	}
-	cout<<ans<<endl;
+	cout<<ans;
 	return ;
 }
 
