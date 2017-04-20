@@ -46,7 +46,7 @@ int n;
 
 
 void Init(){
-
+	print(1);
     REP(i,1,n+1){scanf("%d",&(a[i]));g[i]=a[i]+i;}
     REP(i,n+1,n+n/2+1){a[i]=a[i-n];g[i]=a[i]+i;}
 	return ;
