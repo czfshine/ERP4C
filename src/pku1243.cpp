@@ -37,39 +37,38 @@ const double FINF = 1e18;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
 
-string i;
-
+ll G,L,i,j,T=1,dp[31][31];
 
 void Init(){
 
-	cin>>i;
+	memset(dp,0,sizeof dp);
 	return ;
 }
 
 void Solve(){
 	
-	int len=i.size();
-	int ans=0;
-	//fuck!!!!!!!!!!!!!!!!~~!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	//这个得是顺序存储才能用！！！！！！！！！！！
-	//题目有毒！！！！！！！！！！！！！！！！！！！！！！
-	REP(k,1,((len+1)/2-1)){
-
-		if(i[k-1]!='#')
-			if((i[2*k-1]=='#' && i[2*k] !='#')||(i[2*k-1]!='#' && i[2*k] =='#'))
-					ans++;
+	dp[0][0]=1;
+	REP(i,1,G)
+	{
+		dp[i][0]=i;
+		REP(j,1,L)
+			if(j>=i)
+				dp[i][j]=pow(2.0,i)-1;
+			else
+				dp[i][j]=dp[i-1][j]+1+dp[i-1][j-1];
 	}
-	cout<<ans;
+
+	printf("Case %d: %d\n",T++,dp[G][L]);
+	
 	return ;
 }
 
 int main(){
 
-	freopen("uoj347963.in","r",stdin);
-	int t;
-	//scanf("%d",&t);
-	//while(t--)
+	freopen("pku1243.in","r",stdin);
+
+
+	while(scanf("%d %d",&G,&L) && G)
 	Init(),Solve();
 	return 0;
 }
