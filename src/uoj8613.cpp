@@ -74,7 +74,7 @@ int main(){
 	freopen("uoj8613.in","r",stdin);
 
 
-	while(scanf("%d",&(n))&&n)
+	while((scanf("%d",&(n)))&&n)
 	Init(),Solve();
 	return 0;
 }
