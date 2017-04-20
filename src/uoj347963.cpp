@@ -59,7 +59,7 @@ void Solve(){
 		}
 
 	}
-	cout<<ans;
+	cout<<ans<<endl;
 	return ;
 }
 
