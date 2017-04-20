@@ -69,7 +69,6 @@ void Solve(){
     printf("%d",(ans));
 	return ;
 }
-
 int main(){
 
 	freopen("uoj8613.in","r",stdin);
