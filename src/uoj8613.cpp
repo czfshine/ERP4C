@@ -47,8 +47,8 @@ int n;
 
 void Init(){
 	print(1);
-    REP(i,1,n+1){scanf("%d",&(a[i]));g[i]=a[i]+i;}
-    REP(i,n+1,n+n/2+1){a[i]=a[i-n];g[i]=a[i]+i;}
+    REP(i,1,n){scanf("%d",&(a[i]));g[i]=a[i]+i;}
+    REP(i,n+1,n+n/2){a[i]=a[i-n];g[i]=a[i]+i;}
 	return ;
 }
 
@@ -74,7 +74,7 @@ int main(){
 	freopen("uoj8613.in","r",stdin);
 
 
-	while((scanf("%d",&(n)))&&n)
+	while((scanf("%d",&n))&&n)
 	Init(),Solve();
 	return 0;
 }
