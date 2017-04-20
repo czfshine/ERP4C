@@ -102,7 +102,7 @@ void Solve(){
 
 int main(){
 
-	freopen("uoj347963_copy.in","r",stdin);
+	//freopen("uoj347963_copy.in","r",stdin);
 
 
 
