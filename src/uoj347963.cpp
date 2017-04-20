@@ -48,7 +48,7 @@ void Init(){
 
 void Solve(){
 	
-	int len=i.size():
+	int len=i.size();
 
 	REP(k,1,len/2){
 
