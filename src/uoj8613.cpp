@@ -66,7 +66,7 @@ void Solve(){
     int ans=0;
     REP(i,2,n+n/2)
         ans=max(ans,dp[i]);
-    printf("%d",(ans));
+    printf("%d\n",(ans));
 	return ;
 }
 int main(){
