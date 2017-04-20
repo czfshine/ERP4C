@@ -37,7 +37,7 @@ const double FINF = 1e18;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
 
-ll G,L,i,j,T=1,dp[31][31];
+int G,L,i,j,T=1,dp[31][31];
 
 void Init(){
 
