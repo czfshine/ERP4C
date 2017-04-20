@@ -59,17 +59,14 @@ void Solve(){
     for(int i=2;i<=n+n/2;i++)
     {
         while(i-q[head]>n/2)head++;
-        /*因为q是递减队列，所以找到符合条件i-k<=n的排头，如果用链表的话就是把头一个个删掉*/
         dp[i]=g[i]+a[q[head]]-q[head];
-        /*要选最大的就是队头*/
         while(a[i]-i>=a[q[tail]]-q[tail]&&tail>=head)tail--;
-        /*找位置插入*/
         q[++tail]=i;
     }
     int ans=0;
     for(int i=2;i<=n+n/2;i++)
         ans=max(ans,dp[i]);
-    pd(ans);
+    printf("%d",(ans));
 	return ;
 }
 
