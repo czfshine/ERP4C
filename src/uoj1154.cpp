@@ -51,9 +51,9 @@ void Init(){
 void Solve(){
 	
 	n=strlen(a+1);  
-    dp[0]=0;  
-    REP(i,1,n) dp[i]=INF;  
-      REP(i,1,n) {  
+    dp[0]=0;   
+    REP(i,1,n) {  
+      	dp[i]=INF; 
         for(j=i,k=i;j<=n&&k>0;j++,k--) {  
             if(a[j]==a[k]) dp[j]=min(dp[j],dp[k-1]+1);  
             else break;  
@@ -63,7 +63,6 @@ void Solve(){
             else break;  
         }  
     }  
-
     printf("%d\n",dp[n]);  
 	return ;
 }
@@ -72,10 +71,8 @@ int main(){
 
 	freopen("uoj1154.in","r",stdin);
 
-
 	int T;
 	scanf("%d",&T);
-
 	while(T--)
 	Init(),Solve();
 	return 0;
