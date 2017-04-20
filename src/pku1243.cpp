@@ -50,12 +50,12 @@ void Solve(){
 	dp[0][0]=1;
 	REP(i,1,G)
 	{
-		dp[i][0]=i;
+		dp[i][0]=i;//一个一个猜
 		REP(j,1,L)
 			if(j>=i)
-				dp[i][j]=pow(2.0,i)-1;
+				dp[i][j]=pow(2.0,i)-1;//2的幂
 			else
-				dp[i][j]=dp[i-1][j]+1+dp[i-1][j-1];
+				dp[i][j]=dp[i-1][j]+1+dp[i-1][j-1];//退化成两个子问题
 	}
 
 	printf("Case %d: %d\n",T++,dp[G][L]);
