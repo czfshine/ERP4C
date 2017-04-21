@@ -98,7 +98,7 @@ void Solve(){
     //01背包咯
     REP(i,0,l-1)
         REPD(j,w,st[i].a)
-            dp[j]>?=dp[j-st[i].a]+st[i].b;
+            dp[j]>?= (dp[j-st[i].a]+st[i].b);
 
     printf("%.2lf\n",dp[w]);
 	return ;
