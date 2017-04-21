@@ -71,7 +71,6 @@ int main(){
 
 	freopen("uoj8596.in","r",stdin);
 
-
 	while(cin >> n && n)
 	Init(),Solve();
 	return 0;
