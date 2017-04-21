@@ -47,7 +47,7 @@ void Init(){
 
 	REP(i,1,n)
 		cin>>a[i];
-	sort ( a,a+n);
+	sort ( a+1,a+n+1);
 	return ;
 }
 
@@ -55,7 +55,7 @@ void Solve(){
 	memset(dp,0,sizeof(dp));  
 	REP(i,1,n)       //处理边界  
     	dp[1][i]=(a[i]-a[1])*(a[i]-a[1]);
-      
+
     REP(i,2,m)
     {  
         REP(j,i+1,n)
@@ -69,6 +69,7 @@ void Solve(){
             dp[i][j]=min;  
         }  
     }
+
 
     cout<<dp[m][n]<<endl;  
 	return ;
