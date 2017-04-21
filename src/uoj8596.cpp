@@ -37,7 +37,7 @@ const double FINF = 1e18;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
 #define SIZE 1001
-int i, j, n, max;
+int i, j, n, ans;
 int a[SIZE];
 int d[SIZE];
  
@@ -48,7 +48,7 @@ void Init(){
    		cin >> a[i];
 
    	
-   	max=0;
+   	ans=0;
 	return ;
 }
 
@@ -59,10 +59,10 @@ void Solve(){
 		REP(j,1,i-1)
 			if (a[j] < a[i] && d[i] < d[j] + 1) 
 				d[i] = d[j] + 1;
-   		if (d[i] > max) max = d[i];
+   		if (d[i] > ans) ans = d[i];
 	}
 
-	cout << max << endl;
+	print(ans);
 
 	return ;
 }
