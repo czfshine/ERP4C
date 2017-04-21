@@ -54,7 +54,8 @@ void Init(){
 void Solve(){
 	
 	REP(i,1,n)       //处理边界  
-    	dp[1][i]=(a[i]-a[1])*(a[i]-a[1]);  
+    	dp[1][i]=(a[i]-a[1])*(a[i]-a[1]);
+    memset(dp,0,sizeof(dp));    
     REP(i,2,m)
     {  
         REP(j,i+1,n)
@@ -68,7 +69,7 @@ void Solve(){
             dp[i][j]=min;  
         }  
     }
-    
+
     cout<<dp[m][n]<<endl;  
 	return ;
 }
