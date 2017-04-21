@@ -53,7 +53,7 @@ void Solve(){
 	n=strlen(a+1);  
     dp[0]=0;  
     REP(i,1,n) dp[i]=INF;  
-      REP(i,1,n) {  
+    REP(i,1,n) {  
         for(j=i,k=i;j<=n&&k>0;j++,k--) {  
             if(a[j]==a[k]) dp[j]=min(dp[j],dp[k-1]+1);  
             else break;  
