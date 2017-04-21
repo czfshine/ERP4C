@@ -36,49 +36,51 @@ const double FINF = 1e18;
 #define print(x) cout<<(x)<<endl;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
+char a[1005],b[1005]; 
+int m[1005][1005];
+int la,lb;
+int res=-1;
+int mark;
 
-int n,m;
-
-int a[1005];
-int dp[1005][1005];
 void Init(){
 
-	cin>>n>>m;
 
-	REP(i,1,n)
-		cin>>a[i];
-	sort ( a+1,a+n+1);
 	return ;
 }
 
 void Solve(){
-	memset(dp,0,sizeof(dp));  
-	REP(i,1,n)      
-    	dp[1][i]=(a[i]-a[1])*(a[i]-a[1]);
+	
+	la=strlen(a);lb=strlen(b);
 
-    REP(i,2,m)
-    {  
-        REP(j,i+1,n)
-        {  
-            int min=INF;  
-            REP(k,1,j-i+1) 
-            {  
-                if(min>dp[i-1][j-k]+(a[j]-a[j-k+1])*(a[j]-a[j-k+1]))  
-                   min=dp[i-1][j-k]+(a[j]-a[j-k+1])*(a[j]-a[j-k+1]);  
-            }  
-            dp[i][j]=min;  
-        }  
-    }
+    REP(i,0,la-1)
+        REP(j,0,lb-1)
+            if(a[i]==b[j])
+                if(i==0||j==0) 
+                	m[i][j]=1;
+                else 
+                	m[i][j] = m[i-1][j-1]+1;
+            else
+            	m[i][j]=0;
+    REPD(i,la-1,0)    
+        REP(j,0,lb-1) 
+            if(res<=m[i][j])
+               {
+                   res = m[i][j];
+                   mark = i;
+               }
 
-    cout<<dp[m][n]<<endl;  
+    cout << res<< endl;
+    REP(i,mark-res+1,mark)
+       cout << a[i];
 	return ;
 }
 
 int main(){
 
-	freopen("uoj8597.in","r",stdin);
+	freopen("uoj11077.in","r",stdin);
 
-
+	IOS;
+	cin >> a >> b;
 
 	Init(),Solve();
 	return 0;
