@@ -43,8 +43,6 @@ int res=-1;
 int mark;
 
 void Init(){
-
-
 	return ;
 }
 
