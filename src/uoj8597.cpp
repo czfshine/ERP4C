@@ -36,38 +36,49 @@ const double FINF = 1e18;
 #define print(x) cout<<(x)<<endl;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
-#define SIZE 1001
-int i, j, n, ans;
-int a[SIZE];
-int d[SIZE];
+
+int n,m;
+
+int a[1005];
+int dp[1005][1005];
 void Init(){
 
+	cin>>n>>m;
+
 	REP(i,1,n)
-   		cin >> a[i];
-   	ans=0;
+		cin>>a[i];
+	sort ( a,a+n);
 	return ;
 }
 
 void Solve(){
-	REP(i,1,n)
-	{
-		d[i] = 1;
-		REP(j,1,i-1)
-			if (a[j] < a[i] && d[i] < d[j] + 1) 
-				d[i] = d[j] + 1;
-   		if (d[i] > ans) ans = d[i];
-	}
-
-	print(ans);
-
+	
+	REP(i,1,n)       //处理边界  
+    	dp[1][i]=(a[i]-a[1])*(a[i]-a[1]);  
+    REP(i,2,m)
+    {  
+        REP(j,i+1,n)
+        {  
+            int min=INF;  
+            REP(k,1,j-i+1) 
+            {  
+                if(min>dp[i-1][j-k]+(a[j]-a[j-k+1])*(a[j]-a[j-k+1]))  
+                   min=dp[i-1][j-k]+(a[j]-a[j-k+1])*(a[j]-a[j-k+1]);  
+            }  
+            dp[i][j]=min;  
+        }  
+    }
+    
+    cout<<dp[m][n]<<endl;  
 	return ;
 }
 
 int main(){
 
-	freopen("uoj8596.in","r",stdin);
+	freopen("uoj8597.in","r",stdin);
 
-	while(cin >> n && n)
+
+
 	Init(),Solve();
 	return 0;
 }
