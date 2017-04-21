@@ -52,10 +52,10 @@ void Init(){
 }
 
 void Solve(){
-	
+	memset(dp,0,sizeof(dp));  
 	REP(i,1,n)       //处理边界  
     	dp[1][i]=(a[i]-a[1])*(a[i]-a[1]);
-    memset(dp,0,sizeof(dp));    
+      
     REP(i,2,m)
     {  
         REP(j,i+1,n)
