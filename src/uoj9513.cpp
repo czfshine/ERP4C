@@ -46,7 +46,7 @@ struct node
     int a,b;
     bool operator <(const node t) const
     {
-        return 1.0*b/a>1.0*t.b/t.a;
+        return 1.0*b/a>1.0*t.b/t.a;//单价最高的
     }
 }wa[110],st[110];
 
@@ -56,12 +56,12 @@ double Greed(int n,int w)
     int i=0;
     while(w&&i<n)
     {
-        if(w>=wa[i].a)
+        if(w>=wa[i].a)//从单价最高的开始取，取到不能全部放入
         {
             sum+=wa[i].b;
             w-=wa[i++].a;
         }
-        else
+        else//不能全部放入就放满
         {
             sum+=w*1.0*wa[i].b/wa[i].a;
             w=0;
@@ -78,24 +78,27 @@ void Init(){
 	memset(dp,0,sizeof(dp));
 
 	for(i=0;i<n;i++)
-        {
-            scanf("%d%d%d",&st[l].a,&st[l].b,&c);
-            if(c)
-                wa[r++]=st[l];
-            else
-                l++;
-        }
+    {
+        scanf("%d%d%d",&st[l].a,&st[l].b,&c);
+        if(c)
+            wa[r++]=st[l];
+        else
+            l++;
+    }
     sort(wa,wa+r);
 	return ;
 }
 
 void Solve(){
 
+	//先全部放水
 	REP(i,1,w)
         dp[i]=Greed(r,i);
+
+    //01背包咯
     REP(i,0,l-1)
         REPD(j,w,st[i].a)
-            dp[j]=max(dp[j],dp[j-st[i].a]+st[i].b);
+            dp[j]>?=dp[j-st[i].a]+st[i].b;
 
     printf("%.2lf\n",dp[w]);
 	return ;
