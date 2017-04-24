@@ -38,7 +38,7 @@ const double FINF = 1e18;
 
 
 int len;
-char str[50]
+char str[50];
 void Init(){
 
 	cin>>len;
@@ -50,9 +50,9 @@ void Init(){
 void Solve(){
 
 	do{
-		cout<<str<<endl
+		cout<<str<<endl;
 	}while(next_permutation(str,str+len))
-	
+
 	return ;
 }
 
