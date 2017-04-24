@@ -48,9 +48,9 @@ void Init(){
 }
 
 void Solve(){
-
+	int c=0;
 	do{
-		cout<<str<<endl;
+		printf("%d %s",c++,str);
 	}while(next_permutation(str,str+len));
 
 	return ;
