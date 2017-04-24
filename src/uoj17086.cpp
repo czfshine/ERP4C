@@ -42,8 +42,8 @@ char str[50];
 void Init(){
 
 	cin>>len;
-	scanf("%s",str);\
-	sort(str,str+len)
+	scanf("%s",str);
+	sort(str,str+len);
 	return ;
 }
 
@@ -51,7 +51,7 @@ void Solve(){
 
 	do{
 		cout<<str<<endl;
-	}while(next_permutation(str,str+len))
+	}while(next_permutation(str,str+len));
 
 	return ;
 }
