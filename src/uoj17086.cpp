@@ -50,8 +50,8 @@ void Init(){
 void Solve(){
 	int c=0;
 	do{
-		printf("%d %s",c++,str);
-		
+		printf("%d %s\n",++c,str);
+
 	}while(next_permutation(str,str+len));
 
 	return ;
