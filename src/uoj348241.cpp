@@ -60,6 +60,7 @@ void dfs(int cur)
     }
 
 }
+
 void Init(){
 	memset(r,0,sizeof(d));
     memset(d,0,sizeof(d));
