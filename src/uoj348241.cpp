@@ -36,7 +36,7 @@ const double FINF = 1e18;
 #define print(x) cout<<(x)<<endl;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
-int count=0;
+int cou=0;
 
 void dfs(int n,int p[],int a[],int cur){
 
@@ -48,12 +48,12 @@ void dfs(int n,int p[],int a[],int cur){
 
 		}
 		cout<<endl;
-		count++;
+		cou++;
 	}else{
 
 		REP(i,0,n-1){
 		a[cur]=p[i];
-		dfs(n,p,a,cur+1)
+		dfs(n,p,a,cur+1);
 	}
 
 	}
