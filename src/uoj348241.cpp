@@ -52,9 +52,9 @@ void dfs(int n,int p[],int a[],int cur){
 	}else{
 
 		REP(i,0,n-1){
-		a[cur]=p[i];
-		dfs(n,p,a,cur+1);
-	}
+			a[cur]=p[i];
+			dfs(n,p,a,cur+1);
+		}
 
 	}
 }
