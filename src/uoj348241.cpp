@@ -35,40 +35,43 @@ const double FINF = 1e18;
 #define REPD(i,j,k) for(int i =(j);i>=(k);i--)
 #define print(x) cout<<(x)<<endl;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
+int r[20];
+int d[2][30];
+int cnt,n;
+void dfs(int cur)
+{
+    if(cur==n+1)
+    {
+        cnt++;
+        return;
+    }
+    for(int i=1;i<=n;i++)
+    {
+        if(!r[i]&&!d[0][cur+i]&&!d[1][cur-i+n])
+        {
+            r[i]=d[0][cur+i]=d[1][cur-i+n]=1;
+            dfs(cur+1);
+            r[i]=d[0][cur+i]=d[1][cur-i+n]=0;
 
-int cou=0;
-
-void dfs(int n,int p[],int a[],int cur){
 
 
-	if(cur==n){
-		REP(i,0,n-1){
 
-			cout<<a[i];
+        }
+    }
 
-		}
-		cout<<endl;
-		cou++;
-	}else{
-
-		REP(i,0,n-1){
-			a[cur]=p[i];
-			dfs(n,p,a,cur+1);
-		}
-
-	}
 }
-
 void Init(){
-
+	memset(r,0,sizeof(d));
+    memset(d,0,sizeof(d));
 
 	return ;
 }
 
 void Solve(){
-	int p[]={1,2,3,4};
-	int a[800];
-	dfs(4,p,a,0);
+	scanf("%d",&n);
+        cnt=0;
+        dfs(1);
+        printf("%d\n",cnt);
 
 	return ;
 }
