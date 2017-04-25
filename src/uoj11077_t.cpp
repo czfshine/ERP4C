@@ -72,7 +72,7 @@ void Solve(){
 	int ans=dp[1][1];
 	REPD(i,la-1,0)    
         REP(j,0,lb-1) {
-		if(dp[i][j]>=ans){
+		if(dp[i][j]>ans){
 			ans=dp[i][j];
 			start=i;
 		}
