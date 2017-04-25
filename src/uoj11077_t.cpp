@@ -55,20 +55,19 @@ void Solve(){
 	lb=strlen(b);
 
 	REP(i,0,la-1)
-		REP(j,0,lb-1){
-
-			
-			if(a[i]==b[j]){
-				if(i==0|| j==0 ){
+		REP(j,0,lb-1)
+			if(a[i]==b[j])
+				if(i==0|| j==0 )
 					dp[i][j]=1;
-				}else{
+				else
 					dp[i][j]=dp[i-1][j-1]+1;
-			}else{
+				
+			
+			else
 				dp[i][j]=0;
-			}
-		}
+			
+		
 
-	}
 	int start=0;
 	int ans=dp[1][1];
 	REP(i,0,la-1)
