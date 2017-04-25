@@ -74,7 +74,7 @@ void Solve(){
 		REP(j,0,lb-1){
 		if(dp[i][j]>ans){
 			ans=dp[i][j];
-			start=i;
+			start=j;
 		}
 	}
 
