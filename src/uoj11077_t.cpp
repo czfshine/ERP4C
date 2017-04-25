@@ -68,17 +68,17 @@ void Solve(){
 			
 		
 
-	int start=0;
+	int end=0;
 	int ans=dp[1][1];
 	REPD(i,la-1,0)    
         REP(j,0,lb-1) {
 		if(dp[i][j]>ans){
 			ans=dp[i][j];
-			start=i;
+			end=i;
 		}
 	}
 
-	REP(i,start,start+ans-1){
+	REP(i,end-ans+1,end){
 		cout<<a[i];
 	}
 	cout<<endl;
