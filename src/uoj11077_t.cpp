@@ -1,11 +1,3 @@
-/*
-uoj 1431 One Person
-
-
-
-*/
-
-
 #include <iostream>
 #include <cstdio>
 #include <algorithm>
@@ -45,38 +37,62 @@ const double FINF = 1e18;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
 
-int G,L,i,j,T=1,dp[31][31];
+char a[3000],b[3000];
+
+int dp[3000][3000];
+
+
 
 void Init(){
 
-	memset(dp,0,sizeof dp);
+
 	return ;
 }
 
 void Solve(){
-	
-	dp[0][0]=1;
-	REP(i,1,G)
-	{
-		dp[i][0]=i;//一个一个猜
-		REP(j,1,L)
-			if(j>=i)
-				dp[i][j]=pow(2.0,i)-1;//2的幂
-			else
-				dp[i][j]=dp[i-1][j]+1+dp[i-1][j-1];//退化成两个子问题
+	int la,lb;
+	la=strlen(a);
+	lb=strlen(b);
+
+	REP(i,0,la-1)
+		REP(j,0,lb-1){
+
+			
+			if(a[i]==b[j]){
+				if(i==0|| j==0 ){
+					dp[i][j]=1;
+				}else{
+					dp[i][j]=dp[i-1][j-1]+1;
+			}else{
+				dp[i][j]=0;
+			}
+		}
+
+	}
+	int start=0;
+	int ans=dp[1][1];
+	REP(i,0,la-1)
+		REP(j,0,lb-1){
+		if(dp[i][j]>ans){
+			ans=dp[i][j];
+			start=i;
+		}
 	}
 
-	printf("Case %d: %d\n",T++,dp[G][L]);
-	
+	REP(i,start,start+ans-1){
+		cout<<a[i];
+	}
+	cout<<endl;
+
 	return ;
 }
 
 int main(){
 
-	freopen("pku1243.in","r",stdin);
+	freopen("uoj11077_t.in","r",stdin);
 
 
-	while(scanf("%d %d",&G,&L) && G)
+	while(cin>>a>>b)
 	Init(),Solve();
 	return 0;
 }
