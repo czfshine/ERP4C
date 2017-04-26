@@ -84,7 +84,7 @@ void Solve(){
 
 	REP(i,minb,f){
 		REP(j,1,n){
-			if(j>=fb[j]){
+			if(i>=fb[j]){
 				dpb[i]=max(dpb[i],dpb[i-fb[j]]+c[j]);
 			}
 		}
