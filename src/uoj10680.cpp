@@ -104,7 +104,7 @@ void Solve(){
 }
 
 int main(){
-#ifdef LOCAL
+#ifdef LOCAL1
 	freopen("uoj10680.in","r",stdin);
 #endif
 	int t;
