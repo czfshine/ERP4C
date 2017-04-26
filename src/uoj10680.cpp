@@ -104,9 +104,9 @@ void Solve(){
 }
 
 int main(){
-
+#ifdef LOCAL
 	freopen("uoj10680.in","r",stdin);
-
+#endif
 	int t;
 	scanf("%d",&t);
 	while(t--)
