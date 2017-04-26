@@ -95,7 +95,7 @@ void Solve(){
 	}
 
 	if(ansa+ansb<=f){
-		print(1);
+		print(ansa<<ansb);
 	}else{
 		print(0);
 	}
