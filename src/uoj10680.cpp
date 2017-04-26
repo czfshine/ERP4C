@@ -36,55 +36,80 @@ const double FINF = 1e18;
 #define print(x) cout<<(x)<<endl;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
+int dpa[1005],dpb[1005];
+int c[1005];
+int fa[1005];
+int fb[1005];
 
-char a[3000],b[3000];
+int n,f;
+int p1,p2;
 
-int dp[3000][3000];
-
-
-
+int mina=INF,minb=INF;
 void Init(){
+	cin>>n>>f>>p1>>p2;
+	REP(i,1,n){
+		cin>>c[i];
+	}
 
+	REP(i,1,n){
+		cin>>fa[i];
+		mina=min(mina,fa[i]);
+	}
 
+	REP(i,1,n){
+		cin>>fb[i];
+		minv=min(minb,fb[i]);
+	}
+
+	memset(dpa , 0 ,sizeof dpa);
+	memset(dpb , 0, sizeof dpb);
 	return ;
 }
 
 void Solve(){
-	int la,lb;
-	la=strlen(a);
-	lb=strlen(b);
+	int ansa,ansb;
+	REP(i,mina,f)
+	{
+		REP(j,0,n-1){
+			if(i>=fa[j]){
+				dpa[i]=max(dpa[i],dpa[i-fa[j]]+c[j]);
+			}
+		}
 
-	REP(i,0,la-1)
-		REP(j,0,lb-1)
-			if(a[i]==b[j])
-				if(i==0|| j==0 ) dp[i][j]=1;
-				else dp[i][j]=dp[i-1][j-1]+1;
-			else dp[i][j]=0;
-
-	int end=0;
-	int ans=dp[1][1];
-	REPD(i,la-1,0)    
-        REP(j,0,lb-1) {
-		if(dp[i][j]>ans){
-			ans=dp[i][j];
-			end=i;
+		if(dpa[i]>=p1){
+			ansa=i;
+			break;
 		}
 	}
 
-	REP(i,end-ans+1,end){
-		cout<<a[i];
+	REP(i,minb,f){
+		REP(j,0,n-1){
+			if(j>=fb[j]){
+				dpb[i]=max(dpb[i],dpb[i-fb[j]]+c[j]);
+			}
+		}
+		if(dpb[i]>=q){
+			ansb=i;
+			break;
+		}
 	}
-	cout<<endl;
+
+	if(ansa+ansb<=f){
+		print(1);
+	}else{
+		print(0);
+	}
 
 	return ;
 }
 
 int main(){
 
-	freopen("uoj11077_t.in","r",stdin);
+	freopen("uoj10680.in","r",stdin);
 
-
-	while(cin>>a>>b)
+	int t;
+	scanf("%d",&t);
+	whiel(t--)
 	Init(),Solve();
 	return 0;
 }
