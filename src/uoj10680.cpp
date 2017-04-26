@@ -58,7 +58,7 @@ void Init(){
 
 	REP(i,1,n){
 		cin>>fb[i];
-		minv=min(minb,fb[i]);
+		minb=min(minb,fb[i]);
 	}
 
 	memset(dpa , 0 ,sizeof dpa);
@@ -88,7 +88,7 @@ void Solve(){
 				dpb[i]=max(dpb[i],dpb[i-fb[j]]+c[j]);
 			}
 		}
-		if(dpb[i]>=q){
+		if(dpb[i]>=p2){
 			ansb=i;
 			break;
 		}
@@ -109,7 +109,7 @@ int main(){
 
 	int t;
 	scanf("%d",&t);
-	whiel(t--)
+	while(t--)
 	Init(),Solve();
 	return 0;
 }
