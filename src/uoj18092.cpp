@@ -39,7 +39,7 @@ const double FINF = 1e18;
 
 int n;
 
-int dp[10005];
+int dp[100005];
 void Init(){
 
 	scanf("%d",&n);
@@ -63,8 +63,7 @@ void Solve(){
 	REPD(i,n-1,2){
 		m=min(dp[i-1],dp[i+1]);
 		if(dp[i]-m>1){
-			dp[i]=m+1
-			;
+			dp[i]=m+1;
 		}
 	}
 	int ma=0;
