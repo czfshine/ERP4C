@@ -36,80 +36,42 @@ const double FINF = 1e18;
 #define print(x) cout<<(x)<<endl;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
-int dpa[1005],dpb[1005];
-int c[1005];
-int fa[1005];
-int fb[1005];
 
-int n,f;
-int p1,p2;
+int n;
 
-int mina=INF,minb=INF;
+int a[1005],dp[1005];
 void Init(){
-	cin>>n>>f>>p1>>p2;
-	REP(i,1,n){
-		cin>>c[i];
+	REP(i,0,n-1){
+		scanf("%d",a+i);
+		dp[i]=1;
 	}
 
-	REP(i,1,n){
-		cin>>fa[i];
-		mina=min(mina,fa[i]);
-	}
-
-	REP(i,1,n){
-		cin>>fb[i];
-		minb=min(minb,fb[i]);
-	}
-
-	memset(dpa , 0 ,sizeof dpa);
-	memset(dpb , 0, sizeof dpb);
 	return ;
 }
 
 void Solve(){
-	int ansa,ansb;
-	REP(i,mina,f)
-	{
-		REP(j,1,n){
-			if(i>=fa[j]){
-				dpa[i]=max(dpa[i],dpa[i-fa[j]]+c[j]);
+	int t=1;
+	REP(i,0,n-1){
+		REP(j,0,i-1){
+			if(((dp[j]%2)&& a[i]<a[j])|| ((dp[j]%2 == 0) && a[i]>a[j])){
+				dp[i]=max(dp[i],dp[j]+1);
 			}
 		}
 
-		if(dpa[i]>=p1){
-			ansa=i;
-			break;
-		}
+		t=max(t,dp[i]);
 	}
 
-	REP(i,minb,f){
-		REP(j,1,n){
-			if(i>=fb[j]){
-				dpb[i]=max(dpb[i],dpb[i-fb[j]]+c[j]);
-			}
-		}
-		if(dpb[i]>=p2){
-			ansb=i;
-			break;
-		}
-	}
-
-	if(ansa+ansb<=f){
-		print(1);
-	}else{
-		print(0);
-	}
+	printf("%d\n",t);
 
 	return ;
 }
 
 int main(){
 #ifdef LOCAL
-	freopen("uoj10680.in","r",stdin);
+	freopen("uoj10901.in","r",stdin);
 #endif
-	int t;
-	scanf("%d",&t);
-	while(t--)
+
+	while(scanf("%d",&n) && n)
 	Init(),Solve();
 	return 0;
 }
