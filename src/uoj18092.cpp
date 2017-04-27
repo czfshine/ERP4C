@@ -63,7 +63,8 @@ void Solve(){
 	REPD(i,n-1,2){
 		m=min(dp[i-1],dp[i+1]);
 		if(dp[i]-m>1){
-			dp[i]=m+1;
+			dp[i]=m+1
+			;
 		}
 	}
 	int ma=0;
