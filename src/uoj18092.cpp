@@ -72,7 +72,6 @@ void Solve(){
 		ma=max(ma,dp[i]);
 	}
 	printf("%d",ma);
-
 	return ;
 }
 
