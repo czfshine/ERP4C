@@ -71,7 +71,7 @@ void Solve(){
 	REP(i,1,n){
 		ma=max(ma,dp[i]);
 	}
-	printf("%d",ma);
+	printf("%d\n",ma);
 	return ;
 }
 
