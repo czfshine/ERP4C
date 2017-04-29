@@ -59,19 +59,19 @@ void Solve(){
 		if(dp[i]-m>1){
 			dp[i]=m+1;
 		}
-		print(i);
+		//print(i);
 	}
 	REPD(i,n-1,2){
 		m=min(dp[i-1],dp[i+1]);
 		if(dp[i]-m>1){
 			dp[i]=m+1;
 		}
-		print(i);
+		//print(i);
 	}
 	int ma=0;
 	REP(i,1,n){
 		ma=max(ma,dp[i]);
-		print(i);
+		//print(i);
 	}
 	printf("%d\n",ma);
 	return ;

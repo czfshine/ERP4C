@@ -23,28 +23,7 @@ int main(int argc, char const *argv[])
 	string name;
 
 	user out;
-	/*
-	for (int i = 0; i < timemax;i+=5 )
-	{	if(ttime>=0) pq.push(temp);
-		while(i<=ttime){
-
-			cin>>ttime>>lv>>name;
-			temp.first=lv*10000;
-			temp.second=name;
-			pq.push(temp);
-		}
-
-		if(i%5==0){
-			if(!pq.empty()){
-				out=pq.top();
-
-				print(top.second)
-
-			}
-		}
-
-	}
-	*/
+	
 	int outusernum=0;
 	int p=0;//%5
 	int ttweight=99999;
