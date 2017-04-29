@@ -100,27 +100,35 @@ void Init(){
 
 void Solve(){
 	
-	user temp;
 	int ttime,lv;
 	string name;
 
-	int p=0;//%5
-	int ttweight=99999;
+	int p=0;//时间 （%5）
+	int ttweight=99999;//先后的权值
+
 	while(usernum--){
         cin>>ttime>>lv>>name;
         
         while(ttime-p>0){
+        	//找出能被叫号的弹出来
             if(!pq.empty()){
-                cout<<pq.top().second<<endl;
+                cout<<pq.top().y<<endl;
                 pq.pop();
-               
             }
             p+=5;
         }
+
+        //重点！！！！！
+        //pair的第一个数字当做优先队列的排序条件
+        //加上一个权值，满足先来后到的条件
         pq.push(make_pair(lv*100000+ttweight,name));
+        //所以等级lv高的，先来的会被排在优先队列的前面，一个一个按顺序弹出来就行
+
+
         ttweight--;
     }
 
+    //看有没有剩下的，全部弹出
     while(!pq.empty()){
         cout<<pq.top().second<<endl;
         pq.pop();
@@ -129,7 +137,10 @@ void Solve(){
 	return ;
 }
 
+/*还是模板*/
 int main(){
+	
+	/*这个不用管，你要在编译器加上-DLOCAL 才会从文件读入*/
 #ifdef LOCAL
 	freopen("uoj18105.in","r",stdin);
 #endif
