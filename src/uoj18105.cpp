@@ -45,7 +45,7 @@ int usernum;
 
 void Init(){
 
-	scanf("%d%d",&usernum);
+	scanf("%d",&usernum);
 	
 	return ;
 }
