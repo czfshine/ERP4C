@@ -101,7 +101,7 @@ void Init(){
 void Solve(){
 	
 	user temp;
-	int ttime，lv;
+	int ttime,lv;
 	string name;
 
 	int p=0;//%5
