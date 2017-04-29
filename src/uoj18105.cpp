@@ -1,3 +1,53 @@
+/*
+
+18105 银行的叫号顺序
+时间限制:8000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: G++;GCC;VC
+Description
+银行的叫号过程是一个优先队列的典型应用，假设，银行有4类客户，分别用优先级1，2，3，4表示，级别越高
+则更优先得到服务，例如，当前有三个人排队，两个1级客户，一个3级客户，则银行叫号时，3级客户将先得到服务
+，即使另两个1级有客户比他先到。当多个同级的客户将获得服务时，由先到的客户先得到服务。
+
+假设，银行只有一个服务窗口，一次只能服务一个客户，假设该窗口每5分钟服务一个客户，即叫号的时刻分别
+为0分钟、5分钟、10分钟、.....如果在叫号的时侯，没有客户，银行职员会去喝杯咖啡或上个洗手间，5分钟后
+再继续叫号。
+
+银行给出一系列客户到来的记录，每条记录包括“客户到来的时”，“客户等级”，“客户姓名”（由一个单词构成），请输
+出银行服务的客户的顺序。
+
+
+
+
+输入格式
+第一数字是客户的数量n（n<=100000）
+此后，每一行是一个客户来访信息，包括3个数字，到来的时刻（分钟整点,最大10的8次方）、等级、姓名（最多20个字母）
+（已经按到来时刻排序）
+
+
+输出格式
+按服务的先后顺序输出客户的姓名
+
+
+输入样例
+4
+0 1 John
+3 1 Smith
+3 1 Tom
+4 2 Flod
+
+
+输出样例
+John
+Flod
+Smith
+Tom
+
+*/
+
+//下面是模板，不用看，都一样；
+//****************************************
 #include <iostream>
 #include <cstdio>
 #include <algorithm>
@@ -35,45 +85,29 @@ const double FINF = 1e18;
 #define REPD(i,j,k) for(int i =(j);i>=(k);i--)
 #define print(x) cout<<(x)<<endl;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
+//*****模板结束************************
 
 
-
-typedef  pair<int,string> user;
-priority_queue<user > pq;
+typedef  pair<int,string> user;// 客户
+priority_queue<user > pq;		//客户的优先队列
 
 int usernum;
 
 void Init(){
-
 	scanf("%d",&usernum);
-	
 	return ;
 }
 
 void Solve(){
 	
 	user temp;
-	int ttime=-1;
-	int lv;
+	int ttime，lv;
 	string name;
 
-	user out;
-	
-	int outusernum=0;
 	int p=0;//%5
 	int ttweight=99999;
 	while(usernum--){
         cin>>ttime>>lv>>name;
-        
-        while(ttime-p>0){
-            if(!pq.empty()){
-                cout<<pq.top().second<<endl;
-                pq.pop();
-               
-            }
-             outusernum++;
-            p+=5;
-        }
         pq.push(make_pair(lv*100000+ttweight,name));
         ttweight--;
     }
@@ -81,7 +115,6 @@ void Solve(){
     while(!pq.empty()){
         cout<<pq.top().second<<endl;
         pq.pop();
-        outusernum++;
     }
 
 	return ;
