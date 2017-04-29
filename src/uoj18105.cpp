@@ -108,6 +108,15 @@ void Solve(){
 	int ttweight=99999;
 	while(usernum--){
         cin>>ttime>>lv>>name;
+        
+        while(ttime-p>0){
+            if(!pq.empty()){
+                cout<<pq.top().second<<endl;
+                pq.pop();
+               
+            }
+            p+=5;
+        }
         pq.push(make_pair(lv*100000+ttweight,name));
         ttweight--;
     }
