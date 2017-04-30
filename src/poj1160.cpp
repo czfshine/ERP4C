@@ -97,6 +97,7 @@ void Solve(){
             }  
         }   
 
+    printarray2((int *) dp,v+1,p+1,35);
     print(dp[v][p]);
 
 	return ;
