@@ -107,12 +107,13 @@ void Solve(){
 	int ttweight=99999;//先后的权值
 
 	while(usernum--){
-        cin>>ttime>>lv>>name;
+        cin>>ttime>>lv>>name;//最好不要用cin，这题差一点就超时2333333333
         
         while(ttime-p>0){
         	//找出能被叫号的弹出来
+        	//也就是时间满足条件的
             if(!pq.empty()){
-                cout<<pq.top().y<<endl;
+                print(pq.top().y);
                 pq.pop();
             }
             p+=5;
@@ -130,7 +131,7 @@ void Solve(){
 
     //看有没有剩下的，全部弹出
     while(!pq.empty()){
-        cout<<pq.top().second<<endl;
+        print(pq.top().y);
         pq.pop();
     }
 
@@ -139,8 +140,8 @@ void Solve(){
 
 /*还是模板*/
 int main(){
-	
-	/*这个不用管，你要在编译器加上-DLOCAL 才会从文件读入*/
+
+	/*这个不用管，你要在编译器加上-DLOCAL 才会从文件读入，所以本地可以直接从文件读入，到oj上就不会了*/
 #ifdef LOCAL
 	freopen("uoj18105.in","r",stdin);
 #endif
