@@ -80,7 +80,13 @@ void Solve(){
         REP(j,i+1,v) 
             dis[i][j]=dis[i][j-1]+x[j]-x[(i+j)/2];  
  	printarray2((int *) dis,v+1,v+1);
- 	cout<<dis[2][2];
+ 	for(i=1;i<=v;i++)
+        {
+            for(j=i+1;j<=v;j++)
+            {
+            cout<<dis[i][j];
+            }
+        }
     REP(i,1,v) 
     {  
         dp[i][i]=0;  
