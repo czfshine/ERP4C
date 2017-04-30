@@ -79,7 +79,7 @@ void Solve(){
 	REP(i,1,v)
         REP(j,i+1,v) 
             dis[i][j]=dis[i][j-1]+x[j]-x[(i+j)/2];  
- 	printarray2((int *) dis,v+1,v+1,501);
+ 	//printarray2((int *) dis,v+1,v+1,501);
 
     REP(i,1,v) 
     {  
@@ -93,11 +93,11 @@ void Solve(){
         	dp[i][j]=INF;  
             REP(k,j-1,i-1) 
             {  
-                dp[i][j]=min(dp[i][j],dp[k][j-1]+dis[k+1][i]);  
+                dp[i][j]=min(dp[i][j],dp[k][j-1]+dis[k+1][i]);//在k修建或者在后面修建，看谁小  
             }  
         }   
 
-    printarray2((int *) dp,v+1,p+1,35);
+    //printarray2((int *) dp,v+1,p+1,35);
     print(dp[v][p]);
 
 	return ;
