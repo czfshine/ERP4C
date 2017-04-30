@@ -53,13 +53,13 @@ const double FINF = 1e18;
 
 int dp[500][35]={0}; 
 int dis[500][500]={0}; 
-int x[N]; 
+int x[500]; 
 
 int v,p,i,j,k;  
 
 void Init(){
 
-	scanf("%d%d",&v,&p)；
+	scanf("%d%d",&v,&p);
 	REP(i,1,v) 
 		scanf("%d",&x[i]);
 
