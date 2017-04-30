@@ -80,7 +80,7 @@ void Solve(){
     REP(j,2,p)  
         REP(i,j+1,v) 
         {  
-        	dp[i][j]=inf;  
+        	dp[i][j]=INF;  
             REP(k,j-1,i-1) 
             {  
                 dp[i][j]=min(dp[i][j],dp[k][j-1]+dis[k+1][i]);  
