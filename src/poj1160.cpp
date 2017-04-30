@@ -57,11 +57,11 @@ int x[500];
 
 int v,p,i,j,k;  
 
-void printarray2(int[][] a,int len1,int len2){
+void printarray2(int* a,int len1,int len2){
 
 	REP(i,0,len1-1){
 		REP(j,0,len2-1){
-			cout<<a[i][j];
+			cout<<*(a+i*len2+j);
 		}
 		cout<<endl;
 	}
@@ -79,7 +79,7 @@ void Solve(){
 	REP(i,1,v)
         REP(j,i+1,v) 
             dis[i][j]=dis[i][j-1]+x[j]-x[(i+j)/2];  
- 	printarray2(dis,v+1,v+1);
+ 	printarray2((int *) dis,v+1,v+1);
     REP(i,1,v) 
     {  
         dp[i][i]=0;  
