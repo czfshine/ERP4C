@@ -61,7 +61,7 @@ void printarray2(int* a,int len1,int len2){
 
 	REP(i,0,len1-1){
 		REP(j,0,len2-1){
-			cout<<(a+i*len2+j);
+			cout<<*(a+i*len2+j);
 		}
 		cout<<endl;
 	}
