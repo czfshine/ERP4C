@@ -109,8 +109,8 @@ void Solve(){
     int ans = 0;
     REP(i,0,bgn[n-1]+le[n-1]-1)
         if(fa[i]==i) ans++;
-
-    printf("%.0lf\n",pow(2,ans-2));
+    int a=1;
+    printf("%d",1<<(ans-2));
 
 
 	return ;
