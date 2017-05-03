@@ -75,7 +75,7 @@ void Init(){
             REP(i,0,le[ch-'a']-1)
                 a[la++] = bgn[ch-'a'] + i;  
 
-    while((ch= getchar())!='\n' && (ch= getchar())!=EOF)  
+    while((ch= getchar())!='\n' && (ch)!=EOF)  
         if(ch=='0' || ch=='1')  
             b[lb++] = ch-'0';  
         else  
