@@ -112,7 +112,7 @@ void Solve(){
     if(ans==0)
     	printf("WTF????\n");
    	else if(ans==1)
-   		printf("FUCK!!!!\n")
+   		printf("FUCK!!!!\n");
    	else{
    		int a=1;
     	printf("%d\n",1<<(ans-2));
