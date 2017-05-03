@@ -75,7 +75,7 @@ void Init(){
             REP(i,0,le[ch-'a']-1)
                 a[la++] = bgn[ch-'a'] + i;  
 
-    while((ch= getchar())!='\n' && (ch)!=EOF)  
+    while((ch= getchar())!='\n' )  
         if(ch=='0' || ch=='1')  
             b[lb++] = ch-'0';  
         else  
@@ -114,8 +114,8 @@ void Solve(){
    	else if(ans==1)
    		printf("0\n");
    	else{
-   		int a=1;
-    	printf("%d\n",1<<(ans-2));
+   		long long  a=1;
+    	printf("%lld\n",1<<(62));
    	}
     
 
