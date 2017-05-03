@@ -92,22 +92,22 @@ void Solve(){
         return ;
     }
     
-    REP(i,0,bg[n-1]+le[n-1]-1)
+    REP(i,0,bgn[n-1]+le[n-1]-1)
         fa[i] = i;
 
     REP(i,0,la-1)
     {
-        if(s1[i]+s2[i]==1)
+        if(a[i]+b[i]==1)
         {
             print(0);
             return ;
         }
 
-        Union(s1[i],s2[i]);
+        Union(a[i],b[i]);
     }
 
     int ans = 0;
-    REP(i,0,bg[n-1]+le[n-1]-1)
+    REP(i,0,bgn[n-1]+le[n-1]-1)
         if(fa[i]==i) ans++;
 
     printf("%.0lf\n",pow(2,ans-2));
