@@ -110,9 +110,9 @@ void Solve(){
     REP(i,0,bgn[n-1]+le[n-1]-1)
         if(fa[i]==i) ans++;
     if(ans==0)
-    	printf("WTF????\n");
+    	printf("0\n");
    	else if(ans==1)
-   		printf("FUCK!!!!\n");
+   		printf("0\n");
    	else{
    		int a=1;
     	printf("%d\n",1<<(ans-2));
