@@ -115,7 +115,7 @@ void Solve(){
    		printf("0\n");
    	else{
    		long long  a=1;
-    	printf("%lld\n",1<<(62));
+    	printf("%lld\n",a<<(62));
    	}
     
 
