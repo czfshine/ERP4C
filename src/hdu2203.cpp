@@ -38,7 +38,7 @@ const double FINF = 1e18;
 
 
 
-string a,b;
+char a,b;
 
 void Init(){
 	cin>>b;
@@ -47,9 +47,15 @@ void Init(){
 }
 
 void Solve(){
-	a.append(a);
+	int lena;
+	lena =strlen(a);
 
-	cout<<search(a,b)<<endl;
+	REP(i,0,lena-1){
+		a[lena+i]=a[i];
+	}
+	a[lena*2]=0;
+
+	cout<<search(a,a+2*lena,b,b+strlen(b))<<endl;
 
 	return ;
 }
