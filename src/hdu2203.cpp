@@ -38,7 +38,7 @@ const double FINF = 1e18;
 
 
 
-char a,b;
+char a[300005],b[100005];
 
 void Init(){
 	cin>>b;
