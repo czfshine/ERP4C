@@ -55,7 +55,7 @@ void Solve(){
 	}
 	a[lena*2]=0;
 
-	cout<<search(a,a+2*lena,b,b+strlen(b))-a<<endl;
+	cout<<(search(a,a+2*lena,b,b+strlen(b))-a)<2*lena<<endl;
 
 	return ;
 }
