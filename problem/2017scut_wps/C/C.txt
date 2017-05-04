@@ -1,0 +1,60 @@
+Homework of Geography
+
+The Geography teacher likes chess very much,
+Because he thinks that the chessboard is the same as the Geography map.
+So he gives Nobita a homework about chessboard.
+
+There are a chessboard of N*M size,
+Number the rows 1-N from top to bottom, number the columns 1-M from left to right.
+There are Q cells contains an obstacle.
+
+Nobita want to cover all empty cells use 1*2 or 2*1 blocks,
+blocks can't cover other blocks, and can't cover the place out of chessboard, and can't cover a cell contains obstacle.
+And if the blocks cover the edge of two cells, Nobita will get a value.
+
+Now Nobita want to konw the minimum sum of values he gets after cover all empty cells.
+
+Input
+
+There are lots of test case.
+For each test case.
+The first line contains two integers N and M.
+The second line contains a integer Q.
+The next Q lines, each line contain two integers x and y, indicate the cell in xth row and yth column contains a obstacle.
+The next N lines, for each line contains M-1 integers val.
+the ith line, jth number, indicate the value Nobita will get if he cover the cell (i,j) and (i,j+1).
+The next N-1 lines, for each line contains M integers val.
+the ith line, jth number, indicate the value Nobita will get if he cover the cell (i,j) and (i+1,j).
+(2<=N<=30, 2<=M<=30, 1<=Q<N*M, 1<=val<=10^6)
+
+Output
+
+For each test case output one line.
+Contain a number indicates the minimum sum of values,
+if Nobita can't cover all empty cells, output "-1"(without quotes).
+
+Sample Input
+
+3 3
+3
+1 1
+2 1
+3 3
+10 10
+10 10
+1 10
+0 2 3
+0 10 0
+3 3
+0
+10 10
+10 10
+1 10
+0 2 3
+0 10 0
+
+Sample Output
+
+6
+-1
+

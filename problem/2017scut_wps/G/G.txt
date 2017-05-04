@@ -1,0 +1,38 @@
+Homework of History
+
+The History teacher gives Nobita a homework, explore the history of 1000 yeas ago.
+So Nobita and Doraemon go back to 1000 years ago through time machine.
+But there are something wrong about the time machine. Nobita and Doraemon are thrown into a tower.
+And now they want to get out of this tower.
+
+This tower contains N floors, they are both in the first floor at first.
+Each day, the person who stays in the lower floor will be chosed (if both of them are in the same floor, chose a random person of them).
+And the person be chosed will fight with a monster, if this person win, he will go to the upper one floor.
+and if this person fail, he will go to the lower one floor(if he is in the first floor before, he will stay at the first floor)
+And another person will stay in where he is.
+If one of them get to the Nth floor, this one person will get out of the tower.
+So now they want to know the expection value of days that both of them will get out of the tower.
+
+Input
+
+The first line contains an integer T, indicate the number of test case.
+For each test case,
+The first line contain an integer N and a number P, indicate the number of floor, and the probability of win if fight with the monster.
+(1<=N<=40, 0.4<=P<=1)
+
+Output
+
+For each test case output one line,
+contain a number.(round to 2 digits after decimal point).
+
+Sample Input
+
+2
+20 0.5
+30 0.6
+
+Sample Output
+
+760.00
+270.80
+

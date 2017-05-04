@@ -1,0 +1,33 @@
+Homework of PE
+
+At the begin of PE class, the math teacher comes to the class,
+and says that the PE teacher have a sick.
+So the math teacher gives Nobita a math homework.
+
+The teacher says that s(n) indicates the number of prime in [1,n].
+And the teacher also says that for a permutation of 1-n,  if the number x is in the xth position from left,
+we say that x is in a correct position.
+
+And then teacher wants to know.
+For all permutation of 1-n, how many of them can satisfy that,
+the s(n) primes in [1,n], there are exactly m of them are in the correct position.
+
+And because the answer is so big, so Nobita needs to know the answer % 1000000007.
+
+Input
+
+The first line contains two integer n and m.
+(1<=n<=200, 1<=m<=s(n))
+
+Output
+
+Output the answer % 1000000007.
+
+Sample Input
+
+5 1
+
+Sample Output
+
+42
+

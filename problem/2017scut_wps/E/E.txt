@@ -1,0 +1,15 @@
+Homework of Math
+
+The Math teacher gives Nobita a mathematical formula.
+And Nobita needs to get the value of S(n)%1000000007.
+
+######
+
+Input
+
+The first line contains a integer n.
+(1<=n<10^9)
+
+Output
+
+Output the answer S(n)%1000000007.
