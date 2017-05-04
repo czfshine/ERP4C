@@ -36,32 +36,45 @@ const double FINF = 1e18;
 #define print(x) cout<<(x)<<endl;
 #define IOS ios::sync_with_stdio(0);cin.tie(0);
 
-
-
-char a[300005],b[100005];
+char s[1000005],t[10005];    
+int p[10005];    
 
 void Init(){
-	cin>>b;
+	scanf("%s%s",t,s);
+
 	return ;
 }
 
+#define diff(str,tem,i,j) while(j&&str[i]!=tem[j])j=p[j];
 void Solve(){
-	int lena=strlen(a);
-
-	REP(i,0,lena-1)
-		a[lena+i]=a[i];
-	a[lena*2]=0;
-
-	cout<<(((search(a,a+2*lena,b,b+strlen(b))-a)<2*lena)?"yes":"no")<<endl;
+	
+	int n=strlen(s);
+    int m=strlen(t);
+    int i,j,ans=0;
+    p[0]=p[1]=0;
+    REP(i,1,m-1){
+        j=p[i];
+        diff(t,t,i,j)
+        p[i+1]=t[i]==t[j]?j+1:0;
+    }
+    j=0;
+    REP(i,0,n){
+        diff(s,t,i,j)
+        if(s[i]==t[j])j++;
+        if(j==m)ans++;
+    }
+    printf("%d\n",ans);
 	return ;
 }
 
 int main(){
 #ifdef LOCAL
-	freopen("hdu2203.in","r",stdin);
+	freopen("hdu1686.in","r",stdin);
 #endif
 
-	while(cin>>a)
+	int T;
+    scanf("%d",&T);
+    while(T--)
 	Init(),Solve();
 	return 0;
 }
