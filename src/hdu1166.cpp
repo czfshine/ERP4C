@@ -40,7 +40,7 @@ const double FINF = 1e18;
 
 #define M 50005  
 int sum[M<<2];  //节点
-  
+int l,mid,id;
 inline void PushPlus(int id)  
 {  
     sum[id] = sum[(lson)] + sum[(rson)];  
