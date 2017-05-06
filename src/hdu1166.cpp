@@ -50,7 +50,7 @@ void Build(int l, int r, int id)
 {  
     if(l == r)  
     {  
-        scanf("%d", &sum[id]);  
+        scanf("%d", &sum[id]);//根节点  
         return ;  
     }  
     int mid = ( l + r )>>1;  
