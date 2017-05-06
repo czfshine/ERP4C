@@ -62,7 +62,7 @@ void update(int p,int sc,int l,int r,int id) {
         return ;  
     }  
     int mid = (l + r) >> 1;  
-    if (p <= m) update(p , sc , lson);  
+    if (p <= mid) update(p , sc , lson);  
     else update(p , sc , rson);  
     PushUP(id);  
 }  
@@ -72,8 +72,8 @@ int query(int L,int R,int l,int r,int id) {
     }  
     int mid = (l + r) >> 1;  
     int ret = 0;  
-    if (L <= m) ret = max(ret , query(L , R , lson));  
-    if (R > m) ret = max(ret , query(L , R , rson));  
+    if (L <= mid) ret = max(ret , query(L , R , lson));  
+    if (R > mid) ret = max(ret , query(L , R , rson));  
     return ret;  
 }  
 int n , m; 
@@ -105,4 +105,4 @@ int main(){
 	while (~scanf("%d%d",&n,&m))
 	Init(),Solve();
 	return 0;
-}hdu1754.cp
+}
