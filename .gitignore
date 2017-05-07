@@ -3,3 +3,7 @@ src/test.c
 src/log
 *.html
 data/
+*.o
+test.c
+*.gch
+project/Library/Library.layout
