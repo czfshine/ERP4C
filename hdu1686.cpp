@@ -46,6 +46,7 @@ void Init(){
 }
 
 #define diff(str,tem,i,j) while(j&&str[i]!=tem[j])j=p[j];
+
 void Solve(){
 	
 	int n=strlen(s);
