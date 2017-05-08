@@ -75,6 +75,10 @@ int dfs(int cur){
 		if(add(cur,i)){
 			//print(i);
 			if(cur==n+5){
+				REP(j,0,20){
+					cout<<a[i]<<" ";
+				}
+				cout<<endl;
 				count1++;
 			}else{
 				a[cur++]=i;
