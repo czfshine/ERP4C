@@ -73,7 +73,7 @@ int dfs(int cur){
 	REP(i,0,9){
 		//print(i);
 		if(add(cur,i)){
-			//print(i);
+			print(i);
 			if(cur==n+5){
 				REP(j,0,20){
 					cout<<a[i]<<" ";
