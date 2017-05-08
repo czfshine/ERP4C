@@ -65,9 +65,9 @@ int dfs(int cur){
 	REP(i,0,9){
 		if(add(cur,i)){
 			if(cur==n+5){
-				count++;
+				count1++;
 			}else{
-				a[cur++]=i
+				a[cur++]=i;
 				dfs(cur);
 			}
 			
@@ -76,7 +76,7 @@ int dfs(int cur){
 }
 void Solve(){
 	dfs(5);
-	cout<<count<<endl;
+	cout<<count1<<endl;
 	return ;
 }
 
