@@ -55,9 +55,10 @@ int add(int cur,int i){
 
 	int sum=0;
 
-	REP(i,0,m-1){
+	REP(i,0,m-2){
 		sum+=a[cur-i];
 	}
+	sum+=i;
 	if(p[sum]==1){
 		return 1;
 	}
@@ -72,7 +73,7 @@ int dfs(int cur){
 	REP(i,0,9){
 		print(i);
 		if(add(cur,i)){
-
+			print(i);
 			if(cur==n+5){
 				count1++;
 			}else{
