@@ -62,7 +62,7 @@ int add(int cur,int i){
 int n;
 
 int dfs(int cur){
-	REP(i,0,9,){
+	REP(i,0,9){
 		if(add(cur,i)){
 			if(cur==n+5){
 				count++;
