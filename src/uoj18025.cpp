@@ -49,7 +49,7 @@ void Init(){
 }
 
 int a[30]={0};
-int count;
+int count1;
 int add(int cur,int i){
 	if(p[a[cur-3]+a[cur-2]+a[cur-1]+a[cur]]==1){
 		return 1;
