@@ -92,7 +92,7 @@ void Solve(){
 	scanf("%d%d",&n,&m);
 	memset(a,0,sizeof(a));
 	count1=0;
-	dfs(5);
+	dfs(6);
 	cout<<count1<<endl;
 	return ;
 }
