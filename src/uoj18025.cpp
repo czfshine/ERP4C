@@ -50,8 +50,15 @@ void Init(){
 
 int a[30]={0};
 int count1;
+int m;
 int add(int cur,int i){
-	if(p[a[cur-3]+a[cur-2]+a[cur-1]+a[cur]]==1){
+
+	int sum=0;
+
+	REP(i,0,m-1){
+		sum+=a[cur-i];
+	}
+	if(p[sum]==1){
 		return 1;
 	}
 	else{
@@ -75,6 +82,7 @@ int dfs(int cur){
 	}
 }
 void Solve(){
+	scanf("%d%d",&n,&m);
 	dfs(5);
 	cout<<count1<<endl;
 	return ;
@@ -85,7 +93,8 @@ int main(){
 	freopen("uoj18025.in","r",stdin);
 #endif
 
-
+ 	int t;
+ 	scanf("%d",&t);
 	Init(),Solve();
 	return 0;
 }
