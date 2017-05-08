@@ -55,8 +55,8 @@ int add(int cur,int i){
 
 	int sum=0;
 
-	REP(i,0,m-2){
-		sum+=a[cur-i];
+	REP(j,0,m-2){
+		sum+=a[cur-j];
 	}
 	sum+=i;
 	if(p[sum]==1){
