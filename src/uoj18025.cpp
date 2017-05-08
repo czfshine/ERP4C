@@ -90,6 +90,7 @@ int dfs(int cur){
 }
 void Solve(){
 	scanf("%d%d",&n,&m);
+	memset(a,0,sizeof(a));
 	count1=0;
 	dfs(5);
 	cout<<count1<<endl;
