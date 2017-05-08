@@ -71,7 +71,7 @@ int n;
 
 int dfs(int cur){
 	REP(i,0,9){
-		print(i);
+		//print(i);
 		if(add(cur,i)){
 			print(i);
 			if(cur==n+5){
