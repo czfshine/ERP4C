@@ -98,6 +98,7 @@ int main(){
 
  	int t;
  	scanf("%d",&t);
+ 	while(t--)
 	Init(),Solve();
 	return 0;
 }
