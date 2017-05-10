@@ -48,6 +48,27 @@ void SayHello(){
 #ifndef MENULOGGIN
 #define MENULOGGIN 1
 #endif
+#ifndef MENUCHANGE
+#define MENUCHANGE 2
+#endif
+#ifndef MENUREMOVE
+#define MENUREMOVE 3
+#endif
+#ifndef MENULOG2S
+#define MENULOG2S 4
+#endif
+#ifndef MENUQUERY
+#define MENUQUERY 5
+#endif
+#ifndef MENUSTATIS
+#define MENUSTATIS 6
+#endif
+#ifndef MENUHELP
+#define MENUHELP 7
+#endif
+#ifndef MENUEXIT
+#define MENUEXIT 0
+#endif
 
 void ShowMainMenu(){
 	
@@ -122,6 +143,13 @@ void TypeLongError(INPUTTYPE T){
 										   	errortype(wanttype);\
 											ShowMainMenu();\
 											return 0;
+#define MENUITEM(ID,CALLBACK) case ID :CALLBACK();break;
+#define MENU(op) switch(op){
+#define DEFAULTITEM(CALLBACK) default : CALLBACK(); }	
+
+void callback(){
+	printf("test callback");
+}						
 int ListenMainKey(){
 	int op;
 
@@ -134,11 +162,18 @@ int ListenMainKey(){
 			MainWantError (TypeNullError,T_NUM);
 		case WANTLONGERROR:
 			MainWantError (TypeLongError,T_NUM);
-	}
+		}
 
-	switch(op){
-		case 1 :break;
-	}
+	MENU(op)
+		MENUITEM(MENULOGGIN,callback);
+		MENUITEM(MENUCHANGE,callback);
+		MENUITEM(MENUREMOVE,callback);
+		MENUITEM(MENULOG2S,callback);
+		MENUITEM(MENUQUERY,callback);
+		MENUITEM(MENUSTATIS,callback);
+		MENUITEM(MENUHELP,callback);
+		MENUITEM(MENUEXIT,callback);
+	DEFAULTITEM(callback);
 	printf("%d\n",op);
 	
 	return 0;
