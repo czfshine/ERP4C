@@ -3,9 +3,8 @@
 typedef struct
 {	ptr elem;
 	struct ListNode *next;
-}  ListNode;
+}  ListNode,LinkList;
 
-typedef LinkNode LinkList;
 
 void init(LinkList);
 LinkNode * newnode (ptr elem);
