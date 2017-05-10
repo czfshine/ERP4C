@@ -15,3 +15,9 @@ typedef struct {
 typedef struct {
 	int waitid;
 }	StoreInfo;
+Store * InitStore();
+int AddGoods(Store s,int id,char * name,int count);
+int ChangeGoodsName(Store s,int id,char * name);
+int ChangeGoodsCount(Store s,int id,int count);
+int findid(LinkList L,goods * g);
+goods * FindGoodsById(Store s,int id);
