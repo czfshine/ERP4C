@@ -9,7 +9,7 @@ goods:
 	-lua addbuildnum.lua
 	-git add .
 	-git commit -m "build erp4c" 
-	gcc -Wall -DLOCAL -O3 -ansi goods.c testgoods.c -o testgoods.exe
+	gcc -Wall -DLOCAL -O3 -ansi linklist.c goods.c testgoods.c -o testgoods.exe
 	testgoods.exe
 linklist:
 	-lua addbuildnum.lua
