@@ -72,7 +72,7 @@ void ShowMainMenu(){
 #define WANTNULLERROR -2
 #define WANTLONGERROR -3
 int WantNum(){
-	//note: The input num must be > 0
+	/*note: The input num must be > 0*/
 	int res=0;
 	char ch;
 	char flag=0;
