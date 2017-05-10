@@ -32,7 +32,7 @@ Description:
 #include <ctype.h>
 
 #define LOOP(fn) while(!fn()){}
-#define CleanScreen()  system("cls");SayHello();
+#define CleanScreen()  /*system("cls");*/SayHello();
 int buildnum[]={
 	#include "BUILDNUM"
 };
