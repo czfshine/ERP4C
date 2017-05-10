@@ -64,11 +64,10 @@ void ShowMainMenu(){
 	printf("%s",str);
 
 }
-void InputClean(){
-	char ch;
-	while((ch=getchar())!='\n'){}
+#define InputClean() 	char ch;\
+						while((ch=getchar())!='\n'){}
 
-}
+
 #define WANTTYPEERROR -1
 #define WANTNULLERROR -2
 
@@ -82,13 +81,13 @@ int WantNum(){
 			flag=1;
 		}else{
 			InputClean();
-			return -1;
+			return WANTTYPEERROR;
 		}
 	}
 	if(flag){
 		return res;
 	}else{
-		return -2;
+		return WANTNULLERROR;
 	}
 	
 }
@@ -119,14 +118,9 @@ int ListenMainKey(){
 
 	switch(op){
 		case WANTTYPEERROR:
-		
 			MainWantError (TypeError,T_NUM);
-		
 		case WANTNULLERROR:
-		
 			MainWantError (TypeNullError,T_NUM);
-		
-
 	}
 	printf("%d\n",op);
 	
