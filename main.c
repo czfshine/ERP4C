@@ -69,18 +69,28 @@ void InputClean(){
 	while((ch=getchar())!='\n'){}
 
 }
+#define WANTTYPEERROR -1
+#define WANTNULLERROR -2
+
 int WantNum(){
 	int res=0;
 	char ch;
+	char flag=0;
 	while((ch=getchar())!='\n'){
 		if(isdigit(ch)){
 			res=res*10+ch-'0';
+			flag=1;
 		}else{
 			InputClean();
 			return -1;
 		}
 	}
-	return res;
+	if(flag){
+		return res;
+	}else{
+		return -2;
+	}
+	
 }
 
 #define T_NUM 0
@@ -95,19 +105,34 @@ void TypeError(INPUTTYPE T){
 
 	printf("ERROR: Expect a %s but got another\n",TYPENAME[T]);
 }
+void TypeNullError(INPUTTYPE T){
+
+	printf("ERROR: you must input a %s\n",TYPENAME[T]);
+}
 
 
 int ListenMainKey(){
 	int op;
 
 	op=WantNum();
-	if(op==-1){
-		CleanScreen();
-		TypeError(T_NUM);
-		ShowMainMenu();
-		return 0;
-	}
 
+	swhitch(op){
+		case WANTTYPEERROR:
+		{
+			CleanScreen();
+			TypeError(T_NUM);
+			ShowMainMenu();
+			return 0;
+		}
+		case WANTNULLERROR:
+		{
+			CleanScreen();
+			TypeNullError(T_NUM);
+			ShowMainMenu();
+			return 0;
+		}
+
+	}
 	printf("%d\n",op);
 	
 	return 0;
