@@ -83,7 +83,7 @@ int WantNum(){
 	return res;
 }
 
-typedef INPUTTYPE int;
+typedef int INPUTTYPE ;
 char * TYPENAME[]={
 	"number",
 	"string"
