@@ -6,7 +6,7 @@ typedef struct LinkNode
 }  LinkNode,*LinkList;
 
 
-LinkList  init(LinkList);
+LinkList  init();
 LinkNode * newnode (ptr elem);
 LinkNode * back(LinkList L);
 int pushback(LinkList L,ptr elem);
