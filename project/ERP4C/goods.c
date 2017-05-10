@@ -28,7 +28,7 @@ int ChangeGoodsName(Store s,int id,char * name){
 	return 0;
 }
 
-int ChangeGoodsCount(Store s,int id,char * name){
+int ChangeGoodsCount(Store s,int id,int count){
 
 	goods *g;
 	g=FindGoodsById(s,id);
@@ -38,7 +38,9 @@ int ChangeGoodsCount(Store s,int id,char * name){
 }
 
 int findid(LinkList L,goods * g){
-	if(g->id == L->elem->waitid ){
+	StoreInfo *si;
+	si= L->elem;
+	if(g->id == si>waitid ){
 		return 1;
 	}else{
 		return 0
