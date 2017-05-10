@@ -1,3 +1,7 @@
+#ifndef LINKLIST_H
+#define LINKLIST_H 
+#include <stdlib.h>
+#include <string.h>
 #define ptr void *
 
 typedef struct LinkNode
@@ -12,3 +16,4 @@ LinkNode * back(LinkList L);
 int pushback(LinkList L,ptr elem);
 int pushfront(LinkList L, ptr elem);
 ptr foreach(LinkList L,int (*fn)(ptr ));
+#endif
