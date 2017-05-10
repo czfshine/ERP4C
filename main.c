@@ -83,13 +83,14 @@ int WantNum(){
 	return res;
 }
 
+#define T_NUM 0
+#define T_STR 1
 typedef int INPUTTYPE ;
 char * TYPENAME[]={
 	"number",
 	"string"
-}
-#define T_NUM 0
-#define T_STR 1
+};
+
 void TypeError(INPUTYPE T){
 
 	printf("ERROR: Expect a %s but got another",TYPENAME[T]);
