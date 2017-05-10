@@ -45,6 +45,9 @@ void SayHello(){
 	printf("ERP4C %s ",version);
     printf("| dev-build %04d\n",buildnum[0]);
 }
+##ifndef MENULOGGIN
+#define MENULOGGIN 1
+#endif
 void ShowMainMenu(){
 	
 	
@@ -80,6 +83,7 @@ int WantNum(){
 		if(isdigit(ch)){
 			res=res*10+ch-'0';
 			if(res<0){
+				InputClean();
 				return WANTLONGERROR;
 			}
 			flag=1;
@@ -128,7 +132,11 @@ int ListenMainKey(){
 		case WANTNULLERROR:
 			MainWantError (TypeNullError,T_NUM);
 		case WANTLONGERROR:
-			MainWantError(TypeLongError,T_NUM);
+			MainWantError (TypeLongError,T_NUM);
+	}
+
+	switch(op){
+		case 
 	}
 	printf("%d\n",op);
 	
