@@ -19,5 +19,5 @@ Store * InitStore();
 int AddGoods(Store s,int id,char * name,int count);
 int ChangeGoodsName(Store s,int id,char * name);
 int ChangeGoodsCount(Store s,int id,int count);
-int findid(LinkList L,goods * g);
+int findid(LinkList L,ptr );
 goods * FindGoodsById(Store s,int id);
