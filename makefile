@@ -11,3 +11,9 @@ goods:
 	-git commit -m "build erp4c" 
 	gcc -Wall -DLOCAL -O3 -ansi goods.c testgoods.c -o testgoods.exe
 	testgoods.exe
+linklist:
+	-lua addbuildnum.lua
+	-git add .
+	-git commit -m "build erp4c" 
+	gcc -Wall -DLOCAL -O3 -ansi linklist.c testlinklist.c -o testlinklist.exe
+	linklist.exe
