@@ -1,8 +1,10 @@
 #include "linklist.h"
 
-void init(LinkList L){
-	L->next=NULL;
-	return ;
+LinkList init(LinkList L){
+	LinkNode *n;
+	n=newnode(NULL);
+	n->next=NULL;
+	return n;
 }
 
 LinkNode * newnode (ptr elem){

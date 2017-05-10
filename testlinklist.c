@@ -10,6 +10,7 @@ int print( ptr elem){
 }
 int main(){
 	LinkList L;
+	L=init();
 
 	goods a,b,c;
 	a.a=1;

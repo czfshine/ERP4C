@@ -3,7 +3,7 @@
 typedef struct
 {	ptr elem;
 	struct LinkNode *next;
-}  LinkNode,LinkList;
+}  LinkNode,*LinkList;
 
 
 void init(LinkList);
