@@ -30,8 +30,12 @@ Description:
 #include <stdio.h>
 #include <stdlib.h>
 
+int buildnum[]={
+	#include <BUILDNUM>
+}
 int main()
 {
     printf("Hello world!\n");
+    PRINTF("%d",buildnum[0]);
     return 0;
 }
