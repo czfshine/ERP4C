@@ -32,7 +32,7 @@ Description:
 #include <ctype.h>
 
 #define LOOP(fn) while(!fn()){}
-#define CleanScreen()  system("cls");
+#define CleanScreen()  system("cls");SayHello();
 int buildnum[]={
 	#include "BUILDNUM"
 };
@@ -47,7 +47,7 @@ void SayHello(){
 }
 void ShowMainMenu(){
 	
-	SayHello();
+	
 	char str[]={
 		"Please choose a option:\n"
 		"1)\tloggin goods\n"
