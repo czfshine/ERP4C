@@ -11,4 +11,4 @@ LinkNode * newnode (ptr elem);
 LinkNode * back(LinkList L);
 int pushback(LinkList L,ptr elem);
 int pushfront(LinkList L, ptr elem);
-ptr foreach(LinkList L,(int *)fn(ptr ));
+ptr foreach(LinkList L,int (*fn)(ptr ));
