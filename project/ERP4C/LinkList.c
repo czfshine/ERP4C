@@ -48,7 +48,7 @@ int pushfront(LinkList L, ptr elem){
 	return 0;
 }
 
-ptr foreach(LinkList L,(int *)fn(ptr )){
+ptr foreach(LinkList L,int (* fn)(ptr )){
 
 	LinkNode *p;
 	p=L;
