@@ -55,7 +55,8 @@ ptr foreach(LinkList L,int (* fn)(ptr )){
 	p=L;
 
 	while(p->next){
-		ptr a=(LinkNode *)(p->next)->elem;
+		LinkNode * a=p->next;
+		ptr b=a->elem;
 		if(fn(a)){
 			return p->next;
 		}
