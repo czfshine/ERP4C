@@ -1,5 +1,5 @@
 #include "linklist.h"
 int main(){
-	ListLink L;
+	LinkList L;
 	return 0;
 }
