@@ -31,7 +31,7 @@ Description:
 #include <stdlib.h>
 
 int buildnum[]={
-	#include <BUILDNUM>
+	#include "BUILDNUM"
 }
 int main()
 {
