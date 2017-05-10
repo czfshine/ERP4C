@@ -7,4 +7,4 @@ typedef struct
 typedef struct 
 {
 	ListNode *next;
-} Linklist;
+} LinkList;
