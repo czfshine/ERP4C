@@ -102,15 +102,16 @@ char * TYPENAME[]={
 };
 
 void TypeError(INPUTTYPE T){
-
 	printf("ERROR: Expect a %s but got another\n",TYPENAME[T]);
 }
 void TypeNullError(INPUTTYPE T){
-
 	printf("ERROR: you must input a %s\n",TYPENAME[T]);
 }
 
-
+#define MainWantError (errortype,wanttype) 	CleanScreen();\
+										   	errortype(wanttype);\
+											ShowMainMenu();\
+											return 0;
 int ListenMainKey(){
 	int op;
 
@@ -118,19 +119,13 @@ int ListenMainKey(){
 
 	switch(op){
 		case WANTTYPEERROR:
-		{
-			CleanScreen();
-			TypeError(T_NUM);
-			ShowMainMenu();
-			return 0;
-		}
+		
+			MainWantError (TypeError,T_NUM);
+		
 		case WANTNULLERROR:
-		{
-			CleanScreen();
-			TypeNullError(T_NUM);
-			ShowMainMenu();
-			return 0;
-		}
+		
+			MainWantError (TypeNullError,T_NUM);
+		
 
 	}
 	printf("%d\n",op);
