@@ -1,6 +1,5 @@
 #include "goods.h"
-#include "common.h"
-#include "linklist.h"
+
 Store * InitStore(){
 	Store *s;
 	s=MAKE(Store);
