@@ -6,27 +6,27 @@ void init(LinkList L){
 }
 
 LinkNode * newnode (ptr elem){
-	ListNode * n;
-	n=(ListNode *) malloc(sizeof(ListNode));
+	LinkNode * n;
+	n=(LinkNode *) malloc(sizeof(LinkNode));
 	n->elem=elem;
 	n->next=NULL;
 	return n;
 }
 LinkNode * back(LinkList L){
-	ListNode * temp;
+	LinkNode * temp;
 	temp=L;
 	while(temp->next){
 		temp=temp->next;
 	}
 	return temp;
 }
-int pushback(LinkList L,(ptr) elem){
+int pushback(LinkList L,ptr elem){
 
 	
 	LinkNode * n;
 	n=newnode(elem);
 
-	ListNode * temp;
+	LinkNode * temp;
 	temp=back(L);
 	temp->next=n;
 
