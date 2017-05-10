@@ -33,9 +33,16 @@ Description:
 int buildnum[]={
 	#include "BUILDNUM"
 };
+
+char version[]="dev 0.0.1";
+
+void SayHello(){
+
+	printf("ERP4C %s ",version);
+    printf("| dev-build %04d\n",buildnum[0]);
+}
 int main()
 {
-    printf("Welcome to ERP4C ");
-    printf("(dev-build %04d)\n",buildnum[0]);
+    SayHello();
     return 0;
 }
