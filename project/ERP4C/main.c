@@ -116,7 +116,7 @@ int ListenMainKey(){
 
 	op=WantNum();
 
-	swhitch(op){
+	switch(op){
 		case WANTTYPEERROR:
 		{
 			CleanScreen();
