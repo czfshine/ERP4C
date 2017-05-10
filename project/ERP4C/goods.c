@@ -1,7 +1,8 @@
-typedef struct {
-	char name[255];
-	int cout;
+#include "goods.h"
 
-} goods;
-
-
+Store * InitStore(){
+	Store *s;
+	s=(Store* ) malloc(sizeof(Store));
+	s.L=LinkListInit();
+	return s;
+}
