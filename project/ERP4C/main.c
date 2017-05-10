@@ -128,7 +128,7 @@ int ListenMainKey(){
 		case WANTNULLERROR:
 			MainWantError (TypeNullError,T_NUM);
 		case WANTLONGERROR:
-			MainWantError(TypeLongerror,T_NUM);
+			MainWantError(TypeLongError,T_NUM);
 	}
 	printf("%d\n",op);
 	
