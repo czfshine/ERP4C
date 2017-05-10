@@ -1,3 +1,6 @@
+#include "common.h"
+#include "linklist.h"
+
 typedef struct {
 	int id;
 	char name[255];
