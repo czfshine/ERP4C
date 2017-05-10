@@ -45,6 +45,11 @@ void SayHello(){
 	printf("ERP4C %s ",version);
     printf("| dev-build %04d\n",buildnum[0]);
 }
+void SayGoodbye(){
+	CleanScreen();
+	printf("Thanks you use ERP4C!\n");
+	printf("Goodbye~~~\n");
+}
 #ifndef MENULOGGIN
 #define MENULOGGIN 1
 #endif
@@ -192,6 +197,7 @@ int main()
     CleanScreen();
     ShowMainMenu();
     LOOP(ListenMainKey);
+    SayGoodbye();
 
     return 0;
 }
