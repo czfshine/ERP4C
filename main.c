@@ -62,7 +62,11 @@ void ShowMainMenu(){
 	printf("%s",str);
 
 }
-
+void InputClean(){
+	char ch;
+	while((ch=getchar())!='\n'){}
+		
+}
 int WantNum(){
 	int res=0;
 	char ch;
