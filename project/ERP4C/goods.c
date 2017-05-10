@@ -37,7 +37,7 @@ int ChangeGoodsCount(Store s,int id,int count){
 	return 0;
 }
 
-int findid(LinkList L,goods * g){
+int findid(LinkList L,void * g){
 	StoreInfo *si;
 	si= L->elem;
 	if(g->id == si->waitid ){
