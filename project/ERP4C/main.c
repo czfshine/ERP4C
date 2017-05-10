@@ -93,7 +93,7 @@ char * TYPENAME[]={
 
 void TypeError(INPUTTYPE T){
 
-	printf("ERROR: Expect a %s but got another",TYPENAME[T]);
+	printf("ERROR: Expect a %s but got another\n",TYPENAME[T]);
 }
 
 
@@ -102,11 +102,14 @@ int ListenMainKey(){
 
 	op=WantNum();
 	if(op==-1){
+		CleanScreen();
 		TypeError(T_NUM);
 		ShowMainMenu();
-	}else{
-		printf("%d\n",op);
+		return 0;
 	}
+
+	printf("%d\n",op);
+	
 	return 0;
 }
 
