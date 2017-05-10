@@ -1,6 +1,6 @@
 #include "linklist.h"
-
-LinkList init(){
+#include "common.h"
+LinkList LinkListInit(){
 	LinkNode *n;
 	n=newnode(NULL);
 	n->next=NULL;
@@ -9,7 +9,7 @@ LinkList init(){
 
 LinkNode * newnode (ptr elem){
 	LinkNode * n;
-	n=(LinkNode *) malloc(sizeof(LinkNode));
+	n=MAKE(ListNode);
 	n->elem=elem;
 	n->next=NULL;
 	return n;
