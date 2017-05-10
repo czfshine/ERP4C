@@ -156,7 +156,7 @@ void ShowHelp(){
 		"This a help doc\n"
 		"More infomation to see https://github.com/czfshine/my_oj\n"
 		"Thanks you !\n"
-	}
+	};
 	printf("%s",str);
 }					
 int ListenMainKey(){
