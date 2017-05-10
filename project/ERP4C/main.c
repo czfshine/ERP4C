@@ -32,7 +32,7 @@ Description:
 
 int buildnum[]={
 	#include "BUILDNUM"
-}
+};
 int main()
 {
     printf("Hello world!\n");
