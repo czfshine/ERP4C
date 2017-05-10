@@ -2,7 +2,7 @@
 
 typedef struct
 {	ptr elem;
-	struct LinkNode *next;
+	 LinkNode *next;
 }  LinkNode,*LinkList;
 
 
