@@ -42,7 +42,13 @@ void SayHello(){
     printf("| dev-build %04d\n",buildnum[0]);
 }
 void ShowMainMenu(){
-	
+	char str=[]{
+		"Please choice a option:\n"
+		"1)\tloggin data"
+	};
+
+	printf("%s",str);
+
 }
 int main()
 {
