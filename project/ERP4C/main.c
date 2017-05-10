@@ -35,7 +35,7 @@ int buildnum[]={
 };
 int main()
 {
-    printf("Hello world!\n");
-    printf("%d",buildnum[0]);
+    printf("Welcome to ERP4C ");
+    printf("(dev-build%04d)\n",buildnum[0]);
     return 0;
 }
