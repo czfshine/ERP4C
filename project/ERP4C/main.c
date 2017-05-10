@@ -45,7 +45,7 @@ void SayHello(){
 	printf("ERP4C %s ",version);
     printf("| dev-build %04d\n",buildnum[0]);
 }
-##ifndef MENULOGGIN
+#ifndef MENULOGGIN
 #define MENULOGGIN 1
 #endif
 void ShowMainMenu(){
