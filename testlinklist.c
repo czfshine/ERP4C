@@ -4,7 +4,7 @@ typedef struct {
 } goods;
 
 
-int print( ptr elem){
+int print( LinkList L,ptr elem){
 	printf("%d",((goods *)elem)->a);
 	return 0;
 }

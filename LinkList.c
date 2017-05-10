@@ -48,7 +48,7 @@ int pushfront(LinkList L, ptr elem){
 	return 0;
 }
 
-ptr foreach(LinkList L,int (* fn)(ptr )){
+ptr foreach(LinkList L,int (* fn)(LinkList,ptr )){
 
 	LinkNode *p;
 	p=L;
@@ -56,7 +56,7 @@ ptr foreach(LinkList L,int (* fn)(ptr )){
 	while(p->next){
 		LinkNode * a=p->next;
 		ptr b=a->elem;
-		if(fn(b)){
+		if(fn(L,b)){
 			return p->next;
 		}
 		p=p->next;
