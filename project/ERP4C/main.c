@@ -48,6 +48,7 @@ void SayHello(){
 #ifndef MENULOGGIN
 #define MENULOGGIN 1
 #endif
+
 void ShowMainMenu(){
 	
 	
@@ -136,7 +137,7 @@ int ListenMainKey(){
 	}
 
 	switch(op){
-		case 
+		case 1 :break;
 	}
 	printf("%d\n",op);
 	
