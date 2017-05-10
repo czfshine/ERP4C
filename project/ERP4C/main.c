@@ -48,9 +48,9 @@ void ShowMainMenu(){
 		"2)\tchange goods\n"
 		"3)\tremove goods\n"
 		"4)\tloggin stock&sale info\n"
-		"5)\t query goods\n"
+		"5)\tquery goods\n"
 		"6)\tstatis goods\n"
-		"7)\t exit\n"
+		"7)\texit\n"
 		"Input your choice:"
 	};
 
