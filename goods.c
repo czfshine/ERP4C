@@ -47,7 +47,9 @@ int findid(LinkList L,goods * g){
 	}
 }
 goods * FindGoodsById(Store s,int id){
-	s.L->elem->waitid=id;
+	StoreInfo * si;
+	si=	s.L->elem;
+	si->waitid=id;
 	LinkNode * p;
 	p=foreach(s.L,findid);
 
