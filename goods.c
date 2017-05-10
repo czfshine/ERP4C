@@ -4,7 +4,9 @@ Store * InitStore(){
 	Store *s;
 	s=MAKE(Store);
 	s.L=LinkListInit();
-
+	StoreInfo *si;
+	si=MAKE(StoreInfo);
+	s.L->elem=si;
 	return s;
 }
 int AddGoods(Store s,int id,char * name,int count){
@@ -34,17 +36,16 @@ int ChangeGoodsCount(Store s,int id,char * name){
 	g->count=count;
 	return 0;
 }
-int WaitFindId;
 
-int findid(goods * g){
-	if(g->id == WaitFindId ){
+int findid(LinkList L,goods * g){
+	if(g->id == L->elem->waitid ){
 		return 1;
 	}else{
 		return 0
 	}
 }
 goods * FindGoodsById(Store s,int id){
-	WaitFindId=id;
+	s.L->elem->waitid=id;
 	LinkNode * p;
 	p=foreach(s.L,findid);
 
