@@ -1,8 +1,8 @@
 #define ptr void *
 
-typedef struct
+typedef struct LinkNode
 {	ptr elem;
-	 LinkNode *next;
+	struct LinkNode *next;
 }  LinkNode,*LinkList;
 
 
