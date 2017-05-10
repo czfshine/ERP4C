@@ -172,7 +172,7 @@ int ListenMainKey(){
 		MENUITEM(MENUQUERY,callback());
 		MENUITEM(MENUSTATIS,callback());
 		MENUITEM(MENUHELP,callback());
-		MENUITEM(MENUEXIT,callback());
+		MENUITEM(MENUEXIT,{return 1});
 	DEFAULTITEM(callback());
 	
 	return 0;
