@@ -70,14 +70,18 @@ void ShowMainMenu(){
 
 #define WANTTYPEERROR -1
 #define WANTNULLERROR -2
-
+#define WANTLONGERROR -3
 int WantNum(){
+	//note: The input num must be > 0
 	int res=0;
 	char ch;
 	char flag=0;
 	while((ch=getchar())!='\n'){
 		if(isdigit(ch)){
 			res=res*10+ch-'0';
+			if(res<0){
+				return WANTLONGERROR;
+			}
 			flag=1;
 		}else{
 			InputClean();
@@ -106,7 +110,9 @@ void TypeError(INPUTTYPE T){
 void TypeNullError(INPUTTYPE T){
 	printf("ERROR: you must input a %s\n",TYPENAME[T]);
 }
-
+void TypeLongError(INPUTTYPE T){
+	printf("ERROR: input %s is too long,try input a small %s\n",TYPENAME[T],TYPENAME[T]);
+}
 #define MainWantError(errortype,wanttype) 	CleanScreen();\
 										   	errortype(wanttype);\
 											ShowMainMenu();\
@@ -121,6 +127,8 @@ int ListenMainKey(){
 			MainWantError (TypeError,T_NUM);
 		case WANTNULLERROR:
 			MainWantError (TypeNullError,T_NUM);
+		case WANTLONGERROR:
+			MainWantError(TypeLongerror,T_NUM);
 	}
 	printf("%d\n",op);
 	
