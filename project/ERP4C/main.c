@@ -108,7 +108,7 @@ void TypeNullError(INPUTTYPE T){
 	printf("ERROR: you must input a %s\n",TYPENAME[T]);
 }
 
-#define MainWantError (errortype,wanttype) 	CleanScreen();\
+#define MainWantError(errortype,wanttype) 	CleanScreen();\
 										   	errortype(wanttype);\
 											ShowMainMenu();\
 											return 0;
