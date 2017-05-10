@@ -1,6 +1,7 @@
 typedef struct {
+	int id;
 	char name[255];
-	int cout;
+	int count;
 
 } goods;
 
