@@ -43,8 +43,15 @@ void SayHello(){
 }
 void ShowMainMenu(){
 	char str[]={
-		"Please choice a option:\n"
-		"1)\tloggin data"
+		"Please choose a option:\n"
+		"1)\tloggin goods\n"
+		"2)\tchange goods\n"
+		"3)\tremove goods\n"
+		"4)\tloggin stock&sale info\n"
+		"5)\t query goods\n"
+		"6)\tstatis goods\n"
+		"7)\t exit\n"
+		"Input your choice:"
 	};
 
 	printf("%s",str);
