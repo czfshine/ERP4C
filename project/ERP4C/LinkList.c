@@ -38,7 +38,7 @@ int pushback(LinkList L,ptr elem){
 
 int pushfront(LinkList L, ptr elem){
 
-	LinkNode * n,p;
+	LinkNode * n,*p;
 	n=newnode(elem);
 
 	p=L->next;
