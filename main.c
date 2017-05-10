@@ -41,11 +41,13 @@ char version[]="dev 0.0.1";
 
 
 void SayHello(){
-	system("cls");
+	
 	printf("ERP4C %s ",version);
     printf("| dev-build %04d\n",buildnum[0]);
 }
 void ShowMainMenu(){
+	system("cls");
+	SayHello();
 	char str[]={
 		"Please choose a option:\n"
 		"1)\tloggin goods\n"
@@ -65,7 +67,7 @@ void ShowMainMenu(){
 void InputClean(){
 	char ch;
 	while((ch=getchar())!='\n'){}
-		
+
 }
 int WantNum(){
 	int res=0;
@@ -89,14 +91,14 @@ int ListenMainKey(){
 		printf("input error\n");
 		ShowMainMenu();
 	}else{
-		printf("%d",op);
+		printf("%d\n",op);
 	}
 	return 0;
 }
 
 int main()
 {
-    SayHello();
+    
     ShowMainMenu();
 
     LOOP(ListenMainKey);
