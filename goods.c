@@ -41,7 +41,7 @@ int findid(LinkList L,ptr p){
 	StoreInfo *si;
 	si= L->elem;
 	goods *g;
-	g=(goods * p);
+	g=(goods *) p;
 	if(g->id == si->waitid ){
 		return 1;
 	}else{
