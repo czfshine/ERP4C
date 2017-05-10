@@ -3,10 +3,10 @@
 Store * InitStore(){
 	Store *s;
 	s=MAKE(Store);
-	s.L=LinkListInit();
+	s->L=LinkListInit();
 	StoreInfo *si;
 	si=MAKE(StoreInfo);
-	s.L->elem=si;
+	s->L->elem=si;
 	return s;
 }
 int AddGoods(Store s,int id,char * name,int count){
