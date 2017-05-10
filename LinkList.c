@@ -1,7 +1,7 @@
 #include "linklist.h"
 #include <stdlib.h>
 #include <string.h>
-LinkList init(LinkList L){
+LinkList init(){
 	LinkNode *n;
 	n=newnode(NULL);
 	n->next=NULL;
