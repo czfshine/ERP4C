@@ -149,7 +149,16 @@ void TypeLongError(INPUTTYPE T){
 
 void callback(){
 	printf("test callback");
-}						
+}	
+
+void ShowHelp(){
+	char str[]={
+		"This a help doc\n"
+		"More infomation to see https://github.com/czfshine/my_oj\n"
+		"Thanks you !\n"
+	}
+	printf("%s",str);
+}					
 int ListenMainKey(){
 	int op;
 
@@ -171,7 +180,7 @@ int ListenMainKey(){
 		MENUITEM(MENULOG2S,callback());
 		MENUITEM(MENUQUERY,callback());
 		MENUITEM(MENUSTATIS,callback());
-		MENUITEM(MENUHELP,callback());
+		MENUITEM(MENUHELP,ShowHelp());
 		MENUITEM(MENUEXIT,return 1);
 	DEFAULTITEM(callback());
 	
