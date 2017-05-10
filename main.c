@@ -37,12 +37,16 @@ int buildnum[]={
 char version[]="dev 0.0.1";
 
 void SayHello(){
-
+	system("cls");
 	printf("ERP4C %s ",version);
     printf("| dev-build %04d\n",buildnum[0]);
+}
+void ShowMainMenu(){
+	
 }
 int main()
 {
     SayHello();
+    ShowMainMenu();
     return 0;
 }
