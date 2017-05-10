@@ -91,7 +91,7 @@ char * TYPENAME[]={
 	"string"
 };
 
-void TypeError(INPUTYPE T){
+void TypeError(INPUTTYPE T){
 
 	printf("ERROR: Expect a %s but got another",TYPENAME[T]);
 }
