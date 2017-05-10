@@ -9,7 +9,7 @@ LinkList LinkListInit(){
 
 LinkNode * newnode (ptr elem){
 	LinkNode * n;
-	n=MAKE(ListNode);
+	n=MAKE(LinkNode);
 	n->elem=elem;
 	n->next=NULL;
 	return n;
