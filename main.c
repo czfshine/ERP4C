@@ -32,7 +32,7 @@ Description:
 #include <ctype.h>
 
 #define LOOP(fn) while(!fn()){}
-
+#define CleanScreen()  system("cls");
 int buildnum[]={
 	#include "BUILDNUM"
 };
@@ -46,7 +46,7 @@ void SayHello(){
     printf("| dev-build %04d\n",buildnum[0]);
 }
 void ShowMainMenu(){
-	system("cls");
+	
 	SayHello();
 	char str[]={
 		"Please choose a option:\n"
@@ -83,12 +83,25 @@ int WantNum(){
 	return res;
 }
 
+typedef INPUTTYPE int;
+char * TYPENAME[]={
+	"number",
+	"string"
+}
+#define T_NUM 0
+#define T_STR 1
+void TypeError(INPUTYPE T){
+
+	printf("ERROR: Expect a %s but got another",TYPENAME[T]);
+}
+
+
 int ListenMainKey(){
 	int op;
 
 	op=WantNum();
 	if(op==-1){
-		printf("input error\n");
+		TypeError(T_NUM);
 		ShowMainMenu();
 	}else{
 		printf("%d\n",op);
@@ -98,9 +111,8 @@ int ListenMainKey(){
 
 int main()
 {
-    
+    CleanScreen();
     ShowMainMenu();
-
     LOOP(ListenMainKey);
 
     return 0;
