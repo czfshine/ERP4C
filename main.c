@@ -29,12 +29,16 @@ Description:
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+
+#define LOOP(fn) while(!fn()){}
 
 int buildnum[]={
 	#include "BUILDNUM"
 };
 
 char version[]="dev 0.0.1";
+
 
 void SayHello(){
 	system("cls");
@@ -50,16 +54,48 @@ void ShowMainMenu(){
 		"4)\tloggin stock&sale info\n"
 		"5)\tquery goods\n"
 		"6)\tstatis goods\n"
-		"7)\texit\n"
+		"7)\thelp\n"
+		"0)\texit\n"
 		"Input your choice:"
 	};
 
 	printf("%s",str);
 
 }
+
+int WantNum(){
+	int res=0;
+	char ch;
+	while((ch=getchar())!='\n'){
+		if(isdigit(ch)){
+			res=res*10+ch-'0';
+		}else{
+			InputClean();
+			return -1;
+		}
+	}
+	return res;
+}
+
+int ListenMainKey(){
+	int op;
+
+	op=WantNum();
+	if(op==-1){
+		printf("input error\n");
+		ShowMainMenu();
+	}else{
+		printf("%d",op);
+	}
+	return 0;
+}
+
 int main()
 {
     SayHello();
     ShowMainMenu();
+
+    LOOP(ListenMainKey);
+
     return 0;
 }
