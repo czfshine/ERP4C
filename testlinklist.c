@@ -5,7 +5,7 @@ typedef struct {
 
 
 int print( ptr elem){
-	printf("%d",elem->a);
+	printf("%d",((goods *)elem)->a);
 	return 0;
 }
 int main(){
