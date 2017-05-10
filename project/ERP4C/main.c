@@ -36,6 +36,6 @@ int buildnum[]={
 int main()
 {
     printf("Hello world!\n");
-    PRINTF("%d",buildnum[0]);
+    printf("%d",buildnum[0]);
     return 0;
 }
