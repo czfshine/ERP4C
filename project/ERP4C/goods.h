@@ -9,3 +9,6 @@ typedef struct {
 	LinkList L;
 }	Store;
 
+typedef struct {
+	int waitid;
+}	StoreInfo;
