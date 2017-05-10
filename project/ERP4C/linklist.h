@@ -2,8 +2,8 @@
 
 typedef struct
 {	ptr elem;
-	struct ListNode *next;
-}  ListNode,LinkList;
+	struct LinkNode *next;
+}  LinkNode,LinkList;
 
 
 void init(LinkList);
