@@ -45,34 +45,35 @@ void callback(){
 
 
 void LogginGoods(){
-	ShowLogginGoods();
-	char * name;
-	int id,count;
+	while(1){
+		ShowLogginGoods();
+		char * name;
+		int id,count;
 
-	name=WantName();
-	id=WantId();
-	count=WantCount();
-	printf("input end");
-	printf("%d %d %s",id,count,name);
-	/*TODO ERROR*/
-	if(id == 0){
-		ShowMainMenu();
-		return 0;
+		name=WantName();
+		id=WantId();
+		count=WantCount();
+		printf("input end");
+		printf("%d %d %s",id,count,name);
+		/*TODO ERROR*/
+		if(id == 0){
+			ShowMainMenu();
+			return 0;
+		}
+		goods *g;
+		g=FindGoodsById(GobalStore,id);
+
+		printf("%d %d %s",id,count,name);
+		if(g!=NULL){
+			ShowGoodsExist(id);
+			return 0;
+		}
+
+
+		AddGoods( GobalStore,id,name,count);
+		printf("%d %d %s",id,count,name);
+		ShowLogginSuccess();
 	}
-	goods *g;
-	g=FindGoodsById(GobalStore,id);
-
-	printf("%d %d %s",id,count,name);
-	if(g!=NULL){
-		ShowGoodsExist(id);
-		return 0;
-	}
-
-
-	AddGoods( GobalStore,id,name,count);
-	printf("%d %d %s",id,count,name);
-	ShowLogginSuccess();
-
 	return 0;
 }
 int ListenMainKey(){
