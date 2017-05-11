@@ -42,7 +42,7 @@ void callback(){
 	printf("test callback");
 }		
 
-goods * WantGoodsById(){
+goods * WantGoodsById(int * res){
 	int id;
 	id=WantId();
 	/*TODO TYPE ERROR*/
@@ -50,6 +50,8 @@ goods * WantGoodsById(){
 		ToMainScreen();
 		return -1;
 	}
+
+	*res=id;
 	goods *g;
 	g=FindGoodsById(GobalStore,id);
 
@@ -61,25 +63,21 @@ int LogginGoods(){
 
 	ToLogginScreen();
 	char * name;
-	int count;
+	int id,count;
 
 	
 	goods *g;
-	g=WantGoodsById();
+	g=WantGoodsById(id);
 
 	if(g!=NULL){
 		
-		ShowGoodsExist(g->id);
+		ShowGoodsExist(id);
 		WantEnter();
 		return 0;
 	}
 
 	name=WantName();
 	count=WantCount();
-	
-	
-
-
 
 	AddGoods( GobalStore,id,name,count);
 
