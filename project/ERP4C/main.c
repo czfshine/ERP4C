@@ -87,6 +87,7 @@ int LogginGoods(){
 	
 	return 0;
 }
+/*
 int ChangeName(goods* g){
 	char * name;
 	name=WantName();
@@ -95,7 +96,7 @@ int ChangeName(goods* g){
 	g->name=name;
 	return 0;
 }
-
+*/
 int ChangeCount(goods * g){
 
 	int count ;
