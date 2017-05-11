@@ -16,6 +16,7 @@ int AddGoods(Store s,int id,char * name,int count){
 	strcpy(g->name,name);
 	g->count=count;
 	pushfront(s.L,g);
+	free(name);
 	return OK;
 }
 

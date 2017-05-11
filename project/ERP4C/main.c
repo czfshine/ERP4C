@@ -92,8 +92,8 @@ int ChangeName(goods* g){
 	char * name;
 	name=WantName();
 
-	free(g->name);
-	g->name=name;
+	
+	strcpy(g->name,name);
 	return 0;
 }
 
