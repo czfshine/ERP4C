@@ -46,16 +46,14 @@ void callback(){
 
 void LogginGoods(){
 	while(1){
-		CleanScreen();
-		ShowLogginGoods();
+		ToLogginScreen();
 		char * name;
 		int id,count;
 
 		id=WantId();
-		/*TODO ERROR*/
+		/*TODO TYPE ERROR*/
 		if(id == 0){
-			CleanScreen();
-			ShowMainMenu();
+			ToMainScreen();
 			return 0;
 		}
 
@@ -68,7 +66,7 @@ void LogginGoods(){
 		g=FindGoodsById(GobalStore,id);
 
 		if(g!=NULL){
-			/*CleanScreen();*/
+			
 			ShowGoodsExist(id);
 			WantEnter();
 			continue;
@@ -114,8 +112,7 @@ int main()
 {
 	Init();
 
-    CleanScreen();
-    ShowMainMenu();
+    ToMainScreen();
     LOOP(ListenMainKey);
     SayGoodbye();
 
