@@ -68,14 +68,14 @@ int LogginGoods(){
 	
 	goods *g;
 	g=WantGoodsById(&id);
-	if(g==-1) return -1;
+	if(g==-1) return 1;
 	if(g!=NULL){
 		
 		ShowGoodsExist(id);
 		WantEnter();
 		return 0;
 	}
-	
+
 
 	name=WantName();
 	count=WantCount();
@@ -87,16 +87,33 @@ int LogginGoods(){
 	
 	return 0;
 }
-/*
+int ChangeName(goods* g){
+	char * name;
+	name=WantName();
 
+	free(g->name);
+	g->name=name;
+	return 0;
+}
+
+int ChangeCount(goods * g){
+
+	int count ;
+	count =WantCount();
+
+	g->count=count;
+	return 0;
+
+}
+/*
 int ChangeGoods(){
 	ToChangeScreen();
 
 	int id;
 	goods * g;
+	g=FindGoodsById(GobalStore,&id);
 
-	g=FindGoodsById(GobalStore,id);
-
+	if(g==-1) return 1;
 	if(g==NULL){
 		ShowCantFind(id);
 		WantEnter();
@@ -109,12 +126,13 @@ int ChangeGoods(){
 	type=WantId();
 
 	switch(type){
-		case CHANGENAME:break;
-		case CHANGECOUNT:break;
+		case CHANGENAME:ChangeName()break;
+		case CHANGECOUNT:ChangeCount();break;
 	}
 
 	return 0;
 }
+
 */
 int ListenMainKey(){
 	int op;
@@ -132,7 +150,7 @@ int ListenMainKey(){
 
 	MENU(op)
 		MENUITEM(MENULOGGIN,LOOP(LogginGoods));
-		MENUITEM(MENUCHANGE,callback());
+		/*MENUITEM(MENUCHANGE,LOOP(ChangeGoods));*/
 		MENUITEM(MENUREMOVE,callback());
 		MENUITEM(MENULOG2S,callback());
 		MENUITEM(MENUQUERY,callback());
