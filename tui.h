@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#define CleanScreen()  system("cls");SayHello();
+#define CleanScreen()  /*system("cls")*/;SayHello();
 #define InputClean() 	char ch;\
 						while((ch=getchar())!='\n'){}
 
