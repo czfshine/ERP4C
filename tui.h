@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#define CleanScreen()  /*system("cls")*/;SayHello();
+#define CleanScreen()  system("cls");SayHello();
 #define InputClean() 	char ch;\
 						while((ch=getchar())!='\n'){}
 
@@ -59,10 +59,21 @@ void SayHello();
 void SayGoodbye();
 void ShowMainMenu();
 void ShowHelp();
+void ShowLogginGoods();
+void ShowGoodsExist(int id);
+void ShowLogginSuccess();
+
+
+
 void TypeError(INPUTTYPE T);
 void TypeNullError(INPUTTYPE T);
 void TypeLongError(INPUTTYPE T);
 
 
 int WantNum();
+char * WantString();
+char * WantName();
+int WantId();
+int WantCount();
+
 #endif

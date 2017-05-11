@@ -86,3 +86,73 @@ int WantNum(){
 	}
 	
 }
+
+char * WantString(){
+	//todo
+	char * a;
+	a=(char * )malloc(255);
+	return *a
+
+}
+char * WantName(){
+	//todo
+	printf("Please input the good's name:");
+	return WantString();
+	
+}
+
+int WantId(){
+	//todo
+	printf("Please input the good's id:");
+	int id;
+	id=WantNum();
+	return id;
+}
+
+int WantCount(){
+	//todo
+	printf("Please input the good's id:");
+
+	int count;
+	count=WantNum():
+
+	return count;
+
+}
+
+
+void ShowLogginGoods(){
+	CleanScreen():
+
+	char str[]={
+		"Loggin goods infomation:\n"
+		"Note : You can input a id equal 0 to exit loggin.\n"
+
+	};
+
+	printf("%s",str);
+
+
+}
+
+
+void ShowGoodsExist(int id){
+
+	char str[]={
+		"The Goods id:%d is exist,please input another id\n"
+		"Note : You can input a id equal 0 to exit loggin.\n"
+
+	};
+
+	printf(str,id);
+
+}
+
+void ShowLogginSuccess(){
+
+	char str[]={
+		"The goods are success loggin.\n"
+	};
+
+	printf("%s",str);
+}

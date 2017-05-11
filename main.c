@@ -32,12 +32,45 @@ Description:
 
 #define LOOP(fn) while(!fn()){}
 
+Store GobalStore;
+
+void Init(){
+	Store * S;
+	S=InitStore();
+	GobalStore=*S;
+}
 void callback(){
 	printf("test callback");
 }		
 
-Store GobalStore;
 
+void LogginGoods(){
+	ShowLogginGoods();
+	char * name;
+	int id,count;
+
+	name=WantName();
+	id=WantId();
+	count=WantCount();
+
+	//TODO ERROR
+	if(id == 0){
+		ShowMainMenu();
+		return 0;
+	}
+	goods *g;
+	g=FindGoodsById(s,id);
+
+	if(g!=NULL){
+		ShowGoodsExist(id);
+		return 0;
+	}
+
+	AddGoods( GobalStore,id,name,count);
+	ShowLogginSuccess();
+
+	return 0;
+}
 int ListenMainKey(){
 	int op;
 
@@ -68,9 +101,8 @@ int ListenMainKey(){
 
 int main()
 {
-	Store * S;
-	S=InitStore();
-	GobalStore=*S;
+	Init();
+
     CleanScreen();
     ShowMainMenu();
     LOOP(ListenMainKey);
