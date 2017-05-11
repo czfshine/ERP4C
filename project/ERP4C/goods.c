@@ -47,7 +47,7 @@ int cmpid(goods *g,StoreInfo * si){
 }
 
 int cmpname(goods *g,StoreInfo * si){
-	return cmp(g->name,si->waitname)==0;
+	return strcmp(g->name,si->waitname)==0;
 }
 
 int find(LinkList L,ptr p,int (* cmp)(goods *,StoreInfo *)){
