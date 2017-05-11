@@ -13,6 +13,8 @@ int main(){
 	AddGoods(*S,6,"2111",3);
 	ShowAllGoods();
 
+	printf("\n"):
+	
 	ChangeGoodsName(*S,1,"5555");
 
 	ChangeGoodsCount(*S,2,555);
