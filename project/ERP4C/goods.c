@@ -42,24 +42,27 @@ int ChangeGoodsCount(Store s,int id,int count){
 	g->count=count;
 	return CHANGEOK;
 }
-
-int findid(LinkList L,ptr p){
+int cmpid(goods *g,StoreInfo * si){
+	return g->id == si->waitid ;
+}
+int findid(LinkList L,ptr p,(int *) cmp(goods *,StoreInfo *)){
 	StoreInfo *si;
 	si= L->elem;
 	goods *g;
 	g=(goods *) p;
-	if(g->id == si->waitid ){
+	if(cmp(g,si)){
 		return 1;
 	}else{
 		return 0;
 	}
 }
+
 goods * FindGoodsById(Store s,int id){
 	StoreInfo * si;
 	si=	s.L->elem;
 	si->waitid=id;
 	LinkNode * p;
-	p=foreach(s.L,findid);
+	p=foreach(s.L,findid,cmpid);
 
 	if(p==NULL){
 		return NULL;
