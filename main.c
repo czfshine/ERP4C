@@ -66,7 +66,7 @@ void LogginGoods(){
 		printf("%d %d %s",id,count,name);
 		if(g!=NULL){
 			ShowGoodsExist(id);
-			return 0;
+			continue;
 		}
 
 
