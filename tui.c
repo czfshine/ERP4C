@@ -91,6 +91,7 @@ char * WantString(){
 	/*todo*/
 	char * a;
 	a=(char * )malloc(255);
+	scanf("%s",a);
 	return *a;
 
 }
@@ -111,7 +112,7 @@ int WantId(){
 
 int WantCount(){
 	/*todo*/
-	printf("Please input the good's id:");
+	printf("Please input the good's count:");
 
 	int count;
 	count=WantNum();
