@@ -126,7 +126,7 @@ int ChangeGoods(){
 	type=WantId();
 
 	switch(type){
-		case CHANGENAME:ChangeName(g)break;
+		case CHANGENAME:ChangeName(g);break;
 		case CHANGECOUNT:ChangeCount(g);break;
 	}
 
