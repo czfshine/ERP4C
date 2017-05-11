@@ -16,7 +16,7 @@ int AddGoods(Store s,int id,char * name,int count){
 	strcpy(g->name,name);
 	g->count=count;
 	pushfront(s.L,g);
-	return 0;
+	return OK;
 }
 
 int ChangeGoodsName(Store s,int id,char * name){
@@ -24,8 +24,11 @@ int ChangeGoodsName(Store s,int id,char * name){
 	goods *g;
 	g=FindGoodsById(s,id);
 
+	if(g==NULL){
+		return CHANGEFINDERROR;
+	}
 	strcpy(g->name,name);
-	return 0;
+	return CHANGEOK;
 }
 
 int ChangeGoodsCount(Store s,int id,int count){
@@ -33,8 +36,11 @@ int ChangeGoodsCount(Store s,int id,int count){
 	goods *g;
 	g=FindGoodsById(s,id);
 
+	if(g==NULL){
+		return CHANGEFINDERROR;
+	}
 	g->count=count;
-	return 0;
+	return CHANGEOK;
 }
 
 int findid(LinkList L,ptr p){
@@ -73,5 +79,4 @@ int printgoods(LinkList L,ptr p){
 int ShowAllGoods(Store s){
 	foreach(s.L,printgoods);
 	return 0;
-
 }
