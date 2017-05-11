@@ -52,7 +52,7 @@ void ShowHelp(){
 }	
 
 void TypeError(INPUTTYPE T){
-	printf("\033[32mERROR: Expect a %s but got another\n",TYPENAME[T]);
+	printf("ERROR: Expect a %s but got another\n",TYPENAME[T]);
 }
 void TypeNullError(INPUTTYPE T){
 	printf("ERROR: you must input a %s\n",TYPENAME[T]);
