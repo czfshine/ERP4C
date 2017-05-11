@@ -5,6 +5,18 @@
 #include <stdlib.h>
 #include <ctype.h>
 #define CleanScreen()  system("cls");SayHello();
+
+#define ToMainScreen() CleanScreen();\
+    					ShowMainMenu();
+
+#define ToLogginScreen() CleanScreen();\
+						ShowLogginGoods();
+
+
+
+
+
+
 #define InputClean() 	char ch;\
 						while((ch=getchar())!='\n'){}
 
@@ -76,5 +88,6 @@ char * WantName();
 int WantId();
 int WantCount();
 void WantEnter();
+
 
 #endif
