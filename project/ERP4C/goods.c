@@ -73,13 +73,13 @@ goods * FindGoodsById(Store s,int id){
 	}
 }
 
-int printgoods(LinkList L,ptr p){
+int printgoods(LinkList L,ptr p,int (* cmp)(goods *,StoreInfo *)){
 	goods *g;
 	g=(goods* )p;
 	printf("id:%05d\tname:%-10s\tcount:%05d\n",g->id,g->name,g->count);
 	return 0;
 }
 int ShowAllGoods(Store s){
-	foreach(s.L,printgoods);
+	foreach(s.L,printgoods,cmpid);
 	return 0;
 }
