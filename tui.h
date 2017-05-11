@@ -4,8 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#define CleanScreen()  system("cls");SayHello();
 
+#ifdef __linux__ || __linux
+#define CleanScreen()  system("clear");SayHello();
+#else
+#define CleanScreen()  system("cls");SayHello();
+#endif
 #define ToMainScreen() CleanScreen();\
     					ShowMainMenu();
 

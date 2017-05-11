@@ -57,13 +57,10 @@ int LogginGoods(){
 	}
 
 	name=WantName();
-	
 	count=WantCount();
-	
 	
 	goods *g;
 	g=FindGoodsById(GobalStore,id);
-
 	if(g!=NULL){
 		
 		ShowGoodsExist(id);
