@@ -15,6 +15,29 @@ typedef struct {
 typedef struct {
 	int waitid;
 }	StoreInfo;
+
+
+#define CANTFIND 0;
+
+#ifndef CHANGEOK
+#define CHANGEOK 0
+#endif
+
+#ifndef CHANGFINDERROR
+#define CHANGFINDERROR 1
+#endif
+
+#ifndef OK
+#define OK 0
+#endif
+
+#ifndef ERROR
+#define ERROR 1
+#endif
+
+
+
+
 Store * InitStore();
 int AddGoods(Store s,int id,char * name,int count);
 int ChangeGoodsName(Store s,int id,char * name);
