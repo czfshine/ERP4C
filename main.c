@@ -94,7 +94,8 @@ int ListenMainKey(){
 	}
 
 	MENU(op)
-		MENUITEM(MENULOGGIN,LOOP(LogginGoods));
+		/*MENUITEM(MENULOGGIN,LOOP(LogginGoods));*/
+		case 1 :while(!LogginGoods()){};;break;;
 		MENUITEM(MENUCHANGE,callback());
 		MENUITEM(MENUREMOVE,callback());
 		MENUITEM(MENULOG2S,callback());
