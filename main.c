@@ -86,7 +86,7 @@ int ListenMainKey(){
 	}
 
 	MENU(op)
-		MENUITEM(MENULOGGIN,callback());
+		MENUITEM(MENULOGGIN,LogginGoods());
 		MENUITEM(MENUCHANGE,callback());
 		MENUITEM(MENUREMOVE,callback());
 		MENUITEM(MENULOG2S,callback());
