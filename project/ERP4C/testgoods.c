@@ -15,7 +15,7 @@ int main(){
 
 	printf("\n");
 
-	ChangeGoodsName(*S,1,"5555")
+	ChangeGoodsName(*S,1,"5555");
 	if(ChangeGoodsName(*S,5555,"5555")){
 		printf("can't find goods by id:%d",5555);
 	};
