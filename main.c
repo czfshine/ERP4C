@@ -67,7 +67,7 @@ int LogginGoods(){
 
 	
 	goods *g;
-	g=WantGoodsById(id);
+	g=WantGoodsById(&id);
 
 	if(g!=NULL){
 		
