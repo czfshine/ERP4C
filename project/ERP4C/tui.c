@@ -181,7 +181,7 @@ void ShowChangeType(){
 		"Please choose you want change infomation type:\n"
 		"1) good's name\n"
 		"2) good's count\n"
-	}
+	};
 
 	printf("%s",str);
 }
