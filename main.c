@@ -50,15 +50,18 @@ void LogginGoods(){
 		char * name;
 		int id,count;
 
-		name=WantName();
 		id=WantId();
-		count=WantCount();
-		
 		/*TODO ERROR*/
 		if(id == 0){
 			ShowMainMenu();
 			return 0;
 		}
+		
+		name=WantName();
+		
+		count=WantCount();
+		
+		
 		goods *g;
 		g=FindGoodsById(GobalStore,id);
 
