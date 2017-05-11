@@ -1,6 +1,5 @@
 #include "tui.h"
 
-typedef int INPUTTYPE ;
 char * TYPENAME[]={
 	"number",
 	"string"
