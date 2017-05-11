@@ -92,6 +92,7 @@ char * WantString(){
 	char * a;
 	a=(char * )malloc(255);
 	scanf("%s",a);
+	getchar();
 	return *a;
 
 }
