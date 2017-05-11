@@ -42,31 +42,43 @@ void callback(){
 	printf("test callback");
 }		
 
+goods * WantGoodsById(){
+	int id;
+	id=WantId();
+	/*TODO TYPE ERROR*/
+	if(id == 0){
+		ToMainScreen();
+		return -1;
+	}
+	goods *g;
+	g=FindGoodsById(GobalStore,id);
+
+	return g;
+
+}
 
 int LogginGoods(){
 
 	ToLogginScreen();
 	char * name;
-	int id,count;
+	int count;
 
-	id=WantId();
-	/*TODO TYPE ERROR*/
-	if(id == 0){
-		ToMainScreen();
-		return 1;
-	}
-
-	name=WantName();
-	count=WantCount();
 	
 	goods *g;
-	g=FindGoodsById(GobalStore,id);
+	g=WantGoodsById();
+
 	if(g!=NULL){
 		
 		ShowGoodsExist(id);
 		WantEnter();
 		return 0;
 	}
+
+	name=WantName();
+	count=WantCount();
+	
+	
+
 
 
 	AddGoods( GobalStore,id,name,count);
@@ -76,6 +88,43 @@ int LogginGoods(){
 	
 	return 0;
 }
+/*
+
+int ChangeGoods(){
+	ToChangeScreen();
+
+	int id;
+	id=WantId();
+
+	if(id == 0){
+
+		ToMainScreen();
+		return 1;
+	}
+
+	goods g;
+	g=FindGoodsById(GobalStore,id);
+
+	if(g==NULL){
+		ShowCantFind(id);
+		WantEnter();
+		return 0;
+	}
+
+	ShowChangeType();
+
+	int type;
+	type=WantId();
+
+	switch(type){
+		case CHANGENAME:break;
+		case CHANGECOUNT:break;
+	}
+
+	return 0;
+}
+
+*/
 int ListenMainKey(){
 	int op;
 
