@@ -45,7 +45,7 @@ int ChangeGoodsCount(Store s,int id,int count){
 int cmpid(goods *g,StoreInfo * si){
 	return g->id == si->waitid ;
 }
-int findidwithcmp(LinkList L,ptr p,int (* cmp)(goods *,StoreInfo *)){
+int findid(LinkList L,ptr p,int (* cmp)(goods *,StoreInfo *)){
 	StoreInfo *si;
 	si= L->elem;
 	goods *g;
