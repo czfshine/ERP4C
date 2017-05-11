@@ -28,13 +28,16 @@ Description:
 */
 
 #include "tui.h"
+#include "goods.h"
 
 #define LOOP(fn) while(!fn()){}
 
-
 void callback(){
 	printf("test callback");
-}				
+}		
+
+Store GobalStore;
+
 int ListenMainKey(){
 	int op;
 
@@ -47,7 +50,7 @@ int ListenMainKey(){
 			MainWantError (TypeNullError,T_NUM);
 		case WANTLONGERROR:
 			MainWantError (TypeLongError,T_NUM);
-		}
+	}
 
 	MENU(op)
 		MENUITEM(MENULOGGIN,callback());
@@ -65,6 +68,9 @@ int ListenMainKey(){
 
 int main()
 {
+	Store * S;
+	S=InitStore();
+	GobalStore=*S;
     CleanScreen();
     ShowMainMenu();
     LOOP(ListenMainKey);
