@@ -88,21 +88,21 @@ int WantNum(){
 }
 
 char * WantString(){
-	//todo
+	/*todo*/
 	char * a;
 	a=(char * )malloc(255);
-	return *a
+	return *a;
 
 }
 char * WantName(){
-	//todo
+	/*todo*/
 	printf("Please input the good's name:");
 	return WantString();
 	
 }
 
 int WantId(){
-	//todo
+	/*todo*/
 	printf("Please input the good's id:");
 	int id;
 	id=WantNum();
@@ -110,11 +110,11 @@ int WantId(){
 }
 
 int WantCount(){
-	//todo
+	/*todo*/
 	printf("Please input the good's id:");
 
 	int count;
-	count=WantNum():
+	count=WantNum();
 
 	return count;
 
@@ -122,7 +122,7 @@ int WantCount(){
 
 
 void ShowLogginGoods(){
-	CleanScreen():
+	CleanScreen();
 
 	char str[]={
 		"Loggin goods infomation:\n"
@@ -130,7 +130,7 @@ void ShowLogginGoods(){
 
 	};
 
-	printf("%s",str);
+	printf("%s",&str);
 
 
 }
