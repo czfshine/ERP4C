@@ -46,6 +46,7 @@ void callback(){
 
 void LogginGoods(){
 	while(1){
+		CleanScreen();
 		ShowLogginGoods();
 		char * name;
 		int id,count;
@@ -53,10 +54,11 @@ void LogginGoods(){
 		id=WantId();
 		/*TODO ERROR*/
 		if(id == 0){
+			CleanScreen();
 			ShowMainMenu();
 			return 0;
 		}
-		
+
 		name=WantName();
 		
 		count=WantCount();
@@ -66,6 +68,7 @@ void LogginGoods(){
 		g=FindGoodsById(GobalStore,id);
 
 		if(g!=NULL){
+			//CleanScreen();
 			ShowGoodsExist(id);
 			WantEnter();
 			continue;
