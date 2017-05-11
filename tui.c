@@ -130,7 +130,7 @@ void ShowLogginGoods(){
 
 	};
 
-	printf("%s",&str);
+	printf("%s",str);
 
 
 }
