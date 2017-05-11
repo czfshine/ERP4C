@@ -74,6 +74,7 @@ void LogginGoods(){
 		AddGoods( GobalStore,id,name,count);
 		printf("%d %d %s",id,count,name);
 		ShowLogginSuccess();
+		WantEnter();
 	}
 	return 0;
 }
