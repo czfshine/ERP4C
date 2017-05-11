@@ -43,7 +43,7 @@ void callback(){
 }		
 
 
-void LogginGoods(){
+int LogginGoods(){
 
 	ToLogginScreen();
 	char * name;
@@ -94,8 +94,7 @@ int ListenMainKey(){
 	}
 
 	MENU(op)
-		/*MENUITEM(MENULOGGIN,LOOP(LogginGoods));*/
-		case 1 :while(!LogginGoods()){};;break;;
+		MENUITEM(MENULOGGIN,LOOP(LogginGoods));
 		MENUITEM(MENUCHANGE,callback());
 		MENUITEM(MENUREMOVE,callback());
 		MENUITEM(MENULOG2S,callback());
