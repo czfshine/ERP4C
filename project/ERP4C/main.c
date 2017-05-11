@@ -68,7 +68,7 @@ void LogginGoods(){
 		g=FindGoodsById(GobalStore,id);
 
 		if(g!=NULL){
-			//CleanScreen();
+			/*CleanScreen();*/
 			ShowGoodsExist(id);
 			WantEnter();
 			continue;
