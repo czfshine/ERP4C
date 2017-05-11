@@ -23,8 +23,8 @@ typedef struct {
 #define CHANGEOK 0
 #endif
 
-#ifndef CHANGFINDERROR
-#define CHANGFINDERROR 1
+#ifndef CHANGEFINDERROR
+#define CHANGEFINDERROR 1
 #endif
 
 #ifndef OK
