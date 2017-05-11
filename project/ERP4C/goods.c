@@ -45,7 +45,12 @@ int ChangeGoodsCount(Store s,int id,int count){
 int cmpid(goods *g,StoreInfo * si){
 	return g->id == si->waitid ;
 }
-int findid(LinkList L,ptr p,int (* cmp)(goods *,StoreInfo *)){
+
+int cmpname(goods *g,StoreInfo * si){
+	return cmp(g->name,si->waitname)==0;
+}
+
+int find(LinkList L,ptr p,int (* cmp)(goods *,StoreInfo *)){
 	StoreInfo *si;
 	si= L->elem;
 	goods *g;
@@ -62,7 +67,7 @@ goods * FindGoodsById(Store s,int id){
 	si=	s.L->elem;
 	si->waitid=id;
 	LinkNode * p;
-	p=foreachwithcmp(s.L,findid,cmpid);
+	p=foreachwithcmp(s.L,find,cmpid);
 
 	if(p==NULL){
 		return NULL;
@@ -72,6 +77,23 @@ goods * FindGoodsById(Store s,int id){
 		return g;
 	}
 }
+
+goods * FindGoodsByName(Store s,char *name){
+	StoreInfo * si;
+	si=	s.L->elem;
+	si->waitname=name;
+	LinkNode * p;
+	p=foreachwithcmp(s.L,find,cmpname);
+
+	if(p==NULL){
+		return NULL;
+	}else{
+		goods * g;
+		g=p->elem;
+		return g;
+	}
+}
+
 
 int printgoods(LinkList L,ptr p){
 	goods *g;
