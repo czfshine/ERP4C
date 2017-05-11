@@ -90,7 +90,7 @@ int WantNum(){
 char * WantString(){
 	/*todo*/
 	char * a;
-	a=(char * )malloc(255);
+	a=(char * )malloc(25);
 	scanf("%s",a);
 	getchar();
 	return *a;
