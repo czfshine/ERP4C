@@ -37,6 +37,13 @@
 #define MENUEXIT 0
 #endif
 
+int buildnum[]={
+	#include "BUILDNUM"
+};
+
+char version[]="dev 0.0.1";
+
+
 #define T_NUM 0
 #define T_STR 1
 typedef int INPUTTYPE ;
