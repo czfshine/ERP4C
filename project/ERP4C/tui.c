@@ -122,6 +122,9 @@ int WantCount(){
 
 }
 
+void WantEnter(){
+	InputClean();
+}
 
 void ShowLogginGoods(){
 	CleanScreen();
@@ -142,8 +145,7 @@ void ShowGoodsExist(int id){
 	CleanScreen();
 	char str[]={
 		"The Goods id:%d is exist,please input another id\n"
-		"Note : You can input a id equal 0 to exit loggin.\n"
-
+		"Push Enter to contuine.\n"
 	};
 
 	printf(str,id);
