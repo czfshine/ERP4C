@@ -59,7 +59,7 @@ void LogginGoods(){
 		return 0;
 	}
 	goods *g;
-	g=FindGoodsById(s,id);
+	g=FindGoodsById(GobalStore,id);
 
 	if(g!=NULL){
 		ShowGoodsExist(id);
