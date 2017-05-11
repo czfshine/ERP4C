@@ -52,7 +52,7 @@ void LogginGoods(){
 	name=WantName();
 	id=WantId();
 	count=WantCount();
-
+	printf("input end");
 	printf("%d %d %s",id,count,name);
 	/*TODO ERROR*/
 	if(id == 0){
