@@ -139,7 +139,7 @@ void ShowLogginGoods(){
 
 
 void ShowGoodsExist(int id){
-
+	CleanScreen();
 	char str[]={
 		"The Goods id:%d is exist,please input another id\n"
 		"Note : You can input a id equal 0 to exit loggin.\n"
