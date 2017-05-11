@@ -123,6 +123,7 @@ int WantCount(){
 }
 
 void WantEnter(){
+	puts("Push Enter to contuine.");
 	InputClean();
 }
 
@@ -145,7 +146,6 @@ void ShowGoodsExist(int id){
 	CleanScreen();
 	char str[]={
 		"The Goods id:%d is exist,please input another id\n"
-		"Push Enter to contuine.\n"
 	};
 
 	printf(str,id);
