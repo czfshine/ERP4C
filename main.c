@@ -68,13 +68,14 @@ int LogginGoods(){
 	
 	goods *g;
 	g=WantGoodsById(&id);
-
+	if(g==-1) return -1;
 	if(g!=NULL){
 		
 		ShowGoodsExist(id);
 		WantEnter();
 		return 0;
 	}
+	
 
 	name=WantName();
 	count=WantCount();
