@@ -92,15 +92,8 @@ int ChangeGoods(){
 	ToChangeScreen();
 
 	int id;
-	id=WantId();
+	goods * g;
 
-	if(id == 0){
-
-		ToMainScreen();
-		return 1;
-	}
-
-	goods g;
 	g=FindGoodsById(GobalStore,id);
 
 	if(g==NULL){
@@ -121,7 +114,6 @@ int ChangeGoods(){
 
 	return 0;
 }
-
 */
 int ListenMainKey(){
 	int op;
