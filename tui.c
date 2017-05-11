@@ -1,4 +1,17 @@
 #include "tui.h"
+
+typedef int INPUTTYPE ;
+char * TYPENAME[]={
+	"number",
+	"string"
+};
+
+int buildnum[]={
+	#include "BUILDNUM"
+};
+
+char version[]="dev 0.0.1";
+
 void SayHello(){
 	
 	printf("ERP4C %s ",version);
