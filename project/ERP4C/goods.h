@@ -1,6 +1,8 @@
 #ifndef GOODS_H
 #define GOODS_H 
 
+#include <stdio.h>
+
 #include "common.h"
 #include "linklist.h"
 
