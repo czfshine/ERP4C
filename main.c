@@ -53,8 +53,7 @@ void LogginGoods(){
 		name=WantName();
 		id=WantId();
 		count=WantCount();
-		printf("input end");
-		printf("%d %d %s",id,count,name);
+		
 		/*TODO ERROR*/
 		if(id == 0){
 			ShowMainMenu();
@@ -63,7 +62,6 @@ void LogginGoods(){
 		goods *g;
 		g=FindGoodsById(GobalStore,id);
 
-		printf("%d %d %s",id,count,name);
 		if(g!=NULL){
 			ShowGoodsExist(id);
 			WantEnter();
@@ -72,7 +70,7 @@ void LogginGoods(){
 
 
 		AddGoods( GobalStore,id,name,count);
-		printf("%d %d %s",id,count,name);
+
 		ShowLogginSuccess();
 		WantEnter();
 	}
