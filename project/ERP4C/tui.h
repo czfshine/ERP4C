@@ -1,3 +1,5 @@
+#ifndef TUI_H
+#define TUI_H 
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -71,3 +73,4 @@ void TypeLongError(INPUTTYPE T);
 
 
 int WantNum();
+#endif
