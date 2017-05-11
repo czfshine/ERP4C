@@ -48,7 +48,7 @@ goods * WantGoodsById(int * res){
 	/*TODO TYPE ERROR*/
 	if(id == 0){
 		ToMainScreen();
-		return -1;
+		return (goods *)-1;
 	}
 
 	*res=id;
@@ -68,7 +68,7 @@ int LogginGoods(){
 	
 	goods *g;
 	g=WantGoodsById(&id);
-	if(g==-1) return 1;
+	if(g==(goods *)-1) return 1;
 	if(g!=NULL){
 		
 		ShowGoodsExist(id);
