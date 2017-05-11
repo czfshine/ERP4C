@@ -93,7 +93,7 @@ char * WantString(){
 	a=(char * )malloc(25);
 	scanf("%s",a);
 	getchar();
-	return *a;
+	return a;
 
 }
 char * WantName(){
