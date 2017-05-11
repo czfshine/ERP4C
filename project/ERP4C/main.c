@@ -69,7 +69,7 @@ int LogginGoods(){
 
 	if(g!=NULL){
 		
-		ShowGoodsExist(id);
+		ShowGoodsExist(g->id);
 		WantEnter();
 		return 0;
 	}
