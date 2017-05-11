@@ -92,7 +92,6 @@ int ChangeName(goods* g){
 	char * name;
 	name=WantName();
 
-	
 	strcpy(g->name,name);
 	return 0;
 }
@@ -106,7 +105,7 @@ int ChangeCount(goods * g){
 	return 0;
 
 }
-/*
+
 int ChangeGoods(){
 	ToChangeScreen();
 
@@ -127,14 +126,35 @@ int ChangeGoods(){
 	type=WantId();
 
 	switch(type){
-		case CHANGENAME:ChangeName()break;
-		case CHANGECOUNT:ChangeCount();break;
+		case CHANGENAME:ChangeName(g)break;
+		case CHANGECOUNT:ChangeCount(g);break;
 	}
 
 	return 0;
 }
 
-*/
+
+int RemoveGoods(){
+
+	ShowRemove();
+
+	int type;
+
+	ShowRemoveType();
+
+	type=WantNum();
+
+	int res;
+	switch(type){
+		case REMOVEID:RemoveById();break;
+		case REMOVENAME:RemoveByName();break;
+		case REMOVEEXIT: return 1;
+	}
+
+	ShowRemoveSuccess();
+	return 0;
+}
+
 int ListenMainKey(){
 	int op;
 
@@ -151,7 +171,7 @@ int ListenMainKey(){
 
 	MENU(op)
 		MENUITEM(MENULOGGIN,LOOP(LogginGoods));
-		/*MENUITEM(MENUCHANGE,LOOP(ChangeGoods));*/
+		MENUITEM(MENUCHANGE,LOOP(ChangeGoods));
 		MENUITEM(MENUREMOVE,callback());
 		MENUITEM(MENULOG2S,callback());
 		MENUITEM(MENUQUERY,callback());

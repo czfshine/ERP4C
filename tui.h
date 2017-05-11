@@ -17,8 +17,8 @@
 
 #define ToLogginScreen() CleanScreen();\
 						ShowLogginGoods();
-
-
+#define ToChangeScreen() CleanScreen();\
+						ShowChangeGoods();
 
 
 
@@ -96,4 +96,10 @@ int WantCount();
 void WantEnter();
 
 
+#ifndef CHANGENAME
+#define CHANGENAME 1
+#endif
+#ifndef CHANGECOUNT
+#define CHANGECOUNT 2
+#endif
 #endif

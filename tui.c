@@ -158,3 +158,30 @@ void ShowLogginSuccess(){
 
 	printf("%s",str);
 }
+
+void ShowChangeGoods(){
+
+	char str[]={
+		"Change goods infomation:\n"
+		"Note : You can input a id equal 0 to exit loggin.\n"
+	};
+
+	printf("%s",str);
+}
+void ShowCantFind(id){
+	char str[]={
+		"The Good with id:%d isn't exist,please input another id\n"
+	};
+
+	printf(str,id);
+}
+void ShowChangeType(){
+
+	char str[]={
+		"Please choose you want change infomation type:\n"
+		"1) good's name\n"
+		"2) good's count\n"
+	}
+
+	printf("%s",str);
+}
