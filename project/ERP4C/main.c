@@ -111,7 +111,7 @@ int ChangeGoods(){
 
 	int id;
 	goods * g;
-	g=WantGoodsById(GobalStore,&id);
+	g=WantGoodsById(&id);
 
 	if(g==-1) return 1;
 	if(g==NULL){
