@@ -1,3 +1,6 @@
+#ifndef GOODS_H
+#define GOODS_H 
+
 #include "common.h"
 #include "linklist.h"
 
@@ -44,3 +47,5 @@ int ChangeGoodsName(Store s,int id,char * name);
 int ChangeGoodsCount(Store s,int id,int count);
 int findid(LinkList L,ptr );
 goods * FindGoodsById(Store s,int id);
+
+#endif
