@@ -133,7 +133,7 @@ int ChangeGoods(){
 	return 0;
 }
 
-
+/*
 int RemoveGoods(){
 
 	ShowRemove();
@@ -154,7 +154,7 @@ int RemoveGoods(){
 	ShowRemoveSuccess();
 	return 0;
 }
-
+*/
 int ListenMainKey(){
 	int op;
 
