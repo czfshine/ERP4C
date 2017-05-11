@@ -75,5 +75,6 @@ char * WantString();
 char * WantName();
 int WantId();
 int WantCount();
+void WantEnter();
 
 #endif
