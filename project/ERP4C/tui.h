@@ -40,6 +40,7 @@
 #endif
 
 
+typedef int INPUTTYPE ;
 
 #define T_NUM 0
 #define T_STR 1
