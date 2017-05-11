@@ -68,7 +68,7 @@ void LogginGoods(){
 		
 		ShowGoodsExist(id);
 		WantEnter();
-		continue;
+		return 0;
 	}
 
 
