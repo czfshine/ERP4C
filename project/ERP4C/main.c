@@ -30,7 +30,6 @@ Description:
 #include "tui.h"
 #include "goods.h"
 
-#define LOOP(fn) while(!fn()){}
 
 Store GobalStore;
 
@@ -45,39 +44,39 @@ void callback(){
 
 
 void LogginGoods(){
-	while(1){
-		ToLogginScreen();
-		char * name;
-		int id,count;
 
-		id=WantId();
-		/*TODO TYPE ERROR*/
-		if(id == 0){
-			ToMainScreen();
-			return 0;
-		}
+	ToLogginScreen();
+	char * name;
+	int id,count;
 
-		name=WantName();
-		
-		count=WantCount();
-		
-		
-		goods *g;
-		g=FindGoodsById(GobalStore,id);
-
-		if(g!=NULL){
-			
-			ShowGoodsExist(id);
-			WantEnter();
-			continue;
-		}
-
-
-		AddGoods( GobalStore,id,name,count);
-
-		ShowLogginSuccess();
-		WantEnter();
+	id=WantId();
+	/*TODO TYPE ERROR*/
+	if(id == 0){
+		ToMainScreen();
+		return 1;
 	}
+
+	name=WantName();
+	
+	count=WantCount();
+	
+	
+	goods *g;
+	g=FindGoodsById(GobalStore,id);
+
+	if(g!=NULL){
+		
+		ShowGoodsExist(id);
+		WantEnter();
+		continue;
+	}
+
+
+	AddGoods( GobalStore,id,name,count);
+
+	ShowLogginSuccess();
+	WantEnter();
+	
 	return 0;
 }
 int ListenMainKey(){
@@ -95,7 +94,7 @@ int ListenMainKey(){
 	}
 
 	MENU(op)
-		MENUITEM(MENULOGGIN,LogginGoods());
+		MENUITEM(MENULOGGIN,LOOP(LogginGoods));
 		MENUITEM(MENUCHANGE,callback());
 		MENUITEM(MENUREMOVE,callback());
 		MENUITEM(MENULOG2S,callback());
