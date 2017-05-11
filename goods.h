@@ -2,7 +2,7 @@
 #define GOODS_H 
 
 #include <stdio.h>
-
+#include <string.h>
 #include "common.h"
 #include "linklist.h"
 
