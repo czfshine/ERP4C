@@ -53,7 +53,7 @@ void LogginGoods(){
 	id=WantId();
 	count=WantCount();
 
-	//TODO ERROR
+	/*TODO ERROR*/
 	if(id == 0){
 		ShowMainMenu();
 		return 0;
