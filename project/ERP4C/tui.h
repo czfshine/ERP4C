@@ -5,7 +5,9 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#ifdef __linux__ || __linux
+#ifdef DONTCLEARSCREEN 
+#define CleanScreen()  SayHello();
+#elif __linux__ || __linux
 #define CleanScreen()  system("clear");SayHello();
 #else
 #define CleanScreen()  system("cls");SayHello();
