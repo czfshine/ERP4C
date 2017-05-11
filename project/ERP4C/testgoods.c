@@ -7,7 +7,10 @@ int main(){
 
 	AddGoods(*S,1,"1111",2);
 	AddGoods(*S,2,"2111",3);
-
+	AddGoods(*S,3,"2111",3);
+	AddGoods(*S,4,"2111",3);
+	AddGoods(*S,5,"2111",3);
+	AddGoods(*S,6,"2111",3);
 	ShowAllGoods();
 
 	ChangeGoodsName(*S,1,"5555");
