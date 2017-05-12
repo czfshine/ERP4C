@@ -163,7 +163,7 @@ int RemoveGoods(){
 	switch(type){
 		case REMOVEBYID:RemoveById();break;
 		case REMOVEBYNAME:RemoveByName();break;
-		case REMOVETOEXIT: return 1;
+		case REMOVETOEXIT: ToMainScreen(); return 1;
 	}
 
 	ShowRemoveSuccess();
