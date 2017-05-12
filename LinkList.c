@@ -52,7 +52,7 @@ ptr foreach(LinkList L,int (* fn)(LinkList,ptr )){
 
 	LinkNode *p;
 	p=L;
-
+	if(L->next=NULL) return NULL;
 	while(p->next){
 		LinkNode * a=p->next;
 		ptr b=a->elem;
