@@ -58,7 +58,6 @@ goods * WantGoodsById(int * res){
 	return g;
 
 }
-
 int LogginGoods(){
 
 	ToLogginScreen();
@@ -131,6 +130,7 @@ int ChangeGoods(){
 	}
 	ShowChangeSuccess();
 
+	WantEnter();
 	return 0;
 }
 
@@ -156,6 +156,12 @@ int RemoveGoods(){
 	return 0;
 }
 */
+
+int QueryGoods(){
+
+	ShowAllGoods(GobalStore);
+	return 1;
+}
 int ListenMainKey(){
 	int op;
 
@@ -175,7 +181,7 @@ int ListenMainKey(){
 		MENUITEM(MENUCHANGE,LOOP(ChangeGoods));
 		MENUITEM(MENUREMOVE,callback());
 		MENUITEM(MENULOG2S,callback());
-		MENUITEM(MENUQUERY,callback());
+		MENUITEM(MENUQUERY,LOOP(QueryGoods));
 		MENUITEM(MENUSTATIS,callback());
 		MENUITEM(MENUHELP,ShowHelp());
 		MENUITEM(MENUEXIT,return 1);
@@ -184,8 +190,7 @@ int ListenMainKey(){
 	return 0;
 }
 
-int main()
-{
+int main(int ){
 	Init();
 
     ToMainScreen();
