@@ -318,3 +318,11 @@ void ToStatisScreen() {
 	};
 	printf("%s", str);
 }
+
+void ToQueryScreen() {
+	CleanScreen();
+	char str[] = {
+		"Show all goods:\n"
+	};
+	printf("%s", str);
+}

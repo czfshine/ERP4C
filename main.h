@@ -1,3 +1,4 @@
+int QueryGoods();
 void SaleGoods();
 void StockGoods();
 int Loggin2S();
