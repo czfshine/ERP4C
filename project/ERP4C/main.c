@@ -155,7 +155,7 @@ void RemoveByName() {
 }
 int RemoveGoods(){
 
-	ShowRemove();
+	ToRemoveScreen();
 
 	int type;
 	type=WantNum();
