@@ -298,6 +298,12 @@ int ListenMainKey(){
 }
 
 int main(int argn,char * argv[] ){
+
+#ifdef LOCAL
+	freopen("testin1.txt", "r", stdin);
+	freopen("testout1.txt", "w", stdin);
+#endif 
+
 	Init();
 
     ToMainScreen();
