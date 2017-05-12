@@ -29,6 +29,8 @@ The user interface in console.
 #define ToChangeScreen() CleanScreen();\
 						ShowChangeGoods();
 
+#define ToRemoveScreen() CleanScreen();\
+						ShowRemove();
 
 
 
