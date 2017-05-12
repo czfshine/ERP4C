@@ -140,7 +140,12 @@ void RemoveById() {
 	int id;
 	id = WantId();
 	/*todo error*/
-	RemoveGoodsById(GobalStore, id);
+	int res;
+	res=RemoveGoodsById(GobalStore, id);
+	if (res == REMOVENULL) {
+		ShowRemoveNull();
+		WantEnter();
+	}
 	return ;
 }
 
@@ -149,8 +154,13 @@ void RemoveByName() {
 	name = WantName();
 
 	/*todo*/
+	int res;
 
-	RemoveGoodsByName(GobalStore, name);
+	res=RemoveGoodsByName(GobalStore, name);
+	if (res == REMOVENULL) {
+		ShowRemoveNull();
+		WantEnter();
+	}
 	return;
 }
 int RemoveGoods(){
