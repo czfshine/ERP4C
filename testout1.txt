@@ -1,4 +1,4 @@
-ERP4C dev 0.0.1 | dev-build 0250
+ERP4C dev 0.0.1 | dev-build 0251
 Please choose a option:
 1)	loggin goods
 2)	change goods
@@ -8,20 +8,20 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 0.0.1 | dev-build 0250
+Input your choice:ERP4C dev 0.0.1 | dev-build 0251
 Loggin goods infomation:
 Note : You can input a id equal 0 to exit loggin.
 Please input the good's id:Please input the good's name:Please input the good's count:The goods was success loggined.
 Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0250
+ERP4C dev 0.0.1 | dev-build 0251
 Loggin goods infomation:
 Note : You can input a id equal 0 to exit loggin.
 Please input the good's id:Please input the good's name:Please input the good's count:The goods was success loggined.
 Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0250
+ERP4C dev 0.0.1 | dev-build 0251
 Loggin goods infomation:
 Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:ERP4C dev 0.0.1 | dev-build 0250
+Please input the good's id:ERP4C dev 0.0.1 | dev-build 0251
 Please choose a option:
 1)	loggin goods
 2)	change goods
@@ -31,7 +31,7 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 0.0.1 | dev-build 0250
+Input your choice:ERP4C dev 0.0.1 | dev-build 0251
 ERROR: you must input a number
 Please choose a option:
 1)	loggin goods
@@ -42,6 +42,6 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 0.0.1 | dev-build 0250
+Input your choice:ERP4C dev 0.0.1 | dev-build 0251
 Thanks you use ERP4C!
 Goodbye~~~
