@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
+#include "common.h"
 #ifdef DONTCLEARSCREEN 
 #define CleanScreen()  SayHello();
 #elif __linux__ || __linux
