@@ -296,18 +296,19 @@ int ListenMainKey(){
 	
 	return 0;
 }
-
+#include <io.h>
+#define STDOUT 1
 int main(int argn,char * argv[] ){
 	Init();
-
+	int oldstdout = dup(STDOUT);
 #ifdef LOCAL
 	freopen("testin1.txt", "r", stdin);
 	freopen("testout1.txt", "w", stdout);
 	ToMainScreen();
 	LOOP(ListenMainKey);
 	SayGoodbye();
-	freopen("CON", "rb+", stdin);
-	freopen("CON", "wb+", stdout);
+	freopen("CON", "rb", stdin);
+	dup2(oldstdout, STDOUT);
 #endif 
 	ToMainScreen();
 	LOOP(ListenMainKey);
