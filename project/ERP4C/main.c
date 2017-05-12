@@ -296,28 +296,13 @@ int ListenMainKey(){
 	
 	return 0;
 }
-#define WithDebug(code) do{\
-int oldstdout = dup(1);\
-freopen("testin1.txt", "r", stdin);\
-freopen("testout1.txt", "w", stdout);\
-code;\
-freopen("CON", "r", stdin);\
-freopen("CON", "w", stdout);\
-dup2(oldstdout, 1); \
-}while (0);
 
 int main(int argn,char * argv[] ){
 	Init();
-	
-#ifdef LOCAL
 	WithDebug(
 	ToMainScreen();
 	LOOP(ListenMainKey);
-	SayGoodbye();)
-#endif 
-	ToMainScreen();
-	LOOP(ListenMainKey);
 	SayGoodbye();
-
+	);
     return 0;
 }
