@@ -15,7 +15,5 @@ int DEBUG = 1;
 		freopen("CON", "r", stdin);\
 		freopen("CON", "w", stdout);\
 		dup2(oldstdout, 1);} \
-	else {\
-			code;\
-		}\
+		code;\
 }while (0);
