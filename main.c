@@ -129,7 +129,7 @@ int ChangeGoods(){
 		case CHANGENAME:ChangeName(g);break;
 		case CHANGECOUNT:ChangeCount(g);break;
 	}
-	ShowChnageSuccess();
+	ShowChangeSuccess();
 
 	return 0;
 }
