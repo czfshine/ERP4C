@@ -190,7 +190,7 @@ int ListenMainKey(){
 	return 0;
 }
 
-int main(int ){
+int main(int argn,char * argv[] ){
 	Init();
 
     ToMainScreen();
