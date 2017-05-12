@@ -272,7 +272,7 @@ void ToStockScreen() {
 	printf("%s", str);
 }
 
-void ShowStackCount() {
+void ShowStockCount() {
 	char str[] = {
 		"How many good(s) you want to stock: "
 	};

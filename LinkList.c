@@ -67,7 +67,7 @@ LinkNode* foreach(LinkList L,int (* fn)(LinkList,ptr )){
 		LinkNode * a=p->next;
 		ptr b=a->elem;
 		if(fn(L,b)){
-			return p;//here
+			return p;/*here*/
 		}
 		p=p->next;
 	}

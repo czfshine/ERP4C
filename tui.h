@@ -140,11 +140,11 @@ void WantEnter();
 
 #ifndef SHOWSUMOFCOUNT
 #define SHOWSUMOFCOUNT 1
-#endif // !SHOWSUMOFCOUNT
+#endif /* !SHOWSUMOFCOUNT */
 
 #ifndef SHOWCOUNTID
 #define SHOWCOUNTID 2
-#endif // !SHOWCOUNTID
+#endif /* !SHOWCOUNTID*/
 
 #endif
 
@@ -155,10 +155,10 @@ void ToSaleScreen();
 void ShowSaleCount();
 
 void ShowSaleSuccess();
-
+	
 void ToStockScreen();
 
-void ShowStackCount();
+void ShowStockCount();
 
 void ShowStockSuccess();
 
