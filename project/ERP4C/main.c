@@ -303,7 +303,7 @@ freopen("testout1.txt", "w", stdout);\
 code;\
 freopen("CON", "r", stdin);\
 freopen("CON", "w", stdout);\
-dup2(oldstdout, STDOUT); \
+dup2(oldstdout, 1); \
 }while (0);
 
 int main(int argn,char * argv[] ){
