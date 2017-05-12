@@ -296,12 +296,14 @@ int ListenMainKey(){
 	
 	return 0;
 }
-#include <io.h>
-#define STDOUT 1
+
 int main(int argn,char * argv[] ){
 	Init();
-	int oldstdout = dup(STDOUT);
+	
 #ifdef LOCAL
+#include <io.h>
+#define STDOUT 1
+	int oldstdout = dup(STDOUT);
 	freopen("testin1.txt", "r", stdin);
 	freopen("testout1.txt", "w", stdout);
 	ToMainScreen();
