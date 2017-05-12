@@ -12,6 +12,9 @@ dontclear:
 	gcc -Wall -DLOCAL -DDONTCLEARSCREEN -Wno-incompatible-pointer-types -O3 -ansi tui.c linklist.c goods.c main.c -o erp4c.exe
 	erp4c.exe
 
+min:
+	gcc -DLOCAL -DDONTCLEARSCREEN  -O0 -ansi tui.c linklist.c goods.c main.c -o erp4c.exe
+	erp4c.exe
 goods:
 	-lua addbuildnum.lua
 	-git add .

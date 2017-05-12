@@ -115,28 +115,28 @@ void WantEnter();
 
 #ifndef REMOVEBYID
 #define REMOVEBYID 1
-#endif // !REMOVEBYID
+#endif /* !REMOVEBYID*/
 
 #ifndef REMOVEBYNAME
 #define REMOVEBYNAME 2
-#endif // !REMOVEBYNAME
+#endif /* !REMOVEBYNAME*/
 
 #ifndef REMOVETOEXIT
 #define REMOVETOEXIT  0
-#endif // !REMOVETOEXIT
+#endif /* !REMOVETOEXIT*/
 
 
 #ifndef SALE
 #define SALE 1 
-#endif // SALE
+#endif /* !SALE*/
 
 #ifndef STOCK
 #define STOCK 2		
-#endif // !STOCK
+#endif /* !STOCK*/
 
 #ifndef EXIT
 #define EXIT 0
-#endif // !EXIT
+#endif /* !EXIT */
 
 #ifndef SHOWSUMOFCOUNT
 #define SHOWSUMOFCOUNT 1
