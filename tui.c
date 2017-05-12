@@ -233,6 +233,7 @@ void ShowRemoveSuccess() {
 }
 
 void ToLoggin2SScreen() {
+	CleanScreen();
 	char str[] = {
 		"Sale or Stock good:"
 		"Please choose a option:\n"
@@ -244,6 +245,7 @@ void ToLoggin2SScreen() {
 	printf("%s", str);
 }
 void ToSaleScreen() {
+	CleanScreen();
 	char str[] = {
 		"Sell the goods:\n"
 		"Note : You can input a id equal 0 to exit loggin.\n"
@@ -264,6 +266,7 @@ void ShowSaleSuccess() {
 	printf("%s", str);
 }
 void ToStockScreen() {
+	CleanScreen();
 	char str[] = {
 		"Stock the good:\n"
 		"Note : You can input a id equal 0 to exit loggin.\n"
