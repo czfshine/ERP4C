@@ -80,8 +80,7 @@ void ShowHelp();
 void ShowLogginGoods();
 void ShowGoodsExist(int id);
 void ShowLogginSuccess();
-
-
+void ShowChangeSuccess();
 
 void TypeError(INPUTTYPE T);
 void TypeNullError(INPUTTYPE T);

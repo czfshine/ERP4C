@@ -88,7 +88,7 @@ int LogginGoods(){
 	return 0;
 }
 
-int ChangeName(goods* g){
+int ChangeName(goods* g){                                 
 	char * name;
 	name=WantName();
 
@@ -101,7 +101,7 @@ int ChangeCount(goods * g){
 	int count ;
 	count =WantCount();
 
-	g->count=count;
+	g->count=count;                                                                                         
 	return 0;
 
 }
@@ -129,6 +129,7 @@ int ChangeGoods(){
 		case CHANGENAME:ChangeName(g);break;
 		case CHANGECOUNT:ChangeCount(g);break;
 	}
+	ShowChnageSuccess();
 
 	return 0;
 }
