@@ -139,6 +139,17 @@ void ShowLogginGoods(){
 
 }
 
+void ShowLogginSuccess(){
+
+	char str[]={
+		"The goods was success loggined.\n"
+	};
+
+	printf("%s",str);
+}
+
+
+
 
 void ShowGoodsExist(int id){
 	
