@@ -1,3 +1,12 @@
+/*
+General Linklist Library.
+Author czfshine (https://github.com/czfshine)
+Date :2017-05-10 11:10
+Langage :ANSI C
+Listen :MIT
+Description:
+	The general linklist,other infomation to see code .
+*/
 #include "linklist.h"
 #include "common.h"
 LinkList LinkListInit(){
@@ -48,16 +57,17 @@ int pushfront(LinkList L, ptr elem){
 	return 0;
 }
 
-ptr foreach(LinkList L,int (* fn)(LinkList,ptr )){
+LinkNode* foreach(LinkList L,int (* fn)(LinkList,ptr )){
+	/* note : it return last node ,so you must use R(p) to get correct node*/
 
 	LinkNode *p;
 	p=L;
-	if(L->next=NULL) return NULL;
+	if(L->next==NULL) return NULL;
 	while(p->next){
 		LinkNode * a=p->next;
 		ptr b=a->elem;
 		if(fn(L,b)){
-			return p->next;
+			return p;//here
 		}
 		p=p->next;
 	}
@@ -65,8 +75,8 @@ ptr foreach(LinkList L,int (* fn)(LinkList,ptr )){
 }
 
 
-ptr foreachwithcmp(LinkList L,int (* fn)(LinkList,ptr,int (* cmp )(ptr,ptr) ),int (* cmp )(ptr,ptr)){
-
+LinkNode* foreachwithcmp(LinkList L,int (* fn)(LinkList,ptr,int (* cmp )(ptr,ptr) ),int (* cmp )(ptr,ptr)){
+	/* note : it return last node ,so you must use R(p) to get correct node*/
 	LinkNode *p;
 	p=L;
 
@@ -74,10 +84,29 @@ ptr foreachwithcmp(LinkList L,int (* fn)(LinkList,ptr,int (* cmp )(ptr,ptr) ),in
 		LinkNode * a=p->next;
 		ptr b=a->elem;
 		if(fn(L,b,cmp)){
-			return p->next;
+			return p;
 		}
 		p=p->next;
 	}
 	return NULL;
 }
+int freeNode(LinkNode * nn, int(*freeelem)(ptr)) {
+	freeelem(nn->elem);/* perevent memnory leak*/
+	free(nn);
+	return 0;
+}
 
+int RemoveNode(LinkNode *p,int (*freeelem)(ptr)) {
+	/* remove the next node*/
+	if (p->next == NULL)
+		return 0; 
+	LinkNode *nn;
+	nn = p->next;/*correct node to remove*/
+	if (nn->next == NULL) {
+		p->next = NULL;/* must be set success*/
+	}
+	else {
+		p->next = nn->next;
+	}
+	return freeNode(nn, freeelem);
+}

@@ -1,3 +1,12 @@
+/*
+The Goods And Store.
+Author czfshine (https://github.com/czfshine)
+Date :2017-05-10 11:10
+Langage :ANSI C
+Listen :MIT
+Description:
+Some logic and function for good.
+*/
 #ifndef GOODS_H
 #define GOODS_H 
 
@@ -20,6 +29,7 @@ typedef struct {
 typedef struct {
 	int waitid;
 	char * waitname;
+	int sumconut;
 }	StoreInfo;
 
 
@@ -50,5 +60,8 @@ int ChangeGoodsName(Store s,int id,char * name);
 int ChangeGoodsCount(Store s,int id,int count);
 goods * FindGoodsById(Store s,int id);
 goods * FindGoodsByName(Store s,char *name);
+int ShowAllGoods(Store);
+int RemoveGoodsById(Store s, int id);
 
+int RemoveGoodsByName(Store s, char *name);
 #endif
