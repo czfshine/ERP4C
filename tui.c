@@ -307,7 +307,7 @@ void ShowIdCount() {
 }
 
 void ToStatisScreen() {
-
+	CleanScreen();
 	char str[] = {
 		"Statis good's infomation:\n "
 		"Please choose a option:\n"
