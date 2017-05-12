@@ -298,17 +298,20 @@ int ListenMainKey(){
 }
 
 int main(int argn,char * argv[] ){
+	Init();
 
 #ifdef LOCAL
 	freopen("testin1.txt", "r", stdin);
 	freopen("testout1.txt", "w", stdout);
+	ToMainScreen();
+	LOOP(ListenMainKey);
+	SayGoodbye();
+	freopen("CON", "r", stdin);
+	freopen("CON", "w", stdout);
 #endif 
-
-	Init();
-
-    ToMainScreen();
-    LOOP(ListenMainKey);
-    SayGoodbye();
+	ToMainScreen();
+	LOOP(ListenMainKey);
+	SayGoodbye();
 
     return 0;
 }
