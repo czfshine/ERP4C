@@ -326,3 +326,9 @@ void ToQueryScreen() {
 	};
 	printf("%s", str);
 }
+
+void ShowRemoveNull() {
+	char str[] = {
+		"Not good in the store,remove error.\n"
+	}
+}
