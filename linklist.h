@@ -15,7 +15,7 @@ The general linklist,other infomation to see code .
 
 #define ptr void *
 
-#define R(p) (p)->next
+#define R(p) (((p)==NULL)?NULL:((p)->next))
 
 
 typedef struct LinkNode
