@@ -1,3 +1,12 @@
+/*
+Text User Interface (TUI)
+Author czfshine (https://github.com/czfshine)
+Date :2017-05-10 11:10
+Langage :ANSI C
+Listen :MIT
+Description:
+The user interface in console.
+*/
 #include "tui.h"
 
 char * TYPENAME[]={
@@ -172,8 +181,9 @@ void ShowChangeGoods(){
 	};
 
 	printf("%s",str);
+	return;
 }
-void ShowCantFind(id){
+void ShowCantFind(int id){
 	char str[]={
 		"The Good with id:%d isn't exist,please input another id\n"
 	};
@@ -186,6 +196,7 @@ void ShowChangeType(){
 		"Please choose you want change infomation type:\n"
 		"1) good's name\n"
 		"2) good's count\n"
+		"Input your choice:"
 	};
 
 	printf("%s",str);
@@ -198,4 +209,109 @@ void ShowChangeSuccess(){
 	};
 
 	printf("%s",str);
+}
+void ShowRemove() {
+	char str[] = {
+		"Remove goods from the store:\n"
+		"Please choose a option:\n"
+		"1) remove good by id\n"
+		"2) remove good by name\n"
+		"0) return the main menu\n"
+		"Input your choice:"
+	};
+
+
+	printf("%s", str);
+
+}
+
+void ShowRemoveSuccess() {
+	char str[] = {
+		"Remove good(s) success!\n"
+	};
+	printf("%s", str);
+}
+
+void ToLoggin2SScreen() {
+	char str[] = {
+		"Sale or Stock good:"
+		"Please choose a option:\n"
+		"1) Sale good(s).\n"
+		"2) Stock good(s).\n"
+		"0) Exit.\n"
+		"Input your choice:"
+	};
+	printf("%s", str);
+}
+void ToSaleScreen() {
+	char str[] = {
+		"Sell the goods:\n"
+		"Note : You can input a id equal 0 to exit loggin.\n"
+	};
+	printf("%s", str);
+}
+void ShowSaleCount() {
+	char str[] = {
+		"How many good(s) you want to sell: "
+	};
+	printf("%s", str);
+}
+
+void ShowSaleSuccess() {
+	char str[] = {
+		"The goods was  success sold!\n"
+	};
+	printf("%s", str);
+}
+void ToStockScreen() {
+	char str[] = {
+		"Stock the good:\n"
+		"Note : You can input a id equal 0 to exit loggin.\n"
+	};
+
+	printf("%s", str);
+}
+
+void ShowStackCount() {
+	char str[] = {
+		"How many good(s) you want to stock: "
+	};
+	printf("%s", str);
+}
+
+void ShowStockSuccess() {
+	char str[] = {
+			"The goods was  success stocked!\n"
+	};
+	printf("%s", str);
+
+}
+
+
+void ShowSumCount() {
+	char str[] = {
+		"The sum of the good's count is:"
+	};
+	printf("%s", str);
+}
+
+void ShowIdCount() {
+	char str[] = {
+		"The sum of good's type is:"
+	};
+	printf("%s", str);
+
+}
+
+void ToStatisScreen() {
+
+	char str[] = {
+		"Statis good's infomation:\n "
+		"Please choose a option:\n"
+		"1) Count sum of good's count.\n"
+		"2) Count sum of good's type. \n"
+		"0) Exit\n"
+		"Input your choice:"
+	};
+	printf("%s", str);
 }

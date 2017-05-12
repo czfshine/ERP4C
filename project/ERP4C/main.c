@@ -29,6 +29,7 @@ Description:
 
 #include "tui.h"
 #include "goods.h"
+#include "main.h"
 
 
 Store GobalStore;
@@ -112,7 +113,7 @@ int ChangeGoods(){
 	goods * g;
 	g=WantGoodsById(&id);
 
-	if(g==-1) return 1;
+	if(g==(goods *)-1) return 1;
 	if(g==NULL){
 		ShowCantFind(id);
 		WantEnter();
@@ -122,7 +123,7 @@ int ChangeGoods(){
 	ShowChangeType();
 
 	int type;
-	type=WantId();
+	type=WantNum();
 
 	switch(type){
 		case CHANGENAME:ChangeName(g);break;
@@ -134,33 +135,133 @@ int ChangeGoods(){
 	return 0;
 }
 
-/*
+
+void RemoveById() {
+	int id;
+	id = WantId();
+	/*todo error*/
+	RemoveGoodsById(GobalStore, id);
+	return ;
+}
+
+void RemoveByName() {
+	char *name;
+	name = WantName();
+
+	/*todo*/
+
+	RemoveByName(GobalStore, name);
+	return;
+}
 int RemoveGoods(){
 
 	ShowRemove();
 
 	int type;
-
-	ShowRemoveType();
-
 	type=WantNum();
 
 	int res;
 	switch(type){
-		case REMOVEID:RemoveById();break;
-		case REMOVENAME:RemoveByName();break;
-		case REMOVEEXIT: return 1;
+		case REMOVEBYID:RemoveById();break;
+		case REMOVEBYNAME:RemoveByName();break;
+		case REMOVETOEXIT: return 1;
 	}
 
 	ShowRemoveSuccess();
 	return 0;
 }
-*/
 
 int QueryGoods(){
 
 	ShowAllGoods(GobalStore);
 	return 1;
+}
+
+void SaleGoods() {
+	ToSaleScreen();
+
+	int id;
+	id = WantId();
+
+	int sc;
+	ShowSaleCount();
+	sc = WantNum();
+
+	goods *g;
+	g = FindGoodsById(GobalStore,id);
+
+	g->count -= sc;
+
+	ShowSaleSuccess();
+	WantEnter();
+	return;
+}
+
+
+void StockGoods() {
+	ToStockScreen();
+
+	int id;
+	id = WantId();
+
+	int sc;
+	ShowStockCount();
+	sc = WantNum();
+
+	goods *g;
+	g = FindGoodsById(GobalStore, id);
+
+	g->count += sc;
+
+	ShowStockSuccess();
+	WantEnter();
+	return;
+}
+
+int  Loggin2S() {
+	ToLoggin2SScreen();
+
+	int type;
+	/* todo*/
+	type = WantNum();
+	switch (type) {
+	case SALE:SaleGoods(); break;
+	case STOCK:StockGoods(); break;
+	case EXIT: return 1;
+	}
+
+	return 0;
+
+
+
+}
+
+
+void PrintSumCount() {
+	ShowSumCount();
+	printf("%d\n",SumCount());
+	WantEnter();
+}
+
+void PrintIdCount() {
+	ShowIdCount();
+	printf("%d\n", SumId());
+	WantEnter();
+}
+
+int StatisGoods() {
+	ToStatisScreen(); 
+
+	int type;
+	type = WantNum();
+
+	switch (type) {
+	case SHOWSUMOFCOUNT:PrintSumCount(); break;
+	case SHOWCOUNTID:PrintIdCount(); break;
+	case EXIT: return 1;
+	}
+
+	return 0;
 }
 int ListenMainKey(){
 	int op;
@@ -179,10 +280,10 @@ int ListenMainKey(){
 	MENU(op)
 		MENUITEM(MENULOGGIN,LOOP(LogginGoods));
 		MENUITEM(MENUCHANGE,LOOP(ChangeGoods));
-		MENUITEM(MENUREMOVE,callback());
-		MENUITEM(MENULOG2S,callback());
+		MENUITEM(MENUREMOVE,LOOP(RemoveGoods));
+		MENUITEM(MENULOG2S,LOOP(Loggin2S));
 		MENUITEM(MENUQUERY,LOOP(QueryGoods));
-		MENUITEM(MENUSTATIS,callback());
+		MENUITEM(MENUSTATIS,LOOP(StatisGoods));
 		MENUITEM(MENUHELP,ShowHelp());
 		MENUITEM(MENUEXIT,return 1);
 	DEFAULTITEM(callback());

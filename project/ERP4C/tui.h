@@ -1,3 +1,12 @@
+/*
+Text User Interface (TUI)
+Author czfshine (https://github.com/czfshine)
+Date :2017-05-10 11:10
+Langage :ANSI C
+Listen :MIT
+Description:
+The user interface in console.
+*/
 #ifndef TUI_H
 #define TUI_H 
 
@@ -81,7 +90,9 @@ void ShowLogginGoods();
 void ShowGoodsExist(int id);
 void ShowLogginSuccess();
 void ShowChangeSuccess();
-
+void ShowChangeGoods();
+void ShowCantFind(int );
+void ShowChangeType();
 void TypeError(INPUTTYPE T);
 void TypeNullError(INPUTTYPE T);
 void TypeLongError(INPUTTYPE T);
@@ -101,4 +112,54 @@ void WantEnter();
 #ifndef CHANGECOUNT
 #define CHANGECOUNT 2
 #endif
+
+#ifndef REMOVEBYID
+#define REMOVEBYID 1
+#endif // !REMOVEBYID
+
+#ifndef REMOVEBYNAME
+#define REMOVEBYNAME 2
+#endif // !REMOVEBYNAME
+
+#ifndef REMOVETOEXIT
+#define REMOVETOEXIT  0
+#endif // !REMOVETOEXIT
+
+
+#ifndef SALE
+#define SALE 1 
+#endif // SALE
+
+#ifndef STOCK
+#define STOCK 2		
+#endif // !STOCK
+
+#ifndef EXIT
+#define EXIT 0
+#endif // !EXIT
+
+#ifndef SHOWSUMOFCOUNT
+#define SHOWSUMOFCOUNT 1
+#endif // !SHOWSUMOFCOUNT
+
+#ifndef SHOWCOUNTID
+#define SHOWCOUNTID 2
+#endif // !SHOWCOUNTID
+
 #endif
+
+void ToLoggin2SScreen();
+
+void ToSaleScreen();
+
+void ShowSaleCount();
+
+void ShowSaleSuccess();
+
+void ToStockScreen();
+
+void ShowStackCount();
+
+void ShowStockSuccess();
+
+void ShowSumCount();
