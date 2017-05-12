@@ -264,7 +264,7 @@ int StatisGoods() {
 	switch (type) {
 	case SHOWSUMOFCOUNT:PrintSumCount(); break;
 	case SHOWCOUNTID:PrintIdCount(); break;
-	case EXIT: return 1;
+	case EXIT: ToMainScreen(); return 1;
 	}
 
 	return 0;
