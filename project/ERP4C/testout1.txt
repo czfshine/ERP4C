@@ -1,1 +1,47 @@
-
+ERP4C dev 0.0.1 | dev-build 0235
+Please choose a option:
+1)	loggin goods
+2)	change goods
+3)	remove goods
+4)	loggin stock&sale info
+5)	query goods
+6)	statis goods
+7)	help
+0)	exit
+Input your choice:ERP4C dev 0.0.1 | dev-build 0235
+Loggin goods infomation:
+Note : You can input a id equal 0 to exit loggin.
+Please input the good's id:Please input the good's name:Please input the good's count:The goods was success loggined.
+Push Enter to contuine.
+ERP4C dev 0.0.1 | dev-build 0235
+Loggin goods infomation:
+Note : You can input a id equal 0 to exit loggin.
+Please input the good's id:Please input the good's name:Please input the good's count:The goods was success loggined.
+Push Enter to contuine.
+ERP4C dev 0.0.1 | dev-build 0235
+Loggin goods infomation:
+Note : You can input a id equal 0 to exit loggin.
+Please input the good's id:ERP4C dev 0.0.1 | dev-build 0235
+Please choose a option:
+1)	loggin goods
+2)	change goods
+3)	remove goods
+4)	loggin stock&sale info
+5)	query goods
+6)	statis goods
+7)	help
+0)	exit
+Input your choice:ERP4C dev 0.0.1 | dev-build 0235
+ERROR: you must input a number
+Please choose a option:
+1)	loggin goods
+2)	change goods
+3)	remove goods
+4)	loggin stock&sale info
+5)	query goods
+6)	statis goods
+7)	help
+0)	exit
+Input your choice:ERP4C dev 0.0.1 | dev-build 0235
+Thanks you use ERP4C!
+Goodbye~~~
