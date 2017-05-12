@@ -150,14 +150,8 @@ void ShowGoodsExist(int id){
 
 }
 
-void ShowLogginSuccess(){
 
-	char str[]={
-		"The goods are success loggin.\n"
-	};
 
-	printf("%s",str);
-}
 
 void ShowChangeGoods(){
 
@@ -181,6 +175,15 @@ void ShowChangeType(){
 		"Please choose you want change infomation type:\n"
 		"1) good's name\n"
 		"2) good's count\n"
+	};
+
+	printf("%s",str);
+}
+
+void ShowChangeSuccess(){
+
+	char str[]={
+		"The goods was success changed.\n"
 	};
 
 	printf("%s",str);
