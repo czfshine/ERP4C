@@ -28,7 +28,7 @@ int ChangeGoodsName(Store s,int id,char * name){
 	if(g==NULL){
 		return CHANGEFINDERROR;
 	}
-	strcpy(g->name,name);
+	strcpy_s(g->name,name);
 	return CHANGEOK;
 }
 
