@@ -163,3 +163,7 @@ void ShowStockCount();
 void ShowStockSuccess();
 
 void ShowSumCount();
+void ShowIdCount();
+void ToStatisScreen();
+void ShowRemove();
+void ShowRemoveSuccess();

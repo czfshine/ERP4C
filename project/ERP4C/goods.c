@@ -122,6 +122,7 @@ int RemoveGoodsById(Store s,int id) {
 
 	p = FindLinkNodeById(s, id);/*last node*/
 	RemoveNode(p,freegood);
+	return 0;
 }
 
 int RemoveGoodsByName(Store s,char *name) {
@@ -129,6 +130,7 @@ int RemoveGoodsByName(Store s,char *name) {
 
 	p = FindLinkNodeByName(s, name);/*last node*/
 	RemoveNode(p, freegood);
+	return 0;
 }
 
 int printgoods(LinkList L,ptr p){
