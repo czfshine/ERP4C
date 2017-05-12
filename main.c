@@ -160,7 +160,6 @@ int RemoveGoods(){
 	int type;
 	type=WantNum();
 
-	int res;
 	switch(type){
 		case REMOVEBYID:RemoveById();break;
 		case REMOVEBYNAME:RemoveByName();break;
@@ -239,13 +238,13 @@ int  Loggin2S() {
 
 void PrintSumCount() {
 	ShowSumCount();
-	printf("%d\n",SumCount());
+	printf("%d\n",SumCount(GobalStore));
 	WantEnter();
 }
 
 void PrintIdCount() {
 	ShowIdCount();
-	printf("%d\n", SumId());
+	printf("%d\n", SumId(GobalStore));
 	WantEnter();
 }
 

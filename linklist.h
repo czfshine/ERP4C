@@ -7,7 +7,6 @@ Listen :MIT
 Description:
 The general linklist,other infomation to see code .
 */
-
 #ifndef LINKLIST_H
 #define LINKLIST_H 
 #include <stdlib.h>

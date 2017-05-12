@@ -64,4 +64,7 @@ int ShowAllGoods(Store);
 int RemoveGoodsById(Store s, int id);
 
 int RemoveGoodsByName(Store s, char *name);
+
+int SumCount(Store s);
+int SumId(Store s);
 #endif
