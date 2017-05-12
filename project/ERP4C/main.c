@@ -303,12 +303,12 @@ int main(int argn,char * argv[] ){
 	int oldstdout = dup(STDOUT);
 #ifdef LOCAL
 	freopen("testin1.txt", "r", stdin);
-	/*freopen("testout1.txt", "w", stdout);*/
+	freopen("testout1.txt", "w", stdout);
 	ToMainScreen();
 	LOOP(ListenMainKey);
 	SayGoodbye();
 	freopen("CON", "r", stdin);
-	/*dup2(oldstdout, STDOUT);*/
+	dup2(oldstdout, STDOUT);
 #endif 
 	ToMainScreen();
 	LOOP(ListenMainKey);
