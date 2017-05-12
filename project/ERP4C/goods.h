@@ -51,7 +51,7 @@ typedef struct {
 #define ERROR 1
 #endif
 
-
+#define REMOVENULL -1
 
 
 Store * InitStore();
