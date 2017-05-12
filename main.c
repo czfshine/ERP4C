@@ -306,8 +306,8 @@ int main(int argn,char * argv[] ){
 	ToMainScreen();
 	LOOP(ListenMainKey);
 	SayGoodbye();
-	freopen("CON", "rb", stdin);
-	freopen("CON", "wb", stdout);
+	freopen("CON", "rb+", stdin);
+	freopen("CON", "wb+", stdout);
 #endif 
 	ToMainScreen();
 	LOOP(ListenMainKey);
