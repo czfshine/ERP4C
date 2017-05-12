@@ -31,7 +31,7 @@ Description:
 #include "goods.h"
 #include "main.h"
 #include <io.h>
-
+#include "debug.h"
 Store GobalStore;
 
 void Init(){
