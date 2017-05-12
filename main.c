@@ -308,6 +308,7 @@ int main(int argn,char * argv[] ){
 	LOOP(ListenMainKey);
 	SayGoodbye();
 	freopen("CON", "r", stdin);
+	freopen("CON", "w", stdout);
 	dup2(oldstdout, STDOUT);
 #endif 
 	ToMainScreen();
