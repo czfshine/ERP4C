@@ -171,7 +171,7 @@ int RemoveGoods(){
 }
 
 int QueryGoods(){
-
+	ToQueryScreen();
 	ShowAllGoods(GobalStore);
 	WantEnter();
 	ToMainScreen();
