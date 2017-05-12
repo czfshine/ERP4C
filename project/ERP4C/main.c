@@ -30,7 +30,7 @@ Description:
 #include "tui.h"
 #include "goods.h"
 #include "main.h"
-
+#include <io.h>
 
 Store GobalStore;
 
@@ -301,7 +301,7 @@ int main(int argn,char * argv[] ){
 	Init();
 	
 #ifdef LOCAL
-#include <io.h>
+
 #define STDOUT 1
 	int oldstdout = dup(STDOUT);
 	freopen("testin1.txt", "r", stdin);
