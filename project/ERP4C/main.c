@@ -181,6 +181,9 @@ void SaleGoods() {
 
 	int id;
 	id = WantId();
+	if (id == 0) {
+		return;
+	}
 
 	int sc;
 	ShowSaleCount();
