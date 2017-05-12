@@ -205,7 +205,9 @@ void StockGoods() {
 
 	int id;
 	id = WantId();
-
+	if (id == 0) {
+		return;
+	}
 	int sc;
 	ShowStockCount();
 	sc = WantNum();
@@ -229,7 +231,7 @@ int  Loggin2S() {
 	switch (type) {
 	case SALE:SaleGoods(); break;
 	case STOCK:StockGoods(); break;
-	case EXIT: return 1;
+	case EXIT: ToMainScreen(); return 1;
 	}
 
 	return 0;
