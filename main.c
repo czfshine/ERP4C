@@ -299,10 +299,11 @@ int ListenMainKey(){
 
 int main(int argn,char * argv[] ){
 	Init();
-	WithDebug(
-	ToMainScreen();
-	LOOP(ListenMainKey);
-	SayGoodbye();
-	);
+
+	WithDebug({
+		ToMainScreen();
+		LOOP(ListenMainKey);
+		SayGoodbye();
+	});
     return 0;
 }
