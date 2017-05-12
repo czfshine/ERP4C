@@ -150,7 +150,7 @@ void RemoveByName() {
 
 	/*todo*/
 
-	RemoveByName(GobalStore, name);
+	RemoveGoodsByName(GobalStore, name);
 	return;
 }
 int RemoveGoods(){
