@@ -173,6 +173,8 @@ int RemoveGoods(){
 int QueryGoods(){
 
 	ShowAllGoods(GobalStore);
+	WantEnter();
+	ToMainScreen();
 	return 1;
 }
 
