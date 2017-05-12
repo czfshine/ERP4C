@@ -4,9 +4,11 @@
 #define MAKE(type) (type * ) malloc(sizeof(type));
 
 #define LOOP(fn) while(!fn()){};
+
+#ifndef LOCAL
 int DEBUG = 0;
-#ifdef LOCAL
-DEBUG = 1;
+#else
+int DEBUG = 1;
 #endif 
 
 #define WithDebug(code) do{\
