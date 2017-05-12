@@ -5,9 +5,11 @@
 
 #define LOOP(fn) while(!fn()){};
 
-#ifndef LOCAL
+#ifndef LOCAL&&D
+#define D
 int DEBUG = 0;
 #else
+#define D
 int DEBUG = 1;
 #endif 
 
