@@ -33,3 +33,9 @@ linklist:
 	-git commit -m "build erp4c" 
 	gcc -Wall -DLOCAL -O3 -ansi linklist.c testlinklist.c -o testlinklist.exe
 	testlinklist.exe
+serialize:
+	-lua addbuildnum.lua
+	-git add .
+	-git commit -m "build erp4c" 
+	gcc -Wall -DLOCAL -O3 -ansi linklist.c  good.c serialize.c testserialize.c -o testserialize.exe
+	testserialize.exe
