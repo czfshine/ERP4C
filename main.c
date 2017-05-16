@@ -253,8 +253,8 @@ int  Loggin2S() {
 	/* todo*/
 	type = WantNum();
 	switch (type) {
-	case SALE:if (SaleGoods() == GOODNOTFOUND) { ShowGoodNotFound(); }; break;
-	case STOCK:if (StockGoods() == GOODNOTFOUND) { ShowGoodNotFound(); }; break;
+	case SALE:if (SaleGoods() == GOODNOTFOUND) { ShowGoodNotFound(); WantEnter(); }; break;
+	case STOCK:if (StockGoods() == GOODNOTFOUND) { ShowGoodNotFound(); WantEnter(); }; break;
 	case EXIT: ToMainScreen(); return 1;
 	}
 
