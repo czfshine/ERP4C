@@ -182,56 +182,68 @@ int RemoveGoods(){
 
 int QueryGoods(){
 	ToQueryScreen();
+	if (GobalStore.L->next == NULL)
+	{
+		ShowStoreEmpty();
+		return 1;
+	}
 	ShowAllGoods(GobalStore);
 	WantEnter();
 	ToMainScreen();
 	return 1;
 }
 
-void SaleGoods() {
+int  SaleGoods() {
 	ToSaleScreen();
 
 	int id;
 	id = WantId();
 	if (id == 0) {
-		return;
+		return EXIT;
 	}
+	goods *g;
+	g = FindGoodsById(GobalStore, id);
+	if (g == NULL)
+		return GOODNOTFOUND;
 
 	int sc;
 	ShowSaleCount();
 	sc = WantNum();
 
-	goods *g;
-	g = FindGoodsById(GobalStore,id);
-
+	
 	g->count -= sc;
 
 	ShowSaleSuccess();
 	WantEnter();
-	return;
+	return OK;
 }
 
 
-void StockGoods() {
+int StockGoods() {
 	ToStockScreen();
 
 	int id;
 	id = WantId();
 	if (id == 0) {
-		return;
+		return EXIT;
 	}
+
+	goods *g;
+	g = FindGoodsById(GobalStore, id);
+	if (g == NULL)
+		return GOODNOTFOUND;
+
 	int sc;
 	ShowStockCount();
 	sc = WantNum();
 
-	goods *g;
-	g = FindGoodsById(GobalStore, id);
+	
 
 	g->count += sc;
 
 	ShowStockSuccess();
 	WantEnter();
-	return;
+	return OK;
 }
 
 int  Loggin2S() {
@@ -241,8 +253,8 @@ int  Loggin2S() {
 	/* todo*/
 	type = WantNum();
 	switch (type) {
-	case SALE:SaleGoods(); break;
-	case STOCK:StockGoods(); break;
+	case SALE:if (SaleGoods() == GOODNOTFOUND) { ShowGoodNotFound(); }; break;
+	case STOCK:if (StockGoods() == GOODNOTFOUND) { ShowGoodNotFound(); }; break;
 	case EXIT: ToMainScreen(); return 1;
 	}
 

@@ -1,6 +1,6 @@
 int QueryGoods();
-void SaleGoods();
-void StockGoods();
+int SaleGoods();
+int StockGoods();
 int Loggin2S();
 void PrintSumCount();
 void PrintIdCount();
