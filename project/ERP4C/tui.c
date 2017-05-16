@@ -345,5 +345,5 @@ void ShowStoreEmpty() {
 	char str[] = {
 		"The Store is emtpy.\n"
 	};
-	printf("%s", str);
+	printf("%s",str);
 }

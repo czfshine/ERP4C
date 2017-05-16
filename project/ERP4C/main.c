@@ -177,6 +177,7 @@ int RemoveGoods(){
 	}
 
 	ShowRemoveSuccess();
+	WantEnter();
 	return 0;
 }
 
