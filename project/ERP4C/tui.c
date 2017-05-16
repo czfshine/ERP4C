@@ -333,3 +333,17 @@ void ShowRemoveNull() {
 	};
 	printf("%s", str);
 }
+
+void ShowGoodNotFound() {
+	char str[] = {
+		"The good can't found!\n"
+	};
+	printf("%s", str);
+}
+
+void ShowStoreEmpty() {
+	char str[] = {
+		"The Store is emtpy.\n"
+	};
+	printf("%s", str);
+}

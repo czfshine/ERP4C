@@ -150,6 +150,8 @@ void WantEnter();
 
 #endif
 
+#define GOODNOTFOUND -1
+
 void ToLoggin2SScreen();
 
 void ToSaleScreen();
