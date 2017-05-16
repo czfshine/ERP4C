@@ -136,7 +136,7 @@ int ChangeGoods(){
 }
 
 
-void RemoveById() {
+int RemoveById() {
 	int id;
 	id = WantId();
 	/*todo error*/
@@ -145,11 +145,12 @@ void RemoveById() {
 	if (res == REMOVENULL) {
 		ShowRemoveNull();
 		WantEnter();
+		return ERROR;
 	}
-	return ;
+	return OK;
 }
 
-void RemoveByName() {
+int  RemoveByName() {
 	char *name;
 	name = WantName();
 
@@ -160,8 +161,9 @@ void RemoveByName() {
 	if (res == REMOVENULL) {
 		ShowRemoveNull();
 		WantEnter();
+		return ERROR;
 	}
-	return;
+	return OK;
 }
 int RemoveGoods(){
 
@@ -171,8 +173,8 @@ int RemoveGoods(){
 	type=WantNum();
 
 	switch(type){
-		case REMOVEBYID:RemoveById();break;
-		case REMOVEBYNAME:RemoveByName();break;
+		case REMOVEBYID:if (RemoveById()) return 0; break;
+		case REMOVEBYNAME:if (RemoveByName()) return 0; break;
 		case REMOVETOEXIT: ToMainScreen(); return 1;
 	}
 
