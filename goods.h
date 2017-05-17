@@ -30,6 +30,7 @@ typedef struct {
 	int waitid;
 	char * waitname;
 	int sumconut;
+	FILE *file;
 }	StoreInfo;
 
 
@@ -54,6 +55,7 @@ typedef struct {
 #define REMOVENULL -1
 
 
+#define SI(s) ((StoreInfo*)(s.L)->elem)
 Store * InitStore();
 int AddGoods(Store s,int id,char * name,int count);
 int ChangeGoodsName(Store s,int id,char * name);

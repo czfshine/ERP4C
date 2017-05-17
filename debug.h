@@ -14,6 +14,7 @@ int DEBUG = 1;
 		code;\
 		freopen("CON", "r", stdin);\
 		freopen("CON", "w", stdout);\
-		_dup2(oldstdout, 1);} \
+		_dup2(oldstdout, 1);\
+	} \
 		code;\
 }while (0);
