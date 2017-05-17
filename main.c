@@ -32,12 +32,31 @@ Description:
 #include "main.h"
 #include <io.h>
 #include "debug.h"
-Store GobalStore;
+#include "serialize.h"
+
 
 void Init(){
 	Store * S;
 	S=InitStore();
 	GobalStore=*S;
+	FILE *fp;
+	fp = fopen("goods.dat", "rb");
+	if (fp == NULL) {
+		fp=fopen("goods.dat", "wb");
+		fclose(fp);
+	}
+	else {
+		SI(GobalStore)->file = fp;
+		unserialize(GobalStore, fp, goodreader);
+	}
+}
+
+void GarbageCollection() {
+	FILE *fp;
+	fp = fopen("goods.dat", "wb");
+
+	serialize(GobalStore, fp, goodswriter);
+	fclose(fp);
 }
 void callback(){
 	printf("test callback");
@@ -329,6 +348,7 @@ int main(int argn,char * argv[] ){
 		ToMainScreen();
 		LOOP(ListenMainKey);
 		SayGoodbye();
+		GarbageCollection();
 	});
     return 0;
 }
