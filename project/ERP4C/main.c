@@ -138,13 +138,16 @@ int ChangeGoods(){
 
 	ShowChangeType();
 
-	int type;
-	type=WantNum();
-
-	switch(type){
-		case CHANGENAME:ChangeName(g);break;
-		case CHANGECOUNT:ChangeCount(g);break;
+	int type=-1;
+	while (type < 0|| type>2) {
+		type = WantNum();
+		switch (type) {
+		case CHANGENAME:ChangeName(g); break;
+		case CHANGECOUNT:ChangeCount(g); break;
+		default: {ShowInputTypeError(); ShowChangeType(); }
+		}
 	}
+	
 	ShowChangeSuccess();
 
 	WantEnter();
@@ -333,7 +336,7 @@ int ListenMainKey(){
 		MENUITEM(MENUSTATIS,LOOP(StatisGoods));
 		MENUITEM(MENUHELP,ShowHelp());
 		MENUITEM(MENUEXIT,return 1);
-	DEFAULTITEM(callback());
+		DEFAULTITEM(ShowInputTypeError(); WantEnter(); ToMainScreen(); return 0;);
 	
 	return 0;
 }
