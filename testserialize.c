@@ -9,6 +9,14 @@ int writer(FILE * fp,goods *g){
 	fwrite(g,sizeof (goods) ,1,fp);
 	return 0;
 }
+
+goods * reader(FILE *fp){
+	goods* g;
+	g=MAKE(goods);
+
+	fread(g,sizeof(goods),1,fp);
+	return 0;
+}
 int main(){
 	Store *s;
 	s=InitStore();
@@ -34,6 +42,13 @@ int main(){
 	fp=fopen("testsave.dat","w");
 
 	serialize(*s,fp,writer);
+	fclose(fp);
 
+
+	fp=fopen("testsave.dat","r");
+
+	unserialize(s,fp,reader);
+
+	foreach(L,print);
 	return 0;
 }
