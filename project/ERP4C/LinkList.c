@@ -9,92 +9,92 @@ Description:
 */
 #include "linklist.h"
 #include "common.h"
-LinkList LinkListInit(){
+LinkList LinkListInit() {
 	LinkNode *n;
-	n=newnode(NULL);
-	n->next=NULL;
+	n = newnode(NULL);
+	n->next = NULL;
 	return n;
 }
 
-LinkNode * newnode (ptr elem){
+LinkNode * newnode(ptr elem) {
 	LinkNode * n;
-	n=MAKE(LinkNode);
-	n->elem=elem;
-	n->next=NULL;
+	n = MAKE(LinkNode);
+	n->elem = elem;
+	n->next = NULL;
 	return n;
 }
-LinkNode * back(LinkList L){
+LinkNode * back(LinkList L) {
 	LinkNode * temp;
-	temp=L;
-	while(temp->next){
-		temp=temp->next;
+	temp = L;
+	while (temp->next) {
+		temp = temp->next;
 	}
 	return temp;
 }
-int pushback(LinkList L,ptr elem){
+int pushback(LinkList L, ptr elem) {
 
-	
+
 	LinkNode * n;
-	n=newnode(elem);
+	n = newnode(elem);
 
 	LinkNode * temp;
-	temp=back(L);
-	temp->next=n;
+	temp = back(L);
+	temp->next = n;
 
 	return 0;
 }
 
-int pushfront(LinkList L, ptr elem){
+int pushfront(LinkList L, ptr elem) {
 
-	LinkNode * n,*p;
-	n=newnode(elem);
+	LinkNode * n, *p;
+	n = newnode(elem);
 
-	p=L->next;
+	p = L->next;
 
-	L->next=n;
-	n->next=p;
+	L->next = n;
+	n->next = p;
 
 	return 0;
 }
 
-LinkNode* foreach(LinkList L,int (* fn)(LinkList,ptr )){
+LinkNode* foreach(LinkList L, int(*fn)(LinkList, ptr)) {
 	/* note : it return last node ,so you must use R(p) to get correct node*/
-	/*until fn()!=0 return the Node*/
-
 	/*注意：它返回的是前一个节点，用以删除操作，正确节点得用 R()宏进行修正*/
+	/*until fn()!=0 return the Node*/
+	
 
 	LinkNode *p;
-	p=L;
-	if(L->next==NULL) return NULL;
-	while(p->next){
-		LinkNode * a=p->next;
-		ptr b=a->elem;
-		if(fn(L,b)){
+	p = L;
+	if (L->next == NULL) return NULL;
+	while (p->next) {
+		LinkNode * a = p->next;
+		ptr b = a->elem;
+		if (fn(L, b)) {
 			return p;/*here*/
 		}
-		p=p->next;
+		p = p->next;
 	}
 	return NULL;
 }
 
 
-LinkNode* foreachwithcmp(LinkList L,int (* fn)(LinkList,ptr,int (* cmp )(ptr,ptr) ),int (* cmp )(ptr,ptr)){
-	
+LinkNode* foreachwithcmp(LinkList L, int(*fn)(LinkList, ptr, int(*cmp)(ptr, ptr)), int(*cmp)(ptr, ptr)) {
+
 	/* note : it return last node ,so you must use R(p) to get correct node*/
 	/*until fn()!=0 return the Node*/
 	/*注意：它返回的是前一个节点，用以删除操作，正确节点得用 R()宏进行修正*/
 	/*带比较函数的遍历*/
 
 	LinkNode *p;
-	p=L;
+	p = L;
 
-	while(p->next){
-		LinkNode * a=p->next;
-		ptr b=a->elem;
-		if(fn(L,b,cmp)){
+	while (p->next) {
+		LinkNode * a = p->next;
+		ptr b = a->elem;
+		if (fn(L, b, cmp)) {
 			return p;
 		}
-		p=p->next;
+		p = p->next;
 	}
 	return NULL;
 }
@@ -104,10 +104,10 @@ int freeNode(LinkNode * nn, int(*freeelem)(ptr)) {
 	return 0;
 }
 
-int RemoveNode(LinkNode *p,int (*freeelem)(ptr)) {
+int RemoveNode(LinkNode *p, int(*freeelem)(ptr)) {
 	/* remove the next node*/
 	if (p->next == NULL)
-		return 0; 
+		return 0;
 	LinkNode *nn;
 	nn = p->next;/*correct node to remove*/
 	if (nn->next == NULL) {

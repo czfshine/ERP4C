@@ -27,6 +27,12 @@
     <ClCompile Include="tui.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="serialize.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
@@ -45,6 +51,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="debug.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="serialize.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

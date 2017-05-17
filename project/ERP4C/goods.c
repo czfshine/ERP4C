@@ -180,3 +180,17 @@ int SumId(Store s) {
 	foreach(s.L, sumcount);
 	return si->sumconut;
 }
+
+
+goods * goodreader(FILE *fp) {
+	goods* g;
+	g = MAKE(goods);
+	if (fread(g, sizeof(goods), 1, fp))
+		return g;
+	return 0;
+}
+
+int goodswriter(FILE * fp, goods *g) {
+	fwrite(g, sizeof(goods), 1, fp);
+	return 0;
+}

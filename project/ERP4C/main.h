@@ -1,3 +1,5 @@
+
+Store GobalStore; 
 int QueryGoods();
 int SaleGoods();
 int StockGoods();

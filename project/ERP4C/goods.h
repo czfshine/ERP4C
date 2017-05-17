@@ -70,4 +70,6 @@ int RemoveGoodsByName(Store s, char *name);
 
 int SumCount(Store s);
 int SumId(Store s);
+goods * goodreader(FILE * fp);
+int goodswriter(FILE * fp, goods * g);
 #endif
