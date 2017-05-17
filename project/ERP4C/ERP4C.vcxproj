@@ -112,9 +112,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="common.c" />
     <ClCompile Include="goods.c" />
     <ClCompile Include="linklist.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="serialize.c" />
     <ClCompile Include="tui.c" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +125,7 @@
     <ClInclude Include="goods.h" />
     <ClInclude Include="linklist.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="serialize.h" />
     <ClInclude Include="tui.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
