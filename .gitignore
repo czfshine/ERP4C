@@ -8,3 +8,4 @@ test.c
 *.gch
 project/Library/Library.layout
 *.o
+*.dat
