@@ -56,7 +56,7 @@ int main(){
 
 	//unserialize(*s,fp,reader);
 
-	goods* la,lb,lc;
+	goods* la,*lb,*lc;
 	la=MAKE(goods);
 	lb=MAKE(goods);
 	lc=MAKE(goods);
