@@ -54,8 +54,9 @@ int main(){
 
 	fp=fopen("testsave.dat","rb");
 
-	/*unserialize(*s,fp,reader);*/
+	unserialize(*s,fp,reader);
 
+	/*
 	goods* la,*lb,*lc;
 	la=MAKE(goods);
 	lb=MAKE(goods);
@@ -63,7 +64,7 @@ int main(){
 	fread(la,sizeof(goods),1,fp);
 	fread(lb,sizeof(goods),1,fp);
 	fread(lc,sizeof(goods),1,fp);
-	printf("%d %d %d\n",la->id,lb->id,lc->id);
+	printf("%d %d %d\n",la->id,lb->id,lc->id);*/
 	foreach(L,print);
 	return 0;
 }
