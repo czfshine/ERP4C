@@ -14,8 +14,10 @@ goods * reader(FILE *fp){
 	goods* g;
 	g=MAKE(goods);
 
-	fread(g,sizeof(goods),1,fp);
+	if(fread(g,sizeof(goods),1,fp))
 	return g;
+	
+	return 0;
 }
 int main(){
 	Store *s;
