@@ -149,11 +149,26 @@ void TypeLongError(INPUTTYPE T) {
 	printf("ERROR: input %s is too long,try input a small %s\n", TYPENAME[T], TYPENAME[T]);
 }
 
+void ShowGoodsExist(int id) {
+
+	char str[] = {
+		"The Goods id:%d is exist,please input another id\n"
+	};
+
+	printf(str, id);
+
+}
+void ShowCantFind(int id) {
+	char str[] = {
+		"The Good with id:%d isn't exist,please input another id\n"
+	};
+
+	printf(str, id);
+}
+
 
 void SayHello() {
-
-	printf("ERP4C %s ", version);
-	printf("| dev-build %04d\n", buildnum[0]);
+	printf("ERP4C %s | dev-build %04d\n", version, buildnum[0]);
 }
 void SayGoodbye() {
 	CleanScreen();
@@ -161,10 +176,7 @@ void SayGoodbye() {
 	printf("Goodbye~~~\n");
 }
 
-void ShowMainMenu() {
-
-
-	char str[] = {
+Screen(Main,{
 		"Please choose a option:\n"
 		"1)\tloggin goods\n"
 		"2)\tchange goods\n"
@@ -175,11 +187,7 @@ void ShowMainMenu() {
 		"7)\thelp\n"
 		"0)\texit\n"
 		"Input your choice:"
-	};
-
-	printf("%s", str);
-
-}
+	})
 
 Notice(Help,{
 	"This a help doc\n"
@@ -200,77 +208,44 @@ Notice(ChangeGoods,{
 		"Change goods infomation:\n"
 		"Note : You can input a id equal 0 to exit loggin.\n"
 })
-void ShowGoodsExist(int id) {
 
-	char str[] = {
-		"The Goods id:%d is exist,please input another id\n"
-	};
-
-	printf(str, id);
-
-}
-void ShowCantFind(int id){
-	char str[]={
-		"The Good with id:%d isn't exist,please input another id\n"
-	};
-
-	printf(str,id);
-}
-void ShowChangeType(){
-
-	char str[]={
+Notice(ChangeType,{
 		"Please choose you want change infomation type:\n"
 		"1) good's name\n"
 		"2) good's count\n"
 		"Input your choice:"
-	};
-
-	printf("%s",str);
-}
+	})
 
 Notice(ChangeSuccess,{
 		"The goods was success changed.\n"
 	})
 
-void ShowRemove() {
-	char str[] = {
+Screen(Remove,{
 		"Remove goods from the store:\n"
 		"Please choose a option:\n"
 		"1) remove good by id\n"
 		"2) remove good by name\n"
 		"0) return the main menu\n"
 		"Input your choice:"
-	};
-
-
-	printf("%s", str);
-
-}
+	})
 
 Notice(RemoveSuccess,{
 		"Remove good(s) success!\n"
 	})
 
-void ToLoggin2SScreen() {
-	CleanScreen();
-	char str[] = {
+Screen(Loggin2S,{
 		"Sale or Stock good:"
 		"Please choose a option:\n"
 		"1) Sale good(s).\n"
 		"2) Stock good(s).\n"
 		"0) Exit.\n"
 		"Input your choice:"
-	};
-	printf("%s", str);
-}
-void ToSaleScreen() {
-	CleanScreen();
-	char str[] = {
+	})
+Screen(Sale, {
 		"Sell the goods:\n"
 		"Note : You can input a id equal 0 to exit loggin.\n"
-	};
-	printf("%s", str);
-}
+})
+
 Notice(SaleCount,{
 		"How many good(s) you want to sell: "
 	})
@@ -279,15 +254,10 @@ Notice(SaleSuccess,{
 		"The goods was  success sold!\n"
 	})
 
-void ToStockScreen() {
-	CleanScreen();
-	char str[] = {
+Screen(Stock, {
 		"Stock the good:\n"
 		"Note : You can input a id equal 0 to exit loggin.\n"
-	};
-
-	printf("%s", str);
-}
+	})
 
 Notice(StockCount,{
 		"How many good(s) you want to stock: "
@@ -306,18 +276,14 @@ Notice(IdCount, {
 		"The sum of good's type is:"
 	})
 
-void ToStatisScreen() {
-	CleanScreen();
-	char str[] = {
+Screen(Statis,{
 		"Statis good's infomation:\n "
 		"Please choose a option:\n"
 		"1) Count sum of good's count.\n"
 		"2) Count sum of good's type. \n"
 		"0) Exit\n"
 		"Input your choice:"
-	};
-	printf("%s", str);
-}
+	})
 
 Screen(Query, {
 	"Show all goods:\n"

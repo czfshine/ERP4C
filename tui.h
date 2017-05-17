@@ -21,16 +21,13 @@ The user interface in console.
 #else
 #define CleanScreen()  system("cls");SayHello();
 #endif
-#define ToMainScreen() CleanScreen();\
-    					ShowMainMenu();
 
 #define ToLogginScreen() CleanScreen();\
 						ShowLogginGoods();
 #define ToChangeScreen() CleanScreen();\
 						ShowChangeGoods();
 
-#define ToRemoveScreen() CleanScreen();\
-						ShowRemove();
+
 
 #define Screen(name,string) void To##name##Screen(){\
 								CleanScreen()\
