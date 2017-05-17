@@ -1,7 +1,7 @@
 #include "serialize.h"
 
 int print( LinkList L,ptr elem){
-	printf("%d",((goods *)elem)->id);
+	printf("goods:%d\n",((goods *)elem)->id);
 	return 0;
 }
 
@@ -10,20 +10,25 @@ int writer(FILE * fp,goods *g){
 	return 0;
 }
 
+LinkList L;
+
 goods * reader(FILE *fp){
+	foreach(L,print);
 	goods* g;
 	g=MAKE(goods);
 
 	if(fread(g,sizeof(goods),1,fp))
-	return g;
-	printf("%d\n",g->id);
+	{	printf("%d\n",g->id);
+		return g;
+	}
+	
 	return 0;
 }
 int main(){
 	Store *s;
 	s=InitStore();
 
-	LinkList L;
+	
 	L=s->L;
 
 	goods a,b,c;
