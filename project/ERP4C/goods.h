@@ -17,8 +17,9 @@ Some logic and function for good.
 
 typedef struct {
 	int id;
-	char name[255];
 	int count;
+	char name[255];
+	
 
 } goods;
 
