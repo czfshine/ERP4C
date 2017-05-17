@@ -6,7 +6,7 @@ int print( LinkList L,ptr elem){
 }
 
 int writer(FILE * fp,goods *g){
-	fwrite(g,(sizeof goods) ,1,fp);
+	fwrite(g,sizeof (goods) ,1,fp);
 }
 int main(){
 	Store *s;
