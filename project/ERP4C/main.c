@@ -31,9 +31,10 @@ Description:
 #include "goods.h"
 #include "main.h"
 #include <stdio.h>
+#include <io.h>
 #include "debug.h"
 #include "serialize.h"
-
+#include "common.h"
 
 void Init(){
 	Store * S;
