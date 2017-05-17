@@ -32,7 +32,11 @@ The user interface in console.
 #define ToRemoveScreen() CleanScreen();\
 						ShowRemove();
 
-
+#define Screen(name,string) void To##name##Screen(){\
+							CleanScreen()\
+							char str[]=string;\
+							printf("%s",(str));\
+						}\
 
 #define InputClean() 	char ch;\
 						while((ch=getchar())!='\n'){}
@@ -170,5 +174,6 @@ void ShowSumCount();
 void ShowIdCount();
 void ToStatisScreen();
 void ShowRemoveNull();
+void ShowInputTypeError();
 void ShowRemove();
 void ShowRemoveSuccess();
