@@ -5,8 +5,8 @@ int print( LinkList L,ptr elem){
 	return 0;
 }
 
-int writer(FILE * fp;goods *g){
-	fwrite(g,sizeof goods ,1,fp);
+int writer(FILE * fp,goods *g){
+	fwrite(g,(sizeof goods) ,1,fp);
 }
 int main(){
 	Store *s;
