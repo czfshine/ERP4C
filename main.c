@@ -30,7 +30,7 @@ Description:
 #include "tui.h"
 #include "goods.h"
 #include "main.h"
-#include <io.h>
+#include <stdio.h>
 #include "debug.h"
 #include "serialize.h"
 
