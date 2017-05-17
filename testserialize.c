@@ -16,7 +16,7 @@ goods * reader(FILE *fp){
 
 	if(fread(g,sizeof(goods),1,fp))
 	return g;
-	printf("%d\n",g.id);
+	printf("%d\n",g->id);
 	return 0;
 }
 int main(){
