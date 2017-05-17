@@ -97,35 +97,66 @@ int WantNum(){
 }
 
 char * WantString(){
-	/*todo*/
-	char * a;
-	a=(char * )malloc(25);
+	
+	static char * a = NULL;
+	if (a == NULL) 
+		a = (char *)malloc(25);
 	scanf("%s",a);
 	getchar();
 	return a;
 
 }
 char * WantName(){
-	/*todo*/
+	
 	printf("Please input the good's name:");
 	return WantString();
 	
 }
 
 int WantId(){
-	/*todo*/
+
 	printf("Please input the good's id:");
 	int id;
-	id=WantNum();
+	while (id < 0) {
+		id = WantNum();
+		switch (id) {
+		case WANTTYPEERROR:
+		case WANTNULLERROR:
+			printf("ERROR:Please input a positive integer\n");
+			printf("Please input the good's id:");
+			break;
+		case WANTLONGERROR:
+			printf("ERROR:Input number too long ,please input a small number!\n");
+			printf("Please input the good's id:");
+			break;
+		}
+
+	}
+
 	return id;
 }
 
 int WantCount(){
-	/*todo*/
+	
 	printf("Please input the good's count:");
 
-	int count;
-	count=WantNum();
+	int count=-1;
+	
+	while (count < 0) {
+		count = WantNum();
+		switch (count) {
+		case WANTTYPEERROR:
+		case WANTNULLERROR:
+			printf("ERROR:Please input a positive integer\n"); 
+			printf("Please input the good's count:");
+			break;
+		case WANTLONGERROR:
+			printf("ERROR:Input number too long ,please input a small number!\n");
+			printf("Please input the good's count:"); 
+			break;
+		}
+		
+	}
 
 	return count;
 
