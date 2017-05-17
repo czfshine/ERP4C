@@ -9,3 +9,4 @@ test.c
 project/Library/Library.layout
 *.o
 *.dat
+project/ERP4C/goods.dat
