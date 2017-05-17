@@ -47,7 +47,7 @@ int main(){
 
 	fp=fopen("testsave.dat","r");
 
-	unserialize(s,fp,reader);
+	unserialize(*s,fp,reader);
 
 	foreach(L,print);
 	return 0;
