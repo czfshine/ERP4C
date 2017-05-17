@@ -54,7 +54,7 @@ int main(){
 
 	fp=fopen("testsave.dat","rb");
 
-	//unserialize(*s,fp,reader);
+	/*unserialize(*s,fp,reader);*/
 
 	goods* la,*lb,*lc;
 	la=MAKE(goods);
