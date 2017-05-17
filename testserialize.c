@@ -27,7 +27,7 @@ int main(){
 
 	foreach(L,print);
 	FILE * fp;
-	fopen(fp,"testsave.dat","w");
+	fp=fopen("testsave.dat","w");
 
 	serialize(*s,fp,writer);
 
