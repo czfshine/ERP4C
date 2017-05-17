@@ -46,17 +46,24 @@ int main(){
 
 	foreach(L,print);
 	FILE * fp;
-	fp=fopen("testsave.dat","w");
+	fp=fopen("testsave.dat","wb");
 
 	serialize(*s,fp,writer);
 	fclose(fp);
 
 
-	fp=fopen("testsave.dat","r");
+	fp=fopen("testsave.dat","rb");
 
-	unserialize(*s,fp,reader);
+	//unserialize(*s,fp,reader);
 
-	printf("\n");
+	goods* la,lb,lc;
+	la=MAKE(goods);
+	lb=MAKE(goods);
+	lc=MAKE(goods);
+	fread(la,sizeof(goods),1,fp);
+	fread(lb,sizeof(goods),1,fp);
+	fread(lc,sizeof(goods),1,fp);
+	printf("%d %d %d\n",la->id,lb->id,lc->id);
 	foreach(L,print);
 	return 0;
 }
