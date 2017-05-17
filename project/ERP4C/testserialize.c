@@ -5,6 +5,9 @@ int print( LinkList L,ptr elem){
 	return 0;
 }
 
+int writer(FILE * fp;goods *g){
+	fwrite(g,sizeof goods ,1,fp);
+}
 int main(){
 	Store *s;
 	s=InitStore();
@@ -23,6 +26,10 @@ int main(){
 	pushfront(L,&c);
 
 	foreach(L,print);
+	FILE * fp;
+	fopen(fp,"testsave.dat","w");
+
+	serialize(s,fp,writer)
 
 	return 0;
 }
