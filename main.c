@@ -48,6 +48,7 @@ void Init(){
 	else {
 		SI(GobalStore)->file = fp;
 		unserialize(GobalStore, fp, goodreader);
+		fclose(fp);
 	}
 }
 
@@ -84,18 +85,14 @@ int LogginGoods(){
 	char * name;
 	int id,count;
 
-	
 	goods *g;
 	g=WantGoodsById(&id);
 	if(g==(goods *)-1) return 1;
 	if(g!=NULL){
-		
 		ShowGoodsExist(id);
 		WantEnter();
 		return 0;
 	}
-
-
 	name=WantName();
 	count=WantCount();
 
@@ -103,7 +100,6 @@ int LogginGoods(){
 
 	ShowLogginSuccess();
 	WantEnter();
-	
 	return 0;
 }
 
