@@ -181,63 +181,33 @@ void ShowMainMenu() {
 
 }
 
-void ShowHelp() {
-	char str[] = {
-		"This a help doc\n"
-		"More infomation to see https://github.com/czfshine/my_oj\n"
-		"Thanks you !\n"
-	};
-	printf("%s", str);
-}
+Notice(Help,{
+	"This a help doc\n"
+	"More infomation to see https://github.com/czfshine/my_oj\n"
+	"Thanks you !\n"
+})
 
-
-
-void ShowLogginGoods(){
-	char str[]={
+Notice(LogginGoods, {
 		"Loggin goods infomation:\n"
 		"Note : You can input a id equal 0 to exit loggin.\n"
+})
 
-	};
-
-	printf("%s",str);
-
-
-}
-
-void ShowLogginSuccess(){
-
-	char str[]={
+Notice(LogginSuccess,{
 		"The goods was success loggined.\n"
-	};
+})
 
-	printf("%s",str);
-}
+Notice(ChangeGoods,{
+		"Change goods infomation:\n"
+		"Note : You can input a id equal 0 to exit loggin.\n"
+})
+void ShowGoodsExist(int id) {
 
-
-
-
-void ShowGoodsExist(int id){
-	
-	char str[]={
+	char str[] = {
 		"The Goods id:%d is exist,please input another id\n"
 	};
 
-	printf(str,id);
+	printf(str, id);
 
-}
-
-
-
-
-void ShowChangeGoods(){
-
-	char str[]={
-		"Change goods infomation:\n"
-		"Note : You can input a id equal 0 to exit loggin.\n"
-	};
-
-	printf("%s",str);
-	return;
 }
 void ShowCantFind(int id){
 	char str[]={
@@ -258,14 +228,10 @@ void ShowChangeType(){
 	printf("%s",str);
 }
 
-void ShowChangeSuccess(){
-
-	char str[]={
+Notice(ChangeSuccess,{
 		"The goods was success changed.\n"
-	};
+	})
 
-	printf("%s",str);
-}
 void ShowRemove() {
 	char str[] = {
 		"Remove goods from the store:\n"
@@ -281,12 +247,9 @@ void ShowRemove() {
 
 }
 
-void ShowRemoveSuccess() {
-	char str[] = {
+Notice(RemoveSuccess,{
 		"Remove good(s) success!\n"
-	};
-	printf("%s", str);
-}
+	})
 
 void ToLoggin2SScreen() {
 	CleanScreen();
@@ -308,19 +271,14 @@ void ToSaleScreen() {
 	};
 	printf("%s", str);
 }
-void ShowSaleCount() {
-	char str[] = {
+Notice(SaleCount,{
 		"How many good(s) you want to sell: "
-	};
-	printf("%s", str);
-}
+	})
 
-void ShowSaleSuccess() {
-	char str[] = {
+Notice(SaleSuccess,{
 		"The goods was  success sold!\n"
-	};
-	printf("%s", str);
-}
+	})
+
 void ToStockScreen() {
 	CleanScreen();
 	char str[] = {
@@ -331,36 +289,22 @@ void ToStockScreen() {
 	printf("%s", str);
 }
 
-void ShowStockCount() {
-	char str[] = {
+Notice(StockCount,{
 		"How many good(s) you want to stock: "
-	};
-	printf("%s", str);
-}
+	})
 
-void ShowStockSuccess() {
-	char str[] = {
+Notice(StockSuccess, {
 			"The goods was  success stocked!\n"
-	};
-	printf("%s", str);
-
-}
+	})
 
 
-void ShowSumCount() {
-	char str[] = {
+Notice(SumCount,{
 		"The sum of the good's count is:"
-	};
-	printf("%s", str);
-}
+	})
 
-void ShowIdCount() {
-	char str[] = {
+Notice(IdCount, {
 		"The sum of good's type is:"
-	};
-	printf("%s", str);
-
-}
+	})
 
 void ToStatisScreen() {
 	CleanScreen();
@@ -378,30 +322,19 @@ void ToStatisScreen() {
 Screen(Query, {
 	"Show all goods:\n"
 })
-void ShowRemoveNull() {
-	char str[] = {
+
+Notice(RemoveNull,{
 		"Not good in the store,remove error.\n"
-	};
-	printf("%s", str);
-}
+	})
 
-void ShowGoodNotFound() {
-	char str[] = {
+Notice(GoodNotFound, {
 		"The good can't found!\n"
-	};
-	printf("%s", str);
-}
+	})
 
-void ShowStoreEmpty() {
-	char str[] = {
+Notice(StoreEmpty,{
 		"The Store is emtpy.\n"
-	};
-	printf("%s",str);
-}
+	})
 
-void ShowInputTypeError() {
-	char str[] = {
-		"This choice isn't correct.\n"
-	};
-	printf("%s", str);
-}
+Notice(InputTypeError, {
+	"This choice isn't correct.\n"
+})
