@@ -59,6 +59,9 @@ int pushfront(LinkList L, ptr elem){
 
 LinkNode* foreach(LinkList L,int (* fn)(LinkList,ptr )){
 	/* note : it return last node ,so you must use R(p) to get correct node*/
+	/*until fn()!=0 return the Node*/
+
+	/*注意：它返回的是前一个节点，用以删除操作，正确节点得用 R()宏进行修正*/
 
 	LinkNode *p;
 	p=L;
@@ -76,7 +79,12 @@ LinkNode* foreach(LinkList L,int (* fn)(LinkList,ptr )){
 
 
 LinkNode* foreachwithcmp(LinkList L,int (* fn)(LinkList,ptr,int (* cmp )(ptr,ptr) ),int (* cmp )(ptr,ptr)){
+	
 	/* note : it return last node ,so you must use R(p) to get correct node*/
+	/*until fn()!=0 return the Node*/
+	/*注意：它返回的是前一个节点，用以删除操作，正确节点得用 R()宏进行修正*/
+	/*带比较函数的遍历*/
+
 	LinkNode *p;
 	p=L;
 
