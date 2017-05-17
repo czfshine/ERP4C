@@ -21,6 +21,9 @@ int main(){
 	b.id=2;
 	c.id=3;
 
+	strcpy(a.name,"test");
+	strcpy(b.name,"test");
+	strcpy(c.name,"test");
 
 	pushback(L,&a);
 	pushback(L,&b);
