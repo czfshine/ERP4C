@@ -13,12 +13,11 @@ int writer(FILE * fp,goods *g){
 LinkList L;
 
 goods * reader(FILE *fp){
-	foreach(L,print);
 	goods* g;
 	g=MAKE(goods);
 
 	if(fread(g,sizeof(goods),1,fp))
-	{	printf("%d\n",g->id);
+	{
 		return g;
 	}
 	
