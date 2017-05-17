@@ -16,7 +16,7 @@ int pretretment(LinkList L,ptr p,writerfn(writer)){
 
 int serialize(Store s,FILE * fp,writerfn(writer)){
 	SI(s)->file=fp;
-	for_eachwithcmp(s.L,pretretment,writer);
+	foreachwithcmp(s.L,pretretment,writer);
 }
 
 int unserialize(Store s , FILE * fp,readfn(reader)){
