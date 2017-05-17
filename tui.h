@@ -33,10 +33,15 @@ The user interface in console.
 						ShowRemove();
 
 #define Screen(name,string) void To##name##Screen(){\
-							CleanScreen()\
-							char str[]=string;\
-							printf("%s",(str));\
-						}\
+								CleanScreen()\
+								char str[]=string;\
+								printf("%s",(str));\
+							}
+
+#define Notice(name,string) void Show##name (){\
+								char str[] = string; \
+								printf("%s", (str)); \
+							}\
 
 #define InputClean() 	char ch;\
 						while((ch=getchar())!='\n'){}
