@@ -49,6 +49,7 @@ int main(){
 
 	unserialize(*s,fp,reader);
 
+	printf("\n");
 	foreach(L,print);
 	return 0;
 }
