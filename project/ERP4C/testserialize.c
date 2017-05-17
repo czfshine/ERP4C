@@ -29,7 +29,7 @@ int main(){
 	FILE * fp;
 	fopen(fp,"testsave.dat","w");
 
-	serialize(s,fp,writer);
+	serialize(*s,fp,writer);
 
 	return 0;
 }
