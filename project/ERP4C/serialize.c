@@ -1,19 +1,20 @@
+/*
+Serialize Linklist .
+Author czfshine (https://github.com/czfshine)
+Date :2017-05-10 11:10
+Langage :ANSI C
+Listen :MIT
+Description:
+seralize and unseralize linklist to/from file.
+序列化和反序列化链表
+*/
 #include "serialize.h"
 
 int pretretment(LinkList L, ptr p, writerfn(writer)) {
 	StoreInfo *si;
 	si = L->elem;
-	goods *g;
-	g = (goods *)p;
-
-	if (writer(si->file, g)) {
-		return 1;
-	}
-	else {
-		return 0;
-	}
+	return writer(si->file, p);
 }
-
 
 int serialize(Store s, FILE * fp, writerfn(writer)) {
 	SI(s)->file = fp;

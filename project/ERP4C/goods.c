@@ -64,29 +64,19 @@ int cmpname(goods *g, StoreInfo * si) {
 
 /*寻找第一个满足比较函数的节点*/
 int find(LinkList L, ptr p, int(*cmp)(goods *, StoreInfo *)) {
-	if (cmp(p, L->elem)) {
-		return 1;
-	}
-	else {
-		return 0;
-	}
+	return (cmp(p, L->elem));
 }
 
 goods * getgood(LinkNode *p) {
-	if (p == NULL) {
+	if (p == NULL) 
 		return NULL;
-	}
-	goods * g;
-	g = p->elem;
-	return g;
+	return p->elem;
 }
 LinkNode * FindLinkNodeById(Store s, int id) {
 	StoreInfo * si;
 	si = s.L->elem;
-	si->waitid = id;
-	LinkNode * p;
-	p = foreachwithcmp(s.L, find, cmpid);
-	return p;
+	si->waitid = id;/*将期望的id存进去，比较函数才能获取到*/
+	return foreachwithcmp(s.L, find, cmpid);;
 }
 
 goods * FindGoodsById(Store s, int id) {
@@ -99,10 +89,8 @@ goods * FindGoodsById(Store s, int id) {
 LinkNode * FindLinkNodeByName(Store s, char * name) {
 	StoreInfo * si;
 	si = s.L->elem;
-	si->waitname = name;
-	LinkNode * p;
-	p = foreachwithcmp(s.L, find, cmpname);
-	return p;
+	si->waitname = name;/*同理*/
+	return foreachwithcmp(s.L, find, cmpname);;
 
 }
 goods * FindGoodsByName(Store s, char *name) {
@@ -116,6 +104,7 @@ int freegood(goods * g) {
 	free(g);
 	return 0;
 }
+
 int RemoveGoodsById(Store s, int id) {
 	LinkNode * p;
 
@@ -138,6 +127,7 @@ int RemoveGoodsByName(Store s, char *name) {
 	return OK;
 }
 
+/*不带比较函数的遍历*/
 int printgoods(LinkList L, ptr p) {
 	goods *g;
 	g = (goods*)p;
@@ -161,7 +151,7 @@ int sumcount(LinkList L, ptr p) {
 int SumCount(Store s) {
 	StoreInfo *si;
 	si = s.L->elem;
-	si->sumconut = 0;
+	si->sumconut = 0;/*保留信息咯*/
 	foreach(s.L, sumcount);
 	return si->sumconut;
 }
@@ -180,7 +170,7 @@ int SumId(Store s) {
 	return si->sumconut;
 }
 
-
+/*从文件读取商品信息*/
 goods * goodreader(FILE *fp) {
 	goods* g;
 	g = MAKE(goods);
@@ -188,7 +178,7 @@ goods * goodreader(FILE *fp) {
 		return g;
 	return 0;
 }
-
+/*写入商品信息*/
 int goodswriter(FILE * fp, goods *g) {
 	fwrite(g, sizeof(goods), 1, fp);
 	return 0;
