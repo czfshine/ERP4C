@@ -27,12 +27,6 @@ The user interface in console.
 #endif
 
 
-#define ToLogginScreen() CleanScreen();\
-						ShowLogginGoods();
-#define ToChangeScreen() CleanScreen();\
-						ShowChangeGoods();
-
-
 
 #define Screen(name,string) void To##name##Screen(){\
 								CleanScreen()\
