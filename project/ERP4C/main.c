@@ -40,9 +40,11 @@ void Init() {
 	Store * S;
 	S = InitStore();
 	GobalStore = *S;
+
 	FILE *fp;
 	fp = fopen("goods.dat", "rb");
 	if (fp == NULL) {
+		/*文件不存在则创建*/
 		fp = fopen("goods.dat", "wb");
 		fclose(fp);
 	}
@@ -54,41 +56,40 @@ void Init() {
 }
 
 void GarbageCollection() {
+	/*垃圾回收，不过就这个程序而言，内存不用手动释放，*/
+	/*因为调用这个函数时程序都准备结束了，交给操作系统处理。*/
 	FILE *fp;
 	fp = fopen("goods.dat", "wb");
-
 	serialize(GobalStore, fp, goodswriter);
 	fclose(fp);
 }
 void callback() {
+	/*测试用回调函数*/
 	printf("test callback");
 }
 
 goods * WantGoodsById(int * res) {
+	/*请求用户输入id，并返回对应的商品*/
 	int id;
 	id = WantId();
-	/*TODO TYPE ERROR*/
 	if (id == 0) {
 		ToMainScreen();
-		return (goods *)-1;
+		return -1;
 	}
-
-	*res = id;
-	goods *g;
-	g = FindGoodsById(GobalStore, id);
-
-	return g;
+	*res = id;/*保留，交给调用者*/
+	return FindGoodsById(GobalStore, id);;
 
 }
-int LogginGoods() {
 
+int LogginGoods() {
+	/*录入商品信息*/
 	ToLogginScreen();
 	char * name;
 	int id, count;
 
 	goods *g;
 	g = WantGoodsById(&id);
-	if (g == (goods *)-1) return 1;
+	if (g == -1) return 1;
 	if (g != NULL) {
 		ShowGoodsExist(id);
 		WantEnter();
@@ -107,22 +108,19 @@ int LogginGoods() {
 int ChangeName(goods* g) {
 	char * name;
 	name = WantName();
-
 	strcpy(g->name, name);
 	return 0;
 }
 
 int ChangeCount(goods * g) {
-
 	int count;
 	count = WantCount();
-
 	g->count = count;
 	return 0;
-
 }
 
 int ChangeGoods() {
+	/*修改商品信息*/
 	ToChangeScreen();
 
 	int id;
@@ -147,21 +145,15 @@ int ChangeGoods() {
 		default: {ShowInputTypeError(); ShowChangeType(); }
 		}
 	}
-
 	ShowChangeSuccess();
-
 	WantEnter();
 	return 0;
 }
 
-
 int RemoveById() {
 	int id;
 	id = WantId();
-	/*todo error*/
-	int res;
-	res = RemoveGoodsById(GobalStore, id);
-	if (res == REMOVENULL) {
+	if (RemoveGoodsById(GobalStore, id) == REMOVENULL) {
 		ShowRemoveNull();
 		WantEnter();
 		return ERROR;
@@ -172,12 +164,7 @@ int RemoveById() {
 int  RemoveByName() {
 	char *name;
 	name = WantName();
-
-	/*todo*/
-	int res;
-
-	res = RemoveGoodsByName(GobalStore, name);
-	if (res == REMOVENULL) {
+	if (RemoveGoodsByName(GobalStore, name) == REMOVENULL) {
 		ShowRemoveNull();
 		WantEnter();
 		return ERROR;
@@ -185,9 +172,8 @@ int  RemoveByName() {
 	return OK;
 }
 int RemoveGoods() {
-
+	/*删除商品*/
 	ToRemoveScreen();
-
 
 	int type = -1;
 	while (type < 0 || type>2) {
@@ -200,14 +186,13 @@ int RemoveGoods() {
 		}
 	}
 
-	
-
 	ShowRemoveSuccess();
 	WantEnter();
 	return 0;
 }
 
 int QueryGoods() {
+	/*列出商品信息*/
 	ToQueryScreen();
 	if (GobalStore.L->next == NULL)
 	{
@@ -225,9 +210,8 @@ int  SaleGoods() {
 
 	int id;
 	id = WantId();
-	if (id == 0) {
+	if (id == 0) 
 		return EXIT;
-	}
 	goods *g;
 	g = FindGoodsById(GobalStore, id);
 	if (g == NULL)
@@ -240,9 +224,7 @@ int  SaleGoods() {
 	if (g->count - sc < 0) 
 		return GOODSCOUNTLESS;
 	else {
-
 		g->count -= sc;
-
 		ShowSaleSuccess();
 		WantEnter();
 	}
@@ -268,9 +250,6 @@ int StockGoods() {
 	int sc;
 	ShowStockCount();
 	sc = WantNum();
-
-
-
 	g->count += sc;
 
 	ShowStockSuccess();
@@ -279,6 +258,7 @@ int StockGoods() {
 }
 
 int  Loggin2S() {
+	/*售出与进货信息*/
 	ToLoggin2SScreen();
 
 	int type = -1;
@@ -303,15 +283,9 @@ int  Loggin2S() {
 		case EXIT: ToMainScreen(); return 1;
 		default: {ShowInputTypeError(); WantEnter(); ToLoggin2SScreen(); }
 		}
-		
-		
 	}
 
-
 	return 0;
-
-
-
 }
 
 
@@ -328,6 +302,7 @@ void PrintIdCount() {
 }
 
 int StatisGoods() {
+	/*统计货品信息*/
 	ToStatisScreen();
 
 	int type=-1;
@@ -341,15 +316,15 @@ int StatisGoods() {
 		default: {ShowInputTypeError(); WantEnter(); ToStatisScreen(); }
 		}
 	}
-
 	return 0;
 }
-int ListenMainKey() {
-	int op;
 
+int ListenMainKey() {
+	/*监听用户输入*/
+	int op;
 	op = WantNum();
 
-	switch (op) {
+	switch (op) {/*错误检查*/
 	case WANTTYPEERROR:
 		MainWantError(TypeError, T_NUM);
 	case WANTNULLERROR:
