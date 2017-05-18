@@ -172,7 +172,7 @@ Notice(Help, {
 	"Thanks you !\n"
 })
 
-Notice(LogginGoods, {
+Screen(Loggin, {
 		"Loggin goods infomation:\n"
 		"Note : You can input a id equal 0 to exit loggin.\n"
 })
