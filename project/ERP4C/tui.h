@@ -6,6 +6,7 @@ Langage :ANSI C
 Listen :MIT
 Description:
 The user interface in console.
+文本用户界面
 */
 #ifndef TUI_H
 #define TUI_H 
@@ -14,13 +15,17 @@ The user interface in console.
 #include <stdlib.h>
 #include <ctype.h>
 #include "common.h"
+
+/*是否清空屏幕（用以调试）*/
 #ifdef DONTCLEARSCREEN 
 #define CleanScreen()  SayHello();
 #elif __linux__ || __linux
+/**/
 #define CleanScreen()  system("clear");SayHello();
 #else
 #define CleanScreen()  system("cls");SayHello();
 #endif
+
 
 #define ToLogginScreen() CleanScreen();\
 						ShowLogginGoods();
