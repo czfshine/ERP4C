@@ -27,23 +27,18 @@ The user interface in console.
 #endif
 
 
-void ToLogginScreen();
-
-void ToChangeScreen() ;
-
-
-
+/*输出一屏*/
 #define Screen(name,string) void To##name##Screen(){\
 								CleanScreen()\
 								char str[]=string;\
 								printf("%s",(str));\
 							}
-
+/*输出提醒*/
 #define Notice(name,string) void Show##name (){\
 								char str[] = string; \
 								printf("%s", (str)); \
 							}\
-
+/*吃掉多余输入*/
 #define InputClean() 	char ch;\
 						while((ch=getchar())!='\n'){}
 
@@ -84,13 +79,16 @@ typedef int INPUTTYPE;
 #define T_NUM 0
 #define T_STR 1
 
-
+/*主屏输入错误*/
 #define MainWantError(errortype,wanttype) 	CleanScreen();\
 										   	errortype(wanttype);\
 											ShowMainMenu();\
 											return 0;
+/*菜单项*/
 #define MENUITEM(ID,CALLBACK) case ID :CALLBACK;break;
+/*菜单*/
 #define MENU(op) switch(op){
+/*默认选项*/
 #define DEFAULTITEM(CALLBACK) default : CALLBACK; }	
 
 
@@ -154,28 +152,19 @@ void WantEnter();
 #define SHOWSUMOFCOUNT 1
 #endif /* !SHOWSUMOFCOUNT */
 
-#ifndef SHOWCOUNTID
-#define SHOWCOUNTID 2
-#endif /* !SHOWCOUNTID*/
-
-#endif
 
 #define GOODNOTFOUND -1
 #define GOODSCOUNTLESS -2
+#ifndef SHOWCOUNTID
+#define SHOWCOUNTID 2
+#endif /* !SHOWCOUNTID*/
 void ToLoggin2SScreen();
-
 void ToSaleScreen();
-
 void ShowSaleCount();
-
 void ShowSaleSuccess();
-
 void ToStockScreen();
-
 void ShowStockCount();
-
 void ShowStockSuccess();
-
 void ShowSumCount();
 void ShowIdCount();
 void ToStatisScreen();
@@ -183,3 +172,6 @@ void ShowRemoveNull();
 void ShowInputTypeError();
 void ShowRemove();
 void ShowRemoveSuccess();
+void ToLogginScreen();
+void ToChangeScreen();
+#endif
