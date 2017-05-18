@@ -35,9 +35,11 @@ LinkNode * back(LinkList L) {
 		temp = temp->next;
 	return temp;
 }
-
-
 int pushback(LinkList L, ptr elem) {
+
+	/**/
+	/*尾部插入，复杂度O(n)*/
+	/**/
 
 	LinkNode * n;
 	n = newnode(elem);
@@ -48,7 +50,7 @@ int pushback(LinkList L, ptr elem) {
 }
 
 int pushfront(LinkList L, ptr elem) {
-	
+	/*在前端插入，复杂度O(1)*/
 	LinkNode * n, *p;
 	n = newnode(elem);
 	p = L->next;
@@ -58,11 +60,10 @@ int pushfront(LinkList L, ptr elem) {
 }
 
 LinkNode* foreach(LinkList L, int(*fn)(LinkList, ptr)) {
-
+	/*遍历链表，直到fn返回非0*/
 	/* note : it return last node ,so you must use R(p) to get correct node*/
 	/*注意：它返回的是前一个节点，用以删除操作，正确节点得用 R()宏进行修正*/
 	/*until fn()!=0 return the Node*/
-	/*遍历链表，直到fn返回非0*/
 	LinkNode *p;
 	p = L;
 	if (L->next == NULL) return NULL;
