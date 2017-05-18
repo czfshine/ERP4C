@@ -31,7 +31,10 @@ Description:
 #include "goods.h"
 #include "main.h"
 #include <stdio.h>
+#ifndef __linux__ || __linux
 #include <io.h>
+#endif 
+
 #include "debug.h"
 #include "serialize.h"
 #include "common.h"
