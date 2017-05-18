@@ -36,14 +36,14 @@ Description:
 #include "serialize.h"
 #include "common.h"
 
-void Init(){
+void Init() {
 	Store * S;
-	S=InitStore();
-	GobalStore=*S;
+	S = InitStore();
+	GobalStore = *S;
 	FILE *fp;
 	fp = fopen("goods.dat", "rb");
 	if (fp == NULL) {
-		fp=fopen("goods.dat", "wb");
+		fp = fopen("goods.dat", "wb");
 		fclose(fp);
 	}
 	else {
@@ -60,77 +60,77 @@ void GarbageCollection() {
 	serialize(GobalStore, fp, goodswriter);
 	fclose(fp);
 }
-void callback(){
+void callback() {
 	printf("test callback");
-}		
+}
 
-goods * WantGoodsById(int * res){
+goods * WantGoodsById(int * res) {
 	int id;
-	id=WantId();
+	id = WantId();
 	/*TODO TYPE ERROR*/
-	if(id == 0){
+	if (id == 0) {
 		ToMainScreen();
 		return (goods *)-1;
 	}
 
-	*res=id;
+	*res = id;
 	goods *g;
-	g=FindGoodsById(GobalStore,id);
+	g = FindGoodsById(GobalStore, id);
 
 	return g;
 
 }
-int LogginGoods(){
+int LogginGoods() {
 
 	ToLogginScreen();
 	char * name;
-	int id,count;
+	int id, count;
 
 	goods *g;
-	g=WantGoodsById(&id);
-	if(g==(goods *)-1) return 1;
-	if(g!=NULL){
+	g = WantGoodsById(&id);
+	if (g == (goods *)-1) return 1;
+	if (g != NULL) {
 		ShowGoodsExist(id);
 		WantEnter();
 		return 0;
 	}
-	name=WantName();
-	count=WantCount();
+	name = WantName();
+	count = WantCount();
 
-	AddGoods( GobalStore,id,name,count);
+	AddGoods(GobalStore, id, name, count);
 
 	ShowLogginSuccess();
 	WantEnter();
 	return 0;
 }
 
-int ChangeName(goods* g){                                 
+int ChangeName(goods* g) {
 	char * name;
-	name=WantName();
+	name = WantName();
 
-	strcpy(g->name,name);
+	strcpy(g->name, name);
 	return 0;
 }
 
-int ChangeCount(goods * g){
+int ChangeCount(goods * g) {
 
-	int count ;
-	count =WantCount();
+	int count;
+	count = WantCount();
 
-	g->count=count;                                                                                         
+	g->count = count;
 	return 0;
 
 }
 
-int ChangeGoods(){
+int ChangeGoods() {
 	ToChangeScreen();
 
 	int id;
 	goods * g;
-	g=WantGoodsById(&id);
+	g = WantGoodsById(&id);
 
-	if(g==(goods *)-1) return 1;
-	if(g==NULL){
+	if (g == (goods *)-1) return 1;
+	if (g == NULL) {
 		ShowCantFind(id);
 		WantEnter();
 		return 0;
@@ -138,8 +138,8 @@ int ChangeGoods(){
 
 	ShowChangeType();
 
-	int type=-1;
-	while (type < 0|| type>2) {
+	int type = -1;
+	while (type < 0 || type>2) {
 		type = WantNum();
 		switch (type) {
 		case CHANGENAME:ChangeName(g); break;
@@ -147,7 +147,7 @@ int ChangeGoods(){
 		default: {ShowInputTypeError(); ShowChangeType(); }
 		}
 	}
-	
+
 	ShowChangeSuccess();
 
 	WantEnter();
@@ -160,7 +160,7 @@ int RemoveById() {
 	id = WantId();
 	/*todo error*/
 	int res;
-	res=RemoveGoodsById(GobalStore, id);
+	res = RemoveGoodsById(GobalStore, id);
 	if (res == REMOVENULL) {
 		ShowRemoveNull();
 		WantEnter();
@@ -176,7 +176,7 @@ int  RemoveByName() {
 	/*todo*/
 	int res;
 
-	res=RemoveGoodsByName(GobalStore, name);
+	res = RemoveGoodsByName(GobalStore, name);
 	if (res == REMOVENULL) {
 		ShowRemoveNull();
 		WantEnter();
@@ -184,17 +184,17 @@ int  RemoveByName() {
 	}
 	return OK;
 }
-int RemoveGoods(){
+int RemoveGoods() {
 
 	ToRemoveScreen();
 
 	int type;
-	type=WantNum();
+	type = WantNum();
 
-	switch(type){
-		case REMOVEBYID:if (RemoveById()) return 0; break;
-		case REMOVEBYNAME:if (RemoveByName()) return 0; break;
-		case REMOVETOEXIT: ToMainScreen(); return 1;
+	switch (type) {
+	case REMOVEBYID:if (RemoveById()) return 0; break;
+	case REMOVEBYNAME:if (RemoveByName()) return 0; break;
+	case REMOVETOEXIT: ToMainScreen(); return 1;
 	}
 
 	ShowRemoveSuccess();
@@ -202,7 +202,7 @@ int RemoveGoods(){
 	return 0;
 }
 
-int QueryGoods(){
+int QueryGoods() {
 	ToQueryScreen();
 	if (GobalStore.L->next == NULL)
 	{
@@ -232,7 +232,7 @@ int  SaleGoods() {
 	ShowSaleCount();
 	sc = WantNum();
 
-	
+
 	g->count -= sc;
 
 	ShowSaleSuccess();
@@ -259,7 +259,7 @@ int StockGoods() {
 	ShowStockCount();
 	sc = WantNum();
 
-	
+
 
 	g->count += sc;
 
@@ -289,7 +289,7 @@ int  Loggin2S() {
 
 void PrintSumCount() {
 	ShowSumCount();
-	printf("%d\n",SumCount(GobalStore));
+	printf("%d\n", SumCount(GobalStore));
 	WantEnter();
 }
 
@@ -300,7 +300,7 @@ void PrintIdCount() {
 }
 
 int StatisGoods() {
-	ToStatisScreen(); 
+	ToStatisScreen();
 
 	int type;
 	type = WantNum();
@@ -313,35 +313,35 @@ int StatisGoods() {
 
 	return 0;
 }
-int ListenMainKey(){
+int ListenMainKey() {
 	int op;
 
-	op=WantNum();
+	op = WantNum();
 
-	switch(op){
-		case WANTTYPEERROR:
-			MainWantError (TypeError,T_NUM);
-		case WANTNULLERROR:
-			MainWantError (TypeNullError,T_NUM);
-		case WANTLONGERROR:
-			MainWantError (TypeLongError,T_NUM);
+	switch (op) {
+	case WANTTYPEERROR:
+		MainWantError(TypeError, T_NUM);
+	case WANTNULLERROR:
+		MainWantError(TypeNullError, T_NUM);
+	case WANTLONGERROR:
+		MainWantError(TypeLongError, T_NUM);
 	}
 
 	MENU(op)
-		MENUITEM(MENULOGGIN,LOOP(LogginGoods));
-		MENUITEM(MENUCHANGE,LOOP(ChangeGoods));
-		MENUITEM(MENUREMOVE,LOOP(RemoveGoods));
-		MENUITEM(MENULOG2S,LOOP(Loggin2S));
-		MENUITEM(MENUQUERY,LOOP(QueryGoods));
-		MENUITEM(MENUSTATIS,LOOP(StatisGoods));
-		MENUITEM(MENUHELP,ShowHelp());
-		MENUITEM(MENUEXIT,return 1);
-		DEFAULTITEM(ShowInputTypeError(); WantEnter(); ToMainScreen(); return 0;);
-	
+		MENUITEM(MENULOGGIN, LOOP(LogginGoods));
+	MENUITEM(MENUCHANGE, LOOP(ChangeGoods));
+	MENUITEM(MENUREMOVE, LOOP(RemoveGoods));
+	MENUITEM(MENULOG2S, LOOP(Loggin2S));
+	MENUITEM(MENUQUERY, LOOP(QueryGoods));
+	MENUITEM(MENUSTATIS, LOOP(StatisGoods));
+	MENUITEM(MENUHELP, ShowHelp());
+	MENUITEM(MENUEXIT, return 1);
+	DEFAULTITEM(ShowInputTypeError(); WantEnter(); ToMainScreen(); return 0;);
+
 	return 0;
 }
 
-int main(int argn,char * argv[] ){
+int main(int argn, char * argv[]) {
 	Init();
 
 	WithDebug({
@@ -350,5 +350,5 @@ int main(int argn,char * argv[] ){
 		SayGoodbye();
 		GarbageCollection();
 	});
-    return 0;
+	return 0;
 }

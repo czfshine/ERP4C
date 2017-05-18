@@ -61,7 +61,7 @@ LinkNode* foreach(LinkList L, int(*fn)(LinkList, ptr)) {
 	/* note : it return last node ,so you must use R(p) to get correct node*/
 	/*注意：它返回的是前一个节点，用以删除操作，正确节点得用 R()宏进行修正*/
 	/*until fn()!=0 return the Node*/
-	
+
 
 	LinkNode *p;
 	p = L;
