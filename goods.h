@@ -19,7 +19,7 @@ typedef struct {
 	int id;
 	int count;
 	char name[255];
-	
+
 
 } goods;
 
@@ -58,11 +58,11 @@ typedef struct {
 
 #define SI(s) ((StoreInfo*)(s.L)->elem)
 Store * InitStore();
-int AddGoods(Store s,int id,char * name,int count);
-int ChangeGoodsName(Store s,int id,char * name);
-int ChangeGoodsCount(Store s,int id,int count);
-goods * FindGoodsById(Store s,int id);
-goods * FindGoodsByName(Store s,char *name);
+int AddGoods(Store s, int id, char * name, int count);
+int ChangeGoodsName(Store s, int id, char * name);
+int ChangeGoodsCount(Store s, int id, int count);
+goods * FindGoodsById(Store s, int id);
+goods * FindGoodsByName(Store s, char *name);
 int ShowAllGoods(Store);
 int RemoveGoodsById(Store s, int id);
 

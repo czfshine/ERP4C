@@ -75,7 +75,7 @@ The user interface in console.
 #endif
 
 
-typedef int INPUTTYPE ;
+typedef int INPUTTYPE;
 
 #define T_NUM 0
 #define T_STR 1
@@ -99,7 +99,7 @@ void ShowGoodsExist(int id);
 void ShowLogginSuccess();
 void ShowChangeSuccess();
 void ShowChangeGoods();
-void ShowCantFind(int );
+void ShowCantFind(int);
 void ShowChangeType();
 void TypeError(INPUTTYPE T);
 void TypeNullError(INPUTTYPE T);
@@ -165,7 +165,7 @@ void ToSaleScreen();
 void ShowSaleCount();
 
 void ShowSaleSuccess();
-	
+
 void ToStockScreen();
 
 void ShowStockCount();

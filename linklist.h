@@ -19,17 +19,18 @@ The general linklist,other infomation to see code .
 
 
 typedef struct LinkNode
-{	ptr elem;
+{
+	ptr elem;
 	struct LinkNode *next;
-}  LinkNode,*LinkList;
+}  LinkNode, *LinkList;
 
 
 LinkList  LinkListInit();
-LinkNode * newnode (ptr elem);
+LinkNode * newnode(ptr elem);
 LinkNode * back(LinkList L);
-int pushback(LinkList L,ptr elem);
+int pushback(LinkList L, ptr elem);
 int pushfront(LinkList L, ptr elem);
-LinkNode * foreachwithcmp(LinkList L,int (* fn)(LinkList,ptr ,int (* cmp )(ptr,ptr)),int (* cmp) (ptr,ptr));
-LinkNode * foreach(LinkList L,int (* fn)(LinkList,ptr ));
+LinkNode * foreachwithcmp(LinkList L, int(*fn)(LinkList, ptr, int(*cmp)(ptr, ptr)), int(*cmp) (ptr, ptr));
+LinkNode * foreach(LinkList L, int(*fn)(LinkList, ptr));
 int RemoveNode(LinkNode *p, int(*freeelem)(ptr));
 #endif
