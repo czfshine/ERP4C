@@ -6,6 +6,7 @@ Langage :ANSI C
 Listen :MIT
 Description:
 Some logic and function for good.
+商品相关的函数声明
 */
 #ifndef GOODS_H
 #define GOODS_H 
@@ -19,20 +20,18 @@ typedef struct {
 	int id;
 	int count;
 	char name[255];
-
-
 } goods;
 
 typedef struct {
 	LinkList L;
-}	Store;
+}	Store;/*仓储*/
 
 typedef struct {
 	int waitid;
 	char * waitname;
 	int sumconut;
 	FILE *file;
-}	StoreInfo;
+}	StoreInfo;/*不想污染全局作用域，存放额外信息*/
 
 
 #define CANTFIND 0;
@@ -55,7 +54,7 @@ typedef struct {
 
 #define REMOVENULL -1
 
-
+/*快速取storeinfo*/
 #define SI(s) ((StoreInfo*)(s.L)->elem)
 Store * InitStore();
 int AddGoods(Store s, int id, char * name, int count);
