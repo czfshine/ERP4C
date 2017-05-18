@@ -1,4 +1,4 @@
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Please choose a option:
 1)	loggin goods
 2)	change goods
@@ -8,35 +8,25 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Loggin goods infomation:
 Note : You can input a id equal 0 to exit loggin.
 Please input the good's id:Please input the good's name:Please input the good's count:The goods was success loggined.
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Loggin goods infomation:
 Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:The Goods id:4 is exist,please input another id
+Please input the good's id:Please input the good's name:Please input the good's count:The goods was success loggined.
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Loggin goods infomation:
 Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:The Goods id:4 is exist,please input another id
+Please input the good's id:Please input the good's name:Please input the good's count:The goods was success loggined.
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Loggin goods infomation:
 Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:The Goods id:5 is exist,please input another id
-Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
-Loggin goods infomation:
-Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:The Goods id:5 is exist,please input another id
-Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
-Loggin goods infomation:
-Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:ERP4C dev 1.0.1 | dev-build 0305
+Please input the good's id:ERP4C dev 1.0.1 | dev-build 0306
 Please choose a option:
 1)	loggin goods
 2)	change goods
@@ -46,7 +36,7 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Change goods infomation:
 Note : You can input a id equal 0 to exit loggin.
 Please input the good's id:Please choose you want change infomation type:
@@ -54,10 +44,10 @@ Please input the good's id:Please choose you want change infomation type:
 2) good's count
 Input your choice:Please input the good's name:The goods was success changed.
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Change goods infomation:
 Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:ERP4C dev 1.0.1 | dev-build 0305
+Please input the good's id:ERP4C dev 1.0.1 | dev-build 0306
 Please choose a option:
 1)	loggin goods
 2)	change goods
@@ -67,32 +57,13 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Show all goods:
+id:00005	name:name5     	count:00005
+id:00004	name:name4     	count:00004
 id:00003	name:name3-1   	count:00003
-id:66666	name:55        	count:00055
-id:00005	name:4         	count:05454
-id:00001	name:1         	count:00004
-id:00055	name:21        	count:00002
-id:00545	name:44        	count:00005
-id:11111111	name:111       	count:00011
-id:00015	name:45        	count:00004
-id:00044	name:4         	count:00454
-id:00054	name:54464     	count:00544
-id:00445	name:4         	count:00045
-id:00045	name:45        	count:00044
-id:00555	name:44        	count:00004
-id:00046	name:54564     	count:54646464
-id:00004	name:54555555555555555555555555	count:00054
-id:00056	name:4654      	count:654654
-id:00465	name:4         	count:65456456
-id:65444	name:65465     	count:00004
-id:55555	name:555555555555555555555555555555555555555555555555	count:00004
-id:455456456	name:5645      	count:00045
-id:00456	name:456       	count:456456
-id:00002	name:1         	count:00007
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Please choose a option:
 1)	loggin goods
 2)	change goods
@@ -102,22 +73,22 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Sale or Stock good:Please choose a option:
 1) Sale good(s).
 2) Stock good(s).
 0) Exit.
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Sell the goods:
 Note : You can input a id equal 0 to exit loggin.
 Please input the good's id:How many good(s) you want to sell: The goods was  success sold!
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Sale or Stock good:Please choose a option:
 1) Sale good(s).
 2) Stock good(s).
 0) Exit.
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Please choose a option:
 1)	loggin goods
 2)	change goods
@@ -127,32 +98,13 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Show all goods:
+id:00005	name:name5     	count:00005
+id:00004	name:name4     	count:00004
 id:00003	name:name3-1   	count:00001
-id:66666	name:55        	count:00055
-id:00005	name:4         	count:05454
-id:00001	name:1         	count:00004
-id:00055	name:21        	count:00002
-id:00545	name:44        	count:00005
-id:11111111	name:111       	count:00011
-id:00015	name:45        	count:00004
-id:00044	name:4         	count:00454
-id:00054	name:54464     	count:00544
-id:00445	name:4         	count:00045
-id:00045	name:45        	count:00044
-id:00555	name:44        	count:00004
-id:00046	name:54564     	count:54646464
-id:00004	name:54555555555555555555555555	count:00054
-id:00056	name:4654      	count:654654
-id:00465	name:4         	count:65456456
-id:65444	name:65465     	count:00004
-id:55555	name:555555555555555555555555555555555555555555555555	count:00004
-id:455456456	name:5645      	count:00045
-id:00456	name:456       	count:456456
-id:00002	name:1         	count:00007
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Please choose a option:
 1)	loggin goods
 2)	change goods
@@ -162,22 +114,22 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Sale or Stock good:Please choose a option:
 1) Sale good(s).
 2) Stock good(s).
 0) Exit.
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Stock the good:
 Note : You can input a id equal 0 to exit loggin.
 Please input the good's id:How many good(s) you want to stock: The goods was  success stocked!
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Sale or Stock good:Please choose a option:
 1) Sale good(s).
 2) Stock good(s).
 0) Exit.
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Please choose a option:
 1)	loggin goods
 2)	change goods
@@ -187,29 +139,29 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
-Statis good's infomation:
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
+Statis good's infomation:
  Please choose a option:
 1) Count sum of good's count.
 2) Count sum of good's type. 
 0) Exit
-Input your choice:The sum of the good's count is:121220773
+Input your choice:The sum of the good's count is:12
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Statis good's infomation:
  Please choose a option:
 1) Count sum of good's count.
 2) Count sum of good's type. 
 0) Exit
-Input your choice:The sum of good's type is:22
+Input your choice:The sum of good's type is:3
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Statis good's infomation:
  Please choose a option:
 1) Count sum of good's count.
 2) Count sum of good's type. 
 0) Exit
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Please choose a option:
 1)	loggin goods
 2)	change goods
@@ -219,7 +171,7 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Remove goods from the store:
 Please choose a option:
 1) remove good by id
@@ -227,21 +179,21 @@ Please choose a option:
 0) return the main menu
 Input your choice:Please input the good's id:Remove good(s) success!
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Remove goods from the store:
 Please choose a option:
 1) remove good by id
 2) remove good by name
 0) return the main menu
-Input your choice:Please input the good's name:Not good in the store,remove error.
+Input your choice:Please input the good's name:Remove good(s) success!
 Push Enter to contuine.
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 Remove goods from the store:
 Please choose a option:
 1) remove good by id
 2) remove good by name
 0) return the main menu
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Please choose a option:
 1)	loggin goods
 2)	change goods
@@ -254,7 +206,7 @@ Please choose a option:
 Input your choice:This a help doc
 More infomation to see https://github.com/czfshine/my_oj
 Thanks you !
-ERP4C dev 1.0.1 | dev-build 0305
+ERP4C dev 1.0.1 | dev-build 0306
 ERROR: you must input a number
 Please choose a option:
 1)	loggin goods
@@ -265,6 +217,6 @@ Please choose a option:
 6)	statis goods
 7)	help
 0)	exit
-Input your choice:ERP4C dev 1.0.1 | dev-build 0305
+Input your choice:ERP4C dev 1.0.1 | dev-build 0306
 Thanks you use ERP4C!
 Goodbye~~~
