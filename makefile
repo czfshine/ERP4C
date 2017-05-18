@@ -2,7 +2,7 @@ all:
 	-lua addbuildnum.lua
 	-git add .
 	-git commit -m "build erp4c" 
-	gcc -Wall -DLOCAL -O3 -ansi tui.c linklist.c goods.c main.c -o erp4c.exe
+	gcc -Wall -DLOCAL -O3 -ansi tui.c linklist.c goods.c serialize.c main.c -o erp4c.exe
 	erp4c.exe
 release:
 	-lua addbuildnum.lua
