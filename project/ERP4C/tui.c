@@ -281,6 +281,9 @@ Notice(StoreEmpty, {
 Notice(InputTypeError, {
 		"This choice isn't correct.\n"
 })
+Notice(GoodsCountLess, {
+	"The good's count is less than innput number!\n"
+})
 
 
 void ShowGoodsExist(int id) {

@@ -188,14 +188,19 @@ int RemoveGoods() {
 
 	ToRemoveScreen();
 
-	int type;
-	type = WantNum();
 
-	switch (type) {
-	case REMOVEBYID:if (RemoveById()) return 0; break;
-	case REMOVEBYNAME:if (RemoveByName()) return 0; break;
-	case REMOVETOEXIT: ToMainScreen(); return 1;
+	int type = -1;
+	while (type < 0 || type>2) {
+		type = WantNum();
+		switch (type) {
+		case REMOVEBYID:if (RemoveById()) return 0; break;
+		case REMOVEBYNAME:if (RemoveByName()) return 0; break;
+		case REMOVETOEXIT: ToMainScreen(); return 1;
+		default: {ShowInputTypeError(); WantEnter(); ToRemoveScreen(); }
+		}
 	}
+
+	
 
 	ShowRemoveSuccess();
 	WantEnter();
@@ -232,11 +237,16 @@ int  SaleGoods() {
 	ShowSaleCount();
 	sc = WantNum();
 
+	if (g->count - sc < 0) 
+		return GOODSCOUNTLESS;
+	else {
 
-	g->count -= sc;
+		g->count -= sc;
 
-	ShowSaleSuccess();
-	WantEnter();
+		ShowSaleSuccess();
+		WantEnter();
+	}
+	
 	return OK;
 }
 
@@ -271,14 +281,32 @@ int StockGoods() {
 int  Loggin2S() {
 	ToLoggin2SScreen();
 
-	int type;
-	/* todo*/
-	type = WantNum();
-	switch (type) {
-	case SALE:if (SaleGoods() == GOODNOTFOUND) { ShowGoodNotFound(); WantEnter(); }; break;
-	case STOCK:if (StockGoods() == GOODNOTFOUND) { ShowGoodNotFound(); WantEnter(); }; break;
-	case EXIT: ToMainScreen(); return 1;
+	int type = -1;
+	while (type < 0 || type>2) {
+		type = WantNum();
+		switch (type) {
+		case SALE:
+			switch (SaleGoods()) {
+			case  GOODNOTFOUND: {
+				ShowGoodNotFound();
+				WantEnter();
+				break;
+			}
+			case GOODSCOUNTLESS: {
+				ShowGoodsCountLess();
+				WantEnter();
+				break;
+			}
+			}
+			break;
+		case STOCK:if (StockGoods() == GOODNOTFOUND) { ShowGoodNotFound(); WantEnter(); }; break;
+		case EXIT: ToMainScreen(); return 1;
+		default: {ShowInputTypeError(); WantEnter(); ToLoggin2SScreen(); }
+		}
+		
+		
 	}
+
 
 	return 0;
 
@@ -302,13 +330,16 @@ void PrintIdCount() {
 int StatisGoods() {
 	ToStatisScreen();
 
-	int type;
-	type = WantNum();
+	int type=-1;
 
-	switch (type) {
-	case SHOWSUMOFCOUNT:PrintSumCount(); break;
-	case SHOWCOUNTID:PrintIdCount(); break;
-	case EXIT: ToMainScreen(); return 1;
+	while (type < 0 || type>2) {
+		type = WantNum();
+		switch (type) {
+		case SHOWSUMOFCOUNT:PrintSumCount(); break;
+		case SHOWCOUNTID:PrintIdCount(); break;
+		case EXIT: ToMainScreen(); return 1;
+		default: {ShowInputTypeError(); WantEnter(); ToStatisScreen(); }
+		}
 	}
 
 	return 0;
@@ -329,13 +360,13 @@ int ListenMainKey() {
 
 	MENU(op)
 		MENUITEM(MENULOGGIN, LOOP(LogginGoods));
-	MENUITEM(MENUCHANGE, LOOP(ChangeGoods));
-	MENUITEM(MENUREMOVE, LOOP(RemoveGoods));
-	MENUITEM(MENULOG2S, LOOP(Loggin2S));
-	MENUITEM(MENUQUERY, LOOP(QueryGoods));
-	MENUITEM(MENUSTATIS, LOOP(StatisGoods));
-	MENUITEM(MENUHELP, ShowHelp());
-	MENUITEM(MENUEXIT, return 1);
+		MENUITEM(MENUCHANGE, LOOP(ChangeGoods));
+		MENUITEM(MENUREMOVE, LOOP(RemoveGoods));
+		MENUITEM(MENULOG2S, LOOP(Loggin2S));
+		MENUITEM(MENUQUERY, LOOP(QueryGoods));
+		MENUITEM(MENUSTATIS, LOOP(StatisGoods));
+		MENUITEM(MENUHELP, ShowHelp());
+		MENUITEM(MENUEXIT, return 1);
 	DEFAULTITEM(ShowInputTypeError(); WantEnter(); ToMainScreen(); return 0;);
 
 	return 0;
