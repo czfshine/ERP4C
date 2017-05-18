@@ -1,146 +1,0 @@
-ERP4C dev 0.0.1 | dev-build 0265
-Please choose a option:
-1)	loggin goods
-2)	change goods
-3)	remove goods
-4)	loggin stock&sale info
-5)	query goods
-6)	statis goods
-7)	help
-0)	exit
-Input your choice:ERP4C dev 0.0.1 | dev-build 0265
-Loggin goods infomation:
-Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:Please input the good's name:Please input the good's count:The goods was success loggined.
-Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0265
-Loggin goods infomation:
-Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:Please input the good's name:Please input the good's count:The goods was success loggined.
-Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0265
-Loggin goods infomation:
-Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:ERP4C dev 0.0.1 | dev-build 0265
-Please choose a option:
-1)	loggin goods
-2)	change goods
-3)	remove goods
-4)	loggin stock&sale info
-5)	query goods
-6)	statis goods
-7)	help
-0)	exit
-Input your choice:ERP4C dev 0.0.1 | dev-build 0265
-ERROR: you must input a number
-Please choose a option:
-1)	loggin goods
-2)	change goods
-3)	remove goods
-4)	loggin stock&sale info
-5)	query goods
-6)	statis goods
-7)	help
-0)	exit
-Input your choice:ERP4C dev 0.0.1 | dev-build 0265
-Change goods infomation:
-Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:Please choose you want change infomation type:
-1) good's name
-2) good's count
-Input your choice:Please input the good's name:The goods was success changed.
-Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0265
-Change goods infomation:
-Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:Please choose you want change infomation type:
-1) good's name
-2) good's count
-Input your choice:Please input the good's count:The goods was success changed.
-Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0265
-Change goods infomation:
-Note : You can input a id equal 0 to exit loggin.
-Please input the good's id:ERP4C dev 0.0.1 | dev-build 0265
-Please choose a option:
-1)	loggin goods
-2)	change goods
-3)	remove goods
-4)	loggin stock&sale info
-5)	query goods
-6)	statis goods
-7)	help
-0)	exit
-Input your choice:ERP4C dev 0.0.1 | dev-build 0265
-ERROR: you must input a number
-Please choose a option:
-1)	loggin goods
-2)	change goods
-3)	remove goods
-4)	loggin stock&sale info
-5)	query goods
-6)	statis goods
-7)	help
-0)	exit
-Input your choice:ERP4C dev 0.0.1 | dev-build 0265
-Show all goods:
-id:00002	name:n2        	count:02002
-id:00001	name:n1-2      	count:01001
-Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0265
-Please choose a option:
-1)	loggin goods
-2)	change goods
-3)	remove goods
-4)	loggin stock&sale info
-5)	query goods
-6)	statis goods
-7)	help
-0)	exit
-Input your choice:ERP4C dev 0.0.1 | dev-build 0265
-Remove goods from the store:
-Please choose a option:
-1) remove good by id
-2) remove good by name
-0) return the main menu
-Input your choice:Please input the good's id:Remove good(s) success!
-Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0265
-Remove goods from the store:
-Please choose a option:
-1) remove good by id
-2) remove good by name
-0) return the main menu
-Input your choice:Remove good(s) success!
-Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0265
-Remove goods from the store:
-Please choose a option:
-1) remove good by id
-2) remove good by name
-0) return the main menu
-Input your choice:Remove good(s) success!
-Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0265
-Remove goods from the store:
-Please choose a option:
-1) remove good by id
-2) remove good by name
-0) return the main menu
-Input your choice:Remove good(s) success!
-Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0265
-Remove goods from the store:
-Please choose a option:
-1) remove good by id
-2) remove good by name
-0) return the main menu
-Input your choice:Remove good(s) success!
-Push Enter to contuine.
-ERP4C dev 0.0.1 | dev-build 0265
-Remove goods from the store:
-Please choose a option:
-1) remove good by id
-2) remove good by name
-0) return the main menu
-Input your choice:Remove good
