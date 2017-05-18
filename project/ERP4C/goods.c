@@ -6,6 +6,7 @@ Langage :ANSI C
 Listen :MIT
 Description:
 Some logic and function for good.
+商品与仓储信息。
 */
 
 #include "goods.h"
@@ -13,9 +14,9 @@ Some logic and function for good.
 Store * InitStore() {
 	Store *s;
 	s = MAKE(Store);
-	s->L = LinkListInit();
+	s->L = LinkListInit();/*存放商品的链表*/
 	StoreInfo *si;
-	si = MAKE(StoreInfo);
+	si = MAKE(StoreInfo);/*额外信息*/
 	s->L->elem = si;
 	return s;
 }
@@ -30,10 +31,8 @@ int AddGoods(Store s, int id, char * name, int count) {
 }
 
 int ChangeGoodsName(Store s, int id, char * name) {
-
 	goods *g;
 	g = FindGoodsById(s, id);
-
 	if (g == NULL) {
 		return CHANGEFINDERROR;
 	}
@@ -52,20 +51,20 @@ int ChangeGoodsCount(Store s, int id, int count) {
 	g->count = count;
 	return CHANGEOK;
 }
+
+/*id的比较函数*/
 int cmpid(goods *g, StoreInfo * si) {
+	/*在storeinfo里面读取期望的id值*/
 	return g->id == si->waitid;
 }
-
+/*名字的比较函数*/
 int cmpname(goods *g, StoreInfo * si) {
 	return strcmp(g->name, si->waitname) == 0;
 }
 
+/*寻找第一个满足比较函数的节点*/
 int find(LinkList L, ptr p, int(*cmp)(goods *, StoreInfo *)) {
-	StoreInfo *si;
-	si = L->elem;
-	goods *g;
-	g = (goods *)p;
-	if (cmp(g, si)) {
+	if (cmp(p, L->elem)) {
 		return 1;
 	}
 	else {
