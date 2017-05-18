@@ -29,8 +29,7 @@ The user interface in console.
 
 void ToLogginScreen();
 
-#define ToChangeScreen() CleanScreen();\
-						ShowChangeGoods();
+void ToChangeScreen() ;
 
 
 

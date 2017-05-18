@@ -181,7 +181,7 @@ Notice(LogginSuccess, {
 		"The goods was success loggined.\n"
 })
 
-Notice(ChangeGoods, {
+Screen(Change, {
 		"Change goods infomation:\n"
 		"Note : You can input a id equal 0 to exit loggin.\n"
 })
