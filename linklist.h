@@ -5,7 +5,8 @@ Date :2017-05-10 11:10
 Langage :ANSI C
 Listen :MIT
 Description:
-The general linklist,other infomation to see code .
+	The general linklist,other infomation to see code .
+	通用链表库，支持链表的增删查改寻。
 */
 #ifndef LINKLIST_H
 #define LINKLIST_H 
@@ -13,8 +14,12 @@ The general linklist,other infomation to see code .
 #include <string.h>
 #include "common.h"
 
+/*通用指针*/
+
 #define ptr void *
 
+
+/*取正确的节点*/
 #define R(p) (((p)==NULL)?NULL:((p)->next))
 
 
