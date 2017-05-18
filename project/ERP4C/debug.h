@@ -16,6 +16,9 @@ int DEBUG = 1;
 #endif 
 
 /*在文件输入输出环境下测试，然后将控制权交由用户*/
+#ifdef __linux__ || __linux
+#define WithDebug(code) code;
+#else
 #define WithDebug(code) do{\
 	if(DEBUG){\
 		/*保留原始stdout，不然输出会乱码*/\
@@ -29,3 +32,4 @@ int DEBUG = 1;
 	} \
 		code;\
 }while (0);
+#endif
