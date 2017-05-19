@@ -49,20 +49,24 @@ int WantNum() {
 char * WantString() {
 	/*输入字符串*/
 	/*用静态类型防止内存泄漏*/
-	/*TODO*/
+	/*防止缓冲区溢出*/
 	static char * a = NULL;
 	if (a == NULL)
-		a = (char *)malloc(255);
-
+		/*要在堆内分配空间而不能在栈里面分配，防止被覆写*/
+		a = (char *)malloc(MAXSTRINGLEN+2);
 
 	char ch;
 	int i = 0;
 	while ((ch = getchar()) != '\n') {
 		a[i++] = ch;
+		if (i >= MAXSTRINGLEN-2) {
+			/*超过界限的话，将多余的输入丢弃，防止程序段被篡改*/
+			InputClean();
+			break;
+		}
 	}
 	a[i] = 0;
 	return a;
-
 }
 
 char * WantName() {
