@@ -1,5 +1,16 @@
 
 Store GobalStore;
+void Init();
+void GarbageCollection();
+void callback();
+goods * WantGoodsById(int * res);
+int LogginGoods();
+int ChangeName(goods * g);
+int ChangeCount(goods * g);
+int ChangeGoods();
+int RemoveById();
+int RemoveByName();
+int RemoveGoods();
 int QueryGoods();
 int SaleGoods();
 int StockGoods();
