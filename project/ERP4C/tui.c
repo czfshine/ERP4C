@@ -25,9 +25,7 @@ int WantNum() {
 	/*note: The input num must be > 0*/
 	/*输入的数字必须为自然数，返回的错误码为负*/
 	int res = 0;
-	char ch;
-	char flag = 0;
-
+	char ch,flag = 0;
 	while ((ch = getchar()) != '\n') {
 		if (isdigit(ch)) {
 			res = res * 10 + ch - '0';
@@ -44,14 +42,8 @@ int WantNum() {
 			return WANTTYPEERROR;
 		}
 	}
-	if (flag) {
-		return res;
-	}
-	else {
-		/*未输入*/
-		return WANTNULLERROR;
-	}
-
+	if (flag)  return res;
+	else  return WANTNULLERROR;/*未输入*/
 }
 
 char * WantString() {
@@ -61,9 +53,14 @@ char * WantString() {
 	static char * a = NULL;
 	if (a == NULL)
 		a = (char *)malloc(255);
-	/*TODO ： 用scanf不安全*/
-	scanf("%s", a);
-	getchar();
+
+
+	char ch;
+	int i = 0;
+	while ((ch = getchar()) != '\n') {
+		a[i++] = ch;
+	}
+	a[i] = 0;
 	return a;
 
 }

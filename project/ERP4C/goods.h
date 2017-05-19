@@ -64,11 +64,10 @@ goods * FindGoodsById(Store s, int id);
 goods * FindGoodsByName(Store s, char *name);
 int ShowAllGoods(Store);
 int RemoveGoodsById(Store s, int id);
-
 int RemoveGoodsByName(Store s, char *name);
 
 int SumCount(Store s);
 int SumId(Store s);
-goods * goodreader(FILE * fp);
-int goodswriter(FILE * fp, goods * g);
+goods * goodreader(FILE * fp);/*¶ÁÈ¡Æ÷*/
+int goodswriter(FILE * fp, goods * g);/*Ð´ÈëÆ÷*/
 #endif
