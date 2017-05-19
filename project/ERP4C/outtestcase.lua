@@ -9,4 +9,4 @@ for i=1,1000000 do
 	outfile:write("\n");
 end
 
-outfile:write("0\n\n\n0\n\n");
+outfile:write("0\n\n\n\n\n");
