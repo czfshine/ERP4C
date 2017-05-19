@@ -77,7 +77,7 @@ LinkNode* foreach(LinkList L, int(*fn)(LinkList, ptr)) {
 	return NULL;
 }
 
-#define cmpfn(cmp)  int(*cmp)(ptr, ptr)
+
 LinkNode* foreachwithcmp(LinkList L, int(*fn)(LinkList, ptr, cmpfn(cmp)),cmpfn(cmp)) {
 	/*带比较函数的遍历*/
 
