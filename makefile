@@ -17,7 +17,7 @@ dontclear:
 	-lua addbuildnum.lua
 	-git add .
 	-git commit -m "build erp4c" 
-	gcc -Wall -DLOCAL -DDONTCLEARSCREEN -Wno-incompatible-pointer-types -O3 -ansi $(PREFLE) main.c -o erp4c.exe
+	$(CC) -DDONTCLEARSCREEN -Wno-incompatible-pointer-types  $(PREFLE) main.c -o erp4c.exe
 	erp4c.exe
 
 min:
@@ -27,17 +27,17 @@ goods:
 	-lua addbuildnum.lua
 	-git add .
 	-git commit -m "build erp4c" 
-	gcc -Wall -DLOCAL -O3 -ansi $(PREFLE) testgoods.c -o testgoods.exe
+	$(CC) $(PREFLE) testgoods.c -o testgoods.exe
 	testgoods.exe
 linklist:
 	-lua addbuildnum.lua
 	-git add .
 	-git commit -m "build erp4c" 
-	gcc -Wall -DLOCAL -O3 -ansi $(PREFLE)  testlinklist.c -o testlinklist.exe
+	$(CC) $(PREFLE)  testlinklist.c -o testlinklist.exe
 	testlinklist.exe
 serialize:
 	-lua addbuildnum.lua
 	-git add .
 	-git commit -m "build erp4c" 
-	gcc -Wall -DLOCAL -O3 -ansi $(PREFLE)  testserialize.c -o testserialize.exe
+	$(CC) $(PREFLE)  testserialize.c -o testserialize.exe
 	testserialize.exe
