@@ -91,7 +91,7 @@ typedef int INPUTTYPE;
 /*Ä¬ÈÏÑ¡Ïî*/
 #define DEFAULTITEM(CALLBACK) default : CALLBACK; }	
 
-
+#define MAXSTRINGLEN 255
 void SayHello();
 void SayGoodbye();
 void ShowMainMenu();
