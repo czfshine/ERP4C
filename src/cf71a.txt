@@ -1,5 +1,0 @@
-cf71a 3 time
-
-1st  about the "strictly" .i think is in-side <=10
-2ed  and then 
-3ed forget the len+1
